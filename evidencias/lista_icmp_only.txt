@@ -1,0 +1,2 @@
+nc-dashboards-hml01
+nc-eventanalitics-webgui-hml01

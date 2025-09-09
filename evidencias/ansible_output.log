@@ -1,0 +1,4106 @@
+acronis-isilon-stg01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+aaa-moniot-prd03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+aid-hos-10.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+aaa-moniot-prd04 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+acronisaeh.staging | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+aaa-moniot-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+aaa-moniot-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+algar-contact-prd02.tenant0008 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+algar-contact-prd01.tenant0008 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+algar-contact-hom01.tenant0008 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+api-moniot-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+api-moniot-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+api-prd-jenkins01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+api-protweb-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+afiliados-app-hml01 | CHANGED | rc=0 >>
+OK
+Warning: Permanently added 'afiliados-app-hml01' (ECDSA) to the list of known hosts.
+
+************ Permitido o uso somente para pessoas autorizadas **************
+        Individuos que utilizarem este equipamento sem
+        autorizacao, ou em operacoes que excedam o nivel de
+        autorizacao permitido, estarao sujeitos a penalizacoes
+        e rigores da legislacao aplicavel.
+
+        Qualquer um que utilize este sistema concorda previamente
+        com o monitoramento e esta ciente que se atividades ilicitas
+        e/ou criminais forem reveladas a partir deste, podera ser
+        objeto de processo judicial e/ou criminal.
+****************************************************************************
+
+Shared connection to afiliados-app-hml01 closed.
+
+afiliados-app-prd01 | CHANGED | rc=0 >>
+OK
+Warning: Permanently added 'afiliados-app-prd01' (ECDSA) to the list of known hosts.
+
+************ Permitido o uso somente para pessoas autorizadas **************
+        Individuos que utilizarem este equipamento sem
+        autorizacao, ou em operacoes que excedam o nivel de
+        autorizacao permitido, estarao sujeitos a penalizacoes
+        e rigores da legislacao aplicavel.
+
+        Qualquer um que utilize este sistema concorda previamente
+        com o monitoramento e esta ciente que se atividades ilicitas
+        e/ou criminais forem reveladas a partir deste, podera ser
+        objeto de processo judicial e/ou criminal.
+****************************************************************************
+
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to afiliados-app-prd01 closed.
+
+app-gravacao-02 | CHANGED | rc=0 >>
+OK
+Shared connection to app-gravacao-02 closed.
+
+app-host-resilient-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to app-host-resilient-prd01 closed.
+
+appmobileprd01_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to appmobileprd01_new closed.
+
+api-portal-hom-iot | CHANGED | rc=0 >>
+OK
+Warning: Permanently added 'api-portal-hom-iot' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to api-portal-hom-iot closed.
+
+algar-contact-hom02 | CHANGED | rc=0 >>
+OK
+Warning: Permanently added 'algar-contact-hom02' (ECDSA) to the list of known hosts.
+********* Permitido o uso somente para pessoas autorizadas *********
+        Individuos que utilizarem este equipamento sem
+        autorizacao, ou em operacoes que excedam o nivel de
+        autorizacao permitido, estarao sujeitos a penalizacoes
+        e rigores da legislacao aplicavel.
+
+        Qualquer um que utilize este sistema concorda previamente
+        com o monitoramento e esta ciente que se atividades ilicitas
+        e/ou criminais forem reveladas a partir deste, podera ser
+        objeto de processo judicial e/ou criminal.
+*******************************************************************
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to algar-contact-hom02 closed.
+
+app-omni-h01 | CHANGED | rc=0 >>
+OK
+Shared connection to app-omni-h01 closed.
+
+appmobileprd02_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to appmobileprd02_new closed.
+
+app-phone-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to app-phone-prd01 closed.
+
+app-policy-prd01-238 | CHANGED | rc=0 >>
+OK
+Shared connection to app-policy-prd01-238 closed.
+
+app-phone-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to app-phone-prd02 closed.
+
+app-policy-prd03-238 | CHANGED | rc=0 >>
+OK
+Shared connection to app-policy-prd03-238 closed.
+
+app-policy-prd02-238 | CHANGED | rc=0 >>
+OK
+Shared connection to app-policy-prd02-238 closed.
+
+app-portal-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to app-portal-prd01 closed.
+
+app-portal-nominum-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to app-portal-nominum-prd01 closed.
+
+app-sq-phone-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to app-sq-phone-prd01 closed.
+
+app-sq-phone-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to app-sq-phone-prd02 closed.
+
+aps.staging | CHANGED | rc=0 >>
+OK
+Shared connection to aps.staging closed.
+
+appstack-lgpd-prod01 | CHANGED | rc=0 >>
+OK
+Shared connection to appstack-lgpd-prod01 closed.
+
+apscloudplus.staging | CHANGED | rc=0 >>
+OK
+Shared connection to apscloudplus.staging closed.
+
+aps-ico.staging | CHANGED | rc=0 >>
+OK
+Shared connection to aps-ico.staging closed.
+
+apsmaxmonitor | CHANGED | rc=0 >>
+OK
+Shared connection to apsmaxmonitor closed.
+
+apsmaxmonitor.staging | CHANGED | rc=0 >>
+OK
+Shared connection to apsmaxmonitor.staging closed.
+
+aps-multicloud-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to aps-multicloud-prd01 closed.
+
+automacao-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to automacao-prd03 closed.
+
+automacao-prod-01-fisico | CHANGED | rc=0 >>
+OK
+Shared connection to automacao-prod-01-fisico closed.
+
+b2c-dashboard01 | CHANGED | rc=0 >>
+OK
+Shared connection to b2c-dashboard01 closed.
+
+b2c-indexer01 | CHANGED | rc=0 >>
+OK
+Shared connection to b2c-indexer01 closed.
+
+b2c-indexer02 | CHANGED | rc=0 >>
+OK
+Shared connection to b2c-indexer02 closed.
+
+b2c-jenkins02_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to b2c-jenkins02_new closed.
+
+backend-hom01 | CHANGED | rc=0 >>
+OK
+Shared connection to backend-hom01 closed.
+
+backend-sinfra-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to backend-sinfra-hml02 closed.
+
+backend-sinfr-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to backend-sinfr-prd01 closed.
+
+balancer-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to balancer-prd-1 closed.
+
+balancer-prd-2.ocs.algartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to balancer-prd-2.ocs.algartelecom.com.br closed.
+
+bandalarga-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bandalarga-prd01 closed.
+
+balancer-hom2-1.ocs | CHANGED | rc=0 >>
+OK
+Shared connection to balancer-hom2-1.ocs closed.
+
+bd-conf-phone-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bd-conf-phone-prd01 closed.
+
+bd-conf-phone-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to bd-conf-phone-hml01 closed.
+
+bd-conf-phone-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to bd-conf-phone-prd02 closed.
+
+bd-log-phone-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bd-log-phone-prd01 closed.
+
+bd-log-phone-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to bd-log-phone-prd02 closed.
+
+bd-sip-phone-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bd-sip-phone-prd01 closed.
+
+beatch-moniot-p1 | CHANGED | rc=0 >>
+OK
+Shared connection to beatch-moniot-p1 closed.
+
+beatch-moniot-p2 | CHANGED | rc=0 >>
+OK
+Shared connection to beatch-moniot-p2 closed.
+
+bkprd02-ptguru2px01 | CHANGED | rc=0 >>
+OK
+Shared connection to bkprd02-ptguru2px01 closed.
+
+bmp-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to bmp-hom2-1 closed.
+
+blueplanetpx01 | CHANGED | rc=0 >>
+OK
+Shared connection to blueplanetpx01 closed.
+
+blueplanetpx02 | CHANGED | rc=0 >>
+OK
+Shared connection to blueplanetpx02 closed.
+
+bmp-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to bmp-hom2-2 closed.
+
+bmpweb_prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bmpweb_prd01 closed.
+
+bmpweb_prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to bmpweb_prd02 closed.
+
+bpmapp-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmapp-prd01 closed.
+
+api-02-portal-hom-iot | CHANGED | rc=0 >>
+OK
+Warning: Permanently added 'api-02-portal-hom-iot' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to api-02-portal-hom-iot closed.
+
+bpmdb-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmdb-prd01 closed.
+
+bpmapp-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmapp-prd02 closed.
+
+bpmapp-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmapp-stg01 closed.
+
+bpmapp-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmapp-stg02 closed.
+
+bpmdb-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmdb-stg01 closed.
+
+bpmdb-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmdb-prd02 closed.
+
+bpmdb-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to bpmdb-stg02 closed.
+
+bpmweb-prd01.cloudalgartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to bpmweb-prd01.cloudalgartelecom.com.br closed.
+
+bpmweb-prd02.cloudalgartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to bpmweb-prd02.cloudalgartelecom.com.br closed.
+
+broker-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-hom2-2 closed.
+
+Algar-sipserver | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+algargedtit_NEW | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+antispam-scan02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+airflow-hom01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+acsdb-01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+Algar-BD | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+antispam-scan01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+broker-hom2-4 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-hom2-4 closed.
+
+broker-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-hom2-1 closed.
+
+antispam-db01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+broker-hom2-3 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-hom2-3 closed.
+
+antispam-scan04 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+broker-hom2-5 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-hom2-5 closed.
+
+cacti-capacidade-new-seta | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+cacti-prd-corp01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+capacidade-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+broker-ocs-p04 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-ocs-p04 closed.
+
+broker-ocs-p02 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-ocs-p02 closed.
+
+broker-ocs-p01 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-ocs-p01 closed.
+
+broker-ocs-p03 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-ocs-p03 closed.
+
+broker-ocs-p05 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-ocs-p05 closed.
+
+broker-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-prd-2 closed.
+
+cac-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to cac-hml02 closed.
+
+broker-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-prd-3 closed.
+
+cadastro-posi-hml01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+broker-prd-5 | CHANGED | rc=0 >>
+OK
+Shared connection to broker-prd-5 closed.
+
+cac-hml03 | CHANGED | rc=0 >>
+OK
+Shared connection to cac-hml03 closed.
+
+cbp-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to cbp-hom2-1 closed.
+
+catprod-hml-matrix01 | CHANGED | rc=0 >>
+OK
+Shared connection to catprod-hml-matrix01 closed.
+
+adm-ceph-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+cce-service-hom02 | CHANGED | rc=0 >>
+OK
+Shared connection to cce-service-hom02 closed.
+
+cbp-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to cbp-hom2-2 closed.
+
+cbp-ocs-p02 | CHANGED | rc=0 >>
+OK
+Shared connection to cbp-ocs-p02 closed.
+
+cbp-ocs-p01 | CHANGED | rc=0 >>
+OK
+Shared connection to cbp-ocs-p01 closed.
+
+cds2 | CHANGED | rc=0 >>
+OK
+Shared connection to cds2 closed.
+
+cce-service-hom01 | CHANGED | rc=0 >>
+OK
+Shared connection to cce-service-hom01 closed.
+
+cds1 | CHANGED | rc=0 >>
+OK
+Shared connection to cds1 closed.
+
+citrus-app-omni-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to citrus-app-omni-prd01 closed.
+
+ciscoar-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to ciscoar-prd02 closed.
+
+cds3 | CHANGED | rc=0 >>
+OK
+Shared connection to cds3 closed.
+
+ciscoar-tra | CHANGED | rc=0 >>
+OK
+Shared connection to ciscoar-tra closed.
+
+citrus-app-omni-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to citrus-app-omni-prd02 closed.
+
+citrus-bd-omni-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to citrus-bd-omni-prd02 closed.
+
+citrus-app-omni-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to citrus-app-omni-prd03 closed.
+
+consumers-moniot-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+algarops-hom-app01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+citrus-app-omni-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to citrus-app-omni-prd04 closed.
+
+clik-hom-bd02 | CHANGED | rc=0 >>
+OK
+Shared connection to clik-hom-bd02 closed.
+
+citrus-bd-omni-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to citrus-bd-omni-prd01 closed.
+
+comando-prd | CHANGED | rc=0 >>
+OK
+Shared connection to comando-prd closed.
+
+consumers-moniot-prd06 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+clik-hom-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to clik-hom-app01 closed.
+
+consumers-moniot-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to consumers-moniot-prd01 closed.
+
+cm.staging | CHANGED | rc=0 >>
+OK
+Shared connection to cm.staging closed.
+
+cloud-mediacao | CHANGED | rc=0 >>
+OK
+Shared connection to cloud-mediacao closed.
+
+comissaodes.network | CHANGED | rc=0 >>
+OK
+Shared connection to comissaodes.network closed.
+
+consumers-moniot-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to consumers-moniot-prd05 closed.
+
+consumers-moniot-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to consumers-moniot-prd04 closed.
+
+consumers-moniot-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to consumers-moniot-prd07 closed.
+
+core-hom-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to core-hom-app01 closed.
+
+core-hom-app02 | CHANGED | rc=0 >>
+OK
+Shared connection to core-hom-app02 closed.
+
+consumers-moniot-prd08 | CHANGED | rc=0 >>
+OK
+Shared connection to consumers-moniot-prd08 closed.
+
+antispam-scan03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+apcem-hml01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+api-prd01-iot | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+api-prd02-iot | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+apm-app-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+core-prd-app03 | CHANGED | rc=0 >>
+OK
+Shared connection to core-prd-app03 closed.
+
+apcem-poc01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+core-prd-balancer01 | CHANGED | rc=0 >>
+OK
+Shared connection to core-prd-balancer01 closed.
+
+cpgr-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to cpgr-hml01 closed.
+
+app-gravacao-01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: kex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+crv-prd-backend-cis01 | CHANGED | rc=0 >>
+OK
+Shared connection to crv-prd-backend-cis01 closed.
+
+crm-prd-cache01New | CHANGED | rc=0 >>
+OK
+Shared connection to crm-prd-cache01new closed.
+
+crv-hom-cis01 | CHANGED | rc=0 >>
+OK
+Shared connection to crv-hom-cis01 closed.
+
+crv-prd-app03 | CHANGED | rc=0 >>
+OK
+Shared connection to crv-prd-app03 closed.
+
+cpgr-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to cpgr-prd01 closed.
+
+crm-prd-cache02New | CHANGED | rc=0 >>
+OK
+Shared connection to crm-prd-cache02new closed.
+
+crv-prd-cis-balancer | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+crv-prd-bd01 | CHANGED | rc=0 >>
+OK
+Shared connection to crv-prd-bd01 closed.
+
+crv-prd-cis-frontend | CHANGED | rc=0 >>
+OK
+Shared connection to crv-prd-cis-frontend closed.
+
+crv-prd-backend-cis02 | CHANGED | rc=0 >>
+OK
+Shared connection to crv-prd-backend-cis02 closed.
+
+crv-hom-guru01 | CHANGED | rc=0 >>
+OK
+Shared connection to crv-hom-guru01 closed.
+
+dns-prd-1.ocs.algartelecom.com.br | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+db-policy-prd02-238 | CHANGED | rc=0 >>
+OK
+Shared connection to db-policy-prd02-238 closed.
+
+dbhx01 | CHANGED | rc=0 >>
+OK
+Shared connection to dbhx01 closed.
+
+db-policy-prd01-236 | CHANGED | rc=0 >>
+OK
+Shared connection to db-policy-prd01-236 closed.
+
+crv-prd-balancer | CHANGED | rc=0 >>
+OK
+Shared connection to crv-prd-balancer closed.
+
+dataserver-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to dataserver-hom2-1 closed.
+
+ebd-pem-soa-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ebd-pem-soa-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+db-policy-prd03-238 | CHANGED | rc=0 >>
+OK
+Shared connection to db-policy-prd03-238 closed.
+
+db-policy-prd03-236 | CHANGED | rc=0 >>
+OK
+Shared connection to db-policy-prd03-236 closed.
+
+db-policy-prd01-238 | CHANGED | rc=0 >>
+OK
+Shared connection to db-policy-prd01-238 closed.
+
+director-hml | CHANGED | rc=0 >>
+OK
+Shared connection to director-hml closed.
+
+db-policy-prd02-236 | CHANGED | rc=0 >>
+OK
+Shared connection to db-policy-prd02-236 closed.
+
+ebinvoiceprddav01_new | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+dns-privatecloud-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to dns-privatecloud-prd02 closed.
+
+docs.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to docs.prd.iot closed.
+
+dnstic-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to dnstic-prd01 closed.
+
+dnstic-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to dnstic-prd02 closed.
+
+dns-privatecloud-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to dns-privatecloud-prd01 closed.
+
+elastic-search-hom02 | CHANGED | rc=0 >>
+OK
+Shared connection to elastic-search-hom02 closed.
+
+elastic-search-tit01 | CHANGED | rc=0 >>
+OK
+Shared connection to elastic-search-tit01 closed.
+
+elk-corp | CHANGED | rc=0 >>
+OK
+Shared connection to elk-corp closed.
+
+elastic-search-hom01 | CHANGED | rc=0 >>
+OK
+Shared connection to elastic-search-hom01 closed.
+
+elk-qualidade-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to elk-qualidade-prd02 closed.
+
+ELKHL01 | CHANGED | rc=0 >>
+OK
+Shared connection to elkhl01 closed.
+
+empp-gw-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to empp-gw-prd-1 closed.
+
+ELKPL02 | CHANGED | rc=0 >>
+OK
+Shared connection to elkpl02 closed.
+
+eris-1.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to eris-1.planeta.net closed.
+
+elk-qualidade-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to elk-qualidade-prd01 closed.
+
+fix-prd-4 | CHANGED | rc=0 >>
+OK
+Shared connection to fix-prd-4 closed.
+
+fix-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to fix-prd-3 closed.
+
+fix-ocs-p04 | CHANGED | rc=0 >>
+OK
+Shared connection to fix-ocs-p04 closed.
+
+follow-tech-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to follow-tech-prd01 closed.
+
+frontend-allcom-02.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-allcom-02.prd.iot closed.
+
+frontend-allcom-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-allcom-01.prd.iot closed.
+
+frontend-hom01_1910 | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-hom01_1910 closed.
+
+frontend-scm-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-scm-01.prd.iot closed.
+
+frontend-burst-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-burst-01.prd.iot closed.
+
+frontend-sinfra-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-sinfra-prd02 closed.
+
+gaioapppx01 | CHANGED | rc=0 >>
+OK
+Shared connection to gaioapppx01 closed.
+
+ELKPL01 | CHANGED | rc=0 >>
+OK
+mux_client_request_session: session request failed: Session open refused by peer
+Warning: Permanently added 'elkpl01' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to elkpl01 closed.
+
+frontend-sinfra-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to frontend-sinfra-hml01 closed.
+
+ftp-operacao-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to ftp-operacao-prd01 closed.
+
+gaio-app-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to gaio-app-prd01 closed.
+
+gaio-db-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to gaio-db-prd02 closed.
+
+gaiodbpx02 | CHANGED | rc=0 >>
+OK
+Shared connection to gaiodbpx02 closed.
+
+gaiodbpx01 | CHANGED | rc=0 >>
+OK
+Shared connection to gaiodbpx01 closed.
+
+gaiohx01 | CHANGED | rc=0 >>
+OK
+Shared connection to gaiohx01 closed.
+
+GERCLIENTES | CHANGED | rc=0 >>
+OK
+Shared connection to gerclientes closed.
+
+gerencia.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to gerencia.planeta.net closed.
+
+gerencia-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to gerencia-prd-1 closed.
+
+gerencia-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to gerencia-prd-2 closed.
+
+getraf-tst01 | CHANGED | rc=0 >>
+OK
+Shared connection to getraf-tst01 closed.
+
+gerencia-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to gerencia-hom2-1 closed.
+
+gpf-prd-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to gpf-prd-app01 closed.
+
+gpf-hom-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to gpf-hom-app01 closed.
+
+aid-hos-25 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange",
+    "unreachable": true
+}
+gw-123milhas-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+grafana-01-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to grafana-01-apm.prd.iot closed.
+
+grv-prd-bd01 | CHANGED | rc=0 >>
+OK
+Shared connection to grv-prd-bd01 closed.
+
+grafana-correios-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to grafana-correios-prd01 closed.
+
+grafana-02-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to grafana-02-apm.prd.iot closed.
+
+grv-prd-backend | CHANGED | rc=0 >>
+OK
+Shared connection to grv-prd-backend closed.
+
+grv-prd-frontend | CHANGED | rc=0 >>
+OK
+Shared connection to grv-prd-frontend closed.
+
+gsuite.staging | CHANGED | rc=0 >>
+OK
+Shared connection to gsuite.staging closed.
+
+gw-123milhas-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to gw-123milhas-hml02 closed.
+
+gsuite | CHANGED | rc=0 >>
+OK
+Shared connection to gsuite closed.
+
+gw-123milhas-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to gw-123milhas-hml01 closed.
+
+haproxy1 | CHANGED | rc=0 >>
+OK
+Shared connection to haproxy1 closed.
+
+ELKHL02 | CHANGED | rc=0 >>
+OK
+mux_client_request_session: session request failed: Session open refused by peer
+Warning: Permanently added 'elkhl02' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to elkhl02 closed.
+
+gw-123milhas-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to gw-123milhas-prd02 closed.
+
+henas | CHANGED | rc=0 >>
+OK
+Shared connection to henas closed.
+
+http-proxy-omni-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to http-proxy-omni-prd02 closed.
+
+iam-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to iam-01.prd.iot closed.
+
+icd-db-rep-dev01 | CHANGED | rc=0 >>
+OK
+Shared connection to icd-db-rep-dev01 closed.
+
+icpmaster-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmaster-prd02 closed.
+
+icpmaster-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmaster-stg01 closed.
+
+icd-app-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to icd-app-prd06 closed.
+
+icpmaster-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmaster-prd03 closed.
+
+icpmaster-stg03 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmaster-stg03 closed.
+
+icpmaster-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmaster-stg02 closed.
+
+icpmgmt-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmgmt-prd01 closed.
+
+icpworkerpl-prd03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+icpworkerpl-stg01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+icpproxyex-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxyex-prd02 closed.
+
+icpmgmt-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpmgmt-stg01 closed.
+
+icpproxyex-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxyex-stg01 closed.
+
+icpproxyex-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxyex-prd01 closed.
+
+icpproxy-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxy-prd01 closed.
+
+icpproxy-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxy-stg02 closed.
+
+icpproxyex-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxyex-stg02 closed.
+
+icpworkerpl-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworkerpl-prd01 closed.
+
+icpworkerpl-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworkerpl-prd02 closed.
+
+icpproxy-stg02.cloudalgartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to icpproxy-stg02.cloudalgartelecom.com.br closed.
+
+cap-hos-17 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+icpworkerpl-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworkerpl-stg02 closed.
+
+icpworkerpl-stg03 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworkerpl-stg03 closed.
+
+icpworker-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworker-prd02 closed.
+
+icpworker-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworker-stg01 closed.
+
+icpworker-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworker-prd03 closed.
+
+icpworker-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworker-prd01 closed.
+
+icpworker-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworker-stg02 closed.
+
+icpworker-stg03 | CHANGED | rc=0 >>
+OK
+Shared connection to icpworker-stg03 closed.
+
+id-itnm-hom06 | CHANGED | rc=0 >>
+OK
+Shared connection to id-itnm-hom06 closed.
+
+id-itnm-hom05 | CHANGED | rc=0 >>
+OK
+Shared connection to id-itnm-hom05 closed.
+
+id-itnm-hom09 | CHANGED | rc=0 >>
+OK
+Shared connection to id-itnm-hom09 closed.
+
+id-itnm-hom10 | CHANGED | rc=0 >>
+OK
+Shared connection to id-itnm-hom10 closed.
+
+id-nodered-hom01 | CHANGED | rc=0 >>
+OK
+Shared connection to id-nodered-hom01 closed.
+
+id-portal-hom01_ | CHANGED | rc=0 >>
+OK
+Shared connection to id-portal-hom01_ closed.
+
+id-nodered-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to id-nodered-prd01 closed.
+
+id-portal-prd01_v1212 | CHANGED | rc=0 >>
+OK
+Shared connection to id-portal-prd01_v1212 closed.
+
+id-transmissao-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to id-transmissao-hml01 closed.
+
+id-tncm-ws-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to id-tncm-ws-prd05 closed.
+
+id-tncm-ws-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to id-tncm-ws-prd06 closed.
+
+id-transmissao-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to id-transmissao-prd01 closed.
+
+imsvaprd02 | CHANGED | rc=0 >>
+OK
+Shared connection to imsvaprd02 closed.
+
+ID-VOGEL-APP-HML-01 | CHANGED | rc=0 >>
+OK
+Shared connection to id-vogel-app-hml-01 closed.
+
+id-transmissao-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to id-transmissao-prd02 closed.
+
+influxdb-01-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to influxdb-01-apm.prd.iot closed.
+
+influxdb-02-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to influxdb-02-apm.prd.iot closed.
+
+in-proxy-connect-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to in-proxy-connect-prd01 closed.
+
+influxdb-03-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to influxdb-03-apm.prd.iot closed.
+
+IP-track-relay-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to ip-track-relay-prd01 closed.
+
+insight-ingestion | CHANGED | rc=0 >>
+OK
+Shared connection to insight-ingestion closed.
+
+in-proxy-connect-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to in-proxy-connect-hml01 closed.
+
+isntascan-lgpd-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to isntascan-lgpd-prd01 closed.
+
+jtracivc_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to jtracivc_new closed.
+
+jbosseap04hom_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to jbosseap04hom_new closed.
+
+jenkinspx01 | CHANGED | rc=0 >>
+OK
+Shared connection to jenkinspx01 closed.
+
+kapacitor-01-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to kapacitor-01-apm.prd.iot closed.
+
+kafka-prd2 | CHANGED | rc=0 >>
+OK
+Shared connection to kafka-prd2 closed.
+
+kapacitor-02-apm.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to kapacitor-02-apm.prd.iot closed.
+
+kafka-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to kafka-prd03 closed.
+
+lb-api-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to lb-api-01.prd.iot closed.
+
+LDAP-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to ldap-prd01 closed.
+
+ksql-moniot-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to ksql-moniot-hml01 closed.
+
+lb-api-hom-iot | CHANGED | rc=0 >>
+OK
+Shared connection to lb-api-hom-iot closed.
+
+KBNPL01 | CHANGED | rc=0 >>
+OK
+Shared connection to kbnpl01 closed.
+
+ksql-moniot-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to ksql-moniot-hml02 closed.
+
+LDAP-SDWAN-PRD02 | CHANGED | rc=0 >>
+OK
+Shared connection to ldap-sdwan-prd02 closed.
+
+LDAP-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to ldap-prd02 closed.
+
+link-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to link-prd01 closed.
+
+LDAP-STG01 | CHANGED | rc=0 >>
+OK
+Shared connection to ldap-stg01 closed.
+
+loja-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to loja-prd01 closed.
+
+dbatools-app01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+dns-prd-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+logs-moniot-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to logs-moniot-prd01 closed.
+
+logging_host | CHANGED | rc=0 >>
+OK
+Shared connection to logging_host closed.
+
+csocacti | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+lvr-digital-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to lvr-digital-hml01 closed.
+
+lvr-digital-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to lvr-digital-prd01 closed.
+
+lxjboss01 | CHANGED | rc=0 >>
+OK
+Shared connection to lxjboss01 closed.
+
+mailing-prd-app01.tenant0008 | CHANGED | rc=0 >>
+OK
+Shared connection to mailing-prd-app01.tenant0008 closed.
+
+mailing-hom-app01.tenant0008 | CHANGED | rc=0 >>
+OK
+Shared connection to mailing-hom-app01.tenant0008 closed.
+
+masterhx01 | CHANGED | rc=0 >>
+OK
+Shared connection to masterhx01 closed.
+
+MCP-SERVER01 | CHANGED | rc=0 >>
+OK
+Shared connection to mcp-server01 closed.
+
+memcached-hom01.tenant0008 | CHANGED | rc=0 >>
+OK
+Shared connection to memcached-hom01.tenant0008 closed.
+
+memcached-prd01.tenant0008 | CHANGED | rc=0 >>
+OK
+Shared connection to memcached-prd01.tenant0008 closed.
+
+messageria3 | CHANGED | rc=0 >>
+OK
+Shared connection to messageria3 closed.
+
+messageria2.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to messageria2.planeta.net closed.
+
+metrics-moniot-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to metrics-moniot-prd01 closed.
+
+mgmt-moniot-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to mgmt-moniot-hml01 closed.
+
+mgmt-moniot-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to mgmt-moniot-prd01 closed.
+
+mobile-data-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-hom2-2 closed.
+
+mobile-data-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-hom2-1 closed.
+
+mobile-data-p11 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p11 closed.
+
+mobile-data-p12 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p12 closed.
+
+mobile-data-p14 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p14 closed.
+
+mobile-data-p13 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p13 closed.
+
+mobile-data-p15 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p15 closed.
+
+mobile-data-p2 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p2 closed.
+
+mobile-data-p16 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p16 closed.
+
+mobile-data-p3 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p3 closed.
+
+mobile-data-p5 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p5 closed.
+
+mobile-data-p6 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p6 closed.
+
+mobile-data-p4 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p4 closed.
+
+mobile-data-p7 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p7 closed.
+
+mobile-data-p8 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p8 closed.
+
+mobile-data-p9 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-p9 closed.
+
+mobile-data-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-1 closed.
+
+mobile-data-prd-10 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-10 closed.
+
+mobile-data-prd-11 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-11 closed.
+
+mobile-data-prd-13 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-13 closed.
+
+mobile-data-prd-15 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-15 closed.
+
+mobile-data-prd-14 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-14 closed.
+
+mobile-data-prd-12 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-12 closed.
+
+mobile-data-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-2 closed.
+
+mobile-data-prd-16 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-16 closed.
+
+mobile-data-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-3 closed.
+
+mobile-data-prd-5 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-5 closed.
+
+mobile-data-prd-4 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-4 closed.
+
+mobile-data-prd-6 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-6 closed.
+
+mobile-data-prd-8 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-8 closed.
+
+mobile-data-prd-7 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-7 closed.
+
+Mobile-voice-hom2-1.scp | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-hom2-1.scp closed.
+
+mobile-data-prd-9 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-data-prd-9 closed.
+
+gifeprd01_NEW | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ecomm04_NEW | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+fix-ocs-p02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+fix-ocs-p01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+fix-hom2-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+fix-ocs-p03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ecomm03_NEW | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+Mobile-voice-hom2-2.scp | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-hom2-2.scp closed.
+
+mobile-voice-prd-11 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-11 closed.
+
+fix-hom2-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+mobile-voice-prd-10 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-10 closed.
+
+mobile-voice-prd-14 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-14 closed.
+
+mobile-voice-prd-12 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-12 closed.
+
+mobile-voice-prd-13 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-13 closed.
+
+mobile-voice-prd-16 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-16 closed.
+
+mobile-voice-prd-15 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-15 closed.
+
+mobile-voice-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-2 closed.
+
+mobile-voice-prd-7 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-7 closed.
+
+mobile-voice-prd-6 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-6 closed.
+
+mobile-voice-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-3 closed.
+
+mobile-voice-prd-5 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-5 closed.
+
+mobile-voice-prd-9 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-9 closed.
+
+mobile-voice-prd-8 | CHANGED | rc=0 >>
+OK
+Shared connection to mobile-voice-prd-8 closed.
+
+mon_pain_ince_prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to mon_pain_ince_prd01 closed.
+
+mongo-moniot-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to mongo-moniot-prd02 closed.
+
+mongo-moniot-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to mongo-moniot-prd01 closed.
+
+mon-estoque-eng | CHANGED | rc=0 >>
+OK
+Shared connection to mon-estoque-eng closed.
+
+mongo-moniot-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to mongo-moniot-prd04 closed.
+
+mysql-moniot-prd03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+moni-odin-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to moni-odin-hml02 closed.
+
+mysql-moniot-prd04 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ms-01-portal-hom-iot | CHANGED | rc=0 >>
+OK
+Shared connection to ms-01-portal-hom-iot closed.
+
+multi-cloud-prd02.tenant0029 | CHANGED | rc=0 >>
+OK
+Shared connection to multi-cloud-prd02.tenant0029 closed.
+
+movel-radius-prd01.osc | CHANGED | rc=0 >>
+OK
+Shared connection to movel-radius-prd01.osc closed.
+
+msqlhx01 | CHANGED | rc=0 >>
+OK
+Shared connection to msqlhx01 closed.
+
+ms-02-portal-hom-iot | CHANGED | rc=0 >>
+OK
+Shared connection to ms-02-portal-hom-iot closed.
+
+mysqla2-moniot-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to mysqla2-moniot-prd03 closed.
+
+mysql-moniot-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to mysql-moniot-prd01 closed.
+
+mysql-moniot-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to mysql-moniot-hml01 closed.
+
+mysql-moniot-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to mysql-moniot-prd02 closed.
+
+nbumedia03 | CHANGED | rc=0 >>
+OK
+Shared connection to nbumedia03 closed.
+
+nc-colb1-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-colb1-prd01 closed.
+
+nc-apm-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-apm-hml02 closed.
+
+nc-colp1-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-colp1-hml02 closed.
+
+mongo-moniot-prd03 | CHANGED | rc=0 >>
+OK
+mux_client_request_session: session request failed: Session open refused by peer
+Warning: Permanently added 'mongo-moniot-prd03' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to mongo-moniot-prd03 closed.
+
+nc-dashboards-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-dashboards-hml01 closed.
+
+npp-identity-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+nc-dashboards-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-dashboards-hml02 closed.
+
+nc-colp1-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-colp1-prd01 closed.
+
+mysqla1-moniot-prd01 | CHANGED | rc=0 >>
+OK
+mux_client_request_session: session request failed: Session open refused by peer
+Warning: Permanently added 'mysqla1-moniot-prd01' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to mysqla1-moniot-prd01 closed.
+
+nc-eventanalitics-webgui-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-eventanalitics-webgui-hml01 closed.
+
+nodehx02 | CHANGED | rc=0 >>
+OK
+Shared connection to nodehx02 closed.
+
+nc-probes-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to nc-probes-hml02 closed.
+
+node-red-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to node-red-prd01 closed.
+
+netctpx01.network.ctbc | CHANGED | rc=0 >>
+OK
+Shared connection to netctpx01.network.ctbc closed.
+
+npi-clients-prd01- | CHANGED | rc=0 >>
+OK
+Shared connection to npi-clients-prd01- closed.
+
+npapptit01 | CHANGED | rc=0 >>
+OK
+Shared connection to npapptit01 closed.
+
+npp-inap-ula-236-prd06 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-ula-236-prd07 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-identity-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-identity-prd02 closed.
+
+npp-inap-ula-236-prd08 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-spo-piaf-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-spo-piaf-prd06 closed.
+
+npp-inap-spo-piaf-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-spo-piaf-prd07 closed.
+
+npp-inap-spo-piaf-prd08 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-spo-piaf-prd08 closed.
+
+npp-inap-spo-piaf-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-spo-piaf-prd05 closed.
+
+npp-inap-ula-236-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-236-prd01 closed.
+
+npp-inap-ula-236-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-236-prd03 closed.
+
+npp-inap-ula-238-prd07 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+id-itnm-hom07 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-ula-236-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-236-prd04 closed.
+
+id-itnm-hom08 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-ula-236-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-236-prd02 closed.
+
+kafka-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-ula-238-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd01 closed.
+
+npp-inap-ula-236-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-236-prd05 closed.
+
+mysqla2-moniot-prd02 | CHANGED | rc=0 >>
+OK
+mux_client_request_session: session request failed: Session open refused by peer
+Warning: Permanently added 'mysqla2-moniot-prd02' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to mysqla2-moniot-prd02 closed.
+
+npp-log-agregator-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-ula-238-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd03 closed.
+
+npp-map-spo-piaf-prd10 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-inap-ula-238-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd06 closed.
+
+npp-inap-ula-238-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd05 closed.
+
+npp-inap-ula-238-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd02 closed.
+
+npp-inap-ula-238-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd04 closed.
+
+npp-map-spo-piaf-prd14 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-spo-piaf-prd012 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd012 closed.
+
+npp-map-ula-236-prd04 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-spo-piaf-prd09 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd09 closed.
+
+npp-map-ula-236-prd03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-spo-piaf-prd013 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd013 closed.
+
+npp-inap-ula-238-prd08 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-inap-ula-238-prd08 closed.
+
+npp-map-spo-piaf-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd07 closed.
+
+npp-map-ula-238-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-spo-piaf-prd15 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd15 closed.
+
+npp-map-ula-238-prd03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-spo-piaf-prd11 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd11 closed.
+
+npp-map-ula-236-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-236-prd01 closed.
+
+npp-map-ula-238-prd04 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-ula-238-prd06 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-map-spo-piaf-prd16 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-spo-piaf-prd16 closed.
+
+npp-map-ula-238-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-238-prd01 closed.
+
+npp-map-ula-236-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-236-prd02 closed.
+
+npp-map-ula-236-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-236-prd05 closed.
+
+npp-map-ula-236-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-236-prd07 closed.
+
+npp-map-ula-236-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-236-prd06 closed.
+
+npp-map-ula-238-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-238-prd05 closed.
+
+npp-map-ula-236-prd08 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-236-prd08 closed.
+
+npp-map-ula-238-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-238-prd07 closed.
+
+npp-map-ula-238-prd08 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-map-ula-238-prd08 closed.
+
+npp-web-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-web-prd02 closed.
+
+observion-sec_v267 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-web-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-web-prd01 closed.
+
+npp-tst-pedrom | CHANGED | rc=0 >>
+OK
+Shared connection to npp-tst-pedrom closed.
+
+ns1.cloudalgartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ns1.cloudalgartelecom.com.br closed.
+
+npp-replication-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to npp-replication-prd01 closed.
+
+ns1.staging | CHANGED | rc=0 >>
+OK
+Shared connection to ns1.staging closed.
+
+out-proxy-connect-hml01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+out-proxy-connect-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+padtec-nms-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ocs-dbrac-238-dg01.ocs.algartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ocs-dbrac-238-dg01.ocs.algartelecom.com.br closed.
+
+ntr-soa-p02 | CHANGED | rc=0 >>
+OK
+Shared connection to ntr-soa-p02 closed.
+
+ocs-dbrac-236-prd03.ocs.algartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ocs-dbrac-236-prd03.ocs.algartelecom.com.br closed.
+
+ns2.staging | CHANGED | rc=0 >>
+OK
+Shared connection to ns2.staging closed.
+
+obadb.staging | CHANGED | rc=0 >>
+OK
+Shared connection to obadb.staging closed.
+
+ocs-dbrac-238-dg03.ocs.algartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ocs-dbrac-238-dg03.ocs.algartelecom.com.br closed.
+
+ocs-dbrac-238-dg04.ocs.algartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ocs-dbrac-238-dg04.ocs.algartelecom.com.br closed.
+
+offline-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to offline-prd-1 closed.
+
+ooam.cloudalgartelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ooam.cloudalgartelecom.com.br closed.
+
+onmsi-server-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to onmsi-server-prd01 closed.
+
+pcs44.staging | CHANGED | rc=0 >>
+OK
+Shared connection to pcs44.staging closed.
+
+phone2bapp01.intranet | CHANGED | rc=0 >>
+OK
+Shared connection to phone2bapp01.intranet closed.
+
+pl4-back-grav-03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pix-app-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to pix-app-prd01 closed.
+
+PaloAlto_api-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to paloalto_api-prd01 closed.
+
+PL4-BALANCER-GRAV-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl_apl_01.ctbc.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to pl_apl_01.ctbc.com.br closed.
+
+phone2b-db01.intranet | CHANGED | rc=0 >>
+OK
+Shared connection to phone2b-db01.intranet closed.
+
+PL_MRS-2_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to pl_mrs-2_v203 closed.
+
+pl_sig_24_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to pl_sig_24_v203 closed.
+
+messageria4 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+mobile-data-p1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+mobile-data-p10 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl_sig_41_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to pl_sig_41_v203 closed.
+
+pl4-balancer-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-balancer-2 closed.
+
+PL_MRS-4_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to pl_mrs-4_v203 closed.
+
+PL_MRS-3_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to pl_mrs-3_v203 closed.
+
+PL4-BALANCER-GRAV-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-balancer-grav-1 closed.
+
+pl4-db-adm1.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-db-adm1.planeta.net closed.
+
+pl4-gmlc-mob-2.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-gmlc-mob-2.planeta.net closed.
+
+pl4-iotapi-app-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-iotapi-app-prd04 closed.
+
+pl4-gmlc-mob-1.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-gmlc-mob-1.planeta.net closed.
+
+PL4-HOM-NV-MOB-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-hom-nv-mob-2 closed.
+
+PL4-HOM-NV-APP-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-hom-nv-app-2 closed.
+
+pl4-ivr-sdp-mob-3.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl4-ivr-sdp-mob-2.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl4-iotbr-app-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-iotbr-app-prd01 closed.
+
+pl4-iotbr-app-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-iotbr-app-prd03 closed.
+
+pl4-iotbr-ms-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-iotbr-ms-prd01 closed.
+
+pl4-iotbr-app-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-iotbr-app-prd02 closed.
+
+pl4-iotbr-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-iotbr-prd01 closed.
+
+pl4-log-kibana-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl4-lce-app-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-lce-app-2 closed.
+
+pl4-ivr-sdp-mob-4.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-ivr-sdp-mob-4.planeta.net closed.
+
+pl4-ivr-sdp-mob-1.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-ivr-sdp-mob-1.planeta.net closed.
+
+pl4-lce-app-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-lce-app-1 closed.
+
+pl4-log-indexer-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-log-indexer-2 closed.
+
+PL4-NV-APP-4 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-app-4 closed.
+
+pl4-lce-app-3 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-lce-app-3 closed.
+
+PL4-NV-APP-6 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-app-6 closed.
+
+pl4-nv-mob-1.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-1.planeta.net closed.
+
+PL4-NV-APP-5 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-app-5 closed.
+
+PL4-NV-MOB-11 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-11 closed.
+
+PL4-NV-MOB-12 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-12 closed.
+
+pl5-kannel-1.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl4-nv-mob-3.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-3.planeta.net closed.
+
+pl5-psql-1.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+PL4-NV-MOB-13 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-13 closed.
+
+pl4-oferta-rel-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-oferta-rel-prd01 closed.
+
+pl4-nv-mob-7.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-7.planeta.net closed.
+
+pl4-nv-mob-5.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-5.planeta.net closed.
+
+PL4-NV-MOB-2_ | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-2_ closed.
+
+pl4-nv-mob-6.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-6.planeta.net closed.
+
+PL4-NV-MOB-9 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-nv-mob-9 closed.
+
+PL4-PRD-USSD-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl4-prd-ussd-1 closed.
+
+pl5-eventos-prd13 | CHANGED | rc=0 >>
+OK
+Shared connection to pl5-eventos-prd13 closed.
+
+pl5-psql-2.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to pl5-psql-2.planeta.net closed.
+
+planeta-idp-hom-1 | CHANGED | rc=0 >>
+OK
+Shared connection to planeta-idp-hom-1 closed.
+
+planeta-idp-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to planeta-idp-prd02 closed.
+
+pl-camp-hom-mob-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-camp-hom-mob-1 closed.
+
+planeta-idp-hom-2 | CHANGED | rc=0 >>
+OK
+Shared connection to planeta-idp-hom-2 closed.
+
+pl-camp-hom-mob-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-camp-hom-mob-2 closed.
+
+pl-central-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-central-prd-1 closed.
+
+pl-central-hom-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-central-hom-1 closed.
+
+pl-central-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-central-prd-2 closed.
+
+Pl-grav-adm-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-grav-adm-1 closed.
+
+pl-GRAV-SERV-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-grav-serv-1 closed.
+
+pl-GRAV-SERV-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-grav-serv-2 closed.
+
+pl-GRAV-SERV-5 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-grav-serv-5 closed.
+
+pl-GRAV-SERV-6 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-grav-serv-6 closed.
+
+Pl-ivr-app12 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-ivr-app12 closed.
+
+Pl-ivr-app7 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-ivr-app7 closed.
+
+Pl-ivr-app13 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-ivr-app13 closed.
+
+Pl-ivr-app8 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-ivr-app8 closed.
+
+pl-prd-logging-interface-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-prd-logging-interface-2 closed.
+
+pl-message-prd-4 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-message-prd-4 closed.
+
+pl-prd-search-engine-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-prd-search-engine-1 closed.
+
+pl-prd-search-engine-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-prd-search-engine-2 closed.
+
+pl-prd-search-engine-3 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-prd-search-engine-3 closed.
+
+pl-sdp-v4-app-10 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-app-10 closed.
+
+pl-sdp-v4-adm-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-adm-2 closed.
+
+pl-sdp-v4-adm-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-adm-1 closed.
+
+pl-sdp-v4-app-7 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-app-7 closed.
+
+pl-sdp-v4-app-8 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-app-8 closed.
+
+pl-sdp-v4-ivr-app-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-ivr-app-1 closed.
+
+pl-sdp-v4-soa-3 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-soa-3 closed.
+
+pl-sdp-v4-soa-ati-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-soa-ati-1 closed.
+
+pl-sdp-v4-ivr-app-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-ivr-app-2 closed.
+
+pl-sdp-v4-ivr-app-3 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-ivr-app-3 closed.
+
+pl-sdp-v4-ivr-app-4 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sdp-v4-ivr-app-4 closed.
+
+PL-SIG_16 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sig_16 closed.
+
+pl-sig-26 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sig-26 closed.
+
+pl-sig-14 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sig-14 closed.
+
+pl-sig-13 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sig-13 closed.
+
+pl-sig-15 | CHANGED | rc=0 >>
+OK
+Shared connection to pl-sig-15 closed.
+
+policy-manager-prd01_v76 | CHANGED | rc=0 >>
+OK
+Shared connection to policy-manager-prd01_v76 closed.
+
+portabgw01 | CHANGED | rc=0 >>
+OK
+Shared connection to portabgw01 closed.
+
+portal-clientesb2b-frontend-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to portal-clientesb2b-frontend-prd01 closed.
+
+portabgw02 | CHANGED | rc=0 >>
+OK
+Shared connection to portabgw02 closed.
+
+portal-clientesb2b-frontend-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to portal-clientesb2b-frontend-prd02 closed.
+
+portalctbc04hmg_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to portalctbc04hmg_new closed.
+
+portalctbc06hmg_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to portalctbc06hmg_new closed.
+
+portal-correios-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to portal-correios-prd01 closed.
+
+portal-odin-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to portal-odin-hml01 closed.
+
+porthx05 | CHANGED | rc=0 >>
+OK
+Shared connection to porthx05 closed.
+
+porthx04 | CHANGED | rc=0 >>
+OK
+Shared connection to porthx04 closed.
+
+porthx01 | CHANGED | rc=0 >>
+OK
+Shared connection to porthx01 closed.
+
+porthx03 | CHANGED | rc=0 >>
+OK
+Shared connection to porthx03 closed.
+
+porthx02 | CHANGED | rc=0 >>
+OK
+Shared connection to porthx02 closed.
+
+porthx06 | CHANGED | rc=0 >>
+OK
+Shared connection to porthx06 closed.
+
+pprox.staging | CHANGED | rc=0 >>
+OK
+Shared connection to pprox.staging closed.
+
+pprox-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to pprox-prd01 closed.
+
+proventos-hom-1 | CHANGED | rc=0 >>
+OK
+Shared connection to proventos-hom-1 closed.
+
+provisioning-server-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to provisioning-server-prd01 closed.
+
+proxy-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to proxy-hom2-1 closed.
+
+proxy-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to proxy-prd01 closed.
+
+proxy-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to proxy-01.prd.iot closed.
+
+mxtic-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+msql01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+node-red-hom01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+proxy-prd-4 | CHANGED | rc=0 >>
+OK
+Shared connection to proxy-prd-4 closed.
+
+prtpndb2bpx01 | CHANGED | rc=0 >>
+OK
+Shared connection to prtpndb2bpx01 closed.
+
+proxy-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to proxy-prd02 closed.
+
+proxy-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to proxy-prd-3 closed.
+
+pv4-camp-adm-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-adm-1 closed.
+
+ptdashpx01 | CHANGED | rc=0 >>
+OK
+Shared connection to ptdashpx01 closed.
+
+ptloghx01 | CHANGED | rc=0 >>
+OK
+Shared connection to ptloghx01 closed.
+
+pv4-camp-db-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-db-1 closed.
+
+pv4-camp-db-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-db-2 closed.
+
+radius-iot-acc-hml01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+radius-ciscoar-temp01_v90 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+radius-iot-acc-hml02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pv4-camp-kannel-4 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-kannel-4 closed.
+
+pv4-camp-wso2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-wso2-1 closed.
+
+pv4-camp-mob-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-mob-1 closed.
+
+pv4-camp-mob-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-mob-2 closed.
+
+pv4-camp-kannel-3 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-kannel-3 closed.
+
+pv4-camp-wfly-1 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-wfly-1 closed.
+
+pv4-camp-wfly-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-wfly-2 closed.
+
+pv4-camp-wso2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to pv4-camp-wso2-2 closed.
+
+ractelecom03-236-prd.dbtelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ractelecom03-236-prd.dbtelecom.com.br closed.
+
+ractelecom02-236-prd.dbtelecom.com.br | CHANGED | rc=0 >>
+OK
+Shared connection to ractelecom02-236-prd.dbtelecom.com.br closed.
+
+radius-iot-acc-hml03 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-acc-hml03 closed.
+
+radius-iot-acc-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-acc-prd03 closed.
+
+radius-iot-acc-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-acc-prd01 closed.
+
+radius-iot-acc-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-acc-prd02 closed.
+
+radius-iot-auth-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-auth-hml01 closed.
+
+radius-iot-auth-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-auth-prd03 closed.
+
+radius-iot-auth-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-auth-prd02 closed.
+
+radius-iot-auth-hml03 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-auth-hml03 closed.
+
+Rancher-Admin-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-admin-prd02 closed.
+
+Rancher-Admin-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-admin-prd01 closed.
+
+radius-iot-auth-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to radius-iot-auth-hml02 closed.
+
+Rancher-master-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-master-prd01 closed.
+
+Rancher-master-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-master-prd03 closed.
+
+Rancher-Admin-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-admin-prd03 closed.
+
+Rancher-master-stg03 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-master-stg03 closed.
+
+Rancher-master-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-master-prd02 closed.
+
+Rancher-worker-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-prd02 closed.
+
+rbt-proxysrv-prd01-236_v203_v632 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+Rancher-worker-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-prd03 closed.
+
+Rancher-worker-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-prd01 closed.
+
+Rancher-worker-stg03 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-stg03 closed.
+
+Rancher-worker-stg02 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-stg02 closed.
+
+rbt-dbsrv-prd01-236_v203_v632 | CHANGED | rc=0 >>
+OK
+Shared connection to rbt-dbsrv-prd01-236_v203_v632 closed.
+
+Rancher-worker-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-stg01 closed.
+
+Rancher-worker-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-prd04 closed.
+
+Rancher-worker-stg04 | CHANGED | rc=0 >>
+OK
+Shared connection to rancher-worker-stg04 closed.
+
+rbt-mediasrv-prd01-236_v203_v632 | CHANGED | rc=0 >>
+OK
+Shared connection to rbt-mediasrv-prd01-236_v203_v632 closed.
+
+replicadb.cloudalgartelecom | CHANGED | rc=0 >>
+OK
+Shared connection to replicadb.cloudalgartelecom closed.
+
+replicadb.staging | CHANGED | rc=0 >>
+OK
+Shared connection to replicadb.staging closed.
+
+reposit-front-lgpd-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to reposit-front-lgpd-hml01 closed.
+
+repol01 | CHANGED | rc=0 >>
+OK
+Shared connection to repol01 closed.
+
+ns2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-proxy-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+painelbss | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ntrp-soa-p01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl_sig_29_v203_ | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+npp-proxy-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+scm-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to scm-01.prd.iot closed.
+
+scp-gw-http-hom2-1 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-http-hom2-1 closed.
+
+scp-gw-diameter-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-diameter-prd-1 closed.
+
+scp-gw-diameter-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-diameter-prd-3 closed.
+
+scp-gw-diameter-prd-6 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-diameter-prd-6 closed.
+
+rhua | CHANGED | rc=0 >>
+OK
+Shared connection to rhua closed.
+
+scp-gw-http-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-http-hom2-2 closed.
+
+scp-gw-http-prd-3 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-http-prd-3 closed.
+
+scp-gw-http-prd-5 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-http-prd-5 closed.
+
+scp-gw-http-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-http-prd-2 closed.
+
+server-trace-fac | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+scp-gw-http-prd-6 | CHANGED | rc=0 >>
+OK
+Shared connection to scp-gw-http-prd-6 closed.
+
+server-trace-ula07 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+sendsms-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to sendsms-hom2-2 closed.
+
+sdr-server-captura | CHANGED | rc=0 >>
+OK
+Shared connection to sdr-server-captura closed.
+
+sendsms-prd-2 | CHANGED | rc=0 >>
+OK
+Shared connection to sendsms-prd-2 closed.
+
+server-trace_prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to server-trace_prd02 closed.
+
+Servidor-RC-PHONE2BAPP02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+server-trace_prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to server-trace_prd01 closed.
+
+server-analytics-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to server-analytics-prd01 closed.
+
+sendsms-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to sendsms-prd-1 closed.
+
+server-trace | CHANGED | rc=0 >>
+OK
+Shared connection to server-trace closed.
+
+server-trace-ula08 | CHANGED | rc=0 >>
+OK
+Shared connection to server-trace-ula08 closed.
+
+server-trace-piag-prd09 | CHANGED | rc=0 >>
+OK
+Shared connection to server-trace-piag-prd09 closed.
+
+servidor-topologia-digital-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to servidor-topologia-digital-prd01 closed.
+
+services-hom2-2 | CHANGED | rc=0 >>
+OK
+Shared connection to services-hom2-2 closed.
+
+sgprec01_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to sgprec01_new closed.
+
+sipcor-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to sipcor-prd01 closed.
+
+smartsag-01 | CHANGED | rc=0 >>
+OK
+Shared connection to smartsag-01 closed.
+
+smsc2-core-receiver-01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-01 closed.
+
+smsc2-broker-hml01-ora | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-broker-hml01-ora closed.
+
+smsc2-core-receiver-09 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-core-receiver-02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-02 closed.
+
+smokeping-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to smokeping-prd01 closed.
+
+smsc2-core-receiver-03 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-03 closed.
+
+smsc2-core-receiver-07 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-07 closed.
+
+smsc2-core-receiver-04 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-04 closed.
+
+smsc2-core-receiver-05 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-05 closed.
+
+smsc2-core-receiver-08 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-08 closed.
+
+smsc2-core-receiver-10 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-10 closed.
+
+smsc2-core-receiver-06 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-receiver-06 closed.
+
+smsc2-core-worker-02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-02 closed.
+
+smsc2-core-worker-03 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-03 closed.
+
+smsc2-core-worker-04 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-04 closed.
+
+smsc2-core-worker-12 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-core-worker-01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-01 closed.
+
+smsc2-core-worker-05 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-05 closed.
+
+smsc2-core-worker-07 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-07 closed.
+
+smsc2-core-worker-08 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-08 closed.
+
+smsc2-core-worker-06 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-06 closed.
+
+smsc2-core-worker-09 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-09 closed.
+
+smsc2-core-worker-10 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-10 closed.
+
+smsc2-core-worker-11 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-11 closed.
+
+smsc2-core-worker-13 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-13 closed.
+
+pl-GRAV-SERV-3 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+PL4-NV-MOB-10 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+pl-GRAV-SERV-4 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-core-worker-14 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-14 closed.
+
+smsc2-core-worker-16 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-16 closed.
+
+smsc2-core-worker-15 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-15 closed.
+
+smsc2-core-worker-18 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-18 closed.
+
+smsc2-core-worker-19 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-19 closed.
+
+smsc2-core-worker-17 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-17 closed.
+
+smsc2-proxy-hml01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-data-server-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-data-server-hml01 closed.
+
+smsc2-core-worker-20 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-core-worker-20 closed.
+
+smsc2-map-03.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-map-03.planeta.net closed.
+
+smsc2-map-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-map-hml02 closed.
+
+smsc2-proxy-01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-proxy-01 closed.
+
+smsc2-map-04.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-map-04.planeta.net closed.
+
+smsc2-services-01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-map-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-map-hml01 closed.
+
+smsc2-services-04 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-proxy-02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-proxy-02 closed.
+
+smsc2-proxy-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-proxy-hml02 closed.
+
+smsc2-receiver-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-receiver-hml01 closed.
+
+smsc2-services-03 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-services-03 closed.
+
+smsc2-smpp-04.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-services-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-services-hml02 closed.
+
+smsc2-receiver-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-receiver-hml02 closed.
+
+smsc2-services-02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-services-02 closed.
+
+smsc2-services-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-services-hml01 closed.
+
+smsc2-smpp-02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-smpp-02 closed.
+
+smsc2-smpp-01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-smpp-01 closed.
+
+smsc2-smpp-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-smpp-hml02 closed.
+
+smsc2-smpp-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-smpp-hml01 closed.
+
+smsc2-smpp-hml03 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-smpp-hml03 closed.
+
+smsc-core-worker-7 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-smpp-06 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-smpp-06 closed.
+
+smsc-hazelcast-1.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc-hazelcast-2.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc-hazelcast-3.planeta.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc-broker | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-broker closed.
+
+smsc2-worker-hml-1 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-worker-hml-1 closed.
+
+smsc2-worker-hml-2 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc2-worker-hml-2 closed.
+
+smsc-core-worker-3 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-core-worker-3 closed.
+
+smsc-core-worker-5 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-core-worker-5 closed.
+
+smsc-core-worker-4 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-core-worker-4 closed.
+
+smsc-data-server-1 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-data-server-1 closed.
+
+smsc-core-worker-6 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-core-worker-6 closed.
+
+smsc-core-worker-8 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-core-worker-8 closed.
+
+smsc-data-server-2 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-data-server-2 closed.
+
+smsc-hazelcast-4.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-hazelcast-4.planeta.net closed.
+
+smtp01 | CHANGED | rc=0 >>
+OK
+Shared connection to smtp01 closed.
+
+smsc-map-prd-1 | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-map-prd-1 closed.
+
+smsc-hazelcast-5.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to smsc-hazelcast-5.planeta.net closed.
+
+sps3-app-prd01-iot | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+soawsohom02 | CHANGED | rc=0 >>
+OK
+Shared connection to soawsohom02 closed.
+
+spacewalk-repo-prd01_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to spacewalk-repo-prd01_v203 closed.
+
+soawsohom01 | CHANGED | rc=0 >>
+OK
+Shared connection to soawsohom01 closed.
+
+som-prd-elk02 | CHANGED | rc=0 >>
+OK
+Shared connection to som-prd-elk02 closed.
+
+sportal-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to sportal-prd01 closed.
+
+spark-prd-worker01 | CHANGED | rc=0 >>
+OK
+Shared connection to spark-prd-worker01 closed.
+
+spacecor | CHANGED | rc=0 >>
+OK
+Shared connection to spacecor closed.
+
+sps3-app-hml01-iot | CHANGED | rc=0 >>
+OK
+Shared connection to sps3-app-hml01-iot closed.
+
+stream-moniot-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+stream-moniot-prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+sps3-app-prd02-iot | CHANGED | rc=0 >>
+OK
+Shared connection to sps3-app-prd02-iot closed.
+
+sps-prd-ws01-NEW | CHANGED | rc=0 >>
+OK
+Shared connection to sps-prd-ws01-new closed.
+
+srvphp-dev_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to srvphp-dev_new closed.
+
+sps3-app-hml02.iot | CHANGED | rc=0 >>
+OK
+Shared connection to sps3-app-hml02.iot closed.
+
+stream-moniot-hml01-NEW | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-hml01-new closed.
+
+sps-hom-ws02New | CHANGED | rc=0 >>
+OK
+Shared connection to sps-hom-ws02new closed.
+
+sps-prd-ws02New | CHANGED | rc=0 >>
+OK
+Shared connection to sps-prd-ws02new closed.
+
+stream-moniot-hml03 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-hml03 closed.
+
+SSM-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to ssm-prd01 closed.
+
+stream-moniot-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-hml02 closed.
+
+stream-moniot-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-prd03 closed.
+
+stream-moniot-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-prd05 closed.
+
+stream-moniot-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-prd04 closed.
+
+stream-moniot-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-prd06 closed.
+
+stream-moniot-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to stream-moniot-prd07 closed.
+
+tam-01.planeta.net | CHANGED | rc=0 >>
+OK
+Shared connection to tam-01.planeta.net closed.
+
+syslog-srv01 | CHANGED | rc=0 >>
+OK
+Shared connection to syslog-srv01 closed.
+
+tcr-franca-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to tcr-franca-prd01 closed.
+
+subversion_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to subversion_new closed.
+
+syslog-correios-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to syslog-correios-prd01 closed.
+
+tcr-franca-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to tcr-franca-prd02 closed.
+
+tcr-spo-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to tcr-spo-prd01 closed.
+
+tcr-spo-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to tcr-spo-prd02 closed.
+
+tcr-ula-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to tcr-ula-prd01 closed.
+
+tcr-ula-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to tcr-ula-prd02 closed.
+
+teams-vsession-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to teams-vsession-prd06 closed.
+
+teams-vsession-prd05 | CHANGED | rc=0 >>
+OK
+Shared connection to teams-vsession-prd05 closed.
+
+Terra-Form-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to terra-form-prd01 closed.
+
+teams-vsession-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to teams-vsession-prd01 closed.
+
+telegraf-gateway-01.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to telegraf-gateway-01.prd.iot closed.
+
+terra-form-stg01 | CHANGED | rc=0 >>
+OK
+Shared connection to terra-form-stg01 closed.
+
+telegraf-gateway-02.prd.iot | CHANGED | rc=0 >>
+OK
+Shared connection to telegraf-gateway-02.prd.iot closed.
+
+TNMSPX01 | CHANGED | rc=0 >>
+OK
+Shared connection to tnmspx01 closed.
+
+tf-jenkins-crm-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to tf-jenkins-crm-prd01 closed.
+
+tic-adm-bb-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to tic-adm-bb-prd01 closed.
+
+tokenhom02New | CHANGED | rc=0 >>
+OK
+Shared connection to tokenhom02new closed.
+
+tomcatas01hom_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to tomcatas01hom_new closed.
+
+tomcatasprd02_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to tomcatasprd02_new closed.
+
+pl4-lce-app-4 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nConnection timed out during banner exchange",
+    "unreachable": true
+}
+PL4-NV-APP-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nConnection timed out during banner exchange",
+    "unreachable": true
+}
+toolstelecom-cel-prd01_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom-cel-prd01_v203 closed.
+
+toolstelecom2_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom2_new closed.
+
+toolstelecom1_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom1_new closed.
+
+toolstelecom06 | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom06 closed.
+
+tools-telecom-cel04-prd_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to tools-telecom-cel04-prd_new closed.
+
+tools-telecom-cel03-prd_NEW | CHANGED | rc=0 >>
+OK
+Shared connection to tools-telecom-cel03-prd_new closed.
+
+toolstelecom-cel-prd02_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom-cel-prd02_v203 closed.
+
+toolstelecom-cel-prd05_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom-cel-prd05_v203 closed.
+
+toolstelecom-cel-prd06_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom-cel-prd06_v203 closed.
+
+toolstelecom-cel-prd07_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to toolstelecom-cel-prd07_v203 closed.
+
+tpdu03 | CHANGED | rc=0 >>
+OK
+Shared connection to tpdu03 closed.
+
+tpdu04 | CHANGED | rc=0 >>
+OK
+Shared connection to tpdu04 closed.
+
+tpdu05 | CHANGED | rc=0 >>
+OK
+Shared connection to tpdu05 closed.
+
+Rancher-master-stg02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+Rancher-master-stg01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+server-trace-10 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+sendsms-hom2-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+tpdu06 | CHANGED | rc=0 >>
+OK
+Shared connection to tpdu06 closed.
+
+tpdu07 | CHANGED | rc=0 >>
+OK
+Shared connection to tpdu07 closed.
+
+tpdu08 | CHANGED | rc=0 >>
+OK
+Shared connection to tpdu08 closed.
+
+traffic-analyser-prd05 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+traffic-analyser-prd09 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+traffic-analyser-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd02 closed.
+
+tts.staging | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+traffic-analyser-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd03 closed.
+
+tr069-logs-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to tr069-logs-hml01 closed.
+
+Tr069-Balancer-PRD01 | CHANGED | rc=0 >>
+OK
+Shared connection to tr069-balancer-prd01 closed.
+
+traffic-analyser-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd01 closed.
+
+tr069-logs-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to tr069-logs-prd01 closed.
+
+traffic-analyser-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd04 closed.
+
+traffic-analyser-prd08 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd08 closed.
+
+traffic-analyser-prd06 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd06 closed.
+
+traffic-analyser-prd07 | CHANGED | rc=0 >>
+OK
+Shared connection to traffic-analyser-prd07 closed.
+
+tts | CHANGED | rc=0 >>
+OK
+Shared connection to tts closed.
+
+vertica-prd01-ext4 | CHANGED | rc=0 >>
+OK
+Shared connection to vertica-prd01-ext4 closed.
+
+vEMS-238-2 | CHANGED | rc=0 >>
+OK
+Shared connection to vems-238-2 closed.
+
+velocidade-spo | CHANGED | rc=0 >>
+OK
+Shared connection to velocidade-spo closed.
+
+vertica-prd02-ext4 | CHANGED | rc=0 >>
+OK
+Shared connection to vertica-prd02-ext4 closed.
+
+vertica-prd03-ext4 | CHANGED | rc=0 >>
+OK
+Shared connection to vertica-prd03-ext4 closed.
+
+vertica-prd04.network.ctbc | CHANGED | rc=0 >>
+OK
+Shared connection to vertica-prd04.network.ctbc closed.
+
+sds-monitor-236-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+vigiahx01 | CHANGED | rc=0 >>
+OK
+Shared connection to vigiahx01 closed.
+
+vertica-prd05.network.ctbc | CHANGED | rc=0 >>
+OK
+Shared connection to vertica-prd05.network.ctbc closed.
+
+vertica-prd06.network.ctbc | CHANGED | rc=0 >>
+OK
+Shared connection to vertica-prd06.network.ctbc closed.
+
+vigiapx01 | CHANGED | rc=0 >>
+OK
+Shared connection to vigiapx01 closed.
+
+VM_crm-prd-app02 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_crm-prd-app02 closed.
+
+VM_dmviewedb-spo_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_dmviewedb-spo_v203 closed.
+
+VM_eb-hom-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_eb-hom-app01 closed.
+
+VM_eb-hom-app02 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_eb-hom-app02 closed.
+
+VM_dns-cel02-prd | CHANGED | rc=0 >>
+OK
+Shared connection to vm_dns-cel02-prd closed.
+
+VM_msfranquia_prd02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+VM_eb-prd-app02 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_eb-prd-app02 closed.
+
+VM_monitoramento-algarcrm-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_monitoramento-algarcrm-prd01 closed.
+
+VM_misp-algar | CHANGED | rc=0 >>
+OK
+Shared connection to vm_misp-algar closed.
+
+VM_eb-hom-ws01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_eb-hom-ws01 closed.
+
+VM_eb-prd-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_eb-prd-app01 closed.
+
+VM_jenkings-devops | CHANGED | rc=0 >>
+OK
+Shared connection to vm_jenkings-devops closed.
+
+VM_oimprdidm1 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_oimprdidm1 closed.
+
+VM_msfranquia_prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_msfranquia_prd01 closed.
+
+VM_msfranquia_hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_msfranquia_hml02 closed.
+
+VM_msfranquia_hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_msfranquia_hml01 closed.
+
+VM_POC_TR069_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_poc_tr069_v203 closed.
+
+vm_tarifador_prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_tarifador_prd01 closed.
+
+VM_som-wf-hom01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_som-wf-hom01 closed.
+
+VM_webfranquia_prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+VM_rhel-repo-cor | CHANGED | rc=0 >>
+OK
+Shared connection to vm_rhel-repo-cor closed.
+
+VM_ula_proxy_02 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_ula_proxy_02 closed.
+
+VM_VGGWPRD01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_vggwprd01 closed.
+
+VM_WEBDNS_ALGARSUL | CHANGED | rc=0 >>
+OK
+Shared connection to vm_webdns_algarsul closed.
+
+VM_tr069-utils | CHANGED | rc=0 >>
+OK
+Shared connection to vm_tr069-utils closed.
+
+VM_ubiquiti_prd | CHANGED | rc=0 >>
+OK
+Shared connection to vm_ubiquiti_prd closed.
+
+VM_voipview_web | CHANGED | rc=0 >>
+OK
+Shared connection to vm_voipview_web closed.
+
+services-hom2-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+smsc2-smpp-03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+services-prd-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+VM_webfranquia_hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_webfranquia_hml01 closed.
+
+VM_zabbix-corp | CHANGED | rc=0 >>
+OK
+Shared connection to vm_zabbix-corp closed.
+
+VM_webfranquia_prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_webfranquia_prd02 closed.
+
+VM_wlsim01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_wlsim01 closed.
+
+VM_zabbix-dbclientesv2-prd | CHANGED | rc=0 >>
+OK
+Shared connection to vm_zabbix-dbclientesv2-prd closed.
+
+VM_zabbix-poller1-prod05 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_zabbix-poller1-prod05 closed.
+
+VM_zabbix-poller1-prod08 | CHANGED | rc=0 >>
+OK
+Shared connection to vm_zabbix-poller1-prod08 closed.
+
+wiki-repositorio | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+vm1.staging | CHANGED | rc=0 >>
+OK
+Shared connection to vm1.staging closed.
+
+VM-IPTV-01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm-iptv-01 closed.
+
+vm1px01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm1px01 closed.
+
+vm-cacti-capacidade3 | CHANGED | rc=0 >>
+OK
+Shared connection to vm-cacti-capacidade3 closed.
+
+vm1hx01 | CHANGED | rc=0 >>
+OK
+Shared connection to vm1hx01 closed.
+
+VM-NSPAR | CHANGED | rc=0 >>
+OK
+Shared connection to vm-nspar closed.
+
+VM-NSSAR | CHANGED | rc=0 >>
+OK
+Shared connection to vm-nssar closed.
+
+web-ui-hom-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to web-ui-hom-app01 closed.
+
+web-ui-prd-app01 | CHANGED | rc=0 >>
+OK
+Shared connection to web-ui-prd-app01 closed.
+
+webfranquia-hml02 | CHANGED | rc=0 >>
+OK
+Shared connection to webfranquia-hml02 closed.
+
+wlsapp01 | CHANGED | rc=0 >>
+OK
+mux_client_request_session: session request failed: Session open refused by peer
+Warning: Permanently added 'wlsapp01' (ECDSA) to the list of known hosts.
+ControlSocket /root/.ssh/ansible-%h-%p-%r already exists, disabling multiplexing
+Connection to wlsapp01 closed.
+
+wlsservice01 | CHANGED | rc=0 >>
+OK
+Shared connection to wlsservice01 closed.
+
+wlsservice02 | CHANGED | rc=0 >>
+OK
+Shared connection to wlsservice02 closed.
+
+wlsservice03 | CHANGED | rc=0 >>
+OK
+Shared connection to wlsservice03 closed.
+
+wlsapp02 | CHANGED | rc=0 >>
+OK
+Shared connection to wlsapp02 closed.
+
+wlsservice04 | CHANGED | rc=0 >>
+OK
+Shared connection to wlsservice04 closed.
+
+wsomsghom01 | CHANGED | rc=0 >>
+OK
+Shared connection to wsomsghom01 closed.
+
+wsodsshom02 | CHANGED | rc=0 >>
+OK
+Shared connection to wsodsshom02 closed.
+
+wsodsshom01 | CHANGED | rc=0 >>
+OK
+Shared connection to wsodsshom01 closed.
+
+wsomsghom02 | CHANGED | rc=0 >>
+OK
+Shared connection to wsomsghom02 closed.
+
+xdsl2-des | CHANGED | rc=0 >>
+OK
+Shared connection to xdsl2-des closed.
+
+zabbix-cor-srv-prd01_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-cor-srv-prd01_v203 closed.
+
+wsomysqlhom01 | CHANGED | rc=0 >>
+OK
+Shared connection to wsomysqlhom01 closed.
+
+wsomysqlhom01-new | CHANGED | rc=0 >>
+OK
+Shared connection to wsomysqlhom01-new closed.
+
+zabbixdb10 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbixdb10 closed.
+
+zabbixdb03 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbixdb03 closed.
+
+zabbixdbclientes02 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbixdbclientes02 closed.
+
+zabbixdb07 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbixdb07 closed.
+
+zabbixdbfontes_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbixdbfontes_v203 closed.
+
+zabbix-poller-itau-prd01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+zabbix-poller-tic-app02-desc | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+zabbix-poller-cli-prd02 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-poller-cli-prd02 closed.
+
+zabbix-ondemand-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-ondemand-hml01 closed.
+
+zabbix-mysql-correios-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-mysql-correios-prd01 closed.
+
+zabbix-noc-web | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-noc-web closed.
+
+zabbixdbhomo | CHANGED | rc=0 >>
+OK
+Shared connection to zabbixdbhomo closed.
+
+zabbix-poller-correios-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-poller-correios-prd01 closed.
+
+zabbix-poller-cli-prd03 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-poller-cli-prd03 closed.
+
+zabbix-poller-cli-prd04 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-poller-cli-prd04 closed.
+
+zabbix-poller-cor-prd01_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-poller-cor-prd01_v203 closed.
+
+zabbix-poller-cor-prd02_v203 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-poller-cor-prd02_v203 closed.
+
+zabbix-sec | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-sec closed.
+
+zabbix-report-server-hml01 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-report-server-hml01 closed.
+
+tcr-ula-prd03 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+sps-hom-ws01New | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+zabbix-srv-correios-prd01 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-srv-correios-prd01 closed.
+
+zabbix-web-prod01 | CHANGED | rc=0 >>
+OK
+Shared connection to zabbix-web-prod01 closed.
+
+zbxdbapx03 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxdbapx03 closed.
+
+zbxdbapx02 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxdbapx02 closed.
+
+zbxdbtic01 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxdbtic01 closed.
+
+zbxdbapx01 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxdbapx01 closed.
+
+zbxprxtic03 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxprxtic03 closed.
+
+zbxprxticcl | CHANGED | rc=0 >>
+OK
+Shared connection to zbxprxticcl closed.
+
+zbxsrvtic01 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxsrvtic01 closed.
+
+zbxprxtic04 | CHANGED | rc=0 >>
+OK
+Shared connection to zbxprxtic04 closed.
+
+zteftppx01 | CHANGED | rc=0 >>
+OK
+Shared connection to zteftppx01 closed.
+
+zms-hom02 | CHANGED | rc=0 >>
+OK
+Shared connection to zms-hom02 closed.
+
+tokenhom01NEW | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+TNMSPX02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+tpdu02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ussd-center-02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+ussd-center-01 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+vigiapx02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+VM_oimprdidm2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+VM-SRVTEL-AV02 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+zabbix-repo | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nkex_exchange_identification: Connection closed by remote host",
+    "unreachable": true
+}
+usrv71 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: mux_client_request_session: session request failed: Session open refused by peer\r\nConnection timed out during banner exchange",
+    "unreachable": true
+}

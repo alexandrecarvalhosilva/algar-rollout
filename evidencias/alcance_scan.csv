@@ -1,0 +1,1892 @@
+host,icmp_ok,ssh_open,python_version
+aaa-moniot-prd01,False,False,n/a
+aaa-moniot-prd02,False,False,n/a
+aaa-moniot-prd03,False,False,n/a
+aaa-moniot-prd04,False,False,n/a
+acervo-prd01,True,True,Python 2.7.5
+acronisaeh.staging,False,False,n/a
+acronis-isilon-stg01,False,False,n/a
+acsdb-01,False,False,n/a
+adm-ceph-prd01,False,False,n/a
+afiliados-app-hml01,False,True,Python 2.7.5
+afiliados-app-prd01,False,True,Python 2.7.5
+aid-hos-10.planeta.net,False,False,n/a
+aid-hos-11,True,True,Python 2.7.3
+aid-hos-12,True,True,Python 2.7.3
+aid-hos-21,True,True,Python 2.7.3
+aid-hos-22,True,True,Python 2.7.3
+aid-hos-23,True,True,Python 2.7.3
+aid-hos-24,True,True,Python 2.7.5
+aid-hos-25,False,False,n/a
+airflow-hom01,False,False,n/a
+Algar-BD,False,False,n/a
+algarbff-hom-app01,True,True,Python 2.7.5
+algarbff-hom-app02,True,True,Python 2.7.5
+algarbff-prd-app01,True,True,Python 2.7.5
+algarbff-prd-app02,True,True,Python 2.7.5
+algarbff-prd-app03,True,True,Python 2.7.5
+algar-bsc-hom01,True,True,Python 2.7.5
+algarcatprodhmg01,True,True,Python 2.7.5
+algarcatprodhmg02,True,True,Python 2.7.5
+algarcatprodprd01,True,True,Python 2.7.5
+algarcatprodprd02,True,True,Python 2.7.5
+algarcatprodtit,True,True,Python 2.7.5
+algar-contact-hom01.tenant0008,False,False,n/a
+algar-contact-hom02,False,True,Python 2.7.5
+algar-contact-prd01.tenant0008,False,False,n/a
+algar-contact-prd02.tenant0008,False,False,n/a
+algarcsmhmg-batch02,True,True,Python 2.7.5
+algarcsmhmg-parc01,True,True,Python 2.7.5
+algarcsmhmg-parc02,True,True,Python 2.7.5
+algarcsmhmg-portal01,True,True,Python 2.7.5
+algarcsmprd-batch01,True,True,Python 2.7.5
+algarcsmprd-batch02,True,True,Python 2.7.5
+algarcsmprd-parc01,True,True,Python 2.7.5
+algarcsmprd-parc02,True,True,Python 2.7.5
+algarcsmprd-portal01,True,True,Python 2.7.5
+algarcsmtit,True,True,Python 2.7.5
+algardeploy-prd01,True,True,Python 2.7.5
+algargedhmg01,True,True,Python 2.7.5
+algargedhmg02,True,True,Python 2.7.5
+algargedhmg-rabbit01,True,True,Python 2.7.5
+algargedhmg-rabbit02,True,True,Python 2.7.5
+algargedhmg-service01,True,True,Python 2.7.5
+algargedhmg-service02,True,True,Python 2.7.5
+algargedprd01,True,True,Python 2.7.5
+algargedprd02,True,True,Python 2.7.5
+algargedprd-rabbit01,True,True,Python 2.7.5
+algargedprd-rabbit02,True,True,Python 2.7.5
+algargedprd-service01,True,True,Python 2.7.5
+algargedprd-service02,True,True,Python 2.7.5
+algargedtit_NEW,False,False,n/a
+algarops-hom-app01,False,False,n/a
+algar-sg-spo-3,True,True,Python 2.7.5
+algar-sg-spo-4,True,True,Python 2.7.5
+algar-sg-ula-7,True,True,Python 2.7.5
+Algar-sipserver,False,False,n/a
+algmcache01,True,True,Python 2.7.5
+algmweb01,True,True,Python 2.7.5
+algschx01,True,True,Python 2.7.5
+am_hosts,True,True,Python 2.7.5
+ams-nokia-prd01,True,True,Python 2.7.5
+anrprd,True,True,Python 2.7.5
+ansible-app-prd01,True,True,Python 2.7.5
+ansible-portal-prd01,True,True,Python 2.7.5
+antispam-db01,False,False,n/a
+antispam-scan01,False,False,n/a
+antispam-scan02,False,False,n/a
+antispam-scan03,False,False,n/a
+antispam-scan04,False,False,n/a
+apcem-hml01,False,False,n/a
+apcem-poc01,False,False,n/a
+api-02-portal-hom-iot,False,True,Python 2.7.5
+api-moniot-prd01,False,False,n/a
+api-moniot-prd02,False,False,n/a
+api-portal-hom-iot,False,True,Python 2.7.5
+api-prd01-iot,False,False,n/a
+api-prd02-iot,False,False,n/a
+api-prd-jenkins01,False,False,n/a
+api-protweb-prd01,False,False,n/a
+apm-app-prd01,False,False,n/a
+app01-portal-hml,True,True,Python 2.7.5
+app01-portal-prd,True,True,Python 2.7.5
+app02-portal-hml,True,True,Python 2.7.5
+app02-portal-prd,True,True,Python 2.7.5
+app-gravacao-01,False,False,n/a
+app-gravacao-02,False,False,n/a
+app-host-resilient-prd01,False,False,n/a
+appmobileprd01_NEW,False,False,n/a
+appmobileprd02_NEW,False,False,n/a
+app-omni-h01,False,False,n/a
+app-phone-prd01,False,False,n/a
+app-phone-prd02,False,False,n/a
+app-policy-prd01,True,True,Python 2.7.5
+app-policy-prd01-238,False,False,n/a
+app-policy-prd02,True,True,Python 2.7.5
+app-policy-prd02-238,False,False,n/a
+app-policy-prd03,True,True,Python 2.7.5
+app-policy-prd03-238,False,False,n/a
+app-portal-nominum-prd01,False,True,Python 2.7.5
+app-portal-prd01,False,False,n/a
+app-sq-phone-prd01,False,False,n/a
+app-sq-phone-prd02,False,False,n/a
+appstack-lgpd-prod01,False,False,n/a
+aps.cloudalgartelecom.com.br,True,True,Python 2.7.5
+aps.staging,False,False,n/a
+apscloudplus.staging,False,False,n/a
+aps-ico.staging,False,False,n/a
+aps-ico-prd01,True,True,Python 2.7.5
+apsmaxmonitor,False,False,n/a
+apsmaxmonitor.staging,False,False,n/a
+aps-multicloud-prd01,False,False,n/a
+automacao-prd03,False,False,n/a
+automacao-prod-01,True,True,Python 2.7.5
+automacao-prod-01-fisico,False,False,n/a
+b2c-dashboard01,False,False,n/a
+b2c-elk01,True,True,Python 2.7.5
+b2c-hom-indexer01,True,True,Python 2.7.5
+b2c-hom-indexer02,True,True,Python 2.7.5
+b2c-hom-maestro01,True,True,Python 2.7.5
+b2c-hom-maestro02,True,True,Python 2.7.5
+b2c-indexer01,False,False,n/a
+b2c-indexer02,False,False,n/a
+b2c-jenkins,True,True,Python 2.7.5
+b2c-jenkins02_NEW,False,False,n/a
+b2c-jenkins03,True,True,Python 2.7.5
+b2c-prd-maestro01,True,True,Python 2.7.5
+b2c-prd-maestro02,True,True,Python 2.7.5
+b2c-prd-maestro03,True,True,Python 2.7.5
+b2c-prd-maestro04,True,True,Python 2.7.5
+b2c-prd-maestro05,True,True,Python 2.7.5
+b2c-prd-maestro06,True,True,Python 2.7.5
+b2c-tit-maestro01,True,True,Python 2.7.5
+b2c-tst-maestro01,True,True,Python 2.7.5
+backend-hom01,False,False,n/a
+backend-prd01,True,True,Python 2.7.5
+backend-prd02,True,True,Python 2.7.5
+backend-sinfra-hml02,False,False,n/a
+backend-sinfr-prd01,False,False,n/a
+balancer-hom2-1.ocs,False,False,n/a
+balancer-prd-1,False,False,n/a
+balancer-prd-2.ocs.algartelecom.com.br,False,False,n/a
+bandalarga-prd01,False,False,n/a
+basedeconhecimento.network.ctbc,True,True,Python 2.7.5
+bdahomapp01,True,True,Python 2.7.5
+bdahomapp02,True,True,Python 2.7.5
+bdaprdapp01,True,True,Python 2.7.5
+bdaprdapp02,True,True,Python 2.7.5
+bd-conf-phone-hml01,False,False,n/a
+bd-conf-phone-prd01,False,False,n/a
+bd-conf-phone-prd02,False,False,n/a
+bd-gerar-mysql-prd01,True,True,Python 2.7.5
+bd-log-phone-prd01,False,False,n/a
+bd-log-phone-prd02,False,False,n/a
+bd-sip-phone-prd01,False,False,n/a
+beatch-moniot-p1,False,False,n/a
+beatch-moniot-p2,False,False,n/a
+bedigpx01,True,True,Python 2.7.5
+bilprdapp1,True,True,Python 2.7.5
+bilprdapp2,True,True,Python 2.7.5
+bkprd01,True,True,Python 2.7.5
+bkprd02-ptguru2px01,False,False,n/a
+blazon-acess-hml01,True,True,Python 2.7.5
+blazon-activemq-prd01,True,True,Python 2.7.5
+blazon-adapter-prd01,True,True,Python 2.7.5
+blazon-adapter-prd02,True,True,Python 2.7.5
+blazon-adm-console-prd01,True,True,Python 2.7.5
+blazon-adm-console-prd02,True,True,Python 2.7.5
+blazon-api-prd01,True,True,Python 2.7.5
+blazon-api-prd02,True,True,Python 2.7.5
+blazon-core-hml01,True,True,Python 2.7.5
+blazon-core-prd01,True,True,Python 2.7.5
+blazon-core-prd02,True,True,Python 2.7.5
+blazon-elastic-hml01,True,True,Python 2.7.5
+blazon-elastic-prd01,True,True,Python 2.7.5
+blazon-job-prd01,True,True,Python 2.7.5
+blazon-resetpwd-prd01,True,True,Python 2.7.5
+blazon-resetpwd-prd02,True,True,Python 2.7.5
+blazon-res-hml01,True,True,Python 2.7.5
+blazon-sql-hml01,True,True,Python 2.7.5
+blazon-sql-prd01,True,True,Python 2.7.5
+blazon-sql-prd02,True,True,Python 2.7.5
+blazon-work-hml01,True,True,Python 2.7.5
+blazon-workspace-prd01,True,True,Python 2.7.5
+blazon-workspace-prd02,True,True,Python 2.7.5
+blueplanetpx01,False,False,n/a
+blueplanetpx02,False,False,n/a
+bmp-hom2-1,False,False,n/a
+bmp-hom2-2,False,False,n/a
+bmp-prd-1,True,True,Python 2.7.5
+bmp-prd-10,True,True,Python 2.7.5
+bmp-prd-2,True,True,Python 2.7.5
+bmp-prd-3,True,True,Python 2.7.5
+bmp-prd-4,True,True,Python 2.7.5
+bmp-prd-5,True,True,Python 2.7.5
+bmp-prd-6,True,True,Python 2.7.5
+bmp-prd-7,True,True,Python 2.7.5
+bmp-prd-8,True,True,Python 2.7.5
+bmp-prd-9,True,True,Python 2.7.5
+bmpweb_prd01,False,False,n/a
+bmpweb_prd02,False,False,n/a
+bpmapp-prd01,False,False,n/a
+bpmapp-prd02,False,False,n/a
+bpmapp-stg01,False,False,n/a
+bpmapp-stg02,False,False,n/a
+bpmdb-prd01,False,False,n/a
+bpmdb-prd02,False,False,n/a
+bpmdb-stg01,False,False,n/a
+bpmdb-stg02,False,False,n/a
+bpmweb-prd01.cloudalgartelecom.com.br,False,False,n/a
+bpmweb-prd02.cloudalgartelecom.com.br,False,False,n/a
+broker-hom2-1,False,False,n/a
+broker-hom2-2,False,False,n/a
+broker-hom2-3,False,False,n/a
+broker-hom2-4,False,False,n/a
+broker-hom2-5,False,False,n/a
+broker-ocs-p01,False,False,n/a
+broker-ocs-p02,False,False,n/a
+broker-ocs-p03,False,False,n/a
+broker-ocs-p04,False,False,n/a
+broker-ocs-p05,False,False,n/a
+broker-prd-1,True,True,Python 2.7.5
+broker-prd-2,False,False,n/a
+broker-prd-3,False,False,n/a
+broker-prd-4,True,True,Python 2.7.5
+broker-prd-5,False,False,n/a
+cacheapp01,True,True,Python 2.7.5
+cac-hml02,False,False,n/a
+cac-hml03,False,False,n/a
+cacti-capacidade-new-seta,False,False,n/a
+cacti-prd-corp01,False,False,n/a
+cadastro-app-prd01,True,True,Python 2.7.5
+cadastro-cloud-apps-prd01,True,True,Python 2.7.5
+cadastro-posi-hml01,False,False,n/a
+CALIX-PRD01,True,True,Python 2.7.5
+capacidade-prd01,False,False,n/a
+cap-hos-17,False,False,n/a
+catprod-hml-matrix01,False,False,n/a
+cbp-hom2-1,False,False,n/a
+cbp-hom2-2,False,False,n/a
+cbp-ocs-p01,False,False,n/a
+cbp-ocs-p02,False,False,n/a
+cbp-prd-1,True,True,Python 2.7.5
+cbp-prd-10,True,True,Python 2.7.5
+cbp-prd-11,True,True,Python 2.7.5
+cbp-prd-12,True,True,Python 2.7.5
+cbp-prd-13,True,True,Python 2.7.5
+cbp-prd-14,True,True,Python 2.7.5
+cbp-prd-15,True,True,Python 2.7.5
+cbp-prd-16,True,True,Python 2.7.5
+cbp-prd-2,True,True,Python 2.7.5
+cbp-prd-3,True,True,Python 2.7.5
+cbp-prd-4,True,True,Python 2.7.5
+cbp-prd-5,True,True,Python 2.7.5
+cbp-prd-6,True,True,Python 2.7.5
+cbp-prd-7,True,True,Python 2.7.5
+cbp-prd-8,True,True,Python 2.7.5
+cbp-prd-9,True,True,Python 2.7.5
+CCE-ELASTIC-SEARCH-PRD01,True,True,Python 2.7.5
+CCE-ELASTIC-SEARCH-PRD02,True,True,Python 2.7.5
+cce-gis-prd01,True,True,Python 2.7.5
+cce-gis-prd02,True,True,Python 2.7.5
+cce-service-hom01,False,True,Python 2.7.5
+cce-service-hom02,False,True,Python 2.7.5
+cce-service-prd03,True,True,Python 2.7.5
+cce-service-prd04,True,True,Python 2.7.5
+cce-view-hom01,True,True,Python 2.7.5
+cce-view-hom02,True,True,Python 2.7.5
+cce-view-prd01,True,True,Python 2.7.5
+cce-view-prd02,True,True,Python 2.7.5
+cds1,False,True,Python 2.7.5
+cds2,False,True,Python 2.7.5
+cds3,False,True,Python 2.7.5
+cds-hos-17,True,True,Python 2.7.5
+cdsprd01,True,True,Python 2.7.5
+ciscoar-prd01,True,True,Python 2.7.5
+ciscoar-prd02,False,False,n/a
+ciscoar-tra,False,False,n/a
+citrus-app-omni-prd01,False,False,n/a
+citrus-app-omni-prd02,False,False,n/a
+citrus-app-omni-prd03,False,False,n/a
+citrus-app-omni-prd04,False,False,n/a
+citrus-bd-omni-prd01,False,False,n/a
+citrus-bd-omni-prd02,False,False,n/a
+clik-hom-app01,False,False,n/a
+clik-hom-bd02,False,False,n/a
+cloud12c01,True,True,Python 2.7.5
+cloud12c02,True,True,Python 2.7.5
+cloudcontrolapp,True,True,Python 2.7.5
+cloud-crm,True,True,Python 2.7.5
+cloud-mediacao,False,True,Python 2.7.5
+cloud-receita,True,True,Python 2.7.5
+cm.staging,False,False,n/a
+Cmdb-db-prd01,True,True,Python 2.7.5
+cms01-portal-hml,True,True,Python 2.7.5
+cms01-portal-prd,True,True,Python 2.7.5
+cms02-portal-hml,True,True,Python 2.7.5
+cms02-portal-prd,True,True,Python 2.7.5
+cognos-db-prd01,True,True,Python 2.7.5
+comando-prd,False,False,n/a
+com-hom-app01,True,True,Python 2.7.5
+com-hom-app02,True,True,Python 2.7.5
+com-hom-cache01,True,True,Python 2.7.5
+com-hom-cache02,True,True,Python 2.7.5
+com-hom-srv01,True,True,Python 2.7.5
+com-hom-srv02,True,True,Python 2.7.5
+comissaodes.network,False,False,n/a
+comissaohmg01,True,True,Python 2.7.5
+comissaoprd01,True,True,Python 2.7.5
+com-prd-app01,True,True,Python 2.7.5
+com-prd-app02,True,True,Python 2.7.5
+com-prd-cache01,True,True,Python 2.7.5
+com-prd-cache02,True,True,Python 2.7.5
+com-prd-srv01,True,True,Python 2.7.5
+com-prd-srv02,True,True,Python 2.7.5
+com-tit-app01,True,True,Python 2.7.5
+com-tit-esb01,True,True,Python 2.7.5
+com-tit-srv01,True,True,Python 2.7.5
+com-tst-cache01,True,True,Python 2.7.5
+com-tst-esb01,True,True,Python 2.7.5
+consumers-moniot-prd01,False,False,n/a
+consumers-moniot-prd02,False,False,n/a
+consumers-moniot-prd04,False,False,n/a
+consumers-moniot-prd05,False,False,n/a
+consumers-moniot-prd06,False,False,n/a
+consumers-moniot-prd07,False,False,n/a
+consumers-moniot-prd08,False,False,n/a
+cont-hom-app01,True,True,Python 2.7.5
+cont-hom-app02,True,True,Python 2.7.5
+cont-prd-app01,True,True,Python 2.7.5
+cont-prd-app02,True,True,Python 2.7.5
+cont-tit-app01,True,True,Python 2.7.5
+cont-tst-app01,True,True,Python 2.7.5
+corbkpcel,True,True,Python 2.7.5
+core-hom-app01,False,True,Python 2.7.5
+core-hom-app02,False,True,Python 2.7.5
+core-prd-app01,True,True,Python 2.7.5
+core-prd-app02,True,True,Python 2.7.5
+core-prd-app03,False,False,n/a
+core-prd-app04,True,True,Python 2.7.5
+core-prd-app05,True,True,Python 2.7.5
+core-prd-balancer01,False,False,n/a
+corp-prd-app01,True,True,Python 2.7.5
+couchbase2-soa-prd01,True,True,Python 2.7.5
+couchbase2-soa-prd02,True,True,Python 2.7.5
+couchbase3-soa-prd01,True,True,Python 2.7.5
+couchbase3-soa-prd02,True,True,Python 2.7.5
+couchbase-soa-prd01,True,True,Python 2.7.5
+couchbase-soa-prd02,True,True,Python 2.7.5
+cpgr-hml01,False,True,Python 2.7.5
+cpgr-prd01,False,True,Python 2.7.5
+crm-hom-adm01,True,True,Python 2.7.5
+crm-hom-app01,True,True,Python 2.7.5
+crm-hom-app02,True,True,Python 2.7.5
+crm-hom-app03,True,True,Python 2.7.5
+crm-hom-cache01,True,True,Python 2.7.5
+crm-hom-cache02,True,True,Python 2.7.5
+crm-hom-jms01,True,True,Python 2.7.5
+crm-hom-jms02,True,True,Python 2.7.5
+crm-hom-rules02,True,True,Python 2.7.5
+crm-hom-solar01,True,True,Python 2.7.5
+crm-hom-solar02,True,True,Python 2.7.5
+crm-hom-visao01,True,True,Python 2.7.5
+crm-hom-visao02,True,True,Python 2.7.5
+crm-prd-adm01,True,True,Python 2.7.5
+crm-prd-app01,True,True,Python 2.7.5
+crm-prd-app03,True,True,Python 2.7.5
+crm-prd-app04,True,True,Python 2.7.5
+crm-prd-app05,True,True,Python 2.7.5
+crm-prd-cache01New,False,False,n/a
+crm-prd-cache02New,False,False,n/a
+crm-prd-jms01,True,True,Python 2.7.5
+crm-prd-jms02,True,True,Python 2.7.5
+crm-prd-job01,True,True,Python 2.7.5
+crm-prd-job02,True,True,Python 2.7.5
+crm-prd-job03,True,True,Python 2.7.5
+crm-prd-rules01,True,True,Python 2.7.5
+crm-prd-rules02,True,True,Python 2.7.5
+crm-prd-rules03,True,True,Python 2.7.5
+crm-prd-rules04,True,True,Python 2.7.5
+crm-prd-rules05,True,True,Python 2.7.5
+crm-prd-rules06,True,True,Python 2.7.5
+crm-prd-solar01,True,True,Python 2.7.5
+crm-prd-solar02,True,True,Python 2.7.5
+crm-prd-solar03,True,True,Python 2.7.5
+crm-prd-visao01,True,True,Python 2.7.5
+crm-prd-visao02,True,True,Python 2.7.5
+crm-prd-visao03,True,True,Python 2.7.5
+crm-prd-visao04,True,True,Python 2.7.5
+crm-prd-ws01,True,True,Python 2.7.5
+crm-prd-ws02,True,True,Python 2.7.5
+crm-prd-ws03,True,True,Python 2.7.5
+crm-prd-ws04,True,True,Python 2.7.5
+crm-tit-adm01,True,True,Python 2.7.5
+crm-tit-app01,True,True,Python 2.7.5
+crm-tit-cache01,True,True,Python 2.7.5
+crm-tit-solar01,True,True,Python 2.7.5
+crm-tst-adm01,True,True,Python 2.7.5
+crm-tst-cache01,True,True,Python 2.7.5
+crm-tst-solar01,True,True,Python 2.7.5
+crv-hom-cis01,False,False,n/a
+crv-hom-cis-frontend,True,True,Python 2.7.5
+crv-hom-guru01,False,False,n/a
+crv-prd-app03,False,False,n/a
+crv-prd-backend-cis01,False,False,n/a
+crv-prd-backend-cis02,False,False,n/a
+crv-prd-balancer,False,False,n/a
+crv-prd-bd01,False,False,n/a
+crv-prd-cis-balancer,False,False,n/a
+crv-prd-cis-frontend,False,False,n/a
+csocacti,False,False,n/a
+ctbcapp01,True,True,Python 2.7.5
+ctbcapp02,True,True,Python 2.7.5
+dashhx01,True,True,Python 2.7.5
+dashpx01,True,True,Python 2.7.5
+data-lgpd-prd01,True,True,Python 2.7.5
+data-lgpd-prd02,True,True,Python 2.7.5
+data-lgpd-prd03,True,True,Python 2.7.5
+dataserver-hom2-1,False,False,n/a
+dataserver-prd-1,True,True,Python 2.7.5
+dataserver-prd-2,True,True,Python 2.7.5
+datastagehom01,True,True,Python 2.7.5
+datastageprd01,True,True,Python 2.7.5
+dbatools-app01,False,False,n/a
+dbhx01,False,False,n/a
+db-policy-prd01-236,False,False,n/a
+db-policy-prd01-238,False,False,n/a
+db-policy-prd02-236,False,False,n/a
+db-policy-prd02-238,False,False,n/a
+db-policy-prd03-236,False,False,n/a
+db-policy-prd03-238,False,False,n/a
+director-hml,False,False,n/a
+dmviewdb-ula,True,True,Python 2.7.5
+dns-prd-1.ocs.algartelecom.com.br,False,False,n/a
+dns-prd-2,False,False,n/a
+dns-privatecloud-prd01,False,False,n/a
+dns-privatecloud-prd02,False,False,n/a
+dnstic-prd01,False,False,n/a
+dnstic-prd02,False,False,n/a
+docs.prd.iot,False,False,n/a
+eaq-gerencia-prd01,True,True,Python 2.7.5
+ebd-pem-soa-prd01,False,False,n/a
+ebd-pem-soa-prd02,False,False,n/a
+eb-hom-ws02,True,True,Python 2.7.5
+ebinvoicehmgapp01,True,True,Python 2.7.5
+ebinvoicehmgapp02,True,True,Python 2.7.5
+ebinvoicehmgdav01,True,True,Python 2.7.5
+ebinvoicehmgdav02,True,True,Python 2.7.5
+ebinvoiceprdapp01,True,True,Python 2.7.5
+ebinvoiceprdapp02,True,True,Python 2.7.5
+ebinvoiceprddav01,True,True,Python 2.7.5
+ebinvoiceprddav01_new,False,False,n/a
+ebinvoiceprddav02,True,True,Python 2.7.5
+eb-prd-ws01,True,True,Python 2.7.5
+eb-prd-ws02,True,True,Python 2.7.5
+ecomm03_NEW,False,False,n/a
+ecomm04_NEW,False,False,n/a
+edb-soa-prd01,True,True,Python 2.7.5
+edb-soa-prd02,True,True,Python 2.7.5
+eir-adm-prd01,True,True,Python 2.7.5
+eir-diameter-prd01,True,True,Python 2.7.5
+eir-diameter-prd02,True,True,Python 2.7.5
+eir-diameter-prd03,True,True,Python 2.7.5
+eir-diameter-prd04,True,True,Python 2.7.5
+eir-map-prd01,True,True,Python 2.7.5
+eir-map-prd02,True,True,Python 2.7.5
+eir-map-prd03,True,True,Python 2.7.5
+eir-map-prd04,True,True,Python 2.7.5
+eir-map-prd05,True,True,Python 2.7.5
+elastic-lgpd-prd01,True,True,Python 2.7.5
+elastic-lgpd-prd02,True,True,Python 2.7.5
+elastic-lgpd-prd03,True,True,Python 2.7.5
+elastic-search-hom01,False,False,n/a
+elastic-search-hom02,False,False,n/a
+elastic-search-tit01,False,True,Python 2.7.5
+elk-corp,False,True,Python 2.7.5
+ELKHL01,False,True,Python 2.7.5
+ELKHL02,False,True,Python 2.7.5
+elk-lgpd-hml01,True,True,Python 2.7.5
+elk-lgpd-prd02,True,True,Python 2.7.5
+ELKPL01,False,True,Python 2.7.5
+ELKPL02,False,True,Python 2.7.5
+elk-qualidade-prd01,False,False,n/a
+elk-qualidade-prd02,False,False,n/a
+empp-gw-prd-1,False,False,n/a
+emzdlra01-adm,True,True,Python 2.7.5
+eris-1.planeta.net,False,False,n/a
+fix-hom2-1,False,False,n/a
+fix-hom2-2,False,False,n/a
+fix-ocs-p01,False,False,n/a
+fix-ocs-p02,False,False,n/a
+fix-ocs-p03,False,False,n/a
+fix-ocs-p04,False,False,n/a
+fix-prd-1,True,True,Python 2.7.5
+fix-prd-2,True,True,Python 2.7.5
+fix-prd-3,False,False,n/a
+fix-prd-4,False,False,n/a
+fix-prd-5,True,True,Python 2.7.5
+follow-tech-prd01,False,True,Python 2.7.5
+frauddbprd01,True,True,Python 2.7.5
+frontend-allcom-01.prd.iot,False,False,n/a
+frontend-allcom-02.prd.iot,False,False,n/a
+frontend-burst-01.prd.iot,False,False,n/a
+frontend-hom01_1910,False,False,n/a
+frontend-prd01,True,True,Python 2.7.5
+frontend-prd02,True,True,Python 2.7.5
+frontend-scm-01.prd.iot,False,False,n/a
+frontend-sinfra-hml01,False,False,n/a
+frontend-sinfra-prd02,False,False,n/a
+ftp-internal01,True,True,Python 2.7.5
+ftp-operacao-prd01,False,False,n/a
+ftpserver01,True,True,Python 2.7.5
+furukawaprd01,True,True,Python 2.7.5
+gaio-app-prd01,False,False,n/a
+gaioapppx01,False,False,n/a
+gaio-db-prd02,False,False,n/a
+gaiodbpx01,False,False,n/a
+gaiodbpx02,False,False,n/a
+gaiohx01,False,False,n/a
+gateway-lgpd-prd01,True,True,Python 2.7.5
+gedwebdavhmg01,True,True,Python 2.7.5
+gedwebdavhmg02,True,True,Python 2.7.5
+gedwebdavprd01,True,True,Python 2.7.5
+gedwebdavprd02,True,True,Python 2.7.5
+GERCLIENTES,False,False,n/a
+gerencia.planeta.net,False,False,n/a
+gerencia-hom2-1,False,False,n/a
+gerencia-prd-1,False,False,n/a
+gerencia-prd-2,False,False,n/a
+ger-soem,True,True,Python 2.7.5
+getraf-tst01,False,False,n/a
+gifehmg01,True,True,Python 2.7.5
+gifeprd01_NEW,False,False,n/a
+gpf-hom-app01,False,True,Python 2.7.5
+gpf-prd-app01,False,True,Python 2.7.5
+grafana-01-apm.prd.iot,False,False,n/a
+grafana-02-apm.prd.iot,False,False,n/a
+grafana-correios-prd01,False,False,n/a
+grv-prd-app01,True,True,Python 2.7.5
+grv-prd-backend,False,False,n/a
+grv-prd-bd01,False,False,n/a
+grv-prd-frontend,False,False,n/a
+gsuite,False,False,n/a
+gsuite.staging,False,False,n/a
+guardians-adm-hom01,True,True,Python 2.7.5
+guardians-adm-prd01,True,True,Python 2.7.5
+guardians-app-hom01,True,True,Python 2.7.5
+guardians-app-prd01,True,True,Python 2.7.5
+guardians-db-hom01,True,True,Python 2.7.5
+guardians-db-prd01,True,True,Python 2.7.5
+gw-123milhas-hml01,False,False,n/a
+gw-123milhas-hml02,False,False,n/a
+gw-123milhas-prd01,False,False,n/a
+gw-123milhas-prd02,False,False,n/a
+GW-MAP-7,True,True,Python 2.7.5
+GW-MAP-8,True,True,Python 2.7.5
+haproxy1,False,True,Python 2.7.5
+henas,False,False,n/a
+hewsl01.cloudalgartelecom.com.br,True,True,Python 2.7.5
+http-proxy-omni-prd02,False,False,n/a
+iac-prd-for01,True,True,Python 2.7.5
+iac-prd-for02,True,True,Python 2.7.5
+iac-prd-jen01,True,True,Python 2.7.5
+iac-prd-ps01,True,True,Python 2.7.5
+iac-prd-ps02,True,True,Python 2.7.5
+iac-prd-pup01,True,True,Python 2.7.5
+iac-prd-pup02,True,True,Python 2.7.5
+iac-prd-repo01,True,True,Python 2.7.5
+iam-01.prd.iot,False,False,n/a
+icd-app-prd01,True,True,Python 2.7.5
+icd-app-prd02,True,True,Python 2.7.5
+icd-app-prd03,True,True,Python 2.7.5
+icd-app-prd04,True,True,Python 2.7.5
+icd-app-prd05,True,True,Python 2.7.5
+icd-app-prd06,False,False,n/a
+icd-db-prd01,True,True,Python 2.7.5
+icd-db-rep-dev01,False,False,n/a
+icd-db-rep-prd01,True,True,Python 2.7.5
+icd-hml02,True,True,Python 2.7.5
+icd-hom01,True,True,Python 2.7.5
+icpmaster-prd02,False,False,n/a
+icpmaster-prd03,False,False,n/a
+icpmaster-stg01,False,False,n/a
+icpmaster-stg02,False,False,n/a
+icpmaster-stg03,False,False,n/a
+icpmgmt-prd01,False,False,n/a
+icpmgmt-stg01,False,False,n/a
+icpproxyex-prd01,False,False,n/a
+icpproxyex-prd02,False,False,n/a
+icpproxyex-stg01,False,False,n/a
+icpproxyex-stg02,False,False,n/a
+icpproxy-prd01,False,False,n/a
+icpproxy-stg02,False,False,n/a
+icpproxy-stg02.cloudalgartelecom.com.br,False,False,n/a
+icpworkerpl-prd01,False,False,n/a
+icpworkerpl-prd02,False,False,n/a
+icpworkerpl-prd03,False,False,n/a
+icpworkerpl-stg01,False,False,n/a
+icpworkerpl-stg02,False,False,n/a
+icpworkerpl-stg03,False,False,n/a
+icpworker-prd01,False,False,n/a
+icpworker-prd02,False,False,n/a
+icpworker-prd03,False,False,n/a
+icpworker-stg01,False,False,n/a
+icpworker-stg02,False,False,n/a
+icpworker-stg03,False,False,n/a
+icthml01,True,True,Python 2.7.5
+ictprd01,True,True,Python 2.7.5
+id-itnm-hom05,False,False,n/a
+id-itnm-hom06,False,False,n/a
+id-itnm-hom07,False,False,n/a
+id-itnm-hom08,False,False,n/a
+id-itnm-hom09,False,False,n/a
+id-itnm-hom10,False,False,n/a
+id-itnm-prd03,True,True,Python 2.7.5
+idm-ipa-px01,True,True,Python 2.7.5
+idm-ipa-px02,True,True,Python 2.7.5
+idm-ipa-px03,True,True,Python 2.7.5
+idm-ipa-px04,True,True,Python 2.7.5
+id-nodered-hom01,False,False,n/a
+id-nodered-prd01,False,False,n/a
+IDP-HLSAM01,True,True,Python 2.7.5
+IDP-HLSAM02,True,True,Python 2.7.5
+IDP-HLXACML01,True,True,Python 2.7.5
+IDP-HLXACML02,True,True,Python 2.7.5
+id-portal-hom01_,False,False,n/a
+id-portal-prd01_v1212,False,False,n/a
+id-portal-prd02,True,True,Python 2.7.5
+IDP-PLMTG01,True,True,Python 2.7.5
+IDP-PLSAML01,True,True,Python 2.7.5
+IDP-PLSAML02,True,True,Python 2.7.5
+IDP-PLXACML01,True,True,Python 2.7.5
+IDP-PLXACML02,True,True,Python 2.7.5
+IDP-TIT-PLAPP01,True,True,Python 2.7.5
+id-tncm-cs-hom01,True,True,Python 2.7.5
+id-tncm-cs-prd01,True,True,Python 2.7.5
+id-tncm-ps-hom01,True,True,Python 2.7.5
+id-tncm-ps-prd01,True,True,Python 2.7.5
+id-tncm-ps-prd02,True,True,Python 2.7.5
+id-tncm-ws-hom01,True,True,Python 2.7.5
+id-tncm-ws-hom02,True,True,Python 2.7.5
+id-tncm-ws-prd01,True,True,Python 2.7.5
+id-tncm-ws-prd02,True,True,Python 2.7.5
+id-tncm-ws-prd03,True,True,Python 2.7.5
+id-tncm-ws-prd04,True,True,Python 2.7.5
+id-tncm-ws-prd05,False,False,n/a
+id-tncm-ws-prd06,False,False,n/a
+id-transmissao-hml01,False,False,n/a
+id-transmissao-prd01,False,False,n/a
+id-transmissao-prd02,False,False,n/a
+ID-VOGEL-APP-HML-01,False,False,n/a
+ig-11,True,True,Python 2.7.5
+imehml01,True,True,Python 2.7.5
+imeprd01,True,True,Python 2.7.5
+imsvaprd02,False,False,n/a
+influxdb-01-apm.prd.iot,False,False,n/a
+influxdb-02-apm.prd.iot,False,False,n/a
+influxdb-03-apm.prd.iot,False,False,n/a
+in-proxy-connect-hml01,False,False,n/a
+in-proxy-connect-prd01,False,False,n/a
+insight-ingestion,False,False,n/a
+integpx01,True,True,Python 2.7.5
+integpx01.network.ctbc,True,True,Python 2.7.5
+ipa-idm-prod01,True,True,Python 2.7.5
+IP-track-relay-prd01,False,False,n/a
+isntascan-lgpd-prd01,False,False,n/a
+iss-lgpd-hml01,True,True,Python 2.7.5
+iss-lgpd-prd01,True,True,Python 2.7.5
+jbossas01,True,True,Python 2.7.5
+jbossas02hom,True,True,Python 2.7.5
+jbosseap02,True,True,Python 2.7.5
+jbosseap04hom_NEW,False,False,n/a
+jbossfarm-prd01,True,True,Python 2.7.5
+jenkins01,True,True,Python 2.7.5
+jenkins-devops01,True,True,Python 2.7.5
+jenkinspx01,False,False,n/a
+jpvrfpx01,True,True,Python 2.7.5
+jtracivc_NEW,False,False,n/a
+kafka-prd01,False,False,n/a
+kafka-prd03,False,False,n/a
+kafka-prd2,False,False,n/a
+kapacitor-01-apm.prd.iot,False,False,n/a
+kapacitor-02-apm.prd.iot,False,False,n/a
+KBNPL01,False,True,Python 2.7.5
+kenanfx-01,True,True,Python 2.7.5
+ksql-moniot-hml01,False,False,n/a
+ksql-moniot-hml02,False,False,n/a
+LB01_prd,True,True,Python 2.7.5
+LB02_prd,True,True,Python 2.7.5
+lb-api-01.prd.iot,False,False,n/a
+lb-api-hom-iot,False,True,Python 2.7.5
+lblgw,True,True,Python 2.7.5
+lb-portal-hml01,True,True,Python 2.7.5
+lb-portal-prd01,True,True,Python 2.7.5
+lb-portal-prd02,True,True,Python 2.7.5
+ldapcorp01,True,True,Python 2.7.5
+ldapcorp02,True,True,Python 2.7.5
+LDAP-prd01,False,False,n/a
+LDAP-prd02,False,False,n/a
+LDAP-SDWAN-PRD02,False,False,n/a
+LDAP-STG01,False,False,n/a
+link-prd01,False,False,n/a
+logging_host,False,False,n/a
+logs-moniot-prd01,False,False,n/a
+loja.cloudalgartelecom.com.br,True,True,Python 2.7.5
+loja-prd01,False,False,n/a
+lvr-digital-hml01,False,True,Python 2.7.5
+lvr-digital-prd01,False,True,Python 2.7.5
+lxintraweb01,True,True,Python 2.7.5
+lxjboss01,False,False,n/a
+lxjbossprd01,True,True,Python 2.7.5
+lxmrtg,True,True,Python 2.7.5
+lxprdgw,True,True,Python 2.7.5
+lxvpn01,True,True,Python 2.7.5
+maestro01,True,True,Python 2.7.5
+maestro02,True,True,Python 2.7.5
+maestro03,True,True,Python 2.7.5
+maestrohmg,True,True,Python 2.7.5
+mailing-hom-app01.tenant0008,False,False,n/a
+mailing-prd-app01.tenant0008,False,False,n/a
+masterhx01,False,False,n/a
+master-lgpd-prd01,True,True,Python 2.7.5
+masterpx01,True,True,Python 2.7.5
+MCP-SERVER01,False,False,n/a
+mediapx01,True,True,Python 2.7.5
+med-ime-hml01,True,True,Python 2.7.5
+med-ime-prd01,True,True,Python 2.7.5
+memcached-hom01.tenant0008,False,False,n/a
+memcached-prd01.tenant0008,False,False,n/a
+messageria1.planeta.net,True,True,Python 2.7.5
+messageria2.planeta.net,False,False,n/a
+messageria3,False,False,n/a
+messageria4,False,False,n/a
+metrics-moniot-prd01,False,False,n/a
+mgmt-moniot-hml01,False,False,n/a
+mgmt-moniot-prd01,False,False,n/a
+mib-tst-app01,True,True,Python 2.7.5
+midprddav01,True,True,Python 2.7.5
+midprddav02,True,True,Python 2.7.5
+mmetlprd01,True,True,Python 2.7.5
+mobile-data-hom2-1,False,False,n/a
+mobile-data-hom2-2,False,False,n/a
+mobile-data-p1,False,False,n/a
+mobile-data-p10,False,False,n/a
+mobile-data-p11,False,False,n/a
+mobile-data-p12,False,False,n/a
+mobile-data-p13,False,False,n/a
+mobile-data-p14,False,False,n/a
+mobile-data-p15,False,False,n/a
+mobile-data-p16,False,False,n/a
+mobile-data-p2,False,False,n/a
+mobile-data-p3,False,False,n/a
+mobile-data-p4,False,False,n/a
+mobile-data-p5,False,False,n/a
+mobile-data-p6,False,False,n/a
+mobile-data-p7,False,False,n/a
+mobile-data-p8,False,False,n/a
+mobile-data-p9,False,False,n/a
+mobile-data-prd-1,False,False,n/a
+mobile-data-prd-10,False,False,n/a
+mobile-data-prd-11,False,False,n/a
+mobile-data-prd-12,False,False,n/a
+mobile-data-prd-13,False,False,n/a
+mobile-data-prd-14,False,False,n/a
+mobile-data-prd-15,False,False,n/a
+mobile-data-prd-16,False,False,n/a
+mobile-data-prd-2,False,False,n/a
+mobile-data-prd-3,False,False,n/a
+mobile-data-prd-4,False,False,n/a
+mobile-data-prd-5,False,False,n/a
+mobile-data-prd-6,False,False,n/a
+mobile-data-prd-7,False,False,n/a
+mobile-data-prd-8,False,False,n/a
+mobile-data-prd-9,False,False,n/a
+Mobile-voice-hom2-1.scp,False,False,n/a
+Mobile-voice-hom2-2.scp,False,False,n/a
+mobile-voice-prd-1,True,True,Python 2.7.5
+mobile-voice-prd-10,False,False,n/a
+mobile-voice-prd-11,False,False,n/a
+mobile-voice-prd-12,False,False,n/a
+mobile-voice-prd-13,False,False,n/a
+mobile-voice-prd-14,False,False,n/a
+mobile-voice-prd-15,False,False,n/a
+mobile-voice-prd-16,False,False,n/a
+mobile-voice-prd-2,False,False,n/a
+mobile-voice-prd-3,False,False,n/a
+mobile-voice-prd-4,True,True,Python 2.7.5
+mobile-voice-prd-5,False,False,n/a
+mobile-voice-prd-6,False,False,n/a
+mobile-voice-prd-7,False,False,n/a
+mobile-voice-prd-8,False,False,n/a
+mobile-voice-prd-9,False,False,n/a
+mon_pain_ince_prd01,False,False,n/a
+mon-estoque-eng,False,False,n/a
+mongo-moniot-prd01,False,True,Python 2.7.5
+mongo-moniot-prd02,False,True,Python 2.7.5
+mongo-moniot-prd03,False,True,Python 2.7.5
+mongo-moniot-prd04,False,True,Python 2.7.5
+moni-odin-hml02,False,False,n/a
+monitoramento-ura-online,True,True,Python 2.7.5
+monitoramento-ura-online-hml02,True,True,Python 2.7.5
+monitoramento-ura-online-prd02,True,True,Python 2.7.5
+movel-radius-prd01.osc,False,False,n/a
+ms-01-portal-hom-iot,False,True,Python 2.7.5
+ms-02-portal-hom-iot,False,True,Python 2.7.5
+msql01,False,False,n/a
+msqlhx01,False,False,n/a
+multi-cloud-prd02.tenant0029,False,False,n/a
+mxtic-prd01,False,False,n/a
+mysqla1-moniot-prd01,False,True,Python 2.7.5
+mysqla2-moniot-prd02,False,True,Python 2.7.5
+mysqla2-moniot-prd03,False,False,n/a
+mysqldb,True,True,Python 2.7.5
+mysqldbhom,True,True,Python 2.7.5
+mysql-moniot-hml01,False,True,Python 2.7.5
+mysql-moniot-prd01,False,False,n/a
+mysql-moniot-prd02,False,False,n/a
+mysql-moniot-prd03,False,False,n/a
+mysql-moniot-prd04,False,False,n/a
+nagiossd,True,True,Python 2.7.5
+nbumedia03,False,False,n/a
+nbumedia08,True,True,Python 2.7.5
+nbumedia09,True,True,Python 2.7.5
+nc-aggb1-hml01,True,True,Python 2.7.5
+nc-aggb1-prd01,True,True,Python 2.7.5
+nc-aggp1-hml01,True,True,Python 2.7.5
+nc-aggp1-prd01,True,True,Python 2.7.5
+nc-apm-hml02,False,False,n/a
+nc-colb1-hml01,True,True,Python 2.7.5
+nc-colb1-prd01,False,False,n/a
+nc-colp1-hml02,False,False,n/a
+nc-colp1-prd01,False,False,n/a
+nc-dashboards-hml01,True,False,n/a
+nc-dashboards-hml02,False,False,n/a
+nc-db2-prd01,True,True,Python 2.7.5
+nc-db2-prd02,True,True,Python 2.7.5
+nc-dis-prd01,True,True,Python 2.7.5
+nc-dis-prd02,True,True,Python 2.7.5
+nc-eventanalitics-webgui-hml01,True,False,n/a
+nc-impact-hml01,True,True,Python 2.7.5
+nc-impact-hml02,True,True,Python 2.7.5
+nc-impact-prd01,True,True,Python 2.7.5
+nc-impact-prd02,True,True,Python 2.7.5
+nc-itnm-hml01,True,True,Python 2.7.5
+nc-itnm-hml02,True,True,Python 2.7.5
+nc-itnm-prd01,True,True,Python 2.7.5
+nc-itnm-prd02,True,True,Python 2.7.5
+nc-itnm-prd03,True,True,Python 2.7.5
+nc-itnm-prd04,True,True,Python 2.7.5
+nc-itnm-prd05,True,True,Python 2.7.5
+nc-itnm-prd06,True,True,Python 2.7.5
+nc-itnm-prd07,True,True,Python 2.7.5
+nc-itnm-prd08,True,True,Python 2.7.5
+nc-itnm-prd09,True,True,Python 2.7.5
+nc-itnm-prd10,True,True,Python 2.7.5
+nc-itnm-prd11,True,True,Python 2.7.5
+nc-itnm-prd12,True,True,Python 2.7.5
+nc-itnm-prd13,True,True,Python 2.7.5
+nc-noi-prd01,True,True,Python 2.7.5
+nc-noi-prd02,True,True,Python 2.7.5
+nc-probes-hml01,True,True,Python 2.7.5
+nc-probes-hml02,False,False,n/a
+nc-probes-prd01,True,True,Python 2.7.5
+nc-probes-prd02,True,True,Python 2.7.5
+nc-webgui-hml01,True,True,Python 2.7.5
+nc-webgui-hml02,True,True,Python 2.7.5
+nc-web-prd01,True,True,Python 2.7.5
+netctpx01.network.ctbc,False,False,n/a
+nodehx01,True,True,Python 2.7.5
+nodehx02,False,False,n/a
+nodepx01,True,True,Python 2.7.5
+nodepx02,True,True,Python 2.7.5
+node-red-hom01,False,False,n/a
+node-red-prd01,False,False,n/a
+npappdes01,True,True,Python 2.7.5
+npapptit01,False,True,Python 2.7.5
+npi-clients-prd01-,False,False,n/a
+npp-cassandra-1,True,True,Python 2.7.5
+npp-cassandra-2,True,True,Python 2.7.5
+npp-cassandra-3,True,True,Python 2.7.5
+npp-cassandra-4,True,True,Python 2.7.5
+npp-cassandra-6,True,True,Python 2.7.5
+npp-cassandra-7,True,True,Python 2.7.5
+npp-cassandra-8,True,True,Python 2.7.5
+npp-db-interface-prd01,True,True,Python 2.7.5
+npp-db-interface-prd02,True,True,Python 2.7.5
+npp-db-telecom-admin-prd01,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd01,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd02,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd03,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd04,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd05,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd06,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd07,True,True,Python 2.7.5
+npp-db-telecom-spo-piaf-prd08,True,True,Python 2.7.5
+Npp-db-telecom-ula-10,True,True,Python 2.7.5
+Npp-db-telecom-ula-14,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd01,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd02,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd03,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd04,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd05,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd06,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd07,True,True,Python 2.7.5
+npp-db-telecom-ula-236-prd08,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd01,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd02,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd03,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd04,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd05,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd06,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd07,True,True,Python 2.7.5
+npp-db-telecom-ula-238-prd08,True,True,Python 2.7.5
+npp-identity-prd01,False,False,n/a
+npp-identity-prd02,False,False,n/a
+npp-inap-spo-piaf-prd01,True,True,Python 2.7.5
+npp-inap-spo-piaf-prd02,True,True,Python 2.7.5
+npp-inap-spo-piaf-prd03,True,True,Python 2.7.5
+npp-inap-spo-piaf-prd04,True,True,Python 2.7.5
+npp-inap-spo-piaf-prd05,False,False,n/a
+npp-inap-spo-piaf-prd06,False,False,n/a
+npp-inap-spo-piaf-prd07,False,False,n/a
+npp-inap-spo-piaf-prd08,False,False,n/a
+npp-inap-ula-236-prd01,False,False,n/a
+npp-inap-ula-236-prd02,False,False,n/a
+npp-inap-ula-236-prd03,False,False,n/a
+npp-inap-ula-236-prd04,False,False,n/a
+npp-inap-ula-236-prd05,False,False,n/a
+npp-inap-ula-236-prd06,False,False,n/a
+npp-inap-ula-236-prd07,False,False,n/a
+npp-inap-ula-236-prd08,False,False,n/a
+npp-inap-ula-238-prd01,False,False,n/a
+npp-inap-ula-238-prd02,False,False,n/a
+npp-inap-ula-238-prd03,False,False,n/a
+npp-inap-ula-238-prd04,False,False,n/a
+npp-inap-ula-238-prd05,False,False,n/a
+npp-inap-ula-238-prd06,False,False,n/a
+npp-inap-ula-238-prd07,False,False,n/a
+npp-inap-ula-238-prd08,False,False,n/a
+npp-log-agregator-prd01,False,False,n/a
+npp-map-spo-piaf-prd01,True,True,Python 2.7.5
+npp-map-spo-piaf-prd012,False,False,n/a
+npp-map-spo-piaf-prd013,False,False,n/a
+npp-map-spo-piaf-prd02,True,True,Python 2.7.5
+npp-map-spo-piaf-prd03,True,True,Python 2.7.5
+npp-map-spo-piaf-prd04,True,True,Python 2.7.5
+npp-map-spo-piaf-prd05,True,True,Python 2.7.5
+npp-map-spo-piaf-prd06,True,True,Python 2.7.5
+npp-map-spo-piaf-prd07,False,False,n/a
+npp-map-spo-piaf-prd08,True,True,Python 2.7.5
+npp-map-spo-piaf-prd09,False,False,n/a
+npp-map-spo-piaf-prd10,False,False,n/a
+npp-map-spo-piaf-prd11,False,False,n/a
+npp-map-spo-piaf-prd14,False,False,n/a
+npp-map-spo-piaf-prd15,False,False,n/a
+npp-map-spo-piaf-prd16,False,False,n/a
+npp-map-ula-236-prd01,False,False,n/a
+npp-map-ula-236-prd02,False,False,n/a
+npp-map-ula-236-prd03,False,False,n/a
+npp-map-ula-236-prd04,False,False,n/a
+npp-map-ula-236-prd05,False,False,n/a
+npp-map-ula-236-prd06,False,False,n/a
+npp-map-ula-236-prd07,False,False,n/a
+npp-map-ula-236-prd08,False,False,n/a
+npp-map-ula-238-prd01,False,False,n/a
+npp-map-ula-238-prd02,False,False,n/a
+npp-map-ula-238-prd03,False,False,n/a
+npp-map-ula-238-prd04,False,False,n/a
+npp-map-ula-238-prd05,False,False,n/a
+npp-map-ula-238-prd06,False,False,n/a
+npp-map-ula-238-prd07,False,False,n/a
+npp-map-ula-238-prd08,False,False,n/a
+Npp-mobicents-map-ula-13,True,True,Python 2.7.5
+Npp-mobicents-map-ula-14,True,True,Python 2.7.5
+npp-postgresql-1,True,True,Python 2.7.5
+npp-postgresql-2,True,True,Python 2.7.5
+npp-proxy-prd01,False,False,n/a
+npp-proxy-prd02,False,False,n/a
+npp-replication-prd01,False,False,n/a
+npp-service-prd01,True,True,Python 2.7.5
+npp-service-prd02,True,True,Python 2.7.5
+npp-tst-pedrom,False,False,n/a
+npp-web-prd01,False,False,n/a
+npp-web-prd02,False,False,n/a
+ns1.cloudalgartelecom.com.br,False,False,n/a
+ns1.staging,False,False,n/a
+ns2,False,False,n/a
+ns2.staging,False,False,n/a
+nschdes,True,True,Python 2.7.5
+nschprd,True,True,Python 2.7.5
+nschprd02,True,True,Python 2.7.5
+nschprd-bin01,True,True,Python 2.7.5
+ntf-hom-sps01,True,True,Python 2.7.5
+ntf-hom-sps02,True,True,Python 2.7.5
+ntf-prd-sps01,True,True,Python 2.7.5
+ntf-prd-sps02,True,True,Python 2.7.5
+ntrp-soa-p01,False,False,n/a
+ntr-soa-p02,False,False,n/a
+oasrpx01,True,True,Python 2.7.5
+obadb.staging,False,False,n/a
+obadb.staging.cloudalgartelecom.com.br,True,True,Python 2.7.5
+observion-sec_v267,False,False,n/a
+ocs-db-des02,True,True,Python 2.7.5
+ocs-dbrac-236-prd01,True,True,Python 2.7.5
+ocs-dbrac-236-prd02,True,True,Python 2.7.5
+ocs-dbrac-236-prd03.ocs.algartelecom.com.br,False,False,n/a
+ocs-dbrac-236-prd04,True,True,Python 2.7.5
+ocs-dbrac-236-prd05,True,True,Python 2.7.5
+ocs-dbrac-238-dg01.ocs.algartelecom.com.br,False,False,n/a
+ocs-dbrac-238-dg03.ocs.algartelecom.com.br,False,False,n/a
+ocs-dbrac-238-dg04.ocs.algartelecom.com.br,False,False,n/a
+ocsinventory-hom,True,True,Python 2.7.5
+ocsinventory-prd-292,True,True,Python 2.7.5
+ocs-telefoniaprd01,True,True,Python 2.7.5
+ocs-telefoniaprd02,True,True,Python 2.7.5
+ocs-telefoniaprd03,True,True,Python 2.7.5
+ocs-telefoniaprd04,True,True,Python 2.7.5
+ocs-telefoniaprd05,True,True,Python 2.7.5
+ocs-telefoniaprd06,True,True,Python 2.7.5
+ocs-telefoniaprd07,True,True,Python 2.7.5
+ocs-telefoniaprd08,True,True,Python 2.7.5
+ocvsmedcorppx01,True,True,Python 2.7.5
+ocvsmedtelpx01,True,True,Python 2.7.5
+offline-prd-1,False,False,n/a
+oid-des-app01,True,True,Python 2.7.5
+oid-hom-app01,True,True,Python 2.7.5
+oid-hom-app02,True,True,Python 2.7.5
+oid-prd-app01,True,True,Python 2.7.5
+oid-prd-app02,True,True,Python 2.7.5
+oid-prd-app03,True,True,Python 2.7.5
+oid-prd-app04,True,True,Python 2.7.5
+oid-prd-app05,True,True,Python 2.7.5
+oid-prd-app06,True,True,Python 2.7.5
+oim-hom-app01,True,True,Python 2.7.5
+oim-hom-app02,True,True,Python 2.7.5
+onmsi-server-prd01,False,False,n/a
+ooam.cloudalgartelecom.com.br,False,False,n/a
+OSMPRD,True,True,Python 2.7.5
+ossbuilder,True,True,Python 2.7.5
+oss-opennms-01,True,True,Python 2.7.5
+out-proxy-connect-hml01,False,False,n/a
+out-proxy-connect-prd01,False,False,n/a
+padtec-nms-prd01,False,False,n/a
+pagboletohom,True,True,Python 2.7.5
+painelbss,False,False,n/a
+PaloAlto_api-prd01,False,False,n/a
+parametrizacoes,True,True,Python 2.7.5
+pcs44.staging,False,False,n/a
+phone2bapp01.intranet,False,False,n/a
+phone2b-db01.intranet,False,False,n/a
+pix-app-prd01,False,False,n/a
+pix-app-prd02,True,True,Python 2.7.5
+pix-app-prd03,True,True,Python 2.7.5
+pl_apl_01.ctbc.com.br,False,False,n/a
+PL_MRS-2_v203,False,False,n/a
+PL_MRS-3_v203,False,False,n/a
+PL_MRS-4_v203,False,False,n/a
+pl_sig_02,True,True,Python 2.7.5
+pl_sig_03,True,True,Python 2.7.5
+pl_sig_05,True,True,Python 2.7.5
+pl_sig_06,True,True,Python 2.7.5
+pl_sig_07,True,True,Python 2.7.5
+pl_sig_09,True,True,Python 2.7.5
+pl_sig_10,True,True,Python 2.7.5
+pl_sig_21,True,True,Python 2.7.5
+pl_sig_22,True,True,Python 2.7.5
+pl_sig_23,True,True,Python 2.7.5
+pl_sig_24_v203,False,False,n/a
+pl_sig_28,True,True,Python 2.7.5
+pl_sig_29_v203_,False,False,n/a
+PL_SIG_34,True,True,Python 2.7.5
+PL_SIG_35,True,True,Python 2.7.5
+PL_SIG_36,True,True,Python 2.7.5
+PL_SIG_37,True,True,Python 2.7.5
+PL_SIG_38,True,True,Python 2.7.5
+PL_SIG_39,True,True,Python 2.7.5
+PL_SIG_40,True,True,Python 2.7.5
+pl_sig_41_v203,False,False,n/a
+pl4-back-grav-03,False,False,n/a
+PL4-BALANCER-1.planeta.net,True,True,Python 2.7.5
+pl4-balancer-2,False,False,n/a
+PL4-BALANCER-GRAV-1,False,False,n/a
+PL4-BALANCER-GRAV-2,False,False,n/a
+pl4-db-01.planeta.net,True,True,Python 2.7.5
+pl4-db-02.planeta.net,True,True,Python 2.7.5
+pl4-db-adm1.planeta.net,False,False,n/a
+pl4-gmlc-mob-1.planeta.net,False,False,n/a
+pl4-gmlc-mob-2.planeta.net,False,False,n/a
+pl4-hom1,True,True,Python 2.7.5
+PL4-HOM-NV-APP-2,False,False,n/a
+PL4-HOM-NV-MOB-2,False,False,n/a
+pl4-hos-10,True,True,Python 2.7.5
+pl4-hos-11,True,True,Python 2.7.5
+pl4-hos-9,True,True,Python 2.7.5
+pl4-iotapi-app-prd04,False,False,n/a
+pl4-iotbr-app-prd01,False,False,n/a
+pl4-iotbr-app-prd02,False,False,n/a
+pl4-iotbr-app-prd03,False,False,n/a
+pl4-iotbr-ms-prd01,False,False,n/a
+pl4-iotbr-ms-prd02,True,True,Python 2.7.5
+pl4-iotbr-ms-prd03,True,True,Python 2.7.5
+pl4-iotbr-ms-prd04,True,True,Python 2.7.5
+pl4-iotbr-prd01,False,False,n/a
+pl4-ivr-mob-1,True,True,Python 2.7.5
+pl4-ivr-mob-2,True,True,Python 2.7.5
+pl4-ivr-mob-3,True,True,Python 2.7.5
+pl4-ivr-mob-4,True,True,Python 2.7.5
+PL4-IVR-MOB-5,True,True,Python 2.7.5
+PL4-IVR-MOB-6,True,True,Python 2.7.5
+PL4-IVR-MOB-7,True,True,Python 2.7.5
+PL4-IVR-MOB-8,True,True,Python 2.7.5
+pl4-ivr-sdp-mob-1.planeta.net,False,False,n/a
+pl4-ivr-sdp-mob-2.planeta.net,False,False,n/a
+pl4-ivr-sdp-mob-3.planeta.net,False,False,n/a
+pl4-ivr-sdp-mob-4.planeta.net,False,False,n/a
+PL4-IVR-SDP-MOB-5,True,True,Python 2.7.5
+PL4-IVR-SDP-MOB-7,True,True,Python 2.7.5
+pl4-lce-app-1,False,False,n/a
+pl4-lce-app-2,False,False,n/a
+pl4-lce-app-3,False,False,n/a
+pl4-lce-app-4,False,False,n/a
+pl4-lce-broker-1,True,True,Python 2.7.5
+pl4-lce-broker-3,True,True,Python 2.7.5
+pl4-log-indexer-1,True,True,Python 2.7.5
+pl4-log-indexer-2,False,False,n/a
+pl4-log-kibana-1,False,False,n/a
+pl4-mediaserver-2,True,True,Python 2.7.5
+pl4-mediaserver-5,True,True,Python 2.7.5
+pl4-mediaserver-8,True,True,Python 2.7.5
+pl4-mob-2.planeta.net,True,True,Python 2.7.5
+pl4-mob-3.planeta.net,True,True,Python 2.7.5
+PL4-NV-APP-1,True,True,Python 2.7.5
+PL4-NV-APP-2,False,False,n/a
+PL4-NV-APP-3,True,True,Python 2.7.5
+PL4-NV-APP-4,False,False,n/a
+PL4-NV-APP-5,False,False,n/a
+PL4-NV-APP-6,False,False,n/a
+pl4-nv-esb-1.planeta.net,True,True,Python 2.7.5
+pl4-nv-esb-2.planeta.net,True,True,Python 2.7.5
+pl4-nv-mob-1.planeta.net,False,False,n/a
+PL4-NV-MOB-10,False,False,n/a
+PL4-NV-MOB-11,False,False,n/a
+PL4-NV-MOB-12,False,False,n/a
+PL4-NV-MOB-13,False,False,n/a
+PL4-NV-MOB-2_,False,False,n/a
+pl4-nv-mob-3.planeta.net,False,False,n/a
+PL4-NV-MOB-4,True,True,Python 2.7.5
+pl4-nv-mob-5.planeta.net,False,False,n/a
+pl4-nv-mob-6.planeta.net,False,False,n/a
+pl4-nv-mob-7.planeta.net,False,False,n/a
+pl4-nv-mob-8.planeta.net,True,True,Python 2.7.5
+PL4-NV-MOB-9,False,False,n/a
+pl4-oferta-rel-prd01,False,False,n/a
+PL4-PRD-USSD-1,False,False,n/a
+pl4-tts1.planeta.net,True,True,Python 2.7.5
+pl4-tts1-new,True,True,Python 2.7.5
+pl5-eventos-prd01,True,True,Python 2.7.5
+pl5-eventos-prd02,True,True,Python 2.7.5
+pl5-eventos-prd03,True,True,Python 2.7.5
+pl5-eventos-prd04,True,True,Python 2.7.5
+pl5-eventos-prd05,True,True,Python 2.7.5
+pl5-eventos-prd06,True,True,Python 2.7.5
+pl5-eventos-prd07,True,True,Python 2.7.5
+pl5-eventos-prd08,True,True,Python 2.7.5
+pl5-eventos-prd10,True,True,Python 2.7.5
+pl5-eventos-prd11,True,True,Python 2.7.5
+pl5-eventos-prd13,False,False,n/a
+pl5-eventos-prd14,True,True,Python 2.7.5
+pl5-eventos-prd15,True,True,Python 2.7.5
+pl5-eventos-prd16,True,True,Python 2.7.5
+pl5-kannel-1.planeta.net,False,False,n/a
+pl5-psql-1.planeta.net,False,False,n/a
+pl5-psql-2.planeta.net,False,False,n/a
+planeta-idp-hom-1,False,False,n/a
+planeta-idp-hom-2,False,False,n/a
+planeta-idp-prd01,True,True,Python 2.7.5
+planeta-idp-prd02,False,False,n/a
+pl-camp-hom-mob-1,False,False,n/a
+pl-camp-hom-mob-2,False,False,n/a
+pl-central-hom-1,False,False,n/a
+pl-central-prd-1,False,False,n/a
+pl-central-prd-2,False,False,n/a
+Pl-enabler-postvendas,True,True,Python 2.7.5
+Pl-grav-adm-1,False,False,n/a
+Pl-grav-adm-2,True,True,Python 2.7.5
+pl-grav-monitor-avaya-1,True,True,Python 2.7.5
+Pl-grav-monitor-avaya-2,True,True,Python 2.7.5
+pl-GRAV-SERV-1,False,False,n/a
+pl-GRAV-SERV-2,False,False,n/a
+pl-GRAV-SERV-3,False,False,n/a
+pl-GRAV-SERV-4,False,False,n/a
+pl-GRAV-SERV-5,False,False,n/a
+pl-GRAV-SERV-6,False,False,n/a
+Pl-ivr-adm-1,True,True,Python 2.7.5
+Pl-ivr-app-1,True,True,Python 2.7.5
+Pl-ivr-app12,False,False,n/a
+Pl-ivr-app13,False,False,n/a
+Pl-ivr-app-2,True,True,Python 2.7.5
+Pl-ivr-app-3,True,True,Python 2.7.5
+Pl-ivr-app-4,True,True,Python 2.7.5
+Pl-ivr-app7,False,False,n/a
+Pl-ivr-app8,False,False,n/a
+Pl-ivr-broker-1,True,True,Python 2.7.5
+Pl-ivr-broker-2,True,True,Python 2.7.5
+pl-management,True,True,Python 2.7.5
+pl-message-prd-4,False,False,n/a
+pl-messag-prd-3,True,True,Python 2.7.5
+pl-prd-event-processing-1,True,True,Python 2.7.5
+pl-prd-event-processing-2,True,True,Python 2.7.5
+pl-prd-event-processing-3,True,True,Python 2.7.5
+pl-prd-event-processing-4,True,True,Python 2.7.5
+pl-prd-logging-interface-1,True,True,Python 2.7.5
+pl-prd-logging-interface-2,False,False,n/a
+pl-prd-search-engine-1,False,False,n/a
+pl-prd-search-engine-2,False,False,n/a
+pl-prd-search-engine-3,False,False,n/a
+pl-prd-search-engine-4,True,True,Python 2.7.5
+pl-prd-search-engine-5,True,True,Python 2.7.5
+pl-prd-search-engine-6,True,True,Python 2.7.5
+pl-prd-search-engine-7,True,True,Python 2.7.5
+pl-prd-search-engine-8,True,True,Python 2.7.5
+pl-sdp-v4-adm-1,False,False,n/a
+pl-sdp-v4-adm-2,False,False,n/a
+pl-sdp-v4-app-1,True,True,Python 2.7.5
+pl-sdp-v4-app-10,False,False,n/a
+pl-sdp-v4-app-2,True,True,Python 2.7.5
+pl-sdp-v4-app-3,True,True,Python 2.7.5
+pl-sdp-v4-app-4,True,True,Python 2.7.5
+pl-sdp-v4-app-5,True,True,Python 2.7.5
+pl-sdp-v4-app-6,True,True,Python 2.7.5
+pl-sdp-v4-app-7,False,False,n/a
+pl-sdp-v4-app-8,False,False,n/a
+pl-sdp-v4-ivr-app-1,False,False,n/a
+pl-sdp-v4-ivr-app-2,False,False,n/a
+pl-sdp-v4-ivr-app-3,False,False,n/a
+pl-sdp-v4-ivr-app-4,False,False,n/a
+pl-sdp-v4-ivr-broker-1,True,True,Python 2.7.5
+pl-sdp-v4-ivr-broker-2,True,True,Python 2.7.5
+pl-sdp-v4-soa-1,True,True,Python 2.7.5
+pl-sdp-v4-soa-2,True,True,Python 2.7.5
+pl-sdp-v4-soa-3,False,False,n/a
+pl-sdp-v4-soa-ati-1,False,False,n/a
+PL-SIG_16,False,False,n/a
+pl-sig-13,False,False,n/a
+pl-sig-14,False,False,n/a
+pl-sig-15,False,False,n/a
+pl-sig-26,False,False,n/a
+policy-manager-prd01_v76,False,False,n/a
+porgwpx01,True,True,Python 2.7.5
+porgwpx02,True,True,Python 2.7.5
+portabgw01,False,False,n/a
+portabgw02,False,False,n/a
+portalcdoprd,True,True,Python 2.7.5
+portal-clientesb2b-frontend-prd01,False,False,n/a
+portal-clientesb2b-frontend-prd02,False,False,n/a
+portal-correios-prd01,False,False,n/a
+portalcorrelacoes,True,True,Python 2.7.5
+portal-cre-prd03,True,True,Python 2.7.5
+portalctbc04hmg_NEW,False,False,n/a
+portalctbc05,True,True,Python 2.7.5
+portalctbc05hmg,True,True,Python 2.7.5
+portalctbc06,True,True,Python 2.7.5
+portalctbc06hmg_NEW,False,False,n/a
+portaldb01-portal-prd,True,True,Python 2.7.5
+portaldesempenho,True,True,Python 2.7.5
+portal-hom-integrator01,True,True,Python 2.7.5
+portal-odin-hml01,False,False,n/a
+portal-ponderacoes-b2b-prd01,True,True,Python 2.7.5
+portal-prd-integrator01,True,True,Python 2.7.5
+portal-titular-lgpd-hml01,True,True,Python 2.7.5
+portal-titular-lgpd-prd01,True,True,Python 2.7.5
+portepx01,True,True,Python 2.7.5
+portepx02,True,True,Python 2.7.5
+portepx03,True,True,Python 2.7.5
+portfolio-hom01,True,True,Python 2.7.5
+porthx01,False,True,Python 2.7.5
+porthx02,False,True,Python 2.7.5
+porthx03,False,True,Python 2.7.5
+porthx04,False,True,Python 2.7.5
+porthx05,False,True,Python 2.7.5
+porthx06,False,True,Python 2.7.5
+portmpx01,True,True,Python 2.7.5
+portmpx02,True,True,Python 2.7.5
+portmpx03,True,True,Python 2.7.5
+portmpx04,True,True,Python 2.7.5
+pprox.staging,False,False,n/a
+pprox-prd01,False,False,n/a
+prdgridctl,True,True,Python 2.7.5
+preproddes,True,True,Python 2.7.5
+proventos-hom-1,False,False,n/a
+provisioning-server-prd01,False,False,n/a
+proxy-01.prd.iot,False,False,n/a
+proxy-hom2-1,False,False,n/a
+proxy-prd01,False,False,n/a
+proxy-prd02,False,False,n/a
+proxy-prd-1,True,True,Python 2.7.5
+proxy-prd-2,True,True,Python 2.7.5
+proxy-prd-3,False,False,n/a
+proxy-prd-4,False,False,n/a
+prtpndb2bpx01,False,True,Python 2.7.5
+ptdashpx01,False,False,n/a
+ptloghx01,False,False,n/a
+ptlogpx01,True,True,Python 2.7.5
+publab,True,True,Python 2.7.5
+pubprdapp1,True,True,Python 2.7.5
+pubprdapp2,True,True,Python 2.7.5
+puppet,True,True,Python 2.7.5
+pv4-camp-adm-1,False,False,n/a
+pv4-camp-db-1,False,True,Python 2.7.5
+pv4-camp-db-2,False,False,n/a
+pv4-camp-kannel-1,True,True,Python 2.7.5
+pv4-camp-kannel-2,True,True,Python 2.7.5
+pv4-camp-kannel-3,False,False,n/a
+pv4-camp-kannel-4,False,False,n/a
+pv4-camp-mediaserver-1,True,True,Python 2.7.5
+pv4-camp-mediaserver-2,True,True,Python 2.7.5
+pv4-camp-mob-1,False,False,n/a
+pv4-camp-mob-2,False,False,n/a
+pv4-camp-wfly-1,False,False,n/a
+pv4-camp-wfly-2,False,False,n/a
+pv4-camp-wso2-1,False,False,n/a
+pv4-camp-wso2-2,False,False,n/a
+pvweb01,True,True,Python 2.7.5
+pvweb02,True,True,Python 2.7.5
+pvweblogictst,True,True,Python 2.7.5
+qualidade-hom01,True,True,Python 2.7.5
+qualidade-prd01,True,True,Python 2.7.5
+qualidade-prd02,True,True,Python 2.7.5
+qualidade-prd03,True,True,Python 2.7.5
+qualidade-prd04,True,True,Python 2.7.5
+ractelecom01-236-prd,True,True,Python 2.7.5
+ractelecom02-236-prd.dbtelecom.com.br,False,False,n/a
+ractelecom03-236-prd.dbtelecom.com.br,False,False,n/a
+radius-ciscoar-temp01_v90,False,False,n/a
+radius-dblogs-prd01,True,True,Python 2.7.5
+radius-iot-acc-hml01,False,False,n/a
+radius-iot-acc-hml02,False,False,n/a
+radius-iot-acc-hml03,False,False,n/a
+radius-iot-acc-prd01,False,False,n/a
+radius-iot-acc-prd02,False,False,n/a
+radius-iot-acc-prd03,False,False,n/a
+radius-iot-auth-hml01,False,False,n/a
+radius-iot-auth-hml02,False,False,n/a
+radius-iot-auth-hml03,False,False,n/a
+radius-iot-auth-prd02,False,False,n/a
+radius-iot-auth-prd03,False,False,n/a
+radius-ws-prd01,True,True,Python 2.7.5
+Rancher-Admin-prd01,False,False,n/a
+Rancher-Admin-prd02,False,False,n/a
+Rancher-Admin-prd03,False,False,n/a
+Rancher-master-prd01,False,False,n/a
+Rancher-master-prd02,False,False,n/a
+Rancher-master-prd03,False,False,n/a
+Rancher-master-stg01,False,False,n/a
+Rancher-master-stg02,False,False,n/a
+Rancher-master-stg03,False,False,n/a
+Rancher-worker-prd01,False,False,n/a
+Rancher-worker-prd02,False,False,n/a
+Rancher-worker-prd03,False,False,n/a
+Rancher-worker-prd04,False,False,n/a
+Rancher-worker-stg01,False,False,n/a
+Rancher-worker-stg02,False,False,n/a
+Rancher-worker-stg03,False,False,n/a
+Rancher-worker-stg04,False,False,n/a
+rbt-appsrv-prd01,True,True,Python 2.7.5
+rbt-dbsrv-prd01-236_v203_v632,False,False,n/a
+rbt-mediasrv-prd01-236_v203_v632,False,False,n/a
+rbt-proxysrv-prd01-236_v203_v632,False,False,n/a
+rdplinuxprd02,True,True,Python 2.7.5
+rdplinuxprd03,True,True,Python 2.7.5
+rdplinuxprd04,True,True,Python 2.7.5
+rdplinuxprd05,True,True,Python 2.7.5
+rdplinuxprd06,True,True,Python 2.7.5
+rdplinuxprd07,True,True,Python 2.7.5
+replicadb.cloudalgartelecom,False,False,n/a
+replicadb.staging,False,False,n/a
+repol01,False,False,n/a
+reposit-front-lgpd-hml01,False,False,n/a
+reposit-front-lgpd-prd01,True,True,Python 2.7.5
+reposit-quality-lgpd-hml01,True,True,Python 2.7.5
+rhsatepx01,True,True,Python 2.7.5
+rhua,False,True,Python 2.7.5
+rqual-spo-prod01,True,True,Python 2.7.5
+rqual-ula-centro-prd01,True,True,Python 2.7.5
+rubictbc01,True,True,Python 2.7.5
+rubidbdes01,True,True,Python 2.7.5
+rubiprd01,True,True,Python 2.7.5
+SBLPRDAPP01,True,True,Python 2.7.5
+SBLPRDAPP02,True,True,Python 2.7.5
+sblprdapp03.network.ctbc,True,True,Python 2.7.5
+sblprdapp04.network.ctbc,True,True,Python 2.7.5
+SBLPRDCFG01,True,True,Python 2.7.5
+SBLPRDCFG02,True,True,Python 2.7.5
+SBLPRDGTW01,True,True,Python 2.7.5
+SBLPRDGTW02,True,True,Python 2.7.5
+SBLPRDOAM01,True,True,Python 2.7.5
+SBLPRDOAM02,True,True,Python 2.7.5
+SBLPRDREP01,True,True,Python 2.7.5
+SBLPRDREP02,True,True,Python 2.7.5
+SBLPRDWEB01,True,True,Python 2.7.5
+SBLPRDWEB02,True,True,Python 2.7.5
+SBLPRDWEB03,True,True,Python 2.7.5
+SBLPRDWEB04,True,True,Python 2.7.5
+scm-01.prd.iot,False,False,n/a
+scp-gw-diameter-prd-1,False,False,n/a
+scp-gw-diameter-prd-2,True,True,Python 2.7.5
+scp-gw-diameter-prd-3,False,False,n/a
+scp-gw-diameter-prd-5,True,True,Python 2.7.5
+scp-gw-diameter-prd-6,False,False,n/a
+scp-gw-http-hom2-1,False,False,n/a
+scp-gw-http-hom2-2,False,False,n/a
+scp-gw-http-prd-1,True,True,Python 2.7.5
+scp-gw-http-prd-2,False,False,n/a
+scp-gw-http-prd-3,False,False,n/a
+scp-gw-http-prd-4,True,True,Python 2.7.5
+scp-gw-http-prd-5,False,False,n/a
+scp-gw-http-prd-6,False,False,n/a
+sdr-server-captura,False,False,n/a
+sds-monitor-236-prd01,False,False,n/a
+secgtw-botcor-prd01.network.ctbc,True,True,Python 2.7.5
+sendsms-hom2-1,False,False,n/a
+sendsms-hom2-2,False,False,n/a
+sendsms-prd-1,False,False,n/a
+sendsms-prd-2,False,False,n/a
+server-analytics-prd01,False,False,n/a
+server-trace,False,False,n/a
+server-trace_prd01,False,False,n/a
+server-trace_prd02,False,False,n/a
+server-trace-10,False,False,n/a
+server-trace-fac,False,False,n/a
+server-trace-piag-prd09,False,False,n/a
+server-trace-ula07,False,False,n/a
+server-trace-ula08,False,False,n/a
+services-hom2-1,False,False,n/a
+services-hom2-2,False,False,n/a
+services-prd-1,True,True,Python 2.7.5
+services-prd-2,False,False,n/a
+services-prd-3,True,True,Python 2.7.5
+Servidor-RC-PHONE2BAPP02,False,False,n/a
+servidor-topologia-digital-prd01,False,False,n/a
+servproapp-prd01,True,True,Python 2.7.5
+servproapp-prd02,True,True,Python 2.7.5
+servprobd-prd01,True,True,Python 2.7.5
+settler01,True,True,Python 2.7.5
+sgdleanhom01,True,True,Python 2.7.5
+sgdleanprd01,True,True,Python 2.7.5
+sgp01,True,True,Python 2.7.5
+sgp01hom,True,True,Python 2.7.5
+sgp02,True,True,Python 2.7.5
+sgp02hom,True,True,Python 2.7.5
+sgprec01_NEW,False,False,n/a
+sipcor-prd01,False,False,n/a
+sittelhom01,True,True,Python 2.7.5
+smartsag-01,False,False,n/a
+smdpx01,True,True,Python 2.7.5
+smokeping-prd01,False,False,n/a
+smpp-gw-prd-1,True,True,Python 2.7.5
+smpp-gw-prd-2,True,True,Python 2.7.5
+smpp-gw-prd-3,True,True,Python 2.7.5
+smpp-gw-prd-4,True,True,Python 2.7.5
+smsc2-broker-hml01-ora,False,False,n/a
+smsc2-core-receiver-01,False,False,n/a
+smsc2-core-receiver-02,False,False,n/a
+smsc2-core-receiver-03,False,False,n/a
+smsc2-core-receiver-04,False,False,n/a
+smsc2-core-receiver-05,False,False,n/a
+smsc2-core-receiver-06,False,False,n/a
+smsc2-core-receiver-07,False,False,n/a
+smsc2-core-receiver-08,False,False,n/a
+smsc2-core-receiver-09,False,False,n/a
+smsc2-core-receiver-10,False,False,n/a
+smsc2-core-worker-01,False,False,n/a
+smsc2-core-worker-02,False,False,n/a
+smsc2-core-worker-03,False,False,n/a
+smsc2-core-worker-04,False,False,n/a
+smsc2-core-worker-05,False,False,n/a
+smsc2-core-worker-06,False,False,n/a
+smsc2-core-worker-07,False,False,n/a
+smsc2-core-worker-08,False,False,n/a
+smsc2-core-worker-09,False,False,n/a
+smsc2-core-worker-10,False,False,n/a
+smsc2-core-worker-11,False,False,n/a
+smsc2-core-worker-12,False,False,n/a
+smsc2-core-worker-13,False,False,n/a
+smsc2-core-worker-14,False,False,n/a
+smsc2-core-worker-15,False,False,n/a
+smsc2-core-worker-16,False,False,n/a
+smsc2-core-worker-17,False,False,n/a
+smsc2-core-worker-18,False,False,n/a
+smsc2-core-worker-19,False,False,n/a
+smsc2-core-worker-20,False,False,n/a
+smsc2-data-server-hml01,False,False,n/a
+smsc2-map-02.planeta.net,True,True,Python 2.7.5
+smsc2-map-03.planeta.net,False,False,n/a
+smsc2-map-04.planeta.net,False,False,n/a
+smsc2-map-hml01,False,False,n/a
+smsc2-map-hml02,False,False,n/a
+smsc2-proxy-01,False,False,n/a
+smsc2-proxy-02,False,False,n/a
+smsc2-proxy-hml01,False,False,n/a
+smsc2-proxy-hml02,False,False,n/a
+smsc2-receiver-hml01,False,False,n/a
+smsc2-receiver-hml02,False,False,n/a
+smsc2-services-01,False,False,n/a
+smsc2-services-02,False,False,n/a
+smsc2-services-03,False,False,n/a
+smsc2-services-04,False,False,n/a
+smsc2-services-hml01,False,False,n/a
+smsc2-services-hml02,False,False,n/a
+smsc2-smpp-01,False,False,n/a
+smsc2-smpp-02,False,False,n/a
+smsc2-smpp-03,False,False,n/a
+smsc2-smpp-04.planeta.net,False,False,n/a
+smsc2-smpp-05,True,True,Python 2.7.5
+smsc2-smpp-06,False,False,n/a
+smsc2-smpp-hml01,False,False,n/a
+smsc2-smpp-hml02,False,False,n/a
+smsc2-smpp-hml03,False,False,n/a
+smsc2-worker-hml-1,False,False,n/a
+smsc2-worker-hml-2,False,False,n/a
+smsc-broker,False,False,n/a
+smsc-core-worker-3,False,False,n/a
+smsc-core-worker-4,False,False,n/a
+smsc-core-worker-5,False,False,n/a
+smsc-core-worker-6,False,False,n/a
+smsc-core-worker-7,False,False,n/a
+smsc-core-worker-8,False,False,n/a
+smsc-data-server-1,False,False,n/a
+smsc-data-server-2,False,False,n/a
+smsc-hazelcast-1.planeta.net,False,False,n/a
+smsc-hazelcast-2.planeta.net,False,False,n/a
+smsc-hazelcast-3.planeta.net,False,False,n/a
+smsc-hazelcast-4.planeta.net,False,False,n/a
+smsc-hazelcast-5.planeta.net,False,False,n/a
+smsc-map-prd-1,False,False,n/a
+smsc-smpp-4,True,True,Python 2.7.5
+smtp01,False,False,n/a
+smtpapp,True,True,Python 2.7.5
+smtpapp2,True,True,Python 2.7.5
+soawsohom01,False,True,Python 2.7.5
+soawsohom02,False,True,Python 2.7.5
+soawsoprd01,True,True,Python 2.7.5
+soawsoprd02,True,True,Python 2.7.5
+soawsoprd03,True,True,Python 2.7.5
+soawsoprd04,True,True,Python 2.7.5
+som-hmlv2-cache01,True,True,Python 2.7.5
+som-hmlv2-cache02,True,True,Python 2.7.5
+som-hmlv2-service01,True,True,Python 2.7.5
+som-hmlv2-service02,True,True,Python 2.7.5
+som-hmlv2-view01,True,True,Python 2.7.5
+som-hmlv2-view02,True,True,Python 2.7.5
+som-hom-app01,True,True,Python 2.7.5
+som-hom-app02,True,True,Python 2.7.5
+som-hom-chat01,True,True,Python 2.7.5
+som-hom-wf01,True,True,Python 2.7.5
+som-hom-wf02,True,True,Python 2.7.5
+som-prd-app01,True,True,Python 2.7.5
+som-prd-app02,True,True,Python 2.7.5
+som-prd-chat01,True,True,Python 2.7.5
+som-prd-chat02,True,True,Python 2.7.5
+som-prd-elk02,False,False,n/a
+som-prdv2-cache01,True,True,Python 2.7.5
+som-prdv2-cache02,True,True,Python 2.7.5
+som-prdv2-service01,True,True,Python 2.7.5
+som-prdv2-service02,True,True,Python 2.7.5
+som-prdv2-service03,True,True,Python 2.7.5
+som-prdv2-view01,True,True,Python 2.7.5
+som-prdv2-view02,True,True,Python 2.7.5
+som-prdv2-view03,True,True,Python 2.7.5
+som-prd-wf01,True,True,Python 2.7.5
+som-prd-wf02,True,True,Python 2.7.5
+som-tit-app01,True,True,Python 2.7.5
+som-tit-chat01,True,True,Python 2.7.5
+som-tit-wf01,True,True,Python 2.7.5
+som-wf-hml02,True,True,Python 2.7.5
+som-wf-prd01,True,True,Python 2.7.5
+som-wf-prd02,True,True,Python 2.7.5
+som-wf-prd03,True,True,Python 2.7.5
+spacecor,False,False,n/a
+spacewalk-repo-prd01_v203,False,False,n/a
+spark-prd-worker01,False,False,n/a
+sportal-prd01,False,False,n/a
+sps3-app-dev01-iot,True,True,Python 2.7.5
+sps3-app-dev02-iot,True,True,Python 2.7.5
+sps3-app-hml01-iot,False,False,n/a
+sps3-app-hml02.iot,False,False,n/a
+sps3-app-prd01-iot,False,False,n/a
+sps3-app-prd02-iot,False,False,n/a
+spsdx01,True,True,Python 2.7.5
+spshom02,True,True,Python 2.7.5
+sps-hom-near01,True,True,Python 2.7.5
+sps-hom-ws01,True,True,Python 2.7.5
+sps-hom-ws01New,False,False,n/a
+sps-hom-ws02,True,True,Python 2.7.5
+sps-hom-ws02New,False,False,n/a
+spshx01,True,True,Python 2.7.5
+spshx02,True,True,Python 2.7.5
+spshx03,True,True,Python 2.7.5
+spshx04,True,True,Python 2.7.5
+spsprd01,True,True,Python 2.7.5
+spsprd02,True,True,Python 2.7.5
+spsprd03,True,True,Python 2.7.5
+spsprd04,True,True,Python 2.7.5
+sps-prd-near01,True,True,Python 2.7.5
+sps-prd-ws01-NEW,False,False,n/a
+sps-prd-ws02New,False,False,n/a
+spspx01,True,True,Python 2.7.5
+spspx02,True,True,Python 2.7.5
+spspx03,True,True,Python 2.7.5
+spspx04,True,True,Python 2.7.5
+srvkeymile01,True,True,Python 2.7.5
+srvphpdes01,True,True,Python 2.7.5
+srvphpdes01_NEW,True,True,Python 2.7.5
+srvphp-dev_NEW,False,False,n/a
+SSM-prd01,False,False,n/a
+stream-moniot-hml01-NEW,False,False,n/a
+stream-moniot-hml02,False,False,n/a
+stream-moniot-hml03,False,False,n/a
+stream-moniot-prd01,False,False,n/a
+stream-moniot-prd02,False,False,n/a
+stream-moniot-prd03,False,False,n/a
+stream-moniot-prd04,False,False,n/a
+stream-moniot-prd05,False,False,n/a
+stream-moniot-prd06,False,False,n/a
+stream-moniot-prd07,False,False,n/a
+subversion_NEW,False,False,n/a
+sunlight1,True,True,Python 2.7.5
+sunlight2,True,True,Python 2.7.5
+svn-prd-app01,True,True,Python 2.7.5
+syslog-correios-prd01,False,False,n/a
+syslog-srv01,False,False,n/a
+tam-01.planeta.net,False,False,n/a
+tcr-franca-prd01,False,False,n/a
+tcr-franca-prd02,False,False,n/a
+tcr-spo-prd01,False,False,n/a
+tcr-spo-prd02,False,False,n/a
+tcr-ula-prd01,False,False,n/a
+tcr-ula-prd02,False,False,n/a
+tcr-ula-prd03,False,False,n/a
+tcr-ula-prd04,True,True,Python 2.7.5
+teams-vsession-prd01,False,False,n/a
+teams-vsession-prd05,False,False,n/a
+teams-vsession-prd06,False,False,n/a
+telegraf-gateway-01.prd.iot,False,False,n/a
+telegraf-gateway-02.prd.iot,False,False,n/a
+Terra-Form-prd01,False,False,n/a
+terra-form-stg01,False,False,n/a
+tf-catprod-prd-matrix01,True,True,Python 2.7.5
+tf-jenkins-crm-prd01,False,False,n/a
+tic-adm-bb-hom01,True,True,Python 2.7.5
+tic-adm-bb-prd01,False,False,n/a
+tic-building-blocks-hom01,True,True,Python 2.7.5
+tic-building-blocks-hom02,True,True,Python 2.7.5
+tic-building-blocks-prd01,True,True,Python 2.7.5
+tic-building-blocks-prd02,True,True,Python 2.7.5
+tic-ecommerce-prd02,True,True,Python 2.7.5
+TNMSPX01,False,False,n/a
+TNMSPX02,False,False,n/a
+tokenhom01NEW,False,False,n/a
+tokenhom02New,False,False,n/a
+tokenprd01,True,True,Python 2.7.5
+tokenprd02,True,True,Python 2.7.5
+tokentit01,True,True,Python 2.7.5
+tomcatas01hom_NEW,False,False,n/a
+tomcatasprd02_NEW,False,False,n/a
+tomcatasprd03,True,True,Python 2.7.5
+toolstelecom06,False,False,n/a
+toolstelecom1_NEW,False,False,n/a
+toolstelecom2_NEW,False,False,n/a
+tools-telecom-cel03-prd_NEW,False,False,n/a
+tools-telecom-cel04-prd_NEW,False,False,n/a
+toolstelecom-cel-prd01_v203,False,False,n/a
+toolstelecom-cel-prd02_v203,False,False,n/a
+toolstelecom-cel-prd05_v203,False,False,n/a
+toolstelecom-cel-prd06_v203,False,False,n/a
+toolstelecom-cel-prd07_v203,False,False,n/a
+toolstelecom-cel-prd08,True,True,Python 2.7.5
+TPDU01_prd,True,True,Python 2.7.5
+tpdu02,False,False,n/a
+tpdu03,False,False,n/a
+tpdu04,False,False,n/a
+tpdu05,False,False,n/a
+tpdu06,False,False,n/a
+tpdu07,False,False,n/a
+tpdu08,False,False,n/a
+tr069-api-hml01,True,True,Python 2.7.5
+tr069-api-prd01,True,True,Python 2.7.5
+tr069-api-prd02,True,True,Python 2.7.5
+tr069-api-prd03,True,True,Python 2.7.5
+Tr069-app-prd01,True,True,Python 2.7.5
+Tr069-app-prd03,True,True,Python 2.7.5
+tr069-balancer-hml01,True,True,Python 2.7.5
+Tr069-Balancer-PRD01,False,False,n/a
+Tr069-Balancer-PRD02,True,True,Python 2.7.5
+tr069-logs-hml01,False,False,n/a
+tr069-logs-prd01,False,False,n/a
+tr069-mongo-hml01,True,True,Python 2.7.5
+tr069-mongo-prd01,True,True,Python 2.7.5
+tr069-mongo-prd02,True,True,Python 2.7.5
+tr069-mongo-prd03,True,True,Python 2.7.5
+traffic-analyser-prd01,False,False,n/a
+traffic-analyser-prd02,False,False,n/a
+traffic-analyser-prd03,False,False,n/a
+traffic-analyser-prd04,False,False,n/a
+traffic-analyser-prd05,False,False,n/a
+traffic-analyser-prd06,False,False,n/a
+traffic-analyser-prd07,False,False,n/a
+traffic-analyser-prd08,False,False,n/a
+traffic-analyser-prd09,False,False,n/a
+trsapp-des,True,True,Python 2.7.5
+trs-hom-app01,True,True,Python 2.7.5
+trs-hom-app02,True,True,Python 2.7.5
+trs-tit-app01,True,True,Python 2.7.5
+trs-tst-app01,True,True,Python 2.7.5
+tts,False,False,n/a
+tts.staging,False,False,n/a
+usrv34,True,True,Python 2.7.5
+usrv37,True,True,Python 2.7.5
+usrv71,False,False,n/a
+usrv80,True,True,Python 2.7.5
+usrv80prd,True,True,Python 2.7.5
+usrv82prd,True,True,Python 2.7.5
+ussd-center-01,False,False,n/a
+ussd-center-02,False,False,n/a
+velocidade-spo,False,False,n/a
+vEMS-238-2,False,False,n/a
+vertica-prd01-ext4,False,False,n/a
+vertica-prd02-ext4,False,False,n/a
+vertica-prd03-ext4,False,False,n/a
+vertica-prd04.network.ctbc,False,True,Python 2.7.5
+vertica-prd05.network.ctbc,False,True,Python 2.7.5
+vertica-prd06.network.ctbc,False,True,Python 2.7.5
+vertis-app-prd01,True,True,Python 2.7.5
+VGAPPHOM01,True,True,Python 2.7.5
+VGAPXHOM01,True,True,Python 2.7.5
+VGAPXPRD01,True,True,Python 2.7.5
+VGCONTHOM01,True,True,Python 2.7.5
+VGCONTPRD01,True,True,Python 2.7.5
+VGGWHOM01,True,True,Python 2.7.5
+VGHMPRD01,True,True,Python 2.7.5
+VGNEDPRD01,True,True,Python 2.7.5
+VGPROCHOM01,True,True,Python 2.7.5
+VGPROCPRD01,True,True,Python 2.7.5
+vigiahx01,False,False,n/a
+vigiapx01,False,False,n/a
+vigiapx02,False,False,n/a
+VM_crm-prd-app02,False,False,n/a
+VM_dmviewedb-spo_v203,False,False,n/a
+VM_dns-cel02-prd,False,False,n/a
+VM_eb-hom-app01,False,False,n/a
+VM_eb-hom-app02,False,False,n/a
+VM_eb-hom-ws01,False,False,n/a
+VM_eb-prd-app01,False,False,n/a
+VM_eb-prd-app02,False,False,n/a
+VM_jenkings-devops,False,False,n/a
+VM_misp-algar,False,False,n/a
+VM_monitoramento-algarcrm-prd01,False,False,n/a
+VM_msfranquia_hml01,False,False,n/a
+VM_msfranquia_hml02,False,False,n/a
+VM_msfranquia_prd01,False,False,n/a
+VM_msfranquia_prd02,False,False,n/a
+VM_oimprdidm1,False,False,n/a
+VM_oimprdidm2,False,False,n/a
+VM_POC_TR069_v203,False,False,n/a
+VM_rhel-repo-cor,False,False,n/a
+VM_som-wf-hom01,False,False,n/a
+vm_tarifador_prd01,False,False,n/a
+VM_tr069-utils,False,False,n/a
+VM_ubiquiti_prd,False,False,n/a
+VM_ula_proxy_02,False,False,n/a
+VM_VGGWPRD01,False,False,n/a
+VM_voipview_web,False,False,n/a
+VM_WEBDNS_ALGARSUL,False,False,n/a
+VM_webfranquia_hml01,False,False,n/a
+VM_webfranquia_prd01,False,False,n/a
+VM_webfranquia_prd02,False,False,n/a
+VM_wlsim01,False,False,n/a
+VM_zabbix-corp,False,False,n/a
+VM_zabbix-dbclientesv2-prd,False,False,n/a
+VM_zabbix-poller1-prod05,False,False,n/a
+VM_zabbix-poller1-prod08,False,False,n/a
+vm1.staging,False,False,n/a
+vm1hx01,False,False,n/a
+vm1px01,False,False,n/a
+vm-cacti-capacidade3,False,False,n/a
+VM-IPTV-01,False,False,n/a
+VM-NSPAR,False,False,n/a
+VM-NSSAR,False,False,n/a
+VM-SRVTEL-AV02,False,False,n/a
+webfranquia-hml02,False,True,Python 2.7.5
+webhom02,True,True,Python 2.7.5
+web-ui-hom-app01,False,True,Python 2.7.5
+web-ui-prd-app01,False,False,n/a
+wikipx01,True,True,Python 2.7.5
+wiki-repositorio,False,False,n/a
+wildfly-gerar-prd01,True,True,Python 2.7.5
+wildfly-gerar-prd02,True,True,Python 2.7.5
+wlhom01,True,True,Python 2.7.5
+wlhom02,True,True,Python 2.7.5
+wlsapp01,False,True,Python 2.7.5
+wlsapp02,False,True,Python 2.7.5
+wlsim01,True,True,Python 2.7.5
+wlsservice01,False,True,Python 2.7.5
+wlsservice02,False,True,Python 2.7.5
+wlsservice03,False,True,Python 2.7.5
+wlsservice04,False,True,Python 2.7.5
+wlszhmg01,True,True,Python 2.7.5
+wlszprod01,True,True,Python 2.7.5
+work-lgpd-prd01,True,True,Python 2.7.5
+work-lgpd-prd02,True,True,Python 2.7.5
+wso2prod,True,True,Python 2.7.5
+wsodsshom01,False,True,Python 2.7.5
+wsodsshom02,False,True,Python 2.7.5
+wsodssprd01,True,True,Python 2.7.5
+wsodssprd02,True,True,Python 2.7.5
+wsomsghom01,False,True,Python 2.7.5
+wsomsghom02,False,True,Python 2.7.5
+wsomsgprd01,True,True,Python 2.7.5
+wsomsgprd02,True,True,Python 2.7.5
+wsomysqlhom01,False,True,Python 2.7.5
+wsomysqlhom01-new,False,False,n/a
+wsomysqlprd01,True,True,Python 2.7.5
+xdsl2-des,False,False,n/a
+zabbix-cor-srv-prd01_v203,False,False,n/a
+zabbixdb03,False,False,n/a
+zabbixdb07,False,False,n/a
+zabbixdb10,False,False,n/a
+zabbixdbclientes02,False,False,n/a
+zabbixdbfontes_v203,False,False,n/a
+zabbixdbhomo,False,False,n/a
+zabbix-dck-metro-prd01,True,True,Python 2.7.5
+zabbix-dck-metro-prd02,True,True,Python 2.7.5
+zabbix-dck-metro-prd03,True,True,Python 2.7.5
+zabbix-mysql-correios-prd01,False,False,n/a
+zabbix-mysql-plat-prd01,True,True,Python 2.7.5
+zabbix-noc-web,False,False,n/a
+zabbix-ondemand-hml01,False,False,n/a
+zabbix-poller-cli-prd01,True,True,Python 2.7.5
+zabbix-poller-cli-prd02,False,False,n/a
+zabbix-poller-cli-prd03,False,False,n/a
+zabbix-poller-cli-prd04,False,True,Python 2.7.5
+zabbix-poller-cli-prd05,True,True,Python 2.7.5
+zabbix-poller-cli-prd06,True,True,Python 2.7.5
+zabbix-poller-cli-prd07,True,True,Python 2.7.5
+zabbix-poller-cli-prd08,True,True,Python 2.7.5
+zabbix-poller-cor-prd01_v203,False,False,n/a
+zabbix-poller-cor-prd02_v203,False,False,n/a
+zabbix-poller-correios-prd01,False,False,n/a
+zabbix-poller-cta-prd01,True,True,Python 2.7.5
+zabbix-poller-itau-prd01,False,False,n/a
+zabbix-poller-plat-prd01,True,True,Python 2.7.5
+zabbix-poller-plat-prd02,True,True,Python 2.7.5
+zabbix-poller-plat-prd04,True,True,Python 2.7.5
+zabbix-poller-tic-app02-desc,False,False,n/a
+zabbix-prd-corp01,True,True,Python 2.7.5
+zabbix-repo,False,False,n/a
+zabbix-report-server-hml01,False,False,n/a
+zabbix-report-server-prd01,True,True,Python 2.7.5
+zabbix-sec,False,False,n/a
+zabbix-server-hom-01,True,True,Python 2.7.5
+zabbix-srv-bhe-prd01,True,True,Python 2.7.5
+zabbix-srv-cli-prd01,True,True,Python 2.7.5
+zabbix-srv-correios-prd01,False,False,n/a
+zabbix-srv-cta-prd01,True,True,Python 2.7.5
+zabbix-srv-plat-prd01,True,True,Python 2.7.5
+zabbix-web-prod01,False,False,n/a
+zbxdbalghx01,True,True,Python 2.7.5
+zbxdbapx01,False,False,n/a
+zbxdbapx02,False,False,n/a
+zbxdbapx03,False,False,n/a
+zbxdbpx02,True,True,Python 2.7.5
+zbxdbtic01,False,False,n/a
+zbxprxtic01,True,True,Python 2.7.5
+zbxprxtic02,True,True,Python 2.7.5
+zbxprxtic03,False,False,n/a
+zbxprxtic04,False,False,n/a
+zbxprxtic05,True,True,Python 2.7.5
+zbxprxtic06,True,True,Python 2.7.5
+zbxprxticcl,False,False,n/a
+zbxsrvtic01,False,False,n/a
+zms-hom02,False,False,n/a
+ZMSPRD01,True,True,Python 2.7.5
+zteftppx01,False,False,n/a

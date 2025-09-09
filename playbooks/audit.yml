@@ -1,0 +1,132 @@
+---
+- name: Auditoria de SO, registro e quick-wins (read-only)
+  hosts: linux_all
+  gather_facts: true
+  become: true
+
+  pre_tasks:
+    - name: Classificar ambiente por hostname ou hostvar 'env'
+      ansible.builtin.set_fact:
+        env_class: >-
+          {{ (hostvars[inventory_hostname].env | default('')) |
+             ternary(hostvars[inventory_hostname].env,
+               (inventory_hostname is match('(?i).*\\b(prd|prod|production)\\b.*')) |
+               ternary('PRD',
+                 (inventory_hostname is match('(?i).*\\b(hml|hom|hmg|stg|staging|qa|uat|tst|test|dev)\\b.*')) |
+                 ternary('NPRD','NPRD'))) }}
+    - name: Criar grupos dinâmicos env_prd/env_nprd
+      ansible.builtin.group_by:
+        key: "env_{{ env_class | lower }}"
+
+  tasks:
+    - name: Pacotes instalados
+      ansible.builtin.package_facts:
+        manager: auto
+    - name: Facts de serviços
+      ansible.builtin.service_facts:
+    - name: RHSM identity
+      ansible.builtin.command: subscription-manager identity
+      register: sm_identity
+      changed_when: false
+      failed_when: false
+    - name: RHSM config
+      ansible.builtin.command: subscription-manager config --list
+      register: sm_cfg
+      changed_when: false
+      failed_when: false
+    - name: systemd default target
+      ansible.builtin.command: systemctl get-default
+      register: sys_default
+      changed_when: false
+      failed_when: false
+    - name: SELinux
+      ansible.builtin.command: getenforce
+      register: selinux_enf
+      changed_when: false
+      failed_when: false
+    - name: FIPS
+      ansible.builtin.command: cat /proc/sys/crypto/fips_enabled
+      register: fips
+      changed_when: false
+      failed_when: false
+    - name: Espaço em / e /boot
+      ansible.builtin.set_fact:
+        root_mount: "{{ (ansible_mounts | selectattr('mount','equalto','/') | list | first) | default({}) }}"
+        boot_mount: "{{ (ansible_mounts | selectattr('mount','equalto','/boot') | list | first) | default({}) }}"
+        root_total_gb: "{{ (root_mount.size_total | default(0) / 1024 / 1024 / 1024) | round(1) }}"
+        root_free_gb:  "{{ (root_mount.size_available | default(0) / 1024 / 1024 / 1024) | round(1) }}"
+        boot_free_gb:  "{{ (boot_mount.size_available | default(0) / 1024 / 1024 / 1024) | round(1) }}"
+    - name: Sinais de quick-wins
+      ansible.builtin.set_fact:
+        has_firefox: "{{ 'firefox' in ansible_facts.packages }}"
+        has_cups_pkg: "{{ 'cups' in ansible_facts.packages }}"
+        has_java_pkg: "{{ ansible_facts.packages.keys() | select('match','^java-.*openjdk$') | list | length > 0 }}"
+    - name: Registro RHSM/Satellite
+      ansible.builtin.set_fact:
+        rhsm_registered: "{{ sm_identity.rc == 0 }}"
+        rhsm_server: "{{ (sm_cfg.stdout | regex_search('server\\.hostname\\s*=\\s*\\[(.*?)\\]', '\\1')) | default('desconhecido', true) }}"
+        katello_agent: "{{ 'katello-agent' in ansible_facts.packages }}"
+        host_tools: "{{ 'katello-host-tools' in ansible_facts.packages }}"
+        rhc: "{{ 'rhc' in ansible_facts.packages }}"
+        insights: "{{ 'insights-client' in ansible_facts.packages }}"
+    - name: Montar registro final
+      ansible.builtin.set_fact:
+        audit_record:
+          host: "{{ inventory_hostname }}"
+          env: "{{ env_class }}"
+          distro: "{{ ansible_facts.distribution | default('') }}"
+          version: "{{ ansible_facts.distribution_version | default('') }}"
+          major: "{{ ansible_facts.distribution_major_version | default('') }}"
+          kernel: "{{ ansible_facts.kernel | default('') }}"
+          arch: "{{ ansible_facts.architecture | default('') }}"
+          virt_type: "{{ ansible_facts.virtualization_type | default('') }}"
+          pkg_mgr: "{{ ansible_facts.pkg_mgr | default('') }}"
+          registered: "{{ rhsm_registered }}"
+          rhsm_server: "{{ rhsm_server }}"
+          katello_agent: "{{ katello_agent }}"
+          host_tools: "{{ host_tools }}"
+          rhc: "{{ rhc }}"
+          insights: "{{ insights }}"
+          selinux: "{{ selinux_enf.stdout | default('unknown') }}"
+          fips: "{{ (fips.stdout | default('0') | trim) == '1' }}"
+          default_target: "{{ sys_default.stdout | default('unknown') }}"
+          has_firefox: "{{ has_firefox }}"
+          has_cups_pkg: "{{ has_cups_pkg }}"
+          has_java_pkg: "{{ has_java_pkg }}"
+          root_fs: "{{ root_mount.fstype | default('') }}"
+          root_total_gb: "{{ root_total_gb }}"
+          root_free_gb: "{{ root_free_gb }}"
+          boot_fs: "{{ boot_mount.fstype | default('') }}"
+          boot_free_gb: "{{ boot_free_gb }}"
+          uptime_days: "{{ (ansible_facts.uptime_seconds | default(0) / 86400) | round(1) }}"
+          ip: "{{ ansible_facts.default_ipv4.address | default('') }}"
+          fqdn: "{{ ansible_facts.fqdn | default('') }}"
+    - name: Debug por host
+      ansible.builtin.debug:
+        var: audit_record
+
+    - name: CSV consolidado (control node)
+      run_once: true
+      delegate_to: localhost
+      ansible.builtin.copy:
+        dest: ./audit_inventario.csv
+        mode: "0644"
+        content: |
+          host,env,distro,version,major,kernel,arch,virt_type,pkg_mgr,registered,rhsm_server,katello_agent,host_tools,rhc,insights,selinux,fips,default_target,has_firefox,has_cups_pkg,has_java_pkg,root_fs,root_total_gb,root_free_gb,boot_fs,boot_free_gb,uptime_days,ip,fqdn
+          {% for h in ansible_play_hosts_all -%}
+          {% set r = hostvars[h].audit_record -%}
+          {{ r.host }},{{ r.env }},{{ r.distro }},{{ r.version }},{{ r.major }},{{ r.kernel }},{{ r.arch }},{{ r.virt_type }},{{ r.pkg_mgr }},{{ r.registered }},{{ r.rhsm_server }},{{ r.katello_agent }},{{ r.host_tools }},{{ r.rhc }},{{ r.insights }},{{ r.selinux }},{{ r.fips }},{{ r.default_target }},{{ r.has_firefox }},{{ r.has_cups_pkg }},{{ r.has_java_pkg }},{{ r.root_fs }},{{ r.root_total_gb }},{{ r.root_free_gb }},{{ r.boot_fs }},{{ r.boot_free_gb }},{{ r.uptime_days }},{{ r.ip }},{{ r.fqdn }}
+          {% endfor %}
+
+    - name: JSON consolidado (control node)
+      run_once: true
+      delegate_to: localhost
+      ansible.builtin.copy:
+        dest: ./audit_inventario.json
+        mode: "0644"
+        content: |
+          {
+          {% for h in ansible_play_hosts_all -%}
+            "{{ h }}": {{ hostvars[h].audit_record | to_nice_json }}{{ "," if not loop.last else "" }}
+          {% endfor -%}
+          }

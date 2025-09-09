@@ -1,0 +1,1892 @@
+host,icmp_ok,ssh_open,python_version,status
+aaa-moniot-prd01,False,False,n/a,dead
+aaa-moniot-prd02,False,False,n/a,dead
+aaa-moniot-prd03,False,False,n/a,dead
+aaa-moniot-prd04,False,False,n/a,dead
+acervo-prd01,True,True,Python 2.7.5,full_ok
+acronisaeh.staging,False,False,n/a,dead
+acronis-isilon-stg01,False,False,n/a,dead
+acsdb-01,False,False,n/a,dead
+adm-ceph-prd01,False,False,n/a,dead
+afiliados-app-hml01,False,True,Python 2.7.5,ssh_only
+afiliados-app-prd01,False,True,Python 2.7.5,ssh_only
+aid-hos-10.planeta.net,False,False,n/a,dead
+aid-hos-11,True,True,Python 2.7.3,full_ok
+aid-hos-12,True,True,Python 2.7.3,full_ok
+aid-hos-21,True,True,Python 2.7.3,full_ok
+aid-hos-22,True,True,Python 2.7.3,full_ok
+aid-hos-23,True,True,Python 2.7.3,full_ok
+aid-hos-24,True,True,Python 2.7.5,full_ok
+aid-hos-25,False,False,n/a,dead
+airflow-hom01,False,False,n/a,dead
+Algar-BD,False,False,n/a,dead
+algarbff-hom-app01,True,True,Python 2.7.5,full_ok
+algarbff-hom-app02,True,True,Python 2.7.5,full_ok
+algarbff-prd-app01,True,True,Python 2.7.5,full_ok
+algarbff-prd-app02,True,True,Python 2.7.5,full_ok
+algarbff-prd-app03,True,True,Python 2.7.5,full_ok
+algar-bsc-hom01,True,True,Python 2.7.5,full_ok
+algarcatprodhmg01,True,True,Python 2.7.5,full_ok
+algarcatprodhmg02,True,True,Python 2.7.5,full_ok
+algarcatprodprd01,True,True,Python 2.7.5,full_ok
+algarcatprodprd02,True,True,Python 2.7.5,full_ok
+algarcatprodtit,True,True,Python 2.7.5,full_ok
+algar-contact-hom01.tenant0008,False,False,n/a,dead
+algar-contact-hom02,False,True,Python 2.7.5,ssh_only
+algar-contact-prd01.tenant0008,False,False,n/a,dead
+algar-contact-prd02.tenant0008,False,False,n/a,dead
+algarcsmhmg-batch02,True,True,Python 2.7.5,full_ok
+algarcsmhmg-parc01,True,True,Python 2.7.5,full_ok
+algarcsmhmg-parc02,True,True,Python 2.7.5,full_ok
+algarcsmhmg-portal01,True,True,Python 2.7.5,full_ok
+algarcsmprd-batch01,True,True,Python 2.7.5,full_ok
+algarcsmprd-batch02,True,True,Python 2.7.5,full_ok
+algarcsmprd-parc01,True,True,Python 2.7.5,full_ok
+algarcsmprd-parc02,True,True,Python 2.7.5,full_ok
+algarcsmprd-portal01,True,True,Python 2.7.5,full_ok
+algarcsmtit,True,True,Python 2.7.5,full_ok
+algardeploy-prd01,True,True,Python 2.7.5,full_ok
+algargedhmg01,True,True,Python 2.7.5,full_ok
+algargedhmg02,True,True,Python 2.7.5,full_ok
+algargedhmg-rabbit01,True,True,Python 2.7.5,full_ok
+algargedhmg-rabbit02,True,True,Python 2.7.5,full_ok
+algargedhmg-service01,True,True,Python 2.7.5,full_ok
+algargedhmg-service02,True,True,Python 2.7.5,full_ok
+algargedprd01,True,True,Python 2.7.5,full_ok
+algargedprd02,True,True,Python 2.7.5,full_ok
+algargedprd-rabbit01,True,True,Python 2.7.5,full_ok
+algargedprd-rabbit02,True,True,Python 2.7.5,full_ok
+algargedprd-service01,True,True,Python 2.7.5,full_ok
+algargedprd-service02,True,True,Python 2.7.5,full_ok
+algargedtit_NEW,False,False,n/a,dead
+algarops-hom-app01,False,False,n/a,dead
+algar-sg-spo-3,True,True,Python 2.7.5,full_ok
+algar-sg-spo-4,True,True,Python 2.7.5,full_ok
+algar-sg-ula-7,True,True,Python 2.7.5,full_ok
+Algar-sipserver,False,False,n/a,dead
+algmcache01,True,True,Python 2.7.5,full_ok
+algmweb01,True,True,Python 2.7.5,full_ok
+algschx01,True,True,Python 2.7.5,full_ok
+am_hosts,True,True,Python 2.7.5,full_ok
+ams-nokia-prd01,True,True,Python 2.7.5,full_ok
+anrprd,True,True,Python 2.7.5,full_ok
+ansible-app-prd01,True,True,Python 2.7.5,full_ok
+ansible-portal-prd01,True,True,Python 2.7.5,full_ok
+antispam-db01,False,False,n/a,dead
+antispam-scan01,False,False,n/a,dead
+antispam-scan02,False,False,n/a,dead
+antispam-scan03,False,False,n/a,dead
+antispam-scan04,False,False,n/a,dead
+apcem-hml01,False,False,n/a,dead
+apcem-poc01,False,False,n/a,dead
+api-02-portal-hom-iot,False,True,Python 2.7.5,ssh_only
+api-moniot-prd01,False,False,n/a,dead
+api-moniot-prd02,False,False,n/a,dead
+api-portal-hom-iot,False,True,Python 2.7.5,ssh_only
+api-prd01-iot,False,False,n/a,dead
+api-prd02-iot,False,False,n/a,dead
+api-prd-jenkins01,False,False,n/a,dead
+api-protweb-prd01,False,False,n/a,dead
+apm-app-prd01,False,False,n/a,dead
+app01-portal-hml,True,True,Python 2.7.5,full_ok
+app01-portal-prd,True,True,Python 2.7.5,full_ok
+app02-portal-hml,True,True,Python 2.7.5,full_ok
+app02-portal-prd,True,True,Python 2.7.5,full_ok
+app-gravacao-01,False,False,n/a,dead
+app-gravacao-02,False,False,n/a,dead
+app-host-resilient-prd01,False,False,n/a,dead
+appmobileprd01_NEW,False,False,n/a,dead
+appmobileprd02_NEW,False,False,n/a,dead
+app-omni-h01,False,False,n/a,dead
+app-phone-prd01,False,False,n/a,dead
+app-phone-prd02,False,False,n/a,dead
+app-policy-prd01,True,True,Python 2.7.5,full_ok
+app-policy-prd01-238,False,False,n/a,dead
+app-policy-prd02,True,True,Python 2.7.5,full_ok
+app-policy-prd02-238,False,False,n/a,dead
+app-policy-prd03,True,True,Python 2.7.5,full_ok
+app-policy-prd03-238,False,False,n/a,dead
+app-portal-nominum-prd01,False,True,Python 2.7.5,ssh_only
+app-portal-prd01,False,False,n/a,dead
+app-sq-phone-prd01,False,False,n/a,dead
+app-sq-phone-prd02,False,False,n/a,dead
+appstack-lgpd-prod01,False,False,n/a,dead
+aps.cloudalgartelecom.com.br,True,True,Python 2.7.5,full_ok
+aps.staging,False,False,n/a,dead
+apscloudplus.staging,False,False,n/a,dead
+aps-ico.staging,False,False,n/a,dead
+aps-ico-prd01,True,True,Python 2.7.5,full_ok
+apsmaxmonitor,False,False,n/a,dead
+apsmaxmonitor.staging,False,False,n/a,dead
+aps-multicloud-prd01,False,False,n/a,dead
+automacao-prd03,False,False,n/a,dead
+automacao-prod-01,True,True,Python 2.7.5,full_ok
+automacao-prod-01-fisico,False,False,n/a,dead
+b2c-dashboard01,False,False,n/a,dead
+b2c-elk01,True,True,Python 2.7.5,full_ok
+b2c-hom-indexer01,True,True,Python 2.7.5,full_ok
+b2c-hom-indexer02,True,True,Python 2.7.5,full_ok
+b2c-hom-maestro01,True,True,Python 2.7.5,full_ok
+b2c-hom-maestro02,True,True,Python 2.7.5,full_ok
+b2c-indexer01,False,False,n/a,dead
+b2c-indexer02,False,False,n/a,dead
+b2c-jenkins,True,True,Python 2.7.5,full_ok
+b2c-jenkins02_NEW,False,False,n/a,dead
+b2c-jenkins03,True,True,Python 2.7.5,full_ok
+b2c-prd-maestro01,True,True,Python 2.7.5,full_ok
+b2c-prd-maestro02,True,True,Python 2.7.5,full_ok
+b2c-prd-maestro03,True,True,Python 2.7.5,full_ok
+b2c-prd-maestro04,True,True,Python 2.7.5,full_ok
+b2c-prd-maestro05,True,True,Python 2.7.5,full_ok
+b2c-prd-maestro06,True,True,Python 2.7.5,full_ok
+b2c-tit-maestro01,True,True,Python 2.7.5,full_ok
+b2c-tst-maestro01,True,True,Python 2.7.5,full_ok
+backend-hom01,False,False,n/a,dead
+backend-prd01,True,True,Python 2.7.5,full_ok
+backend-prd02,True,True,Python 2.7.5,full_ok
+backend-sinfra-hml02,False,False,n/a,dead
+backend-sinfr-prd01,False,False,n/a,dead
+balancer-hom2-1.ocs,False,False,n/a,dead
+balancer-prd-1,False,False,n/a,dead
+balancer-prd-2.ocs.algartelecom.com.br,False,False,n/a,dead
+bandalarga-prd01,False,False,n/a,dead
+basedeconhecimento.network.ctbc,True,True,Python 2.7.5,full_ok
+bdahomapp01,True,True,Python 2.7.5,full_ok
+bdahomapp02,True,True,Python 2.7.5,full_ok
+bdaprdapp01,True,True,Python 2.7.5,full_ok
+bdaprdapp02,True,True,Python 2.7.5,full_ok
+bd-conf-phone-hml01,False,False,n/a,dead
+bd-conf-phone-prd01,False,False,n/a,dead
+bd-conf-phone-prd02,False,False,n/a,dead
+bd-gerar-mysql-prd01,True,True,Python 2.7.5,full_ok
+bd-log-phone-prd01,False,False,n/a,dead
+bd-log-phone-prd02,False,False,n/a,dead
+bd-sip-phone-prd01,False,False,n/a,dead
+beatch-moniot-p1,False,False,n/a,dead
+beatch-moniot-p2,False,False,n/a,dead
+bedigpx01,True,True,Python 2.7.5,full_ok
+bilprdapp1,True,True,Python 2.7.5,full_ok
+bilprdapp2,True,True,Python 2.7.5,full_ok
+bkprd01,True,True,Python 2.7.5,full_ok
+bkprd02-ptguru2px01,False,False,n/a,dead
+blazon-acess-hml01,True,True,Python 2.7.5,full_ok
+blazon-activemq-prd01,True,True,Python 2.7.5,full_ok
+blazon-adapter-prd01,True,True,Python 2.7.5,full_ok
+blazon-adapter-prd02,True,True,Python 2.7.5,full_ok
+blazon-adm-console-prd01,True,True,Python 2.7.5,full_ok
+blazon-adm-console-prd02,True,True,Python 2.7.5,full_ok
+blazon-api-prd01,True,True,Python 2.7.5,full_ok
+blazon-api-prd02,True,True,Python 2.7.5,full_ok
+blazon-core-hml01,True,True,Python 2.7.5,full_ok
+blazon-core-prd01,True,True,Python 2.7.5,full_ok
+blazon-core-prd02,True,True,Python 2.7.5,full_ok
+blazon-elastic-hml01,True,True,Python 2.7.5,full_ok
+blazon-elastic-prd01,True,True,Python 2.7.5,full_ok
+blazon-job-prd01,True,True,Python 2.7.5,full_ok
+blazon-resetpwd-prd01,True,True,Python 2.7.5,full_ok
+blazon-resetpwd-prd02,True,True,Python 2.7.5,full_ok
+blazon-res-hml01,True,True,Python 2.7.5,full_ok
+blazon-sql-hml01,True,True,Python 2.7.5,full_ok
+blazon-sql-prd01,True,True,Python 2.7.5,full_ok
+blazon-sql-prd02,True,True,Python 2.7.5,full_ok
+blazon-work-hml01,True,True,Python 2.7.5,full_ok
+blazon-workspace-prd01,True,True,Python 2.7.5,full_ok
+blazon-workspace-prd02,True,True,Python 2.7.5,full_ok
+blueplanetpx01,False,False,n/a,dead
+blueplanetpx02,False,False,n/a,dead
+bmp-hom2-1,False,False,n/a,dead
+bmp-hom2-2,False,False,n/a,dead
+bmp-prd-1,True,True,Python 2.7.5,full_ok
+bmp-prd-10,True,True,Python 2.7.5,full_ok
+bmp-prd-2,True,True,Python 2.7.5,full_ok
+bmp-prd-3,True,True,Python 2.7.5,full_ok
+bmp-prd-4,True,True,Python 2.7.5,full_ok
+bmp-prd-5,True,True,Python 2.7.5,full_ok
+bmp-prd-6,True,True,Python 2.7.5,full_ok
+bmp-prd-7,True,True,Python 2.7.5,full_ok
+bmp-prd-8,True,True,Python 2.7.5,full_ok
+bmp-prd-9,True,True,Python 2.7.5,full_ok
+bmpweb_prd01,False,False,n/a,dead
+bmpweb_prd02,False,False,n/a,dead
+bpmapp-prd01,False,False,n/a,dead
+bpmapp-prd02,False,False,n/a,dead
+bpmapp-stg01,False,False,n/a,dead
+bpmapp-stg02,False,False,n/a,dead
+bpmdb-prd01,False,False,n/a,dead
+bpmdb-prd02,False,False,n/a,dead
+bpmdb-stg01,False,False,n/a,dead
+bpmdb-stg02,False,False,n/a,dead
+bpmweb-prd01.cloudalgartelecom.com.br,False,False,n/a,dead
+bpmweb-prd02.cloudalgartelecom.com.br,False,False,n/a,dead
+broker-hom2-1,False,False,n/a,dead
+broker-hom2-2,False,False,n/a,dead
+broker-hom2-3,False,False,n/a,dead
+broker-hom2-4,False,False,n/a,dead
+broker-hom2-5,False,False,n/a,dead
+broker-ocs-p01,False,False,n/a,dead
+broker-ocs-p02,False,False,n/a,dead
+broker-ocs-p03,False,False,n/a,dead
+broker-ocs-p04,False,False,n/a,dead
+broker-ocs-p05,False,False,n/a,dead
+broker-prd-1,True,True,Python 2.7.5,full_ok
+broker-prd-2,False,False,n/a,dead
+broker-prd-3,False,False,n/a,dead
+broker-prd-4,True,True,Python 2.7.5,full_ok
+broker-prd-5,False,False,n/a,dead
+cacheapp01,True,True,Python 2.7.5,full_ok
+cac-hml02,False,False,n/a,dead
+cac-hml03,False,False,n/a,dead
+cacti-capacidade-new-seta,False,False,n/a,dead
+cacti-prd-corp01,False,False,n/a,dead
+cadastro-app-prd01,True,True,Python 2.7.5,full_ok
+cadastro-cloud-apps-prd01,True,True,Python 2.7.5,full_ok
+cadastro-posi-hml01,False,False,n/a,dead
+CALIX-PRD01,True,True,Python 2.7.5,full_ok
+capacidade-prd01,False,False,n/a,dead
+cap-hos-17,False,False,n/a,dead
+catprod-hml-matrix01,False,False,n/a,dead
+cbp-hom2-1,False,False,n/a,dead
+cbp-hom2-2,False,False,n/a,dead
+cbp-ocs-p01,False,False,n/a,dead
+cbp-ocs-p02,False,False,n/a,dead
+cbp-prd-1,True,True,Python 2.7.5,full_ok
+cbp-prd-10,True,True,Python 2.7.5,full_ok
+cbp-prd-11,True,True,Python 2.7.5,full_ok
+cbp-prd-12,True,True,Python 2.7.5,full_ok
+cbp-prd-13,True,True,Python 2.7.5,full_ok
+cbp-prd-14,True,True,Python 2.7.5,full_ok
+cbp-prd-15,True,True,Python 2.7.5,full_ok
+cbp-prd-16,True,True,Python 2.7.5,full_ok
+cbp-prd-2,True,True,Python 2.7.5,full_ok
+cbp-prd-3,True,True,Python 2.7.5,full_ok
+cbp-prd-4,True,True,Python 2.7.5,full_ok
+cbp-prd-5,True,True,Python 2.7.5,full_ok
+cbp-prd-6,True,True,Python 2.7.5,full_ok
+cbp-prd-7,True,True,Python 2.7.5,full_ok
+cbp-prd-8,True,True,Python 2.7.5,full_ok
+cbp-prd-9,True,True,Python 2.7.5,full_ok
+CCE-ELASTIC-SEARCH-PRD01,True,True,Python 2.7.5,full_ok
+CCE-ELASTIC-SEARCH-PRD02,True,True,Python 2.7.5,full_ok
+cce-gis-prd01,True,True,Python 2.7.5,full_ok
+cce-gis-prd02,True,True,Python 2.7.5,full_ok
+cce-service-hom01,False,True,Python 2.7.5,ssh_only
+cce-service-hom02,False,True,Python 2.7.5,ssh_only
+cce-service-prd03,True,True,Python 2.7.5,full_ok
+cce-service-prd04,True,True,Python 2.7.5,full_ok
+cce-view-hom01,True,True,Python 2.7.5,full_ok
+cce-view-hom02,True,True,Python 2.7.5,full_ok
+cce-view-prd01,True,True,Python 2.7.5,full_ok
+cce-view-prd02,True,True,Python 2.7.5,full_ok
+cds1,False,True,Python 2.7.5,ssh_only
+cds2,False,True,Python 2.7.5,ssh_only
+cds3,False,True,Python 2.7.5,ssh_only
+cds-hos-17,True,True,Python 2.7.5,full_ok
+cdsprd01,True,True,Python 2.7.5,full_ok
+ciscoar-prd01,True,True,Python 2.7.5,full_ok
+ciscoar-prd02,False,False,n/a,dead
+ciscoar-tra,False,False,n/a,dead
+citrus-app-omni-prd01,False,False,n/a,dead
+citrus-app-omni-prd02,False,False,n/a,dead
+citrus-app-omni-prd03,False,False,n/a,dead
+citrus-app-omni-prd04,False,False,n/a,dead
+citrus-bd-omni-prd01,False,False,n/a,dead
+citrus-bd-omni-prd02,False,False,n/a,dead
+clik-hom-app01,False,False,n/a,dead
+clik-hom-bd02,False,False,n/a,dead
+cloud12c01,True,True,Python 2.7.5,full_ok
+cloud12c02,True,True,Python 2.7.5,full_ok
+cloudcontrolapp,True,True,Python 2.7.5,full_ok
+cloud-crm,True,True,Python 2.7.5,full_ok
+cloud-mediacao,False,True,Python 2.7.5,ssh_only
+cloud-receita,True,True,Python 2.7.5,full_ok
+cm.staging,False,False,n/a,dead
+Cmdb-db-prd01,True,True,Python 2.7.5,full_ok
+cms01-portal-hml,True,True,Python 2.7.5,full_ok
+cms01-portal-prd,True,True,Python 2.7.5,full_ok
+cms02-portal-hml,True,True,Python 2.7.5,full_ok
+cms02-portal-prd,True,True,Python 2.7.5,full_ok
+cognos-db-prd01,True,True,Python 2.7.5,full_ok
+comando-prd,False,False,n/a,dead
+com-hom-app01,True,True,Python 2.7.5,full_ok
+com-hom-app02,True,True,Python 2.7.5,full_ok
+com-hom-cache01,True,True,Python 2.7.5,full_ok
+com-hom-cache02,True,True,Python 2.7.5,full_ok
+com-hom-srv01,True,True,Python 2.7.5,full_ok
+com-hom-srv02,True,True,Python 2.7.5,full_ok
+comissaodes.network,False,False,n/a,dead
+comissaohmg01,True,True,Python 2.7.5,full_ok
+comissaoprd01,True,True,Python 2.7.5,full_ok
+com-prd-app01,True,True,Python 2.7.5,full_ok
+com-prd-app02,True,True,Python 2.7.5,full_ok
+com-prd-cache01,True,True,Python 2.7.5,full_ok
+com-prd-cache02,True,True,Python 2.7.5,full_ok
+com-prd-srv01,True,True,Python 2.7.5,full_ok
+com-prd-srv02,True,True,Python 2.7.5,full_ok
+com-tit-app01,True,True,Python 2.7.5,full_ok
+com-tit-esb01,True,True,Python 2.7.5,full_ok
+com-tit-srv01,True,True,Python 2.7.5,full_ok
+com-tst-cache01,True,True,Python 2.7.5,full_ok
+com-tst-esb01,True,True,Python 2.7.5,full_ok
+consumers-moniot-prd01,False,False,n/a,dead
+consumers-moniot-prd02,False,False,n/a,dead
+consumers-moniot-prd04,False,False,n/a,dead
+consumers-moniot-prd05,False,False,n/a,dead
+consumers-moniot-prd06,False,False,n/a,dead
+consumers-moniot-prd07,False,False,n/a,dead
+consumers-moniot-prd08,False,False,n/a,dead
+cont-hom-app01,True,True,Python 2.7.5,full_ok
+cont-hom-app02,True,True,Python 2.7.5,full_ok
+cont-prd-app01,True,True,Python 2.7.5,full_ok
+cont-prd-app02,True,True,Python 2.7.5,full_ok
+cont-tit-app01,True,True,Python 2.7.5,full_ok
+cont-tst-app01,True,True,Python 2.7.5,full_ok
+corbkpcel,True,True,Python 2.7.5,full_ok
+core-hom-app01,False,True,Python 2.7.5,ssh_only
+core-hom-app02,False,True,Python 2.7.5,ssh_only
+core-prd-app01,True,True,Python 2.7.5,full_ok
+core-prd-app02,True,True,Python 2.7.5,full_ok
+core-prd-app03,False,False,n/a,dead
+core-prd-app04,True,True,Python 2.7.5,full_ok
+core-prd-app05,True,True,Python 2.7.5,full_ok
+core-prd-balancer01,False,False,n/a,dead
+corp-prd-app01,True,True,Python 2.7.5,full_ok
+couchbase2-soa-prd01,True,True,Python 2.7.5,full_ok
+couchbase2-soa-prd02,True,True,Python 2.7.5,full_ok
+couchbase3-soa-prd01,True,True,Python 2.7.5,full_ok
+couchbase3-soa-prd02,True,True,Python 2.7.5,full_ok
+couchbase-soa-prd01,True,True,Python 2.7.5,full_ok
+couchbase-soa-prd02,True,True,Python 2.7.5,full_ok
+cpgr-hml01,False,True,Python 2.7.5,ssh_only
+cpgr-prd01,False,True,Python 2.7.5,ssh_only
+crm-hom-adm01,True,True,Python 2.7.5,full_ok
+crm-hom-app01,True,True,Python 2.7.5,full_ok
+crm-hom-app02,True,True,Python 2.7.5,full_ok
+crm-hom-app03,True,True,Python 2.7.5,full_ok
+crm-hom-cache01,True,True,Python 2.7.5,full_ok
+crm-hom-cache02,True,True,Python 2.7.5,full_ok
+crm-hom-jms01,True,True,Python 2.7.5,full_ok
+crm-hom-jms02,True,True,Python 2.7.5,full_ok
+crm-hom-rules02,True,True,Python 2.7.5,full_ok
+crm-hom-solar01,True,True,Python 2.7.5,full_ok
+crm-hom-solar02,True,True,Python 2.7.5,full_ok
+crm-hom-visao01,True,True,Python 2.7.5,full_ok
+crm-hom-visao02,True,True,Python 2.7.5,full_ok
+crm-prd-adm01,True,True,Python 2.7.5,full_ok
+crm-prd-app01,True,True,Python 2.7.5,full_ok
+crm-prd-app03,True,True,Python 2.7.5,full_ok
+crm-prd-app04,True,True,Python 2.7.5,full_ok
+crm-prd-app05,True,True,Python 2.7.5,full_ok
+crm-prd-cache01New,False,False,n/a,dead
+crm-prd-cache02New,False,False,n/a,dead
+crm-prd-jms01,True,True,Python 2.7.5,full_ok
+crm-prd-jms02,True,True,Python 2.7.5,full_ok
+crm-prd-job01,True,True,Python 2.7.5,full_ok
+crm-prd-job02,True,True,Python 2.7.5,full_ok
+crm-prd-job03,True,True,Python 2.7.5,full_ok
+crm-prd-rules01,True,True,Python 2.7.5,full_ok
+crm-prd-rules02,True,True,Python 2.7.5,full_ok
+crm-prd-rules03,True,True,Python 2.7.5,full_ok
+crm-prd-rules04,True,True,Python 2.7.5,full_ok
+crm-prd-rules05,True,True,Python 2.7.5,full_ok
+crm-prd-rules06,True,True,Python 2.7.5,full_ok
+crm-prd-solar01,True,True,Python 2.7.5,full_ok
+crm-prd-solar02,True,True,Python 2.7.5,full_ok
+crm-prd-solar03,True,True,Python 2.7.5,full_ok
+crm-prd-visao01,True,True,Python 2.7.5,full_ok
+crm-prd-visao02,True,True,Python 2.7.5,full_ok
+crm-prd-visao03,True,True,Python 2.7.5,full_ok
+crm-prd-visao04,True,True,Python 2.7.5,full_ok
+crm-prd-ws01,True,True,Python 2.7.5,full_ok
+crm-prd-ws02,True,True,Python 2.7.5,full_ok
+crm-prd-ws03,True,True,Python 2.7.5,full_ok
+crm-prd-ws04,True,True,Python 2.7.5,full_ok
+crm-tit-adm01,True,True,Python 2.7.5,full_ok
+crm-tit-app01,True,True,Python 2.7.5,full_ok
+crm-tit-cache01,True,True,Python 2.7.5,full_ok
+crm-tit-solar01,True,True,Python 2.7.5,full_ok
+crm-tst-adm01,True,True,Python 2.7.5,full_ok
+crm-tst-cache01,True,True,Python 2.7.5,full_ok
+crm-tst-solar01,True,True,Python 2.7.5,full_ok
+crv-hom-cis01,False,False,n/a,dead
+crv-hom-cis-frontend,True,True,Python 2.7.5,full_ok
+crv-hom-guru01,False,False,n/a,dead
+crv-prd-app03,False,False,n/a,dead
+crv-prd-backend-cis01,False,False,n/a,dead
+crv-prd-backend-cis02,False,False,n/a,dead
+crv-prd-balancer,False,False,n/a,dead
+crv-prd-bd01,False,False,n/a,dead
+crv-prd-cis-balancer,False,False,n/a,dead
+crv-prd-cis-frontend,False,False,n/a,dead
+csocacti,False,False,n/a,dead
+ctbcapp01,True,True,Python 2.7.5,full_ok
+ctbcapp02,True,True,Python 2.7.5,full_ok
+dashhx01,True,True,Python 2.7.5,full_ok
+dashpx01,True,True,Python 2.7.5,full_ok
+data-lgpd-prd01,True,True,Python 2.7.5,full_ok
+data-lgpd-prd02,True,True,Python 2.7.5,full_ok
+data-lgpd-prd03,True,True,Python 2.7.5,full_ok
+dataserver-hom2-1,False,False,n/a,dead
+dataserver-prd-1,True,True,Python 2.7.5,full_ok
+dataserver-prd-2,True,True,Python 2.7.5,full_ok
+datastagehom01,True,True,Python 2.7.5,full_ok
+datastageprd01,True,True,Python 2.7.5,full_ok
+dbatools-app01,False,False,n/a,dead
+dbhx01,False,False,n/a,dead
+db-policy-prd01-236,False,False,n/a,dead
+db-policy-prd01-238,False,False,n/a,dead
+db-policy-prd02-236,False,False,n/a,dead
+db-policy-prd02-238,False,False,n/a,dead
+db-policy-prd03-236,False,False,n/a,dead
+db-policy-prd03-238,False,False,n/a,dead
+director-hml,False,False,n/a,dead
+dmviewdb-ula,True,True,Python 2.7.5,full_ok
+dns-prd-1.ocs.algartelecom.com.br,False,False,n/a,dead
+dns-prd-2,False,False,n/a,dead
+dns-privatecloud-prd01,False,False,n/a,dead
+dns-privatecloud-prd02,False,False,n/a,dead
+dnstic-prd01,False,False,n/a,dead
+dnstic-prd02,False,False,n/a,dead
+docs.prd.iot,False,False,n/a,dead
+eaq-gerencia-prd01,True,True,Python 2.7.5,full_ok
+ebd-pem-soa-prd01,False,False,n/a,dead
+ebd-pem-soa-prd02,False,False,n/a,dead
+eb-hom-ws02,True,True,Python 2.7.5,full_ok
+ebinvoicehmgapp01,True,True,Python 2.7.5,full_ok
+ebinvoicehmgapp02,True,True,Python 2.7.5,full_ok
+ebinvoicehmgdav01,True,True,Python 2.7.5,full_ok
+ebinvoicehmgdav02,True,True,Python 2.7.5,full_ok
+ebinvoiceprdapp01,True,True,Python 2.7.5,full_ok
+ebinvoiceprdapp02,True,True,Python 2.7.5,full_ok
+ebinvoiceprddav01,True,True,Python 2.7.5,full_ok
+ebinvoiceprddav01_new,False,False,n/a,dead
+ebinvoiceprddav02,True,True,Python 2.7.5,full_ok
+eb-prd-ws01,True,True,Python 2.7.5,full_ok
+eb-prd-ws02,True,True,Python 2.7.5,full_ok
+ecomm03_NEW,False,False,n/a,dead
+ecomm04_NEW,False,False,n/a,dead
+edb-soa-prd01,True,True,Python 2.7.5,full_ok
+edb-soa-prd02,True,True,Python 2.7.5,full_ok
+eir-adm-prd01,True,True,Python 2.7.5,full_ok
+eir-diameter-prd01,True,True,Python 2.7.5,full_ok
+eir-diameter-prd02,True,True,Python 2.7.5,full_ok
+eir-diameter-prd03,True,True,Python 2.7.5,full_ok
+eir-diameter-prd04,True,True,Python 2.7.5,full_ok
+eir-map-prd01,True,True,Python 2.7.5,full_ok
+eir-map-prd02,True,True,Python 2.7.5,full_ok
+eir-map-prd03,True,True,Python 2.7.5,full_ok
+eir-map-prd04,True,True,Python 2.7.5,full_ok
+eir-map-prd05,True,True,Python 2.7.5,full_ok
+elastic-lgpd-prd01,True,True,Python 2.7.5,full_ok
+elastic-lgpd-prd02,True,True,Python 2.7.5,full_ok
+elastic-lgpd-prd03,True,True,Python 2.7.5,full_ok
+elastic-search-hom01,False,False,n/a,dead
+elastic-search-hom02,False,False,n/a,dead
+elastic-search-tit01,False,True,Python 2.7.5,ssh_only
+elk-corp,False,True,Python 2.7.5,ssh_only
+ELKHL01,False,True,Python 2.7.5,ssh_only
+ELKHL02,False,True,Python 2.7.5,ssh_only
+elk-lgpd-hml01,True,True,Python 2.7.5,full_ok
+elk-lgpd-prd02,True,True,Python 2.7.5,full_ok
+ELKPL01,False,True,Python 2.7.5,ssh_only
+ELKPL02,False,True,Python 2.7.5,ssh_only
+elk-qualidade-prd01,False,False,n/a,dead
+elk-qualidade-prd02,False,False,n/a,dead
+empp-gw-prd-1,False,False,n/a,dead
+emzdlra01-adm,True,True,Python 2.7.5,full_ok
+eris-1.planeta.net,False,False,n/a,dead
+fix-hom2-1,False,False,n/a,dead
+fix-hom2-2,False,False,n/a,dead
+fix-ocs-p01,False,False,n/a,dead
+fix-ocs-p02,False,False,n/a,dead
+fix-ocs-p03,False,False,n/a,dead
+fix-ocs-p04,False,False,n/a,dead
+fix-prd-1,True,True,Python 2.7.5,full_ok
+fix-prd-2,True,True,Python 2.7.5,full_ok
+fix-prd-3,False,False,n/a,dead
+fix-prd-4,False,False,n/a,dead
+fix-prd-5,True,True,Python 2.7.5,full_ok
+follow-tech-prd01,False,True,Python 2.7.5,ssh_only
+frauddbprd01,True,True,Python 2.7.5,full_ok
+frontend-allcom-01.prd.iot,False,False,n/a,dead
+frontend-allcom-02.prd.iot,False,False,n/a,dead
+frontend-burst-01.prd.iot,False,False,n/a,dead
+frontend-hom01_1910,False,False,n/a,dead
+frontend-prd01,True,True,Python 2.7.5,full_ok
+frontend-prd02,True,True,Python 2.7.5,full_ok
+frontend-scm-01.prd.iot,False,False,n/a,dead
+frontend-sinfra-hml01,False,False,n/a,dead
+frontend-sinfra-prd02,False,False,n/a,dead
+ftp-internal01,True,True,Python 2.7.5,full_ok
+ftp-operacao-prd01,False,False,n/a,dead
+ftpserver01,True,True,Python 2.7.5,full_ok
+furukawaprd01,True,True,Python 2.7.5,full_ok
+gaio-app-prd01,False,False,n/a,dead
+gaioapppx01,False,False,n/a,dead
+gaio-db-prd02,False,False,n/a,dead
+gaiodbpx01,False,False,n/a,dead
+gaiodbpx02,False,False,n/a,dead
+gaiohx01,False,False,n/a,dead
+gateway-lgpd-prd01,True,True,Python 2.7.5,full_ok
+gedwebdavhmg01,True,True,Python 2.7.5,full_ok
+gedwebdavhmg02,True,True,Python 2.7.5,full_ok
+gedwebdavprd01,True,True,Python 2.7.5,full_ok
+gedwebdavprd02,True,True,Python 2.7.5,full_ok
+GERCLIENTES,False,False,n/a,dead
+gerencia.planeta.net,False,False,n/a,dead
+gerencia-hom2-1,False,False,n/a,dead
+gerencia-prd-1,False,False,n/a,dead
+gerencia-prd-2,False,False,n/a,dead
+ger-soem,True,True,Python 2.7.5,full_ok
+getraf-tst01,False,False,n/a,dead
+gifehmg01,True,True,Python 2.7.5,full_ok
+gifeprd01_NEW,False,False,n/a,dead
+gpf-hom-app01,False,True,Python 2.7.5,ssh_only
+gpf-prd-app01,False,True,Python 2.7.5,ssh_only
+grafana-01-apm.prd.iot,False,False,n/a,dead
+grafana-02-apm.prd.iot,False,False,n/a,dead
+grafana-correios-prd01,False,False,n/a,dead
+grv-prd-app01,True,True,Python 2.7.5,full_ok
+grv-prd-backend,False,False,n/a,dead
+grv-prd-bd01,False,False,n/a,dead
+grv-prd-frontend,False,False,n/a,dead
+gsuite,False,False,n/a,dead
+gsuite.staging,False,False,n/a,dead
+guardians-adm-hom01,True,True,Python 2.7.5,full_ok
+guardians-adm-prd01,True,True,Python 2.7.5,full_ok
+guardians-app-hom01,True,True,Python 2.7.5,full_ok
+guardians-app-prd01,True,True,Python 2.7.5,full_ok
+guardians-db-hom01,True,True,Python 2.7.5,full_ok
+guardians-db-prd01,True,True,Python 2.7.5,full_ok
+gw-123milhas-hml01,False,False,n/a,dead
+gw-123milhas-hml02,False,False,n/a,dead
+gw-123milhas-prd01,False,False,n/a,dead
+gw-123milhas-prd02,False,False,n/a,dead
+GW-MAP-7,True,True,Python 2.7.5,full_ok
+GW-MAP-8,True,True,Python 2.7.5,full_ok
+haproxy1,False,True,Python 2.7.5,ssh_only
+henas,False,False,n/a,dead
+hewsl01.cloudalgartelecom.com.br,True,True,Python 2.7.5,full_ok
+http-proxy-omni-prd02,False,False,n/a,dead
+iac-prd-for01,True,True,Python 2.7.5,full_ok
+iac-prd-for02,True,True,Python 2.7.5,full_ok
+iac-prd-jen01,True,True,Python 2.7.5,full_ok
+iac-prd-ps01,True,True,Python 2.7.5,full_ok
+iac-prd-ps02,True,True,Python 2.7.5,full_ok
+iac-prd-pup01,True,True,Python 2.7.5,full_ok
+iac-prd-pup02,True,True,Python 2.7.5,full_ok
+iac-prd-repo01,True,True,Python 2.7.5,full_ok
+iam-01.prd.iot,False,False,n/a,dead
+icd-app-prd01,True,True,Python 2.7.5,full_ok
+icd-app-prd02,True,True,Python 2.7.5,full_ok
+icd-app-prd03,True,True,Python 2.7.5,full_ok
+icd-app-prd04,True,True,Python 2.7.5,full_ok
+icd-app-prd05,True,True,Python 2.7.5,full_ok
+icd-app-prd06,False,False,n/a,dead
+icd-db-prd01,True,True,Python 2.7.5,full_ok
+icd-db-rep-dev01,False,False,n/a,dead
+icd-db-rep-prd01,True,True,Python 2.7.5,full_ok
+icd-hml02,True,True,Python 2.7.5,full_ok
+icd-hom01,True,True,Python 2.7.5,full_ok
+icpmaster-prd02,False,False,n/a,dead
+icpmaster-prd03,False,False,n/a,dead
+icpmaster-stg01,False,False,n/a,dead
+icpmaster-stg02,False,False,n/a,dead
+icpmaster-stg03,False,False,n/a,dead
+icpmgmt-prd01,False,False,n/a,dead
+icpmgmt-stg01,False,False,n/a,dead
+icpproxyex-prd01,False,False,n/a,dead
+icpproxyex-prd02,False,False,n/a,dead
+icpproxyex-stg01,False,False,n/a,dead
+icpproxyex-stg02,False,False,n/a,dead
+icpproxy-prd01,False,False,n/a,dead
+icpproxy-stg02,False,False,n/a,dead
+icpproxy-stg02.cloudalgartelecom.com.br,False,False,n/a,dead
+icpworkerpl-prd01,False,False,n/a,dead
+icpworkerpl-prd02,False,False,n/a,dead
+icpworkerpl-prd03,False,False,n/a,dead
+icpworkerpl-stg01,False,False,n/a,dead
+icpworkerpl-stg02,False,False,n/a,dead
+icpworkerpl-stg03,False,False,n/a,dead
+icpworker-prd01,False,False,n/a,dead
+icpworker-prd02,False,False,n/a,dead
+icpworker-prd03,False,False,n/a,dead
+icpworker-stg01,False,False,n/a,dead
+icpworker-stg02,False,False,n/a,dead
+icpworker-stg03,False,False,n/a,dead
+icthml01,True,True,Python 2.7.5,full_ok
+ictprd01,True,True,Python 2.7.5,full_ok
+id-itnm-hom05,False,False,n/a,dead
+id-itnm-hom06,False,False,n/a,dead
+id-itnm-hom07,False,False,n/a,dead
+id-itnm-hom08,False,False,n/a,dead
+id-itnm-hom09,False,False,n/a,dead
+id-itnm-hom10,False,False,n/a,dead
+id-itnm-prd03,True,True,Python 2.7.5,full_ok
+idm-ipa-px01,True,True,Python 2.7.5,full_ok
+idm-ipa-px02,True,True,Python 2.7.5,full_ok
+idm-ipa-px03,True,True,Python 2.7.5,full_ok
+idm-ipa-px04,True,True,Python 2.7.5,full_ok
+id-nodered-hom01,False,False,n/a,dead
+id-nodered-prd01,False,False,n/a,dead
+IDP-HLSAM01,True,True,Python 2.7.5,full_ok
+IDP-HLSAM02,True,True,Python 2.7.5,full_ok
+IDP-HLXACML01,True,True,Python 2.7.5,full_ok
+IDP-HLXACML02,True,True,Python 2.7.5,full_ok
+id-portal-hom01_,False,False,n/a,dead
+id-portal-prd01_v1212,False,False,n/a,dead
+id-portal-prd02,True,True,Python 2.7.5,full_ok
+IDP-PLMTG01,True,True,Python 2.7.5,full_ok
+IDP-PLSAML01,True,True,Python 2.7.5,full_ok
+IDP-PLSAML02,True,True,Python 2.7.5,full_ok
+IDP-PLXACML01,True,True,Python 2.7.5,full_ok
+IDP-PLXACML02,True,True,Python 2.7.5,full_ok
+IDP-TIT-PLAPP01,True,True,Python 2.7.5,full_ok
+id-tncm-cs-hom01,True,True,Python 2.7.5,full_ok
+id-tncm-cs-prd01,True,True,Python 2.7.5,full_ok
+id-tncm-ps-hom01,True,True,Python 2.7.5,full_ok
+id-tncm-ps-prd01,True,True,Python 2.7.5,full_ok
+id-tncm-ps-prd02,True,True,Python 2.7.5,full_ok
+id-tncm-ws-hom01,True,True,Python 2.7.5,full_ok
+id-tncm-ws-hom02,True,True,Python 2.7.5,full_ok
+id-tncm-ws-prd01,True,True,Python 2.7.5,full_ok
+id-tncm-ws-prd02,True,True,Python 2.7.5,full_ok
+id-tncm-ws-prd03,True,True,Python 2.7.5,full_ok
+id-tncm-ws-prd04,True,True,Python 2.7.5,full_ok
+id-tncm-ws-prd05,False,False,n/a,dead
+id-tncm-ws-prd06,False,False,n/a,dead
+id-transmissao-hml01,False,False,n/a,dead
+id-transmissao-prd01,False,False,n/a,dead
+id-transmissao-prd02,False,False,n/a,dead
+ID-VOGEL-APP-HML-01,False,False,n/a,dead
+ig-11,True,True,Python 2.7.5,full_ok
+imehml01,True,True,Python 2.7.5,full_ok
+imeprd01,True,True,Python 2.7.5,full_ok
+imsvaprd02,False,False,n/a,dead
+influxdb-01-apm.prd.iot,False,False,n/a,dead
+influxdb-02-apm.prd.iot,False,False,n/a,dead
+influxdb-03-apm.prd.iot,False,False,n/a,dead
+in-proxy-connect-hml01,False,False,n/a,dead
+in-proxy-connect-prd01,False,False,n/a,dead
+insight-ingestion,False,False,n/a,dead
+integpx01,True,True,Python 2.7.5,full_ok
+integpx01.network.ctbc,True,True,Python 2.7.5,full_ok
+ipa-idm-prod01,True,True,Python 2.7.5,full_ok
+IP-track-relay-prd01,False,False,n/a,dead
+isntascan-lgpd-prd01,False,False,n/a,dead
+iss-lgpd-hml01,True,True,Python 2.7.5,full_ok
+iss-lgpd-prd01,True,True,Python 2.7.5,full_ok
+jbossas01,True,True,Python 2.7.5,full_ok
+jbossas02hom,True,True,Python 2.7.5,full_ok
+jbosseap02,True,True,Python 2.7.5,full_ok
+jbosseap04hom_NEW,False,False,n/a,dead
+jbossfarm-prd01,True,True,Python 2.7.5,full_ok
+jenkins01,True,True,Python 2.7.5,full_ok
+jenkins-devops01,True,True,Python 2.7.5,full_ok
+jenkinspx01,False,False,n/a,dead
+jpvrfpx01,True,True,Python 2.7.5,full_ok
+jtracivc_NEW,False,False,n/a,dead
+kafka-prd01,False,False,n/a,dead
+kafka-prd03,False,False,n/a,dead
+kafka-prd2,False,False,n/a,dead
+kapacitor-01-apm.prd.iot,False,False,n/a,dead
+kapacitor-02-apm.prd.iot,False,False,n/a,dead
+KBNPL01,False,True,Python 2.7.5,ssh_only
+kenanfx-01,True,True,Python 2.7.5,full_ok
+ksql-moniot-hml01,False,False,n/a,dead
+ksql-moniot-hml02,False,False,n/a,dead
+LB01_prd,True,True,Python 2.7.5,full_ok
+LB02_prd,True,True,Python 2.7.5,full_ok
+lb-api-01.prd.iot,False,False,n/a,dead
+lb-api-hom-iot,False,True,Python 2.7.5,ssh_only
+lblgw,True,True,Python 2.7.5,full_ok
+lb-portal-hml01,True,True,Python 2.7.5,full_ok
+lb-portal-prd01,True,True,Python 2.7.5,full_ok
+lb-portal-prd02,True,True,Python 2.7.5,full_ok
+ldapcorp01,True,True,Python 2.7.5,full_ok
+ldapcorp02,True,True,Python 2.7.5,full_ok
+LDAP-prd01,False,False,n/a,dead
+LDAP-prd02,False,False,n/a,dead
+LDAP-SDWAN-PRD02,False,False,n/a,dead
+LDAP-STG01,False,False,n/a,dead
+link-prd01,False,False,n/a,dead
+logging_host,False,False,n/a,dead
+logs-moniot-prd01,False,False,n/a,dead
+loja.cloudalgartelecom.com.br,True,True,Python 2.7.5,full_ok
+loja-prd01,False,False,n/a,dead
+lvr-digital-hml01,False,True,Python 2.7.5,ssh_only
+lvr-digital-prd01,False,True,Python 2.7.5,ssh_only
+lxintraweb01,True,True,Python 2.7.5,full_ok
+lxjboss01,False,False,n/a,dead
+lxjbossprd01,True,True,Python 2.7.5,full_ok
+lxmrtg,True,True,Python 2.7.5,full_ok
+lxprdgw,True,True,Python 2.7.5,full_ok
+lxvpn01,True,True,Python 2.7.5,full_ok
+maestro01,True,True,Python 2.7.5,full_ok
+maestro02,True,True,Python 2.7.5,full_ok
+maestro03,True,True,Python 2.7.5,full_ok
+maestrohmg,True,True,Python 2.7.5,full_ok
+mailing-hom-app01.tenant0008,False,False,n/a,dead
+mailing-prd-app01.tenant0008,False,False,n/a,dead
+masterhx01,False,False,n/a,dead
+master-lgpd-prd01,True,True,Python 2.7.5,full_ok
+masterpx01,True,True,Python 2.7.5,full_ok
+MCP-SERVER01,False,False,n/a,dead
+mediapx01,True,True,Python 2.7.5,full_ok
+med-ime-hml01,True,True,Python 2.7.5,full_ok
+med-ime-prd01,True,True,Python 2.7.5,full_ok
+memcached-hom01.tenant0008,False,False,n/a,dead
+memcached-prd01.tenant0008,False,False,n/a,dead
+messageria1.planeta.net,True,True,Python 2.7.5,full_ok
+messageria2.planeta.net,False,False,n/a,dead
+messageria3,False,False,n/a,dead
+messageria4,False,False,n/a,dead
+metrics-moniot-prd01,False,False,n/a,dead
+mgmt-moniot-hml01,False,False,n/a,dead
+mgmt-moniot-prd01,False,False,n/a,dead
+mib-tst-app01,True,True,Python 2.7.5,full_ok
+midprddav01,True,True,Python 2.7.5,full_ok
+midprddav02,True,True,Python 2.7.5,full_ok
+mmetlprd01,True,True,Python 2.7.5,full_ok
+mobile-data-hom2-1,False,False,n/a,dead
+mobile-data-hom2-2,False,False,n/a,dead
+mobile-data-p1,False,False,n/a,dead
+mobile-data-p10,False,False,n/a,dead
+mobile-data-p11,False,False,n/a,dead
+mobile-data-p12,False,False,n/a,dead
+mobile-data-p13,False,False,n/a,dead
+mobile-data-p14,False,False,n/a,dead
+mobile-data-p15,False,False,n/a,dead
+mobile-data-p16,False,False,n/a,dead
+mobile-data-p2,False,False,n/a,dead
+mobile-data-p3,False,False,n/a,dead
+mobile-data-p4,False,False,n/a,dead
+mobile-data-p5,False,False,n/a,dead
+mobile-data-p6,False,False,n/a,dead
+mobile-data-p7,False,False,n/a,dead
+mobile-data-p8,False,False,n/a,dead
+mobile-data-p9,False,False,n/a,dead
+mobile-data-prd-1,False,False,n/a,dead
+mobile-data-prd-10,False,False,n/a,dead
+mobile-data-prd-11,False,False,n/a,dead
+mobile-data-prd-12,False,False,n/a,dead
+mobile-data-prd-13,False,False,n/a,dead
+mobile-data-prd-14,False,False,n/a,dead
+mobile-data-prd-15,False,False,n/a,dead
+mobile-data-prd-16,False,False,n/a,dead
+mobile-data-prd-2,False,False,n/a,dead
+mobile-data-prd-3,False,False,n/a,dead
+mobile-data-prd-4,False,False,n/a,dead
+mobile-data-prd-5,False,False,n/a,dead
+mobile-data-prd-6,False,False,n/a,dead
+mobile-data-prd-7,False,False,n/a,dead
+mobile-data-prd-8,False,False,n/a,dead
+mobile-data-prd-9,False,False,n/a,dead
+Mobile-voice-hom2-1.scp,False,False,n/a,dead
+Mobile-voice-hom2-2.scp,False,False,n/a,dead
+mobile-voice-prd-1,True,True,Python 2.7.5,full_ok
+mobile-voice-prd-10,False,False,n/a,dead
+mobile-voice-prd-11,False,False,n/a,dead
+mobile-voice-prd-12,False,False,n/a,dead
+mobile-voice-prd-13,False,False,n/a,dead
+mobile-voice-prd-14,False,False,n/a,dead
+mobile-voice-prd-15,False,False,n/a,dead
+mobile-voice-prd-16,False,False,n/a,dead
+mobile-voice-prd-2,False,False,n/a,dead
+mobile-voice-prd-3,False,False,n/a,dead
+mobile-voice-prd-4,True,True,Python 2.7.5,full_ok
+mobile-voice-prd-5,False,False,n/a,dead
+mobile-voice-prd-6,False,False,n/a,dead
+mobile-voice-prd-7,False,False,n/a,dead
+mobile-voice-prd-8,False,False,n/a,dead
+mobile-voice-prd-9,False,False,n/a,dead
+mon_pain_ince_prd01,False,False,n/a,dead
+mon-estoque-eng,False,False,n/a,dead
+mongo-moniot-prd01,False,True,Python 2.7.5,ssh_only
+mongo-moniot-prd02,False,True,Python 2.7.5,ssh_only
+mongo-moniot-prd03,False,True,Python 2.7.5,ssh_only
+mongo-moniot-prd04,False,True,Python 2.7.5,ssh_only
+moni-odin-hml02,False,False,n/a,dead
+monitoramento-ura-online,True,True,Python 2.7.5,full_ok
+monitoramento-ura-online-hml02,True,True,Python 2.7.5,full_ok
+monitoramento-ura-online-prd02,True,True,Python 2.7.5,full_ok
+movel-radius-prd01.osc,False,False,n/a,dead
+ms-01-portal-hom-iot,False,True,Python 2.7.5,ssh_only
+ms-02-portal-hom-iot,False,True,Python 2.7.5,ssh_only
+msql01,False,False,n/a,dead
+msqlhx01,False,False,n/a,dead
+multi-cloud-prd02.tenant0029,False,False,n/a,dead
+mxtic-prd01,False,False,n/a,dead
+mysqla1-moniot-prd01,False,True,Python 2.7.5,ssh_only
+mysqla2-moniot-prd02,False,True,Python 2.7.5,ssh_only
+mysqla2-moniot-prd03,False,False,n/a,dead
+mysqldb,True,True,Python 2.7.5,full_ok
+mysqldbhom,True,True,Python 2.7.5,full_ok
+mysql-moniot-hml01,False,True,Python 2.7.5,ssh_only
+mysql-moniot-prd01,False,False,n/a,dead
+mysql-moniot-prd02,False,False,n/a,dead
+mysql-moniot-prd03,False,False,n/a,dead
+mysql-moniot-prd04,False,False,n/a,dead
+nagiossd,True,True,Python 2.7.5,full_ok
+nbumedia03,False,False,n/a,dead
+nbumedia08,True,True,Python 2.7.5,full_ok
+nbumedia09,True,True,Python 2.7.5,full_ok
+nc-aggb1-hml01,True,True,Python 2.7.5,full_ok
+nc-aggb1-prd01,True,True,Python 2.7.5,full_ok
+nc-aggp1-hml01,True,True,Python 2.7.5,full_ok
+nc-aggp1-prd01,True,True,Python 2.7.5,full_ok
+nc-apm-hml02,False,False,n/a,dead
+nc-colb1-hml01,True,True,Python 2.7.5,full_ok
+nc-colb1-prd01,False,False,n/a,dead
+nc-colp1-hml02,False,False,n/a,dead
+nc-colp1-prd01,False,False,n/a,dead
+nc-dashboards-hml01,True,False,n/a,icmp_only
+nc-dashboards-hml02,False,False,n/a,dead
+nc-db2-prd01,True,True,Python 2.7.5,full_ok
+nc-db2-prd02,True,True,Python 2.7.5,full_ok
+nc-dis-prd01,True,True,Python 2.7.5,full_ok
+nc-dis-prd02,True,True,Python 2.7.5,full_ok
+nc-eventanalitics-webgui-hml01,True,False,n/a,icmp_only
+nc-impact-hml01,True,True,Python 2.7.5,full_ok
+nc-impact-hml02,True,True,Python 2.7.5,full_ok
+nc-impact-prd01,True,True,Python 2.7.5,full_ok
+nc-impact-prd02,True,True,Python 2.7.5,full_ok
+nc-itnm-hml01,True,True,Python 2.7.5,full_ok
+nc-itnm-hml02,True,True,Python 2.7.5,full_ok
+nc-itnm-prd01,True,True,Python 2.7.5,full_ok
+nc-itnm-prd02,True,True,Python 2.7.5,full_ok
+nc-itnm-prd03,True,True,Python 2.7.5,full_ok
+nc-itnm-prd04,True,True,Python 2.7.5,full_ok
+nc-itnm-prd05,True,True,Python 2.7.5,full_ok
+nc-itnm-prd06,True,True,Python 2.7.5,full_ok
+nc-itnm-prd07,True,True,Python 2.7.5,full_ok
+nc-itnm-prd08,True,True,Python 2.7.5,full_ok
+nc-itnm-prd09,True,True,Python 2.7.5,full_ok
+nc-itnm-prd10,True,True,Python 2.7.5,full_ok
+nc-itnm-prd11,True,True,Python 2.7.5,full_ok
+nc-itnm-prd12,True,True,Python 2.7.5,full_ok
+nc-itnm-prd13,True,True,Python 2.7.5,full_ok
+nc-noi-prd01,True,True,Python 2.7.5,full_ok
+nc-noi-prd02,True,True,Python 2.7.5,full_ok
+nc-probes-hml01,True,True,Python 2.7.5,full_ok
+nc-probes-hml02,False,False,n/a,dead
+nc-probes-prd01,True,True,Python 2.7.5,full_ok
+nc-probes-prd02,True,True,Python 2.7.5,full_ok
+nc-webgui-hml01,True,True,Python 2.7.5,full_ok
+nc-webgui-hml02,True,True,Python 2.7.5,full_ok
+nc-web-prd01,True,True,Python 2.7.5,full_ok
+netctpx01.network.ctbc,False,False,n/a,dead
+nodehx01,True,True,Python 2.7.5,full_ok
+nodehx02,False,False,n/a,dead
+nodepx01,True,True,Python 2.7.5,full_ok
+nodepx02,True,True,Python 2.7.5,full_ok
+node-red-hom01,False,False,n/a,dead
+node-red-prd01,False,False,n/a,dead
+npappdes01,True,True,Python 2.7.5,full_ok
+npapptit01,False,True,Python 2.7.5,ssh_only
+npi-clients-prd01-,False,False,n/a,dead
+npp-cassandra-1,True,True,Python 2.7.5,full_ok
+npp-cassandra-2,True,True,Python 2.7.5,full_ok
+npp-cassandra-3,True,True,Python 2.7.5,full_ok
+npp-cassandra-4,True,True,Python 2.7.5,full_ok
+npp-cassandra-6,True,True,Python 2.7.5,full_ok
+npp-cassandra-7,True,True,Python 2.7.5,full_ok
+npp-cassandra-8,True,True,Python 2.7.5,full_ok
+npp-db-interface-prd01,True,True,Python 2.7.5,full_ok
+npp-db-interface-prd02,True,True,Python 2.7.5,full_ok
+npp-db-telecom-admin-prd01,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd01,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd02,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd03,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd04,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd05,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd06,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd07,True,True,Python 2.7.5,full_ok
+npp-db-telecom-spo-piaf-prd08,True,True,Python 2.7.5,full_ok
+Npp-db-telecom-ula-10,True,True,Python 2.7.5,full_ok
+Npp-db-telecom-ula-14,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd01,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd02,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd03,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd04,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd05,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd06,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd07,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-236-prd08,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd01,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd02,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd03,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd04,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd05,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd06,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd07,True,True,Python 2.7.5,full_ok
+npp-db-telecom-ula-238-prd08,True,True,Python 2.7.5,full_ok
+npp-identity-prd01,False,False,n/a,dead
+npp-identity-prd02,False,False,n/a,dead
+npp-inap-spo-piaf-prd01,True,True,Python 2.7.5,full_ok
+npp-inap-spo-piaf-prd02,True,True,Python 2.7.5,full_ok
+npp-inap-spo-piaf-prd03,True,True,Python 2.7.5,full_ok
+npp-inap-spo-piaf-prd04,True,True,Python 2.7.5,full_ok
+npp-inap-spo-piaf-prd05,False,False,n/a,dead
+npp-inap-spo-piaf-prd06,False,False,n/a,dead
+npp-inap-spo-piaf-prd07,False,False,n/a,dead
+npp-inap-spo-piaf-prd08,False,False,n/a,dead
+npp-inap-ula-236-prd01,False,False,n/a,dead
+npp-inap-ula-236-prd02,False,False,n/a,dead
+npp-inap-ula-236-prd03,False,False,n/a,dead
+npp-inap-ula-236-prd04,False,False,n/a,dead
+npp-inap-ula-236-prd05,False,False,n/a,dead
+npp-inap-ula-236-prd06,False,False,n/a,dead
+npp-inap-ula-236-prd07,False,False,n/a,dead
+npp-inap-ula-236-prd08,False,False,n/a,dead
+npp-inap-ula-238-prd01,False,False,n/a,dead
+npp-inap-ula-238-prd02,False,False,n/a,dead
+npp-inap-ula-238-prd03,False,False,n/a,dead
+npp-inap-ula-238-prd04,False,False,n/a,dead
+npp-inap-ula-238-prd05,False,False,n/a,dead
+npp-inap-ula-238-prd06,False,False,n/a,dead
+npp-inap-ula-238-prd07,False,False,n/a,dead
+npp-inap-ula-238-prd08,False,False,n/a,dead
+npp-log-agregator-prd01,False,False,n/a,dead
+npp-map-spo-piaf-prd01,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd012,False,False,n/a,dead
+npp-map-spo-piaf-prd013,False,False,n/a,dead
+npp-map-spo-piaf-prd02,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd03,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd04,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd05,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd06,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd07,False,False,n/a,dead
+npp-map-spo-piaf-prd08,True,True,Python 2.7.5,full_ok
+npp-map-spo-piaf-prd09,False,False,n/a,dead
+npp-map-spo-piaf-prd10,False,False,n/a,dead
+npp-map-spo-piaf-prd11,False,False,n/a,dead
+npp-map-spo-piaf-prd14,False,False,n/a,dead
+npp-map-spo-piaf-prd15,False,False,n/a,dead
+npp-map-spo-piaf-prd16,False,False,n/a,dead
+npp-map-ula-236-prd01,False,False,n/a,dead
+npp-map-ula-236-prd02,False,False,n/a,dead
+npp-map-ula-236-prd03,False,False,n/a,dead
+npp-map-ula-236-prd04,False,False,n/a,dead
+npp-map-ula-236-prd05,False,False,n/a,dead
+npp-map-ula-236-prd06,False,False,n/a,dead
+npp-map-ula-236-prd07,False,False,n/a,dead
+npp-map-ula-236-prd08,False,False,n/a,dead
+npp-map-ula-238-prd01,False,False,n/a,dead
+npp-map-ula-238-prd02,False,False,n/a,dead
+npp-map-ula-238-prd03,False,False,n/a,dead
+npp-map-ula-238-prd04,False,False,n/a,dead
+npp-map-ula-238-prd05,False,False,n/a,dead
+npp-map-ula-238-prd06,False,False,n/a,dead
+npp-map-ula-238-prd07,False,False,n/a,dead
+npp-map-ula-238-prd08,False,False,n/a,dead
+Npp-mobicents-map-ula-13,True,True,Python 2.7.5,full_ok
+Npp-mobicents-map-ula-14,True,True,Python 2.7.5,full_ok
+npp-postgresql-1,True,True,Python 2.7.5,full_ok
+npp-postgresql-2,True,True,Python 2.7.5,full_ok
+npp-proxy-prd01,False,False,n/a,dead
+npp-proxy-prd02,False,False,n/a,dead
+npp-replication-prd01,False,False,n/a,dead
+npp-service-prd01,True,True,Python 2.7.5,full_ok
+npp-service-prd02,True,True,Python 2.7.5,full_ok
+npp-tst-pedrom,False,False,n/a,dead
+npp-web-prd01,False,False,n/a,dead
+npp-web-prd02,False,False,n/a,dead
+ns1.cloudalgartelecom.com.br,False,False,n/a,dead
+ns1.staging,False,False,n/a,dead
+ns2,False,False,n/a,dead
+ns2.staging,False,False,n/a,dead
+nschdes,True,True,Python 2.7.5,full_ok
+nschprd,True,True,Python 2.7.5,full_ok
+nschprd02,True,True,Python 2.7.5,full_ok
+nschprd-bin01,True,True,Python 2.7.5,full_ok
+ntf-hom-sps01,True,True,Python 2.7.5,full_ok
+ntf-hom-sps02,True,True,Python 2.7.5,full_ok
+ntf-prd-sps01,True,True,Python 2.7.5,full_ok
+ntf-prd-sps02,True,True,Python 2.7.5,full_ok
+ntrp-soa-p01,False,False,n/a,dead
+ntr-soa-p02,False,False,n/a,dead
+oasrpx01,True,True,Python 2.7.5,full_ok
+obadb.staging,False,False,n/a,dead
+obadb.staging.cloudalgartelecom.com.br,True,True,Python 2.7.5,full_ok
+observion-sec_v267,False,False,n/a,dead
+ocs-db-des02,True,True,Python 2.7.5,full_ok
+ocs-dbrac-236-prd01,True,True,Python 2.7.5,full_ok
+ocs-dbrac-236-prd02,True,True,Python 2.7.5,full_ok
+ocs-dbrac-236-prd03.ocs.algartelecom.com.br,False,False,n/a,dead
+ocs-dbrac-236-prd04,True,True,Python 2.7.5,full_ok
+ocs-dbrac-236-prd05,True,True,Python 2.7.5,full_ok
+ocs-dbrac-238-dg01.ocs.algartelecom.com.br,False,False,n/a,dead
+ocs-dbrac-238-dg03.ocs.algartelecom.com.br,False,False,n/a,dead
+ocs-dbrac-238-dg04.ocs.algartelecom.com.br,False,False,n/a,dead
+ocsinventory-hom,True,True,Python 2.7.5,full_ok
+ocsinventory-prd-292,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd01,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd02,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd03,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd04,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd05,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd06,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd07,True,True,Python 2.7.5,full_ok
+ocs-telefoniaprd08,True,True,Python 2.7.5,full_ok
+ocvsmedcorppx01,True,True,Python 2.7.5,full_ok
+ocvsmedtelpx01,True,True,Python 2.7.5,full_ok
+offline-prd-1,False,False,n/a,dead
+oid-des-app01,True,True,Python 2.7.5,full_ok
+oid-hom-app01,True,True,Python 2.7.5,full_ok
+oid-hom-app02,True,True,Python 2.7.5,full_ok
+oid-prd-app01,True,True,Python 2.7.5,full_ok
+oid-prd-app02,True,True,Python 2.7.5,full_ok
+oid-prd-app03,True,True,Python 2.7.5,full_ok
+oid-prd-app04,True,True,Python 2.7.5,full_ok
+oid-prd-app05,True,True,Python 2.7.5,full_ok
+oid-prd-app06,True,True,Python 2.7.5,full_ok
+oim-hom-app01,True,True,Python 2.7.5,full_ok
+oim-hom-app02,True,True,Python 2.7.5,full_ok
+onmsi-server-prd01,False,False,n/a,dead
+ooam.cloudalgartelecom.com.br,False,False,n/a,dead
+OSMPRD,True,True,Python 2.7.5,full_ok
+ossbuilder,True,True,Python 2.7.5,full_ok
+oss-opennms-01,True,True,Python 2.7.5,full_ok
+out-proxy-connect-hml01,False,False,n/a,dead
+out-proxy-connect-prd01,False,False,n/a,dead
+padtec-nms-prd01,False,False,n/a,dead
+pagboletohom,True,True,Python 2.7.5,full_ok
+painelbss,False,False,n/a,dead
+PaloAlto_api-prd01,False,False,n/a,dead
+parametrizacoes,True,True,Python 2.7.5,full_ok
+pcs44.staging,False,False,n/a,dead
+phone2bapp01.intranet,False,False,n/a,dead
+phone2b-db01.intranet,False,False,n/a,dead
+pix-app-prd01,False,False,n/a,dead
+pix-app-prd02,True,True,Python 2.7.5,full_ok
+pix-app-prd03,True,True,Python 2.7.5,full_ok
+pl_apl_01.ctbc.com.br,False,False,n/a,dead
+PL_MRS-2_v203,False,False,n/a,dead
+PL_MRS-3_v203,False,False,n/a,dead
+PL_MRS-4_v203,False,False,n/a,dead
+pl_sig_02,True,True,Python 2.7.5,full_ok
+pl_sig_03,True,True,Python 2.7.5,full_ok
+pl_sig_05,True,True,Python 2.7.5,full_ok
+pl_sig_06,True,True,Python 2.7.5,full_ok
+pl_sig_07,True,True,Python 2.7.5,full_ok
+pl_sig_09,True,True,Python 2.7.5,full_ok
+pl_sig_10,True,True,Python 2.7.5,full_ok
+pl_sig_21,True,True,Python 2.7.5,full_ok
+pl_sig_22,True,True,Python 2.7.5,full_ok
+pl_sig_23,True,True,Python 2.7.5,full_ok
+pl_sig_24_v203,False,False,n/a,dead
+pl_sig_28,True,True,Python 2.7.5,full_ok
+pl_sig_29_v203_,False,False,n/a,dead
+PL_SIG_34,True,True,Python 2.7.5,full_ok
+PL_SIG_35,True,True,Python 2.7.5,full_ok
+PL_SIG_36,True,True,Python 2.7.5,full_ok
+PL_SIG_37,True,True,Python 2.7.5,full_ok
+PL_SIG_38,True,True,Python 2.7.5,full_ok
+PL_SIG_39,True,True,Python 2.7.5,full_ok
+PL_SIG_40,True,True,Python 2.7.5,full_ok
+pl_sig_41_v203,False,False,n/a,dead
+pl4-back-grav-03,False,False,n/a,dead
+PL4-BALANCER-1.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-balancer-2,False,False,n/a,dead
+PL4-BALANCER-GRAV-1,False,False,n/a,dead
+PL4-BALANCER-GRAV-2,False,False,n/a,dead
+pl4-db-01.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-db-02.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-db-adm1.planeta.net,False,False,n/a,dead
+pl4-gmlc-mob-1.planeta.net,False,False,n/a,dead
+pl4-gmlc-mob-2.planeta.net,False,False,n/a,dead
+pl4-hom1,True,True,Python 2.7.5,full_ok
+PL4-HOM-NV-APP-2,False,False,n/a,dead
+PL4-HOM-NV-MOB-2,False,False,n/a,dead
+pl4-hos-10,True,True,Python 2.7.5,full_ok
+pl4-hos-11,True,True,Python 2.7.5,full_ok
+pl4-hos-9,True,True,Python 2.7.5,full_ok
+pl4-iotapi-app-prd04,False,False,n/a,dead
+pl4-iotbr-app-prd01,False,False,n/a,dead
+pl4-iotbr-app-prd02,False,False,n/a,dead
+pl4-iotbr-app-prd03,False,False,n/a,dead
+pl4-iotbr-ms-prd01,False,False,n/a,dead
+pl4-iotbr-ms-prd02,True,True,Python 2.7.5,full_ok
+pl4-iotbr-ms-prd03,True,True,Python 2.7.5,full_ok
+pl4-iotbr-ms-prd04,True,True,Python 2.7.5,full_ok
+pl4-iotbr-prd01,False,False,n/a,dead
+pl4-ivr-mob-1,True,True,Python 2.7.5,full_ok
+pl4-ivr-mob-2,True,True,Python 2.7.5,full_ok
+pl4-ivr-mob-3,True,True,Python 2.7.5,full_ok
+pl4-ivr-mob-4,True,True,Python 2.7.5,full_ok
+PL4-IVR-MOB-5,True,True,Python 2.7.5,full_ok
+PL4-IVR-MOB-6,True,True,Python 2.7.5,full_ok
+PL4-IVR-MOB-7,True,True,Python 2.7.5,full_ok
+PL4-IVR-MOB-8,True,True,Python 2.7.5,full_ok
+pl4-ivr-sdp-mob-1.planeta.net,False,False,n/a,dead
+pl4-ivr-sdp-mob-2.planeta.net,False,False,n/a,dead
+pl4-ivr-sdp-mob-3.planeta.net,False,False,n/a,dead
+pl4-ivr-sdp-mob-4.planeta.net,False,False,n/a,dead
+PL4-IVR-SDP-MOB-5,True,True,Python 2.7.5,full_ok
+PL4-IVR-SDP-MOB-7,True,True,Python 2.7.5,full_ok
+pl4-lce-app-1,False,False,n/a,dead
+pl4-lce-app-2,False,False,n/a,dead
+pl4-lce-app-3,False,False,n/a,dead
+pl4-lce-app-4,False,False,n/a,dead
+pl4-lce-broker-1,True,True,Python 2.7.5,full_ok
+pl4-lce-broker-3,True,True,Python 2.7.5,full_ok
+pl4-log-indexer-1,True,True,Python 2.7.5,full_ok
+pl4-log-indexer-2,False,False,n/a,dead
+pl4-log-kibana-1,False,False,n/a,dead
+pl4-mediaserver-2,True,True,Python 2.7.5,full_ok
+pl4-mediaserver-5,True,True,Python 2.7.5,full_ok
+pl4-mediaserver-8,True,True,Python 2.7.5,full_ok
+pl4-mob-2.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-mob-3.planeta.net,True,True,Python 2.7.5,full_ok
+PL4-NV-APP-1,True,True,Python 2.7.5,full_ok
+PL4-NV-APP-2,False,False,n/a,dead
+PL4-NV-APP-3,True,True,Python 2.7.5,full_ok
+PL4-NV-APP-4,False,False,n/a,dead
+PL4-NV-APP-5,False,False,n/a,dead
+PL4-NV-APP-6,False,False,n/a,dead
+pl4-nv-esb-1.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-nv-esb-2.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-nv-mob-1.planeta.net,False,False,n/a,dead
+PL4-NV-MOB-10,False,False,n/a,dead
+PL4-NV-MOB-11,False,False,n/a,dead
+PL4-NV-MOB-12,False,False,n/a,dead
+PL4-NV-MOB-13,False,False,n/a,dead
+PL4-NV-MOB-2_,False,False,n/a,dead
+pl4-nv-mob-3.planeta.net,False,False,n/a,dead
+PL4-NV-MOB-4,True,True,Python 2.7.5,full_ok
+pl4-nv-mob-5.planeta.net,False,False,n/a,dead
+pl4-nv-mob-6.planeta.net,False,False,n/a,dead
+pl4-nv-mob-7.planeta.net,False,False,n/a,dead
+pl4-nv-mob-8.planeta.net,True,True,Python 2.7.5,full_ok
+PL4-NV-MOB-9,False,False,n/a,dead
+pl4-oferta-rel-prd01,False,False,n/a,dead
+PL4-PRD-USSD-1,False,False,n/a,dead
+pl4-tts1.planeta.net,True,True,Python 2.7.5,full_ok
+pl4-tts1-new,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd01,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd02,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd03,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd04,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd05,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd06,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd07,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd08,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd10,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd11,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd13,False,False,n/a,dead
+pl5-eventos-prd14,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd15,True,True,Python 2.7.5,full_ok
+pl5-eventos-prd16,True,True,Python 2.7.5,full_ok
+pl5-kannel-1.planeta.net,False,False,n/a,dead
+pl5-psql-1.planeta.net,False,False,n/a,dead
+pl5-psql-2.planeta.net,False,False,n/a,dead
+planeta-idp-hom-1,False,False,n/a,dead
+planeta-idp-hom-2,False,False,n/a,dead
+planeta-idp-prd01,True,True,Python 2.7.5,full_ok
+planeta-idp-prd02,False,False,n/a,dead
+pl-camp-hom-mob-1,False,False,n/a,dead
+pl-camp-hom-mob-2,False,False,n/a,dead
+pl-central-hom-1,False,False,n/a,dead
+pl-central-prd-1,False,False,n/a,dead
+pl-central-prd-2,False,False,n/a,dead
+Pl-enabler-postvendas,True,True,Python 2.7.5,full_ok
+Pl-grav-adm-1,False,False,n/a,dead
+Pl-grav-adm-2,True,True,Python 2.7.5,full_ok
+pl-grav-monitor-avaya-1,True,True,Python 2.7.5,full_ok
+Pl-grav-monitor-avaya-2,True,True,Python 2.7.5,full_ok
+pl-GRAV-SERV-1,False,False,n/a,dead
+pl-GRAV-SERV-2,False,False,n/a,dead
+pl-GRAV-SERV-3,False,False,n/a,dead
+pl-GRAV-SERV-4,False,False,n/a,dead
+pl-GRAV-SERV-5,False,False,n/a,dead
+pl-GRAV-SERV-6,False,False,n/a,dead
+Pl-ivr-adm-1,True,True,Python 2.7.5,full_ok
+Pl-ivr-app-1,True,True,Python 2.7.5,full_ok
+Pl-ivr-app12,False,False,n/a,dead
+Pl-ivr-app13,False,False,n/a,dead
+Pl-ivr-app-2,True,True,Python 2.7.5,full_ok
+Pl-ivr-app-3,True,True,Python 2.7.5,full_ok
+Pl-ivr-app-4,True,True,Python 2.7.5,full_ok
+Pl-ivr-app7,False,False,n/a,dead
+Pl-ivr-app8,False,False,n/a,dead
+Pl-ivr-broker-1,True,True,Python 2.7.5,full_ok
+Pl-ivr-broker-2,True,True,Python 2.7.5,full_ok
+pl-management,True,True,Python 2.7.5,full_ok
+pl-message-prd-4,False,False,n/a,dead
+pl-messag-prd-3,True,True,Python 2.7.5,full_ok
+pl-prd-event-processing-1,True,True,Python 2.7.5,full_ok
+pl-prd-event-processing-2,True,True,Python 2.7.5,full_ok
+pl-prd-event-processing-3,True,True,Python 2.7.5,full_ok
+pl-prd-event-processing-4,True,True,Python 2.7.5,full_ok
+pl-prd-logging-interface-1,True,True,Python 2.7.5,full_ok
+pl-prd-logging-interface-2,False,False,n/a,dead
+pl-prd-search-engine-1,False,False,n/a,dead
+pl-prd-search-engine-2,False,False,n/a,dead
+pl-prd-search-engine-3,False,False,n/a,dead
+pl-prd-search-engine-4,True,True,Python 2.7.5,full_ok
+pl-prd-search-engine-5,True,True,Python 2.7.5,full_ok
+pl-prd-search-engine-6,True,True,Python 2.7.5,full_ok
+pl-prd-search-engine-7,True,True,Python 2.7.5,full_ok
+pl-prd-search-engine-8,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-adm-1,False,False,n/a,dead
+pl-sdp-v4-adm-2,False,False,n/a,dead
+pl-sdp-v4-app-1,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-app-10,False,False,n/a,dead
+pl-sdp-v4-app-2,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-app-3,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-app-4,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-app-5,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-app-6,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-app-7,False,False,n/a,dead
+pl-sdp-v4-app-8,False,False,n/a,dead
+pl-sdp-v4-ivr-app-1,False,False,n/a,dead
+pl-sdp-v4-ivr-app-2,False,False,n/a,dead
+pl-sdp-v4-ivr-app-3,False,False,n/a,dead
+pl-sdp-v4-ivr-app-4,False,False,n/a,dead
+pl-sdp-v4-ivr-broker-1,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-ivr-broker-2,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-soa-1,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-soa-2,True,True,Python 2.7.5,full_ok
+pl-sdp-v4-soa-3,False,False,n/a,dead
+pl-sdp-v4-soa-ati-1,False,False,n/a,dead
+PL-SIG_16,False,False,n/a,dead
+pl-sig-13,False,False,n/a,dead
+pl-sig-14,False,False,n/a,dead
+pl-sig-15,False,False,n/a,dead
+pl-sig-26,False,False,n/a,dead
+policy-manager-prd01_v76,False,False,n/a,dead
+porgwpx01,True,True,Python 2.7.5,full_ok
+porgwpx02,True,True,Python 2.7.5,full_ok
+portabgw01,False,False,n/a,dead
+portabgw02,False,False,n/a,dead
+portalcdoprd,True,True,Python 2.7.5,full_ok
+portal-clientesb2b-frontend-prd01,False,False,n/a,dead
+portal-clientesb2b-frontend-prd02,False,False,n/a,dead
+portal-correios-prd01,False,False,n/a,dead
+portalcorrelacoes,True,True,Python 2.7.5,full_ok
+portal-cre-prd03,True,True,Python 2.7.5,full_ok
+portalctbc04hmg_NEW,False,False,n/a,dead
+portalctbc05,True,True,Python 2.7.5,full_ok
+portalctbc05hmg,True,True,Python 2.7.5,full_ok
+portalctbc06,True,True,Python 2.7.5,full_ok
+portalctbc06hmg_NEW,False,False,n/a,dead
+portaldb01-portal-prd,True,True,Python 2.7.5,full_ok
+portaldesempenho,True,True,Python 2.7.5,full_ok
+portal-hom-integrator01,True,True,Python 2.7.5,full_ok
+portal-odin-hml01,False,False,n/a,dead
+portal-ponderacoes-b2b-prd01,True,True,Python 2.7.5,full_ok
+portal-prd-integrator01,True,True,Python 2.7.5,full_ok
+portal-titular-lgpd-hml01,True,True,Python 2.7.5,full_ok
+portal-titular-lgpd-prd01,True,True,Python 2.7.5,full_ok
+portepx01,True,True,Python 2.7.5,full_ok
+portepx02,True,True,Python 2.7.5,full_ok
+portepx03,True,True,Python 2.7.5,full_ok
+portfolio-hom01,True,True,Python 2.7.5,full_ok
+porthx01,False,True,Python 2.7.5,ssh_only
+porthx02,False,True,Python 2.7.5,ssh_only
+porthx03,False,True,Python 2.7.5,ssh_only
+porthx04,False,True,Python 2.7.5,ssh_only
+porthx05,False,True,Python 2.7.5,ssh_only
+porthx06,False,True,Python 2.7.5,ssh_only
+portmpx01,True,True,Python 2.7.5,full_ok
+portmpx02,True,True,Python 2.7.5,full_ok
+portmpx03,True,True,Python 2.7.5,full_ok
+portmpx04,True,True,Python 2.7.5,full_ok
+pprox.staging,False,False,n/a,dead
+pprox-prd01,False,False,n/a,dead
+prdgridctl,True,True,Python 2.7.5,full_ok
+preproddes,True,True,Python 2.7.5,full_ok
+proventos-hom-1,False,False,n/a,dead
+provisioning-server-prd01,False,False,n/a,dead
+proxy-01.prd.iot,False,False,n/a,dead
+proxy-hom2-1,False,False,n/a,dead
+proxy-prd01,False,False,n/a,dead
+proxy-prd02,False,False,n/a,dead
+proxy-prd-1,True,True,Python 2.7.5,full_ok
+proxy-prd-2,True,True,Python 2.7.5,full_ok
+proxy-prd-3,False,False,n/a,dead
+proxy-prd-4,False,False,n/a,dead
+prtpndb2bpx01,False,True,Python 2.7.5,ssh_only
+ptdashpx01,False,False,n/a,dead
+ptloghx01,False,False,n/a,dead
+ptlogpx01,True,True,Python 2.7.5,full_ok
+publab,True,True,Python 2.7.5,full_ok
+pubprdapp1,True,True,Python 2.7.5,full_ok
+pubprdapp2,True,True,Python 2.7.5,full_ok
+puppet,True,True,Python 2.7.5,full_ok
+pv4-camp-adm-1,False,False,n/a,dead
+pv4-camp-db-1,False,True,Python 2.7.5,ssh_only
+pv4-camp-db-2,False,False,n/a,dead
+pv4-camp-kannel-1,True,True,Python 2.7.5,full_ok
+pv4-camp-kannel-2,True,True,Python 2.7.5,full_ok
+pv4-camp-kannel-3,False,False,n/a,dead
+pv4-camp-kannel-4,False,False,n/a,dead
+pv4-camp-mediaserver-1,True,True,Python 2.7.5,full_ok
+pv4-camp-mediaserver-2,True,True,Python 2.7.5,full_ok
+pv4-camp-mob-1,False,False,n/a,dead
+pv4-camp-mob-2,False,False,n/a,dead
+pv4-camp-wfly-1,False,False,n/a,dead
+pv4-camp-wfly-2,False,False,n/a,dead
+pv4-camp-wso2-1,False,False,n/a,dead
+pv4-camp-wso2-2,False,False,n/a,dead
+pvweb01,True,True,Python 2.7.5,full_ok
+pvweb02,True,True,Python 2.7.5,full_ok
+pvweblogictst,True,True,Python 2.7.5,full_ok
+qualidade-hom01,True,True,Python 2.7.5,full_ok
+qualidade-prd01,True,True,Python 2.7.5,full_ok
+qualidade-prd02,True,True,Python 2.7.5,full_ok
+qualidade-prd03,True,True,Python 2.7.5,full_ok
+qualidade-prd04,True,True,Python 2.7.5,full_ok
+ractelecom01-236-prd,True,True,Python 2.7.5,full_ok
+ractelecom02-236-prd.dbtelecom.com.br,False,False,n/a,dead
+ractelecom03-236-prd.dbtelecom.com.br,False,False,n/a,dead
+radius-ciscoar-temp01_v90,False,False,n/a,dead
+radius-dblogs-prd01,True,True,Python 2.7.5,full_ok
+radius-iot-acc-hml01,False,False,n/a,dead
+radius-iot-acc-hml02,False,False,n/a,dead
+radius-iot-acc-hml03,False,False,n/a,dead
+radius-iot-acc-prd01,False,False,n/a,dead
+radius-iot-acc-prd02,False,False,n/a,dead
+radius-iot-acc-prd03,False,False,n/a,dead
+radius-iot-auth-hml01,False,False,n/a,dead
+radius-iot-auth-hml02,False,False,n/a,dead
+radius-iot-auth-hml03,False,False,n/a,dead
+radius-iot-auth-prd02,False,False,n/a,dead
+radius-iot-auth-prd03,False,False,n/a,dead
+radius-ws-prd01,True,True,Python 2.7.5,full_ok
+Rancher-Admin-prd01,False,False,n/a,dead
+Rancher-Admin-prd02,False,False,n/a,dead
+Rancher-Admin-prd03,False,False,n/a,dead
+Rancher-master-prd01,False,False,n/a,dead
+Rancher-master-prd02,False,False,n/a,dead
+Rancher-master-prd03,False,False,n/a,dead
+Rancher-master-stg01,False,False,n/a,dead
+Rancher-master-stg02,False,False,n/a,dead
+Rancher-master-stg03,False,False,n/a,dead
+Rancher-worker-prd01,False,False,n/a,dead
+Rancher-worker-prd02,False,False,n/a,dead
+Rancher-worker-prd03,False,False,n/a,dead
+Rancher-worker-prd04,False,False,n/a,dead
+Rancher-worker-stg01,False,False,n/a,dead
+Rancher-worker-stg02,False,False,n/a,dead
+Rancher-worker-stg03,False,False,n/a,dead
+Rancher-worker-stg04,False,False,n/a,dead
+rbt-appsrv-prd01,True,True,Python 2.7.5,full_ok
+rbt-dbsrv-prd01-236_v203_v632,False,False,n/a,dead
+rbt-mediasrv-prd01-236_v203_v632,False,False,n/a,dead
+rbt-proxysrv-prd01-236_v203_v632,False,False,n/a,dead
+rdplinuxprd02,True,True,Python 2.7.5,full_ok
+rdplinuxprd03,True,True,Python 2.7.5,full_ok
+rdplinuxprd04,True,True,Python 2.7.5,full_ok
+rdplinuxprd05,True,True,Python 2.7.5,full_ok
+rdplinuxprd06,True,True,Python 2.7.5,full_ok
+rdplinuxprd07,True,True,Python 2.7.5,full_ok
+replicadb.cloudalgartelecom,False,False,n/a,dead
+replicadb.staging,False,False,n/a,dead
+repol01,False,False,n/a,dead
+reposit-front-lgpd-hml01,False,False,n/a,dead
+reposit-front-lgpd-prd01,True,True,Python 2.7.5,full_ok
+reposit-quality-lgpd-hml01,True,True,Python 2.7.5,full_ok
+rhsatepx01,True,True,Python 2.7.5,full_ok
+rhua,False,True,Python 2.7.5,ssh_only
+rqual-spo-prod01,True,True,Python 2.7.5,full_ok
+rqual-ula-centro-prd01,True,True,Python 2.7.5,full_ok
+rubictbc01,True,True,Python 2.7.5,full_ok
+rubidbdes01,True,True,Python 2.7.5,full_ok
+rubiprd01,True,True,Python 2.7.5,full_ok
+SBLPRDAPP01,True,True,Python 2.7.5,full_ok
+SBLPRDAPP02,True,True,Python 2.7.5,full_ok
+sblprdapp03.network.ctbc,True,True,Python 2.7.5,full_ok
+sblprdapp04.network.ctbc,True,True,Python 2.7.5,full_ok
+SBLPRDCFG01,True,True,Python 2.7.5,full_ok
+SBLPRDCFG02,True,True,Python 2.7.5,full_ok
+SBLPRDGTW01,True,True,Python 2.7.5,full_ok
+SBLPRDGTW02,True,True,Python 2.7.5,full_ok
+SBLPRDOAM01,True,True,Python 2.7.5,full_ok
+SBLPRDOAM02,True,True,Python 2.7.5,full_ok
+SBLPRDREP01,True,True,Python 2.7.5,full_ok
+SBLPRDREP02,True,True,Python 2.7.5,full_ok
+SBLPRDWEB01,True,True,Python 2.7.5,full_ok
+SBLPRDWEB02,True,True,Python 2.7.5,full_ok
+SBLPRDWEB03,True,True,Python 2.7.5,full_ok
+SBLPRDWEB04,True,True,Python 2.7.5,full_ok
+scm-01.prd.iot,False,False,n/a,dead
+scp-gw-diameter-prd-1,False,False,n/a,dead
+scp-gw-diameter-prd-2,True,True,Python 2.7.5,full_ok
+scp-gw-diameter-prd-3,False,False,n/a,dead
+scp-gw-diameter-prd-5,True,True,Python 2.7.5,full_ok
+scp-gw-diameter-prd-6,False,False,n/a,dead
+scp-gw-http-hom2-1,False,False,n/a,dead
+scp-gw-http-hom2-2,False,False,n/a,dead
+scp-gw-http-prd-1,True,True,Python 2.7.5,full_ok
+scp-gw-http-prd-2,False,False,n/a,dead
+scp-gw-http-prd-3,False,False,n/a,dead
+scp-gw-http-prd-4,True,True,Python 2.7.5,full_ok
+scp-gw-http-prd-5,False,False,n/a,dead
+scp-gw-http-prd-6,False,False,n/a,dead
+sdr-server-captura,False,False,n/a,dead
+sds-monitor-236-prd01,False,False,n/a,dead
+secgtw-botcor-prd01.network.ctbc,True,True,Python 2.7.5,full_ok
+sendsms-hom2-1,False,False,n/a,dead
+sendsms-hom2-2,False,False,n/a,dead
+sendsms-prd-1,False,False,n/a,dead
+sendsms-prd-2,False,False,n/a,dead
+server-analytics-prd01,False,False,n/a,dead
+server-trace,False,False,n/a,dead
+server-trace_prd01,False,False,n/a,dead
+server-trace_prd02,False,False,n/a,dead
+server-trace-10,False,False,n/a,dead
+server-trace-fac,False,False,n/a,dead
+server-trace-piag-prd09,False,False,n/a,dead
+server-trace-ula07,False,False,n/a,dead
+server-trace-ula08,False,False,n/a,dead
+services-hom2-1,False,False,n/a,dead
+services-hom2-2,False,False,n/a,dead
+services-prd-1,True,True,Python 2.7.5,full_ok
+services-prd-2,False,False,n/a,dead
+services-prd-3,True,True,Python 2.7.5,full_ok
+Servidor-RC-PHONE2BAPP02,False,False,n/a,dead
+servidor-topologia-digital-prd01,False,False,n/a,dead
+servproapp-prd01,True,True,Python 2.7.5,full_ok
+servproapp-prd02,True,True,Python 2.7.5,full_ok
+servprobd-prd01,True,True,Python 2.7.5,full_ok
+settler01,True,True,Python 2.7.5,full_ok
+sgdleanhom01,True,True,Python 2.7.5,full_ok
+sgdleanprd01,True,True,Python 2.7.5,full_ok
+sgp01,True,True,Python 2.7.5,full_ok
+sgp01hom,True,True,Python 2.7.5,full_ok
+sgp02,True,True,Python 2.7.5,full_ok
+sgp02hom,True,True,Python 2.7.5,full_ok
+sgprec01_NEW,False,False,n/a,dead
+sipcor-prd01,False,False,n/a,dead
+sittelhom01,True,True,Python 2.7.5,full_ok
+smartsag-01,False,False,n/a,dead
+smdpx01,True,True,Python 2.7.5,full_ok
+smokeping-prd01,False,False,n/a,dead
+smpp-gw-prd-1,True,True,Python 2.7.5,full_ok
+smpp-gw-prd-2,True,True,Python 2.7.5,full_ok
+smpp-gw-prd-3,True,True,Python 2.7.5,full_ok
+smpp-gw-prd-4,True,True,Python 2.7.5,full_ok
+smsc2-broker-hml01-ora,False,False,n/a,dead
+smsc2-core-receiver-01,False,False,n/a,dead
+smsc2-core-receiver-02,False,False,n/a,dead
+smsc2-core-receiver-03,False,False,n/a,dead
+smsc2-core-receiver-04,False,False,n/a,dead
+smsc2-core-receiver-05,False,False,n/a,dead
+smsc2-core-receiver-06,False,False,n/a,dead
+smsc2-core-receiver-07,False,False,n/a,dead
+smsc2-core-receiver-08,False,False,n/a,dead
+smsc2-core-receiver-09,False,False,n/a,dead
+smsc2-core-receiver-10,False,False,n/a,dead
+smsc2-core-worker-01,False,False,n/a,dead
+smsc2-core-worker-02,False,False,n/a,dead
+smsc2-core-worker-03,False,False,n/a,dead
+smsc2-core-worker-04,False,False,n/a,dead
+smsc2-core-worker-05,False,False,n/a,dead
+smsc2-core-worker-06,False,False,n/a,dead
+smsc2-core-worker-07,False,False,n/a,dead
+smsc2-core-worker-08,False,False,n/a,dead
+smsc2-core-worker-09,False,False,n/a,dead
+smsc2-core-worker-10,False,False,n/a,dead
+smsc2-core-worker-11,False,False,n/a,dead
+smsc2-core-worker-12,False,False,n/a,dead
+smsc2-core-worker-13,False,False,n/a,dead
+smsc2-core-worker-14,False,False,n/a,dead
+smsc2-core-worker-15,False,False,n/a,dead
+smsc2-core-worker-16,False,False,n/a,dead
+smsc2-core-worker-17,False,False,n/a,dead
+smsc2-core-worker-18,False,False,n/a,dead
+smsc2-core-worker-19,False,False,n/a,dead
+smsc2-core-worker-20,False,False,n/a,dead
+smsc2-data-server-hml01,False,False,n/a,dead
+smsc2-map-02.planeta.net,True,True,Python 2.7.5,full_ok
+smsc2-map-03.planeta.net,False,False,n/a,dead
+smsc2-map-04.planeta.net,False,False,n/a,dead
+smsc2-map-hml01,False,False,n/a,dead
+smsc2-map-hml02,False,False,n/a,dead
+smsc2-proxy-01,False,False,n/a,dead
+smsc2-proxy-02,False,False,n/a,dead
+smsc2-proxy-hml01,False,False,n/a,dead
+smsc2-proxy-hml02,False,False,n/a,dead
+smsc2-receiver-hml01,False,False,n/a,dead
+smsc2-receiver-hml02,False,False,n/a,dead
+smsc2-services-01,False,False,n/a,dead
+smsc2-services-02,False,False,n/a,dead
+smsc2-services-03,False,False,n/a,dead
+smsc2-services-04,False,False,n/a,dead
+smsc2-services-hml01,False,False,n/a,dead
+smsc2-services-hml02,False,False,n/a,dead
+smsc2-smpp-01,False,False,n/a,dead
+smsc2-smpp-02,False,False,n/a,dead
+smsc2-smpp-03,False,False,n/a,dead
+smsc2-smpp-04.planeta.net,False,False,n/a,dead
+smsc2-smpp-05,True,True,Python 2.7.5,full_ok
+smsc2-smpp-06,False,False,n/a,dead
+smsc2-smpp-hml01,False,False,n/a,dead
+smsc2-smpp-hml02,False,False,n/a,dead
+smsc2-smpp-hml03,False,False,n/a,dead
+smsc2-worker-hml-1,False,False,n/a,dead
+smsc2-worker-hml-2,False,False,n/a,dead
+smsc-broker,False,False,n/a,dead
+smsc-core-worker-3,False,False,n/a,dead
+smsc-core-worker-4,False,False,n/a,dead
+smsc-core-worker-5,False,False,n/a,dead
+smsc-core-worker-6,False,False,n/a,dead
+smsc-core-worker-7,False,False,n/a,dead
+smsc-core-worker-8,False,False,n/a,dead
+smsc-data-server-1,False,False,n/a,dead
+smsc-data-server-2,False,False,n/a,dead
+smsc-hazelcast-1.planeta.net,False,False,n/a,dead
+smsc-hazelcast-2.planeta.net,False,False,n/a,dead
+smsc-hazelcast-3.planeta.net,False,False,n/a,dead
+smsc-hazelcast-4.planeta.net,False,False,n/a,dead
+smsc-hazelcast-5.planeta.net,False,False,n/a,dead
+smsc-map-prd-1,False,False,n/a,dead
+smsc-smpp-4,True,True,Python 2.7.5,full_ok
+smtp01,False,False,n/a,dead
+smtpapp,True,True,Python 2.7.5,full_ok
+smtpapp2,True,True,Python 2.7.5,full_ok
+soawsohom01,False,True,Python 2.7.5,ssh_only
+soawsohom02,False,True,Python 2.7.5,ssh_only
+soawsoprd01,True,True,Python 2.7.5,full_ok
+soawsoprd02,True,True,Python 2.7.5,full_ok
+soawsoprd03,True,True,Python 2.7.5,full_ok
+soawsoprd04,True,True,Python 2.7.5,full_ok
+som-hmlv2-cache01,True,True,Python 2.7.5,full_ok
+som-hmlv2-cache02,True,True,Python 2.7.5,full_ok
+som-hmlv2-service01,True,True,Python 2.7.5,full_ok
+som-hmlv2-service02,True,True,Python 2.7.5,full_ok
+som-hmlv2-view01,True,True,Python 2.7.5,full_ok
+som-hmlv2-view02,True,True,Python 2.7.5,full_ok
+som-hom-app01,True,True,Python 2.7.5,full_ok
+som-hom-app02,True,True,Python 2.7.5,full_ok
+som-hom-chat01,True,True,Python 2.7.5,full_ok
+som-hom-wf01,True,True,Python 2.7.5,full_ok
+som-hom-wf02,True,True,Python 2.7.5,full_ok
+som-prd-app01,True,True,Python 2.7.5,full_ok
+som-prd-app02,True,True,Python 2.7.5,full_ok
+som-prd-chat01,True,True,Python 2.7.5,full_ok
+som-prd-chat02,True,True,Python 2.7.5,full_ok
+som-prd-elk02,False,False,n/a,dead
+som-prdv2-cache01,True,True,Python 2.7.5,full_ok
+som-prdv2-cache02,True,True,Python 2.7.5,full_ok
+som-prdv2-service01,True,True,Python 2.7.5,full_ok
+som-prdv2-service02,True,True,Python 2.7.5,full_ok
+som-prdv2-service03,True,True,Python 2.7.5,full_ok
+som-prdv2-view01,True,True,Python 2.7.5,full_ok
+som-prdv2-view02,True,True,Python 2.7.5,full_ok
+som-prdv2-view03,True,True,Python 2.7.5,full_ok
+som-prd-wf01,True,True,Python 2.7.5,full_ok
+som-prd-wf02,True,True,Python 2.7.5,full_ok
+som-tit-app01,True,True,Python 2.7.5,full_ok
+som-tit-chat01,True,True,Python 2.7.5,full_ok
+som-tit-wf01,True,True,Python 2.7.5,full_ok
+som-wf-hml02,True,True,Python 2.7.5,full_ok
+som-wf-prd01,True,True,Python 2.7.5,full_ok
+som-wf-prd02,True,True,Python 2.7.5,full_ok
+som-wf-prd03,True,True,Python 2.7.5,full_ok
+spacecor,False,False,n/a,dead
+spacewalk-repo-prd01_v203,False,False,n/a,dead
+spark-prd-worker01,False,False,n/a,dead
+sportal-prd01,False,False,n/a,dead
+sps3-app-dev01-iot,True,True,Python 2.7.5,full_ok
+sps3-app-dev02-iot,True,True,Python 2.7.5,full_ok
+sps3-app-hml01-iot,False,False,n/a,dead
+sps3-app-hml02.iot,False,False,n/a,dead
+sps3-app-prd01-iot,False,False,n/a,dead
+sps3-app-prd02-iot,False,False,n/a,dead
+spsdx01,True,True,Python 2.7.5,full_ok
+spshom02,True,True,Python 2.7.5,full_ok
+sps-hom-near01,True,True,Python 2.7.5,full_ok
+sps-hom-ws01,True,True,Python 2.7.5,full_ok
+sps-hom-ws01New,False,False,n/a,dead
+sps-hom-ws02,True,True,Python 2.7.5,full_ok
+sps-hom-ws02New,False,False,n/a,dead
+spshx01,True,True,Python 2.7.5,full_ok
+spshx02,True,True,Python 2.7.5,full_ok
+spshx03,True,True,Python 2.7.5,full_ok
+spshx04,True,True,Python 2.7.5,full_ok
+spsprd01,True,True,Python 2.7.5,full_ok
+spsprd02,True,True,Python 2.7.5,full_ok
+spsprd03,True,True,Python 2.7.5,full_ok
+spsprd04,True,True,Python 2.7.5,full_ok
+sps-prd-near01,True,True,Python 2.7.5,full_ok
+sps-prd-ws01-NEW,False,False,n/a,dead
+sps-prd-ws02New,False,False,n/a,dead
+spspx01,True,True,Python 2.7.5,full_ok
+spspx02,True,True,Python 2.7.5,full_ok
+spspx03,True,True,Python 2.7.5,full_ok
+spspx04,True,True,Python 2.7.5,full_ok
+srvkeymile01,True,True,Python 2.7.5,full_ok
+srvphpdes01,True,True,Python 2.7.5,full_ok
+srvphpdes01_NEW,True,True,Python 2.7.5,full_ok
+srvphp-dev_NEW,False,False,n/a,dead
+SSM-prd01,False,False,n/a,dead
+stream-moniot-hml01-NEW,False,False,n/a,dead
+stream-moniot-hml02,False,False,n/a,dead
+stream-moniot-hml03,False,False,n/a,dead
+stream-moniot-prd01,False,False,n/a,dead
+stream-moniot-prd02,False,False,n/a,dead
+stream-moniot-prd03,False,False,n/a,dead
+stream-moniot-prd04,False,False,n/a,dead
+stream-moniot-prd05,False,False,n/a,dead
+stream-moniot-prd06,False,False,n/a,dead
+stream-moniot-prd07,False,False,n/a,dead
+subversion_NEW,False,False,n/a,dead
+sunlight1,True,True,Python 2.7.5,full_ok
+sunlight2,True,True,Python 2.7.5,full_ok
+svn-prd-app01,True,True,Python 2.7.5,full_ok
+syslog-correios-prd01,False,False,n/a,dead
+syslog-srv01,False,False,n/a,dead
+tam-01.planeta.net,False,False,n/a,dead
+tcr-franca-prd01,False,False,n/a,dead
+tcr-franca-prd02,False,False,n/a,dead
+tcr-spo-prd01,False,False,n/a,dead
+tcr-spo-prd02,False,False,n/a,dead
+tcr-ula-prd01,False,False,n/a,dead
+tcr-ula-prd02,False,False,n/a,dead
+tcr-ula-prd03,False,False,n/a,dead
+tcr-ula-prd04,True,True,Python 2.7.5,full_ok
+teams-vsession-prd01,False,False,n/a,dead
+teams-vsession-prd05,False,False,n/a,dead
+teams-vsession-prd06,False,False,n/a,dead
+telegraf-gateway-01.prd.iot,False,False,n/a,dead
+telegraf-gateway-02.prd.iot,False,False,n/a,dead
+Terra-Form-prd01,False,False,n/a,dead
+terra-form-stg01,False,False,n/a,dead
+tf-catprod-prd-matrix01,True,True,Python 2.7.5,full_ok
+tf-jenkins-crm-prd01,False,False,n/a,dead
+tic-adm-bb-hom01,True,True,Python 2.7.5,full_ok
+tic-adm-bb-prd01,False,False,n/a,dead
+tic-building-blocks-hom01,True,True,Python 2.7.5,full_ok
+tic-building-blocks-hom02,True,True,Python 2.7.5,full_ok
+tic-building-blocks-prd01,True,True,Python 2.7.5,full_ok
+tic-building-blocks-prd02,True,True,Python 2.7.5,full_ok
+tic-ecommerce-prd02,True,True,Python 2.7.5,full_ok
+TNMSPX01,False,False,n/a,dead
+TNMSPX02,False,False,n/a,dead
+tokenhom01NEW,False,False,n/a,dead
+tokenhom02New,False,False,n/a,dead
+tokenprd01,True,True,Python 2.7.5,full_ok
+tokenprd02,True,True,Python 2.7.5,full_ok
+tokentit01,True,True,Python 2.7.5,full_ok
+tomcatas01hom_NEW,False,False,n/a,dead
+tomcatasprd02_NEW,False,False,n/a,dead
+tomcatasprd03,True,True,Python 2.7.5,full_ok
+toolstelecom06,False,False,n/a,dead
+toolstelecom1_NEW,False,False,n/a,dead
+toolstelecom2_NEW,False,False,n/a,dead
+tools-telecom-cel03-prd_NEW,False,False,n/a,dead
+tools-telecom-cel04-prd_NEW,False,False,n/a,dead
+toolstelecom-cel-prd01_v203,False,False,n/a,dead
+toolstelecom-cel-prd02_v203,False,False,n/a,dead
+toolstelecom-cel-prd05_v203,False,False,n/a,dead
+toolstelecom-cel-prd06_v203,False,False,n/a,dead
+toolstelecom-cel-prd07_v203,False,False,n/a,dead
+toolstelecom-cel-prd08,True,True,Python 2.7.5,full_ok
+TPDU01_prd,True,True,Python 2.7.5,full_ok
+tpdu02,False,False,n/a,dead
+tpdu03,False,False,n/a,dead
+tpdu04,False,False,n/a,dead
+tpdu05,False,False,n/a,dead
+tpdu06,False,False,n/a,dead
+tpdu07,False,False,n/a,dead
+tpdu08,False,False,n/a,dead
+tr069-api-hml01,True,True,Python 2.7.5,full_ok
+tr069-api-prd01,True,True,Python 2.7.5,full_ok
+tr069-api-prd02,True,True,Python 2.7.5,full_ok
+tr069-api-prd03,True,True,Python 2.7.5,full_ok
+Tr069-app-prd01,True,True,Python 2.7.5,full_ok
+Tr069-app-prd03,True,True,Python 2.7.5,full_ok
+tr069-balancer-hml01,True,True,Python 2.7.5,full_ok
+Tr069-Balancer-PRD01,False,False,n/a,dead
+Tr069-Balancer-PRD02,True,True,Python 2.7.5,full_ok
+tr069-logs-hml01,False,False,n/a,dead
+tr069-logs-prd01,False,False,n/a,dead
+tr069-mongo-hml01,True,True,Python 2.7.5,full_ok
+tr069-mongo-prd01,True,True,Python 2.7.5,full_ok
+tr069-mongo-prd02,True,True,Python 2.7.5,full_ok
+tr069-mongo-prd03,True,True,Python 2.7.5,full_ok
+traffic-analyser-prd01,False,False,n/a,dead
+traffic-analyser-prd02,False,False,n/a,dead
+traffic-analyser-prd03,False,False,n/a,dead
+traffic-analyser-prd04,False,False,n/a,dead
+traffic-analyser-prd05,False,False,n/a,dead
+traffic-analyser-prd06,False,False,n/a,dead
+traffic-analyser-prd07,False,False,n/a,dead
+traffic-analyser-prd08,False,False,n/a,dead
+traffic-analyser-prd09,False,False,n/a,dead
+trsapp-des,True,True,Python 2.7.5,full_ok
+trs-hom-app01,True,True,Python 2.7.5,full_ok
+trs-hom-app02,True,True,Python 2.7.5,full_ok
+trs-tit-app01,True,True,Python 2.7.5,full_ok
+trs-tst-app01,True,True,Python 2.7.5,full_ok
+tts,False,False,n/a,dead
+tts.staging,False,False,n/a,dead
+usrv34,True,True,Python 2.7.5,full_ok
+usrv37,True,True,Python 2.7.5,full_ok
+usrv71,False,False,n/a,dead
+usrv80,True,True,Python 2.7.5,full_ok
+usrv80prd,True,True,Python 2.7.5,full_ok
+usrv82prd,True,True,Python 2.7.5,full_ok
+ussd-center-01,False,False,n/a,dead
+ussd-center-02,False,False,n/a,dead
+velocidade-spo,False,False,n/a,dead
+vEMS-238-2,False,False,n/a,dead
+vertica-prd01-ext4,False,False,n/a,dead
+vertica-prd02-ext4,False,False,n/a,dead
+vertica-prd03-ext4,False,False,n/a,dead
+vertica-prd04.network.ctbc,False,True,Python 2.7.5,ssh_only
+vertica-prd05.network.ctbc,False,True,Python 2.7.5,ssh_only
+vertica-prd06.network.ctbc,False,True,Python 2.7.5,ssh_only
+vertis-app-prd01,True,True,Python 2.7.5,full_ok
+VGAPPHOM01,True,True,Python 2.7.5,full_ok
+VGAPXHOM01,True,True,Python 2.7.5,full_ok
+VGAPXPRD01,True,True,Python 2.7.5,full_ok
+VGCONTHOM01,True,True,Python 2.7.5,full_ok
+VGCONTPRD01,True,True,Python 2.7.5,full_ok
+VGGWHOM01,True,True,Python 2.7.5,full_ok
+VGHMPRD01,True,True,Python 2.7.5,full_ok
+VGNEDPRD01,True,True,Python 2.7.5,full_ok
+VGPROCHOM01,True,True,Python 2.7.5,full_ok
+VGPROCPRD01,True,True,Python 2.7.5,full_ok
+vigiahx01,False,False,n/a,dead
+vigiapx01,False,False,n/a,dead
+vigiapx02,False,False,n/a,dead
+VM_crm-prd-app02,False,False,n/a,dead
+VM_dmviewedb-spo_v203,False,False,n/a,dead
+VM_dns-cel02-prd,False,False,n/a,dead
+VM_eb-hom-app01,False,False,n/a,dead
+VM_eb-hom-app02,False,False,n/a,dead
+VM_eb-hom-ws01,False,False,n/a,dead
+VM_eb-prd-app01,False,False,n/a,dead
+VM_eb-prd-app02,False,False,n/a,dead
+VM_jenkings-devops,False,False,n/a,dead
+VM_misp-algar,False,False,n/a,dead
+VM_monitoramento-algarcrm-prd01,False,False,n/a,dead
+VM_msfranquia_hml01,False,False,n/a,dead
+VM_msfranquia_hml02,False,False,n/a,dead
+VM_msfranquia_prd01,False,False,n/a,dead
+VM_msfranquia_prd02,False,False,n/a,dead
+VM_oimprdidm1,False,False,n/a,dead
+VM_oimprdidm2,False,False,n/a,dead
+VM_POC_TR069_v203,False,False,n/a,dead
+VM_rhel-repo-cor,False,False,n/a,dead
+VM_som-wf-hom01,False,False,n/a,dead
+vm_tarifador_prd01,False,False,n/a,dead
+VM_tr069-utils,False,False,n/a,dead
+VM_ubiquiti_prd,False,False,n/a,dead
+VM_ula_proxy_02,False,False,n/a,dead
+VM_VGGWPRD01,False,False,n/a,dead
+VM_voipview_web,False,False,n/a,dead
+VM_WEBDNS_ALGARSUL,False,False,n/a,dead
+VM_webfranquia_hml01,False,False,n/a,dead
+VM_webfranquia_prd01,False,False,n/a,dead
+VM_webfranquia_prd02,False,False,n/a,dead
+VM_wlsim01,False,False,n/a,dead
+VM_zabbix-corp,False,False,n/a,dead
+VM_zabbix-dbclientesv2-prd,False,False,n/a,dead
+VM_zabbix-poller1-prod05,False,False,n/a,dead
+VM_zabbix-poller1-prod08,False,False,n/a,dead
+vm1.staging,False,False,n/a,dead
+vm1hx01,False,False,n/a,dead
+vm1px01,False,False,n/a,dead
+vm-cacti-capacidade3,False,False,n/a,dead
+VM-IPTV-01,False,False,n/a,dead
+VM-NSPAR,False,False,n/a,dead
+VM-NSSAR,False,False,n/a,dead
+VM-SRVTEL-AV02,False,False,n/a,dead
+webfranquia-hml02,False,True,Python 2.7.5,ssh_only
+webhom02,True,True,Python 2.7.5,full_ok
+web-ui-hom-app01,False,True,Python 2.7.5,ssh_only
+web-ui-prd-app01,False,False,n/a,dead
+wikipx01,True,True,Python 2.7.5,full_ok
+wiki-repositorio,False,False,n/a,dead
+wildfly-gerar-prd01,True,True,Python 2.7.5,full_ok
+wildfly-gerar-prd02,True,True,Python 2.7.5,full_ok
+wlhom01,True,True,Python 2.7.5,full_ok
+wlhom02,True,True,Python 2.7.5,full_ok
+wlsapp01,False,True,Python 2.7.5,ssh_only
+wlsapp02,False,True,Python 2.7.5,ssh_only
+wlsim01,True,True,Python 2.7.5,full_ok
+wlsservice01,False,True,Python 2.7.5,ssh_only
+wlsservice02,False,True,Python 2.7.5,ssh_only
+wlsservice03,False,True,Python 2.7.5,ssh_only
+wlsservice04,False,True,Python 2.7.5,ssh_only
+wlszhmg01,True,True,Python 2.7.5,full_ok
+wlszprod01,True,True,Python 2.7.5,full_ok
+work-lgpd-prd01,True,True,Python 2.7.5,full_ok
+work-lgpd-prd02,True,True,Python 2.7.5,full_ok
+wso2prod,True,True,Python 2.7.5,full_ok
+wsodsshom01,False,True,Python 2.7.5,ssh_only
+wsodsshom02,False,True,Python 2.7.5,ssh_only
+wsodssprd01,True,True,Python 2.7.5,full_ok
+wsodssprd02,True,True,Python 2.7.5,full_ok
+wsomsghom01,False,True,Python 2.7.5,ssh_only
+wsomsghom02,False,True,Python 2.7.5,ssh_only
+wsomsgprd01,True,True,Python 2.7.5,full_ok
+wsomsgprd02,True,True,Python 2.7.5,full_ok
+wsomysqlhom01,False,True,Python 2.7.5,ssh_only
+wsomysqlhom01-new,False,False,n/a,dead
+wsomysqlprd01,True,True,Python 2.7.5,full_ok
+xdsl2-des,False,False,n/a,dead
+zabbix-cor-srv-prd01_v203,False,False,n/a,dead
+zabbixdb03,False,False,n/a,dead
+zabbixdb07,False,False,n/a,dead
+zabbixdb10,False,False,n/a,dead
+zabbixdbclientes02,False,False,n/a,dead
+zabbixdbfontes_v203,False,False,n/a,dead
+zabbixdbhomo,False,False,n/a,dead
+zabbix-dck-metro-prd01,True,True,Python 2.7.5,full_ok
+zabbix-dck-metro-prd02,True,True,Python 2.7.5,full_ok
+zabbix-dck-metro-prd03,True,True,Python 2.7.5,full_ok
+zabbix-mysql-correios-prd01,False,False,n/a,dead
+zabbix-mysql-plat-prd01,True,True,Python 2.7.5,full_ok
+zabbix-noc-web,False,False,n/a,dead
+zabbix-ondemand-hml01,False,False,n/a,dead
+zabbix-poller-cli-prd01,True,True,Python 2.7.5,full_ok
+zabbix-poller-cli-prd02,False,False,n/a,dead
+zabbix-poller-cli-prd03,False,False,n/a,dead
+zabbix-poller-cli-prd04,False,True,Python 2.7.5,ssh_only
+zabbix-poller-cli-prd05,True,True,Python 2.7.5,full_ok
+zabbix-poller-cli-prd06,True,True,Python 2.7.5,full_ok
+zabbix-poller-cli-prd07,True,True,Python 2.7.5,full_ok
+zabbix-poller-cli-prd08,True,True,Python 2.7.5,full_ok
+zabbix-poller-cor-prd01_v203,False,False,n/a,dead
+zabbix-poller-cor-prd02_v203,False,False,n/a,dead
+zabbix-poller-correios-prd01,False,False,n/a,dead
+zabbix-poller-cta-prd01,True,True,Python 2.7.5,full_ok
+zabbix-poller-itau-prd01,False,False,n/a,dead
+zabbix-poller-plat-prd01,True,True,Python 2.7.5,full_ok
+zabbix-poller-plat-prd02,True,True,Python 2.7.5,full_ok
+zabbix-poller-plat-prd04,True,True,Python 2.7.5,full_ok
+zabbix-poller-tic-app02-desc,False,False,n/a,dead
+zabbix-prd-corp01,True,True,Python 2.7.5,full_ok
+zabbix-repo,False,False,n/a,dead
+zabbix-report-server-hml01,False,False,n/a,dead
+zabbix-report-server-prd01,True,True,Python 2.7.5,full_ok
+zabbix-sec,False,False,n/a,dead
+zabbix-server-hom-01,True,True,Python 2.7.5,full_ok
+zabbix-srv-bhe-prd01,True,True,Python 2.7.5,full_ok
+zabbix-srv-cli-prd01,True,True,Python 2.7.5,full_ok
+zabbix-srv-correios-prd01,False,False,n/a,dead
+zabbix-srv-cta-prd01,True,True,Python 2.7.5,full_ok
+zabbix-srv-plat-prd01,True,True,Python 2.7.5,full_ok
+zabbix-web-prod01,False,False,n/a,dead
+zbxdbalghx01,True,True,Python 2.7.5,full_ok
+zbxdbapx01,False,False,n/a,dead
+zbxdbapx02,False,False,n/a,dead
+zbxdbapx03,False,False,n/a,dead
+zbxdbpx02,True,True,Python 2.7.5,full_ok
+zbxdbtic01,False,False,n/a,dead
+zbxprxtic01,True,True,Python 2.7.5,full_ok
+zbxprxtic02,True,True,Python 2.7.5,full_ok
+zbxprxtic03,False,False,n/a,dead
+zbxprxtic04,False,False,n/a,dead
+zbxprxtic05,True,True,Python 2.7.5,full_ok
+zbxprxtic06,True,True,Python 2.7.5,full_ok
+zbxprxticcl,False,False,n/a,dead
+zbxsrvtic01,False,False,n/a,dead
+zms-hom02,False,False,n/a,dead
+ZMSPRD01,True,True,Python 2.7.5,full_ok
+zteftppx01,False,False,n/a,dead

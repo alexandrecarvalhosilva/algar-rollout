@@ -1,0 +1,14 @@
+RELATÓRIO DE ALCANCE - 2025-09-08 23:09:22
+
+Total de hosts: 1891
+ICMP OK: 921 (48,7%)
+SSH 22 aberto: 987 (52,2%)
+ICMP+SSH OK: 919 (48,6%)
+Somente ICMP: 2 (0,1%)
+Somente SSH: 68 (3,6%)
+Sem ICMP e SSH: 902 (47,7%)
+
+Python 3.x: 0
+Python 2.7.x: 987
+Python 2.6.x: 0
+Sem Python (n/a): 904

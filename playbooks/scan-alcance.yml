@@ -1,0 +1,84 @@
+---
+- name: Varredura ICMP/SSH/Python (fail-fast) e relatório
+  hosts: linux_all
+  gather_facts: false
+  vars:
+    ping_cmd: "ping -c1 -W1 {{ inventory_hostname }}"
+  tasks:
+    - name: ICMP
+      delegate_to: localhost
+      changed_when: false
+      failed_when: false
+      register: icmp
+      ansible.builtin.command: "{{ ping_cmd }}"
+
+    - name: Porta 22
+      delegate_to: localhost
+      changed_when: false
+      failed_when: false
+      register: ssh22
+      ansible.builtin.wait_for:
+        host: "{{ inventory_hostname }}"
+        port: 22
+        timeout: 3
+        state: started
+
+    - name: Versão Python (apenas se 22 aberto)
+      ignore_errors: true
+      changed_when: false
+      when: ssh22.state|default('') == 'started'
+      register: pyver
+      ansible.builtin.raw: "python3 -V || python -V || echo no-python"
+
+    - name: Registrar fatos
+      ansible.builtin.set_fact:
+        rec:
+          host: "{{ inventory_hostname }}"
+          icmp_ok: "{{ icmp.rc == 0 }}"
+          ssh_open: "{{ ssh22.state|default('') == 'started' }}"
+          python_version: "{{ (pyver.stdout|default('n/a')).splitlines()|last|default('n/a') }}"
+
+    - name: Resumo em tela (run_once)
+      run_once: true
+      ansible.builtin.debug:
+        msg:
+          icmp_ok: "{{ ansible_play_hosts_all | select('in', ansible_play_hosts_all) | select('truthy') | list | length }}"
+      vars:
+        # não precisa perfeito; resumo oficial vai no CSV abaixo
+        _dummy: ""
+
+    - name: Gerar CSV no nó de controle (raiz do repo)
+      run_once: true
+      delegate_to: localhost
+      ansible.builtin.copy:
+        dest: "{{ playbook_dir }}/../alcance_scan.csv"
+        mode: "0644"
+        content: |
+          host,icmp_ok,ssh_open,python_version
+          {% for h in ansible_play_hosts_all -%}
+          {{ h }},{{ hostvars[h].rec.icmp_ok }},{{ hostvars[h].rec.ssh_open }},{{ hostvars[h].rec.python_version }}
+          {% endfor %}
+
+    - name: Gerar TXT com listas por estado
+      run_once: true
+      delegate_to: localhost
+      ansible.builtin.copy:
+        dest: "{{ playbook_dir }}/../alcance_listas.txt"
+        mode: "0644"
+        content: |
+          [ICMP_OK]
+          {% for h in ansible_play_hosts_all if hostvars[h].rec.icmp_ok -%}{{ h }}
+          {% endfor %}
+          [ICMP_FAIL]
+          {% for h in ansible_play_hosts_all if not hostvars[h].rec.icmp_ok -%}{{ h }}
+          {% endfor %}
+          [SSH_22_OPEN]
+          {% for h in ansible_play_hosts_all if hostvars[h].rec.ssh_open -%}{{ h }}
+          {% endfor %}
+          [SSH_22_CLOSED]
+          {% for h in ansible_play_hosts_all if not hostvars[h].rec.ssh_open -%}{{ h }}
+          {% endfor %}
+          [PYTHON_26]
+          {% for h in ansible_play_hosts_all
+             if (hostvars[h].rec.python_version|default('')) is search('Python 2\\.6') -%}{{ h }}
+          {% endfor %}
