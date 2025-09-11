@@ -2,13 +2,14 @@
 # -*- coding: utf-8 -*-
 
 """
+ssh_system_profile.py
 Coleta de perfil de sistemas via SSH (rodar na bastion).
 Entrada: inventário CSV/XLSX. Opcional: CSV do probe para filtrar conectados.
 Saída: CSV (e XLSX opcional) com SO, distro, kernel, serviços, pacotes, Python, Zabbix, Qualys.
 Requer: OpenSSH. Para XLSX: pip install xlsxwriter pandas openpyxl
 """
 
-import argparse, csv, ipaddress, os, re, socket, subprocess, sys, time, json
+import argparse, csv, ipaddress, os, re, socket, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
@@ -88,6 +89,7 @@ def read_connected_filter(path):
     return ok
 
 def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
+    # Usa 'sh -c "bash --noprofile --norc -s || sh -s"' para compatibilidade
     cmd = [
         "ssh","-F","/dev/null",
         "-o","IdentitiesOnly=yes",
@@ -108,40 +110,38 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
         ]
     if identity: cmd += ["-i", identity]
     if port and str(port)!="22": cmd += ["-p", str(port)]
-    cmd += [f"{user}@{host}","bash","-s"]
+    cmd += [f"{user}@{host}", "sh", "-c", "bash --noprofile --norc -s || sh -s"]
     return cmd
 
-REMOTE_SCRIPT = r'''set -euo pipefail
-export LC_ALL=C
+REMOTE_SCRIPT = r'''set -u
+export LC_ALL=C TERM=dumb
 out_kv(){ printf "%s=%s\n" "$1" "$2"; }
 
-# Base: SO e kernel
+# SO
 OS_ID=""; OS_NAME=""; OS_VER=""; OS_PRETTY=""
-if [ -r /etc/os-release ]; then . /etc/os-release; OS_ID="${ID:-}"; OS_NAME="${NAME:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
-elif [ -r /usr/lib/os-release ]; then . /usr/lib/os-release; OS_ID="${ID:-}"; OS_NAME="${NAME:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
+if [ -r /etc/os-release ]; then . /etc/os-release || true
+  OS_ID="${ID:-}"; OS_NAME="${NAME:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
+elif [ -r /usr/lib/os-release ]; then . /usr/lib/os-release || true
+  OS_ID="${ID:-}"; OS_NAME="${NAME:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
 fi
-KERNEL="$(uname -r 2>/dev/null || echo)" || true
+KERNEL="$(uname -r 2>/dev/null || echo)"
 
 # Init
 if command -v systemctl >/dev/null 2>&1; then INIT="systemd"
 elif command -v rc-status >/dev/null 2>&1; then INIT="openrc"
 else INIT="$(ps -p 1 -o comm= 2>/dev/null || echo)"; fi
 
-# Serviços
+# Serviços (sem mapfile, sem pipefail)
 SERV_CNT=0; SERV_SMP=""
 if [ "${INIT}" = "systemd" ]; then
-  mapfile -t S < <(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | head -n 50)
   SERV_CNT="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | wc -l | awk '{print $1}')"
-  SERV_SMP="$(printf "%s;" "${S[@]}" 2>/dev/null || true)"
+  SERV_SMP="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | head -n 50 | tr '\n' ';' || true)"
 elif command -v rc-status >/dev/null 2>&1; then
-  mapfile -t S < <(rc-status -a 2>/dev/null | grep -E "started|running" | awk '{print $1}' | head -n 50)
   SERV_CNT="$(rc-status -a 2>/dev/null | grep -E "started|running" | wc -l | awk '{print $1}')"
-  SERV_SMP="$(printf "%s;" "${S[@]}" 2>/dev/null || true)"
+  SERV_SMP="$(rc-status -a 2>/dev/null | grep -E "started|running" | awk '{print $1}' | head -n 50 | tr '\n' ';' || true)"
 else
-  # Debian-like fallback
-  mapfile -t S < <(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | awk '{print $4}' | head -n 50)
   SERV_CNT="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | wc -l | awk '{print $1}')"
-  SERV_SMP="$(printf "%s;" "${S[@]}" 2>/dev/null || true)"
+  SERV_SMP="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | awk '{print $4}' | head -n 50 | tr '\n' ';' || true)"
 fi
 
 # Pacotes
@@ -149,25 +149,25 @@ PKG_MGR=""; PKG_CNT=0; PKG_SMP=""
 if command -v dpkg-query >/dev/null 2>&1; then
   PKG_MGR="dpkg"
   PKG_CNT="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';')"
+  PKG_SMP="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
 elif command -v rpm >/dev/null 2>&1; then
   PKG_MGR="rpm"
   PKG_CNT="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';')"
+  PKG_SMP="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
 elif command -v apk >/dev/null 2>&1; then
   PKG_MGR="apk"
   PKG_CNT="$(apk info 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(apk info 2>/dev/null | sort | head -n 30 | tr '\n' ';')"
+  PKG_SMP="$(apk info 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
 elif command -v dnf >/dev/null 2>&1; then
   PKG_MGR="dnf"
   PKG_CNT="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';')"
+  PKG_SMP="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
 fi
 
 # Python
 PY_INST="no"; PY_VER=""
 if command -v python3 >/dev/null 2>&1; then PY_INST="yes"; PY_VER="$(python3 -V 2>&1 | awk '{print $2}')"
-elif command -v python >/dev/null 2>&1; then PY_INST="yes"; PY_VER="$(python -V 2>&1 | awk '{print $2}')"
+elif command -v python  >/dev/null 2>&1; then PY_INST="yes"; PY_VER="$(python  -V 2>&1 | awk '{print $2}')"
 fi
 
 # Zabbix
@@ -175,7 +175,7 @@ ZB_INST="no"; ZB_VER=""
 if command -v zabbix_agentd >/dev/null 2>&1; then
   ZB_INST="yes"; ZB_VER="$(zabbix_agentd -V 2>&1 | head -n1 | awk '{print $NF}')"
 elif command -v zabbix_agent2 >/dev/null 2>&1; then
-  ZB_INST="yes"; ZB_VER="$(zabbix_agent2 -V 2>&1 | head -n1 | awk '{print $NF}')"
+  ZB_INST="yes"; ZB_VER="$(zabbix_agent2 -V 2>/dev/null | head -n1 | awk '{print $NF}')"
 elif systemctl list-unit-files 2>/dev/null | grep -q '^zabbix-agent'; then ZB_INST="yes"
 elif pgrep -fa zabbix_agent >/dev/null 2>&1; then ZB_INST="yes"
 fi
@@ -185,13 +185,17 @@ QL_INST="no"; QL_VER=""
 if systemctl list-unit-files 2>/dev/null | grep -q '^qualys-cloud-agent'; then QL_INST="yes"; fi
 if pgrep -fa qualys >/dev/null 2>&1 || pgrep -fa qagent >/dev/null 2>&1; then QL_INST="yes"; fi
 if [ -x /usr/local/qualys/cloud-agent/bin/qagent ]; then
-  V="$(/usr/local/qualys/cloud-agent/bin/qagent -v 2>&1 || true)"; QL_VER="$(echo "$V" | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n1)"
+  V="$(/usr/local/qualys/cloud-agent/bin/qagent -v 2>&1 || true)"
+  QL_VER="$(echo "$V" | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n1)"
+fi
+if [ -z "$QL_VER" ] && command -v rpm >/dev/null 2>&1; then
+  QL_VER="$(rpm -q --qf '%{VERSION}\n' qualys-cloud-agent 2>/dev/null | head -n1)"
 fi
 if [ -z "$QL_VER" ] && [ -r /etc/qualys/cloud-agent/qualys-cloud-agent.conf ]; then
   QL_VER="$(grep -E '^AGENT_VERSION=' /etc/qualys/cloud-agent/qualys-cloud-agent.conf 2>/dev/null | cut -d= -f2)"
 fi
 
-# Saída em KV
+# Saída
 out_kv os_family "linux"
 out_kv distro_id "${OS_ID}"
 out_kv distro_pretty_name "${OS_PRETTY}"
@@ -199,10 +203,10 @@ out_kv distro_version_id "${OS_VER}"
 out_kv kernel "${KERNEL}"
 out_kv init_system "${INIT}"
 out_kv services_running_count "${SERV_CNT}"
-out_kv services_sample "${SERV_SMP}"
+out_kv services_sample "${SERV_SMP%%;}"
 out_kv pkg_manager "${PKG_MGR}"
 out_kv pkg_count "${PKG_CNT}"
-out_kv pkg_sample "${PKG_SMP}"
+out_kv pkg_sample "${PKG_SMP%%;}"
 out_kv python_installed "${PY_INST}"
 out_kv python_version "${PY_VER}"
 out_kv zabbix_agent_installed "${ZB_INST}"
@@ -217,7 +221,7 @@ def parse_kv(text):
         if not line.strip(): continue
         if "=" not in line: continue
         k,v = line.split("=",1)
-        res[k.strip()] = v.strip().strip()
+        res[k.strip()] = v.strip()
     return res
 
 def tcp_probe(host, port, timeout):
@@ -249,7 +253,6 @@ def collect_one(entry, dflt, filter_ok, dbg):
     target   = ipaddr if ipaddr and is_ipv4(ipaddr) else (hostname if hostname else "")
     row = row_base(hostname, ipaddr)
 
-    # filtro "conectados" se fornecido
     if filter_ok:
         allow = False
         if ipaddr and ("ip", ipaddr) in filter_ok: allow = True
@@ -271,7 +274,6 @@ def collect_one(entry, dflt, filter_ok, dbg):
     users += dflt["users"]
     seen=set(); users=[u for u in users if u and not (u in seen or seen.add(u))]
 
-    # checagem TCP rápida
     pre = tcp_probe(target, port, dflt["timeout"])
     if pre != "ok":
         row["status"]="failed"; row["error"]=f"tcp_{pre}"; return row
@@ -292,10 +294,10 @@ def collect_one(entry, dflt, filter_ok, dbg):
                     "kernel": kv.get("kernel",""),
                     "init_system": kv.get("init_system",""),
                     "services_running_count": kv.get("services_running_count",""),
-                    "services_sample": kv.get("services_sample","").rstrip(";"),
+                    "services_sample": kv.get("services_sample",""),
                     "pkg_manager": kv.get("pkg_manager",""),
                     "pkg_count": kv.get("pkg_count",""),
-                    "pkg_sample": kv.get("pkg_sample","").rstrip(";"),
+                    "pkg_sample": kv.get("pkg_sample",""),
                     "python_installed": kv.get("python_installed",""),
                     "python_version": kv.get("python_version",""),
                     "zabbix_agent_installed": kv.get("zabbix_agent_installed",""),
@@ -305,19 +307,16 @@ def collect_one(entry, dflt, filter_ok, dbg):
                 })
                 return row
             else:
-                last_err = (p.stderr or "").strip()
+                last_err = (p.stderr or "").strip() or f"rc={p.returncode}"
                 if dbg: dbg.write(f"{target} user={user} rc={p.returncode} err={last_err}\n")
-                # tentar próximo usuário somente se erro de auth
                 if re.search(r"permission denied|no supported authentication methods|too many authentication failures", last_err, re.I):
                     continue
-                # outros erros → falha
                 row["status"]="failed"; row["error"]=f"ssh_error:{last_err[:180]}"; return row
         except subprocess.TimeoutExpired:
             row["status"]="failed"; row["error"]="ssh_timeout"; return row
         except Exception as e:
             last_err = str(e)
             if dbg: dbg.write(f"{target} user={user} EXC={last_err}\n")
-            # segue próximo user se parecer auth
             if re.search(r"permission denied|authentication", last_err, re.I):
                 continue
             row["status"]="failed"; row["error"]=f"ssh_exc:{last_err[:180]}"; return row
@@ -356,7 +355,7 @@ def parse_args():
     p.add_argument("--timeout", type=int, default=12, help="Timeout por host (s)")
     p.add_argument("--workers", type=int, default=40, help="Concorrência")
     p.add_argument("--strict-known-hosts", action="store_true", help="StrictHostKeyChecking=accept-new")
-    p.add_argument("--legacy-crypto", action="store_true", help="Habilita algoritmos legados (+ssh-rsa,+dh-group14-sha1)")
+    p.add_argument("--legacy-crypto", action="store_true", help="Algoritmos legados (+ssh-rsa,+dh-group14-sha1)")
     p.add_argument("--out-csv", help="CSV de saída")
     p.add_argument("--out-xlsx", help="XLSX de saída (opcional)")
     p.add_argument("--debug-log", help="Arquivo de debug opcional")
