@@ -6,9 +6,9 @@ ssh_system_profile.py
 Coleta via SSH a partir da bastion.
 Entrada: inventário CSV/XLSX e opcional CSV do probe (para filtrar status=connected).
 Saída: único CSV por host contendo listas COMPLETAS:
-  - services_all: todos os serviços UP
-  - pkg_all: todos os pacotes instalados (independente da distro)
-Mantive metadados úteis (SO, kernel, contagens, Python, Zabbix, Qualys).
+  - services_all: todos os serviços UP (separados por ';')
+  - pkg_all: todos os pacotes instalados (separados por ';')
+Também detecta Java, PHP e Apache (instalação e versão).
 Requer: OpenSSH. XLSX opcional: pip install xlsxwriter pandas openpyxl
 """
 
@@ -25,6 +25,9 @@ OUT_COLS = [
     "python_installed","python_version",
     "zabbix_agent_installed","zabbix_agent_version",
     "qualys_agent_installed","qualys_agent_version",
+    "java_installed","java_version",
+    "php_installed","php_version",
+    "apache_installed","apache_version",
 ]
 
 DEF_USERS = ["root","ec2-user","ubuntu","centos","opc","admin","azureuser","rocky","oracle"]
@@ -119,6 +122,8 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
 REMOTE_SCRIPT = r'''set -u
 export LC_ALL=C TERM=dumb
 out_kv(){ printf "%s=%s\n" "$1" "$2"; }
+trimsemi(){ X="$1"; X="${X%%;}" ; printf "%s" "$X"; }
+countsemi(){ X="$(trimsemi "$1")"; if [ -n "$X" ]; then printf "%s" "$X" | awk -F';' '{print NF}'; else echo 0; fi; }
 
 # SO
 OS_ID=""; OS_VER=""; OS_PRETTY=""
@@ -134,38 +139,35 @@ if command -v systemctl >/dev/null 2>&1; then INIT="systemd"
 elif command -v rc-status >/dev/null 2>&1; then INIT="openrc"
 else INIT="$(ps -p 1 -o comm= 2>/dev/null || echo)"; fi
 
-# Serviços UP (completo)
-SERV_CNT=0; SERV_ALL=""
+# Serviços UP (completo -> count derivado da lista)
+SERV_ALL=""
 if [ "${INIT}" = "systemd" ]; then
-  SERV_CNT="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | wc -l | awk '{print $1}')"
   SERV_ALL="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | sort -u | tr '\n' ';' || true)"
 elif command -v rc-status >/dev/null 2>&1; then
-  SERV_CNT="$(rc-status -a 2>/dev/null | grep -E "started|running" | wc -l | awk '{print $1}')"
   SERV_ALL="$(rc-status -a 2>/dev/null | grep -E "started|running" | awk '{print $1}' | sort -u | tr '\n' ';' || true)"
 else
-  SERV_CNT="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | wc -l | awk '{print $1}')"
   SERV_ALL="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | awk '{print $4}' | sort -u | tr '\n' ';' || true)"
 fi
+SERV_ALL="$(trimsemi "$SERV_ALL")"
+SERV_CNT="$(countsemi "$SERV_ALL")"
 
-# Pacotes (completo)
-PKG_MGR=""; PKG_CNT=0; PKG_ALL=""
+# Pacotes (completo -> count derivado da lista)
+PKG_MGR=""; PKG_ALL=""
 if command -v dpkg-query >/dev/null 2>&1; then
   PKG_MGR="dpkg"
-  PKG_CNT="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | wc -l | awk '{print $1}')"
   PKG_ALL="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
 elif command -v rpm >/dev/null 2>&1; then
   PKG_MGR="rpm"
-  PKG_CNT="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | wc -l | awk '{print $1}')"
   PKG_ALL="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
 elif command -v apk >/dev/null 2>&1; then
   PKG_MGR="apk"
-  PKG_CNT="$(apk info 2>/dev/null | wc -l | awk '{print $1}')"
   PKG_ALL="$(apk info 2>/dev/null | sort -u | tr '\n' ';' || true)"
 elif command -v dnf >/dev/null 2>&1; then
   PKG_MGR="dnf"
-  PKG_CNT="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | wc -l | awk '{print $1}')"
   PKG_ALL="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
 fi
+PKG_ALL="$(trimsemi "$PKG_ALL")"
+PKG_CNT="$(countsemi "$PKG_ALL")"
 
 # Python
 PY_INST="no"; PY_VER=""
@@ -198,6 +200,70 @@ if [ -z "$QL_VER" ] && [ -r /etc/qualys/cloud-agent/qualys-cloud-agent.conf ]; t
   QL_VER="$(grep -E '^AGENT_VERSION=' /etc/qualys/cloud-agent/qualys-cloud-agent.conf 2>/dev/null | cut -d= -f2)"
 fi
 
+# Java
+JAVA_INST="no"; JAVA_VER=""
+if command -v java >/dev/null 2>&1; then
+  JAVA_INST="yes"
+  JAVA_VER="$(java -version 2>&1 | head -n1 | sed -E 's/.*version \"?([0-9][^\" ]*).*/\1/;t;d')"
+fi
+if [ "$JAVA_INST" = "no" ] && command -v javac >/dev/null 2>&1; then
+  JAVA_INST="yes"
+  J="$(javac -version 2>&1 | head -n1 | awk '{print $2}')"
+  [ -n "$J" ] && JAVA_VER="$J"
+fi
+if [ "$JAVA_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
+  L="$(printf '%s' "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
+  echo "$L" | grep -Eq '(openjdk|(^|;)java-1\.|(^|;)java-)' && JAVA_INST="yes"
+  if [ -z "$JAVA_VER" ]; then
+    JAVA_VER="$(echo "$L" | grep -Eo 'openjdk[0-9]{1,2}|java-1\.[0-9]\.0' | head -n1 | sed -E 's/openjdk//; s/java-1\.([0-9])\.0/\1.0/')"
+  fi
+fi
+
+# PHP
+PHP_INST="no"; PHP_VER=""
+if command -v php >/dev/null 2>&1; then
+  PHP_INST="yes"
+  PHP_VER="$(php -v 2>/dev/null | head -n1 | sed -E 's/^PHP ([0-9][^ ]*).*/\1/;t;d')"
+fi
+if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "rpm" ]; then
+  V="$(rpm -q --qf '%{VERSION}\n' php 2>/dev/null | head -n1)"
+  if [ -n "$V" ]; then PHP_INST="yes"; PHP_VER="$V"; fi
+fi
+if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "dpkg" ]; then
+  V="$(dpkg-query -W -f='${Version}\n' php 2>/dev/null | head -n1)"
+  if [ -n "$V" ]; then PHP_INST="yes"; PHP_VER="$V"; fi
+fi
+if [ "$PHP_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
+  L="$(printf '%s' "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
+  echo "$L" | grep -Eq '(^|;)php($|[-;])' && PHP_INST="yes"
+fi
+
+# Apache HTTPD
+AP_INST="no"; AP_VER=""
+if command -v httpd >/dev/null 2>&1; then
+  AP_INST="yes"
+  AP_VER="$(httpd -v 2>/dev/null | grep -i 'server version' | head -n1 | sed -E 's/.*Apache\/([0-9][^ ]*).*/\1/;t;d')"
+elif command -v apache2 >/dev/null 2>&1; then
+  AP_INST="yes"
+  AP_VER="$(apache2 -v 2>/dev/null | grep -i 'server version' | head -n1 | sed -E 's/.*Apache\/([0-9][^ ]*).*/\1/;t;d')"
+fi
+if [ "$AP_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
+  L="$(printf '%s' "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
+  echo "$L" | grep -Eq '(^|;)(httpd|apache2)($|;)' && AP_INST="yes"
+fi
+if [ -z "$AP_VER" ] && [ "$AP_INST" = "yes" ]; then
+  if [ "$PKG_MGR" = "rpm" ]; then
+    V="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
+    [ -n "$V" ] && AP_VER="$V"
+  elif [ "$PKG_MGR" = "dpkg" ]; then
+    V="$(dpkg-query -W -f='${Version}\n' apache2 2>/dev/null | head -n1)"
+    [ -n "$V" ] && AP_VER="$V"
+  elif [ "$PKG_MGR" = "apk" ]; then
+    V="$(apk info -vv apache2 2>/dev/null | head -n1 | sed -E 's/.*-([0-9][^-]*)-.*/\1/')" || true
+    [ -n "$V" ] && AP_VER="$V"
+  fi
+fi
+
 # Saída
 out_kv os_family "linux"
 out_kv distro_id "${OS_ID}"
@@ -206,16 +272,22 @@ out_kv distro_version_id "${OS_VER}"
 out_kv kernel "${KERNEL}"
 out_kv init_system "${INIT}"
 out_kv services_running_count "${SERV_CNT}"
-out_kv services_all "${SERV_ALL%%;}"
+out_kv services_all "${SERV_ALL}"
 out_kv pkg_manager "${PKG_MGR}"
 out_kv pkg_count "${PKG_CNT}"
-out_kv pkg_all "${PKG_ALL%%;}"
+out_kv pkg_all "${PKG_ALL}"
 out_kv python_installed "${PY_INST}"
 out_kv python_version "${PY_VER}"
 out_kv zabbix_agent_installed "${ZB_INST}"
 out_kv zabbix_agent_version "${ZB_VER}"
 out_kv qualys_agent_installed "${QL_INST}"
 out_kv qualys_agent_version "${QL_VER}"
+out_kv java_installed "${JAVA_INST}"
+out_kv java_version "${JAVA_VER}"
+out_kv php_installed "${PHP_INST}"
+out_kv php_version "${PHP_VER}"
+out_kv apache_installed "${AP_INST}"
+out_kv apache_version "${AP_VER}"
 '''
 
 def parse_kv(text):
@@ -247,6 +319,9 @@ def row_base(h, ip):
         "python_installed":"", "python_version":"",
         "zabbix_agent_installed":"", "zabbix_agent_version":"",
         "qualys_agent_installed":"", "qualys_agent_version":"",
+        "java_installed":"", "java_version":"",
+        "php_installed":"", "php_version":"",
+        "apache_installed":"", "apache_version":"",
     }
 
 def collect_one(entry, dflt, filter_ok, dbg):
@@ -284,8 +359,7 @@ def collect_one(entry, dflt, filter_ok, dbg):
     for user in users:
         cmd = ssh_cmd(target, user, port, dflt["identity"], dflt["timeout"], dflt["strict"], dflt["legacy"])
         try:
-            # +120s para listas grandes
-            p = run(cmd, dflt["timeout"] + 120, input_data=REMOTE_SCRIPT)
+            p = run(cmd, dflt["timeout"] + 150, input_data=REMOTE_SCRIPT)
             if p.returncode == 0:
                 kv = parse_kv(p.stdout)
                 row.update({
@@ -307,6 +381,12 @@ def collect_one(entry, dflt, filter_ok, dbg):
                     "zabbix_agent_version": kv.get("zabbix_agent_version",""),
                     "qualys_agent_installed": kv.get("qualys_agent_installed",""),
                     "qualys_agent_version": kv.get("qualys_agent_version",""),
+                    "java_installed": kv.get("java_installed",""),
+                    "java_version": kv.get("java_version",""),
+                    "php_installed": kv.get("php_installed",""),
+                    "php_version": kv.get("php_version",""),
+                    "apache_installed": kv.get("apache_installed",""),
+                    "apache_version": kv.get("apache_version",""),
                 })
                 return row
             else:
@@ -348,7 +428,7 @@ def write_xlsx(path, rows):
     wb.close()
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Perfil de sistemas via SSH (bastion) -> CSV único com listas completas.")
+    p = argparse.ArgumentParser(description="Perfil de sistemas via SSH (bastion) -> CSV único com listas completas e detecções Java/PHP/Apache.")
     p.add_argument("--inventory", required=True, help="CSV/XLSX com hostname/ip; opcionais: ssh_user, ssh_port")
     p.add_argument("--connectivity-csv", help="CSV do ssh_connectivity_probe para filtrar status=connected")
     p.add_argument("--target-user", default="root", help="Usuário padrão")
