@@ -3,10 +3,13 @@
 
 """
 ssh_system_profile.py
-Coleta de perfil de sistemas via SSH (rodar na bastion).
-Entrada: inventário CSV/XLSX. Opcional: CSV do probe para filtrar conectados.
-Saída: CSV (e XLSX opcional) com SO, distro, kernel, serviços, pacotes, Python, Zabbix, Qualys.
-Requer: OpenSSH. Para XLSX: pip install xlsxwriter pandas openpyxl
+Coleta via SSH a partir da bastion.
+Entrada: inventário CSV/XLSX e opcional CSV do probe (para filtrar status=connected).
+Saída: único CSV por host contendo listas COMPLETAS:
+  - services_all: todos os serviços UP
+  - pkg_all: todos os pacotes instalados (independente da distro)
+Mantive metadados úteis (SO, kernel, contagens, Python, Zabbix, Qualys).
+Requer: OpenSSH. XLSX opcional: pip install xlsxwriter pandas openpyxl
 """
 
 import argparse, csv, ipaddress, os, re, socket, subprocess, sys
@@ -17,8 +20,8 @@ OUT_COLS = [
     "hostname","ip_address","status","error","collected_at",
     "os_family","distro_id","distro_pretty_name","distro_version_id",
     "kernel","init_system",
-    "services_running_count","services_sample",
-    "pkg_manager","pkg_count","pkg_sample",
+    "services_running_count","services_all",
+    "pkg_manager","pkg_count","pkg_all",
     "python_installed","python_version",
     "zabbix_agent_installed","zabbix_agent_version",
     "qualys_agent_installed","qualys_agent_version",
@@ -89,7 +92,6 @@ def read_connected_filter(path):
     return ok
 
 def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
-    # Usa 'sh -c "bash --noprofile --norc -s || sh -s"' para compatibilidade
     cmd = [
         "ssh","-F","/dev/null",
         "-o","IdentitiesOnly=yes",
@@ -110,7 +112,8 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
         ]
     if identity: cmd += ["-i", identity]
     if port and str(port)!="22": cmd += ["-p", str(port)]
-    cmd += [f"{user}@{host}", "sh", "-c", "bash --noprofile --norc -s || sh -s"]
+    # evita perfis; cai para sh se bash não existir
+    cmd += [f"{user}@{host}","sh","-c","bash --noprofile --norc -s || sh -s"]
     return cmd
 
 REMOTE_SCRIPT = r'''set -u
@@ -118,11 +121,11 @@ export LC_ALL=C TERM=dumb
 out_kv(){ printf "%s=%s\n" "$1" "$2"; }
 
 # SO
-OS_ID=""; OS_NAME=""; OS_VER=""; OS_PRETTY=""
+OS_ID=""; OS_VER=""; OS_PRETTY=""
 if [ -r /etc/os-release ]; then . /etc/os-release || true
-  OS_ID="${ID:-}"; OS_NAME="${NAME:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
+  OS_ID="${ID:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
 elif [ -r /usr/lib/os-release ]; then . /usr/lib/os-release || true
-  OS_ID="${ID:-}"; OS_NAME="${NAME:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
+  OS_ID="${ID:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
 fi
 KERNEL="$(uname -r 2>/dev/null || echo)"
 
@@ -131,37 +134,37 @@ if command -v systemctl >/dev/null 2>&1; then INIT="systemd"
 elif command -v rc-status >/dev/null 2>&1; then INIT="openrc"
 else INIT="$(ps -p 1 -o comm= 2>/dev/null || echo)"; fi
 
-# Serviços (sem mapfile, sem pipefail)
-SERV_CNT=0; SERV_SMP=""
+# Serviços UP (completo)
+SERV_CNT=0; SERV_ALL=""
 if [ "${INIT}" = "systemd" ]; then
   SERV_CNT="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | wc -l | awk '{print $1}')"
-  SERV_SMP="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | head -n 50 | tr '\n' ';' || true)"
+  SERV_ALL="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | sort -u | tr '\n' ';' || true)"
 elif command -v rc-status >/dev/null 2>&1; then
   SERV_CNT="$(rc-status -a 2>/dev/null | grep -E "started|running" | wc -l | awk '{print $1}')"
-  SERV_SMP="$(rc-status -a 2>/dev/null | grep -E "started|running" | awk '{print $1}' | head -n 50 | tr '\n' ';' || true)"
+  SERV_ALL="$(rc-status -a 2>/dev/null | grep -E "started|running" | awk '{print $1}' | sort -u | tr '\n' ';' || true)"
 else
   SERV_CNT="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | wc -l | awk '{print $1}')"
-  SERV_SMP="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | awk '{print $4}' | head -n 50 | tr '\n' ';' || true)"
+  SERV_ALL="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | awk '{print $4}' | sort -u | tr '\n' ';' || true)"
 fi
 
-# Pacotes
-PKG_MGR=""; PKG_CNT=0; PKG_SMP=""
+# Pacotes (completo)
+PKG_MGR=""; PKG_CNT=0; PKG_ALL=""
 if command -v dpkg-query >/dev/null 2>&1; then
   PKG_MGR="dpkg"
   PKG_CNT="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
+  PKG_ALL="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
 elif command -v rpm >/dev/null 2>&1; then
   PKG_MGR="rpm"
   PKG_CNT="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
+  PKG_ALL="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
 elif command -v apk >/dev/null 2>&1; then
   PKG_MGR="apk"
   PKG_CNT="$(apk info 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(apk info 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
+  PKG_ALL="$(apk info 2>/dev/null | sort -u | tr '\n' ';' || true)"
 elif command -v dnf >/dev/null 2>&1; then
   PKG_MGR="dnf"
   PKG_CNT="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | wc -l | awk '{print $1}')"
-  PKG_SMP="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort | head -n 30 | tr '\n' ';' || true)"
+  PKG_ALL="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
 fi
 
 # Python
@@ -203,10 +206,10 @@ out_kv distro_version_id "${OS_VER}"
 out_kv kernel "${KERNEL}"
 out_kv init_system "${INIT}"
 out_kv services_running_count "${SERV_CNT}"
-out_kv services_sample "${SERV_SMP%%;}"
+out_kv services_all "${SERV_ALL%%;}"
 out_kv pkg_manager "${PKG_MGR}"
 out_kv pkg_count "${PKG_CNT}"
-out_kv pkg_sample "${PKG_SMP%%;}"
+out_kv pkg_all "${PKG_ALL%%;}"
 out_kv python_installed "${PY_INST}"
 out_kv python_version "${PY_VER}"
 out_kv zabbix_agent_installed "${ZB_INST}"
@@ -218,8 +221,7 @@ out_kv qualys_agent_version "${QL_VER}"
 def parse_kv(text):
     res = {}
     for line in text.splitlines():
-        if not line.strip(): continue
-        if "=" not in line: continue
+        if not line.strip() or "=" not in line: continue
         k,v = line.split("=",1)
         res[k.strip()] = v.strip()
     return res
@@ -240,8 +242,8 @@ def row_base(h, ip):
         "hostname": h, "ip_address": ip, "status":"failed", "error":"", "collected_at": now_str(),
         "os_family":"", "distro_id":"", "distro_pretty_name":"", "distro_version_id":"",
         "kernel":"", "init_system":"",
-        "services_running_count":"", "services_sample":"",
-        "pkg_manager":"", "pkg_count":"", "pkg_sample":"",
+        "services_running_count":"", "services_all":"",
+        "pkg_manager":"", "pkg_count":"", "pkg_all":"",
         "python_installed":"", "python_version":"",
         "zabbix_agent_installed":"", "zabbix_agent_version":"",
         "qualys_agent_installed":"", "qualys_agent_version":"",
@@ -282,7 +284,8 @@ def collect_one(entry, dflt, filter_ok, dbg):
     for user in users:
         cmd = ssh_cmd(target, user, port, dflt["identity"], dflt["timeout"], dflt["strict"], dflt["legacy"])
         try:
-            p = run(cmd, dflt["timeout"] + 20, input_data=REMOTE_SCRIPT)
+            # +120s para listas grandes
+            p = run(cmd, dflt["timeout"] + 120, input_data=REMOTE_SCRIPT)
             if p.returncode == 0:
                 kv = parse_kv(p.stdout)
                 row.update({
@@ -294,10 +297,10 @@ def collect_one(entry, dflt, filter_ok, dbg):
                     "kernel": kv.get("kernel",""),
                     "init_system": kv.get("init_system",""),
                     "services_running_count": kv.get("services_running_count",""),
-                    "services_sample": kv.get("services_sample",""),
+                    "services_all": kv.get("services_all",""),
                     "pkg_manager": kv.get("pkg_manager",""),
                     "pkg_count": kv.get("pkg_count",""),
-                    "pkg_sample": kv.get("pkg_sample",""),
+                    "pkg_all": kv.get("pkg_all",""),
                     "python_installed": kv.get("python_installed",""),
                     "python_version": kv.get("python_version",""),
                     "zabbix_agent_installed": kv.get("zabbix_agent_installed",""),
@@ -345,7 +348,7 @@ def write_xlsx(path, rows):
     wb.close()
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Perfil de sistemas via SSH (bastion) -> CSV/XLSX.")
+    p = argparse.ArgumentParser(description="Perfil de sistemas via SSH (bastion) -> CSV único com listas completas.")
     p.add_argument("--inventory", required=True, help="CSV/XLSX com hostname/ip; opcionais: ssh_user, ssh_port")
     p.add_argument("--connectivity-csv", help="CSV do ssh_connectivity_probe para filtrar status=connected")
     p.add_argument("--target-user", default="root", help="Usuário padrão")
@@ -353,7 +356,7 @@ def parse_args():
     p.add_argument("--identity", help="Caminho da chave privada SSH")
     p.add_argument("--port", type=int, default=22, help="Porta padrão")
     p.add_argument("--timeout", type=int, default=12, help="Timeout por host (s)")
-    p.add_argument("--workers", type=int, default=40, help="Concorrência")
+    p.add_argument("--workers", type=int, default=30, help="Concorrência")
     p.add_argument("--strict-known-hosts", action="store_true", help="StrictHostKeyChecking=accept-new")
     p.add_argument("--legacy-crypto", action="store_true", help="Algoritmos legados (+ssh-rsa,+dh-group14-sha1)")
     p.add_argument("--out-csv", help="CSV de saída")
