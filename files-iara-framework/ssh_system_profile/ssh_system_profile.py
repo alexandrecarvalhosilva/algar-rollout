@@ -2,14 +2,19 @@
 # -*- coding: utf-8 -*-
 
 """
-ssh_system_profile.py
-Coleta via SSH a partir da bastion.
-Entrada: inventário CSV/XLSX e opcional CSV do probe (para filtrar status=connected).
-Saída: único CSV por host contendo listas COMPLETAS:
-  - services_all: todos os serviços UP (separados por ';')
-  - pkg_all: todos os pacotes instalados (separados por ';')
-Também detecta Java, PHP e Apache (instalação e versão).
-Requer: OpenSSH. XLSX opcional: pip install xlsxwriter pandas openpyxl
+ssh_system_profile.py — coleta via SSH (bastion)
+Saída: único CSV com:
+  - OS, kernel, init
+  - TODOS os serviços UP (services_all)
+  - TODOS os pacotes + versão (pkg_all)
+  - Python: instalado + versão
+  - Zabbix/Qualys: instalado + versão
+  - Java: instalado + versão + JAVA_HOME
+  - PHP: instalado + versão
+  - Apache HTTPD: instalado + versão + flavor (httpd/apache2)
+  - JBoss/WildFly: instalado + produto + versão + home + serviços/pids
+  - WebSphere: instalado + versão + home
+Compatível: Python 3.6+, OpenSSH. XLSX opcional: pandas/openpyxl/xlsxwriter
 """
 
 import argparse, csv, ipaddress, os, re, socket, subprocess, sys
@@ -18,16 +23,22 @@ from datetime import datetime
 
 OUT_COLS = [
     "hostname","ip_address","status","error","collected_at",
-    "os_family","distro_id","distro_pretty_name","distro_version_id",
-    "kernel","init_system",
+    "os_family","distro_id","distro_pretty_name","distro_version_id","kernel","init_system",
     "services_running_count","services_all",
     "pkg_manager","pkg_count","pkg_all",
     "python_installed","python_version",
     "zabbix_agent_installed","zabbix_agent_version",
     "qualys_agent_installed","qualys_agent_version",
-    "java_installed","java_version",
+    # Java
+    "java_installed","java_version","java_home",
+    # PHP
     "php_installed","php_version",
-    "apache_installed","apache_version",
+    # Apache
+    "apache_installed","apache_version","apache_flavor","apache_service",
+    # JBoss / WildFly
+    "jboss_installed","jboss_product","jboss_version","jboss_home","jboss_services","jboss_pids",
+    # WebSphere
+    "websphere_installed","websphere_version","websphere_home",
 ]
 
 DEF_USERS = ["root","ec2-user","ubuntu","centos","opc","admin","azureuser","rocky","oracle"]
@@ -36,8 +47,7 @@ def now_str():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 def is_ipv4(s):
-    try:
-        ipaddress.IPv4Address(s); return True
+    try: ipaddress.IPv4Address(s); return True
     except: return False
 
 def run(cmd, timeout, input_data=None):
@@ -68,8 +78,7 @@ def read_inventory(path):
                     reader = csv.DictReader(f, delimiter=sep)
                     tmp = [{(k or "").strip().lower(): (v or "").strip() for k,v in r.items()} for r in reader]
                 if tmp: rows = tmp; break
-            except Exception:
-                rows = []
+            except Exception: rows = []
         if not rows:
             print("Falha ao ler inventário CSV.", file=sys.stderr); sys.exit(2)
 
@@ -115,17 +124,19 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
         ]
     if identity: cmd += ["-i", identity]
     if port and str(port)!="22": cmd += ["-p", str(port)]
-    # evita perfis; cai para sh se bash não existir
     cmd += [f"{user}@{host}","sh","-c","bash --noprofile --norc -s || sh -s"]
     return cmd
 
 REMOTE_SCRIPT = r'''set -u
 export LC_ALL=C TERM=dumb
+# PATH amplo p/ serviços/bins comuns
+export PATH="/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:/usr/local/sbin:/opt/IBM/WebSphere/AppServer/bin:/opt/jboss/bin:/opt/wildfly/bin:$PATH"
+
 out_kv(){ printf "%s=%s\n" "$1" "$2"; }
 trimsemi(){ X="$1"; X="${X%%;}" ; printf "%s" "$X"; }
-countsemi(){ X="$(trimsemi "$1")"; if [ -n "$X" ]; then printf "%s" "$X" | awk -F';' '{print NF}'; else echo 0; fi; }
+joinsemi(){ tr '\n' ';' | sed 's/;*$//' || true; }
 
-# SO
+# ---------- SO ----------
 OS_ID=""; OS_VER=""; OS_PRETTY=""
 if [ -r /etc/os-release ]; then . /etc/os-release || true
   OS_ID="${ID:-}"; OS_VER="${VERSION_ID:-}"; OS_PRETTY="${PRETTY_NAME:-}"
@@ -134,64 +145,60 @@ elif [ -r /usr/lib/os-release ]; then . /usr/lib/os-release || true
 fi
 KERNEL="$(uname -r 2>/dev/null || echo)"
 
-# Init
+# ---------- INIT ----------
 if command -v systemctl >/dev/null 2>&1; then INIT="systemd"
 elif command -v rc-status >/dev/null 2>&1; then INIT="openrc"
 else INIT="$(ps -p 1 -o comm= 2>/dev/null || echo)"; fi
 
-# Serviços UP (completo -> count derivado da lista)
+# ---------- SERVIÇOS UP (completo) ----------
 SERV_ALL=""
 if [ "${INIT}" = "systemd" ]; then
-  SERV_ALL="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | sort -u | tr '\n' ';' || true)"
+  SERV_ALL="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | sort -u | joinsemi)"
 elif command -v rc-status >/dev/null 2>&1; then
-  SERV_ALL="$(rc-status -a 2>/dev/null | grep -E "started|running" | awk '{print $1}' | sort -u | tr '\n' ';' || true)"
+  SERV_ALL="$(rc-status -a 2>/dev/null | awk '/started|running/ {print $1}' | sort -u | joinsemi)"
 else
-  SERV_ALL="$(service --status-all 2>/dev/null | grep -E "^\s*\[\s*\+\s*\]" | awk '{print $4}' | sort -u | tr '\n' ';' || true)"
+  SERV_ALL="$(service --status-all 2>/dev/null | awk '/\[[[:space:]]*\+[[:space:]]*\]/{print $4}' | sort -u | joinsemi)"
 fi
-SERV_ALL="$(trimsemi "$SERV_ALL")"
-SERV_CNT="$(countsemi "$SERV_ALL")"
+SERV_CNT=0; [ -n "$SERV_ALL" ] && SERV_CNT=$(printf "%s" "$SERV_ALL" | awk -F';' '{print NF}')
 
-# Pacotes (completo -> count derivado da lista)
+# ---------- PACOTES + VERSÃO ----------
 PKG_MGR=""; PKG_ALL=""
 if command -v dpkg-query >/dev/null 2>&1; then
   PKG_MGR="dpkg"
-  PKG_ALL="$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
+  PKG_ALL="$(dpkg-query -W -f='${Package}=${Version}\n' 2>/dev/null | sort -u | joinsemi)"
 elif command -v rpm >/dev/null 2>&1; then
   PKG_MGR="rpm"
-  PKG_ALL="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
+  PKG_ALL="$(rpm -qa --qf '%{NAME}=%{VERSION}-%{RELEASE}\n' 2>/dev/null | sort -u | joinsemi)"
 elif command -v apk >/dev/null 2>&1; then
   PKG_MGR="apk"
-  PKG_ALL="$(apk info 2>/dev/null | sort -u | tr '\n' ';' || true)"
+  PKG_ALL="$(apk info -v 2>/dev/null | sed 's/-r/=/; s/-[0-9].*=/=/' | sort -u | joinsemi)"
 elif command -v dnf >/dev/null 2>&1; then
   PKG_MGR="dnf"
-  PKG_ALL="$(rpm -qa --qf '%{NAME}\n' 2>/dev/null | sort -u | tr '\n' ';' || true)"
+  PKG_ALL="$(rpm -qa --qf '%{NAME}=%{VERSION}-%{RELEASE}\n' 2>/dev/null | sort -u | joinsemi)"
 fi
-PKG_ALL="$(trimsemi "$PKG_ALL")"
-PKG_CNT="$(countsemi "$PKG_ALL")"
+PKG_CNT=0; [ -n "$PKG_ALL" ] && PKG_CNT=$(printf "%s" "$PKG_ALL" | awk -F';' '{print NF}')
 
-# Python
+# ---------- PYTHON ----------
 PY_INST="no"; PY_VER=""
 if command -v python3 >/dev/null 2>&1; then PY_INST="yes"; PY_VER="$(python3 -V 2>&1 | awk '{print $2}')"
 elif command -v python  >/dev/null 2>&1; then PY_INST="yes"; PY_VER="$(python  -V 2>&1 | awk '{print $2}')"
 fi
 
-# Zabbix
+# ---------- ZABBIX ----------
 ZB_INST="no"; ZB_VER=""
-if command -v zabbix_agentd >/dev/null 2>&1; then
-  ZB_INST="yes"; ZB_VER="$(zabbix_agentd -V 2>&1 | head -n1 | awk '{print $NF}')"
-elif command -v zabbix_agent2 >/dev/null 2>&1; then
-  ZB_INST="yes"; ZB_VER="$(zabbix_agent2 -V 2>/dev/null | head -n1 | awk '{print $NF}')"
+if command -v zabbix_agentd >/dev/null 2>&1; then ZB_INST="yes"; ZB_VER="$(zabbix_agentd -V 2>&1 | head -n1 | awk '{print $NF}')"
+elif command -v zabbix_agent2 >/dev/null 2>&1; then ZB_INST="yes"; ZB_VER="$(zabbix_agent2 -V 2>/dev/null | head -n1 | awk '{print $NF}')"
 elif systemctl list-unit-files 2>/dev/null | grep -q '^zabbix-agent'; then ZB_INST="yes"
 elif pgrep -fa zabbix_agent >/dev/null 2>&1; then ZB_INST="yes"
 fi
 
-# Qualys
+# ---------- QUALYS ----------
 QL_INST="no"; QL_VER=""
 if systemctl list-unit-files 2>/dev/null | grep -q '^qualys-cloud-agent'; then QL_INST="yes"; fi
 if pgrep -fa qualys >/dev/null 2>&1 || pgrep -fa qagent >/dev/null 2>&1; then QL_INST="yes"; fi
 if [ -x /usr/local/qualys/cloud-agent/bin/qagent ]; then
   V="$(/usr/local/qualys/cloud-agent/bin/qagent -v 2>&1 || true)"
-  QL_VER="$(echo "$V" | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n1)"
+  QL_VER="$(printf "%s" "$V" | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n1)"
 fi
 if [ -z "$QL_VER" ] && command -v rpm >/dev/null 2>&1; then
   QL_VER="$(rpm -q --qf '%{VERSION}\n' qualys-cloud-agent 2>/dev/null | head -n1)"
@@ -200,71 +207,126 @@ if [ -z "$QL_VER" ] && [ -r /etc/qualys/cloud-agent/qualys-cloud-agent.conf ]; t
   QL_VER="$(grep -E '^AGENT_VERSION=' /etc/qualys/cloud-agent/qualys-cloud-agent.conf 2>/dev/null | cut -d= -f2)"
 fi
 
-# Java
-JAVA_INST="no"; JAVA_VER=""
+# ---------- JAVA ----------
+JAVA_INST="no"; JAVA_VER=""; JAVA_HOME=""
+# via binário
 if command -v java >/dev/null 2>&1; then
   JAVA_INST="yes"
-  JAVA_VER="$(java -version 2>&1 | head -n1 | sed -E 's/.*version \"?([0-9][^\" ]*).*/\1/;t;d')"
+  JAVA_VER="$(java -version 2>&1 | head -n1 | awk -F\" '/version/ {print $2}' | awk '{print $1}')"
+  JAVA_HOME="$(readlink -f "$(command -v java)" 2>/dev/null | sed 's#/bin/java##' || true)"
 fi
+# alternativas
 if [ "$JAVA_INST" = "no" ] && command -v javac >/dev/null 2>&1; then
   JAVA_INST="yes"
-  J="$(javac -version 2>&1 | head -n1 | awk '{print $2}')"
-  [ -n "$J" ] && JAVA_VER="$J"
+  JAVA_VER="$(javac -version 2>&1 | awk '{print $2}')"
+  JAVA_HOME="$(readlink -f "$(command -v javac)" 2>/dev/null | sed 's#/bin/javac##' || true)"
 fi
+# package-based hint
 if [ "$JAVA_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
-  L="$(printf '%s' "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
-  echo "$L" | grep -Eq '(openjdk|(^|;)java-1\.|(^|;)java-)' && JAVA_INST="yes"
-  if [ -z "$JAVA_VER" ]; then
-    JAVA_VER="$(echo "$L" | grep -Eo 'openjdk[0-9]{1,2}|java-1\.[0-9]\.0' | head -n1 | sed -E 's/openjdk//; s/java-1\.([0-9])\.0/\1.0/')"
-  fi
+  L="$(printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
+  echo "$L" | grep -Eq '(^|;)openjdk|(^|;)java-1\.|(^|;)jdk|(^|;)jre' && JAVA_INST="yes"
+  [ -z "$JAVA_VER" ] && JAVA_VER="$(printf "%s" "$L" | grep -Eo 'openjdk[0-9]{1,2}|java-1\.[0-9]' | head -n1 | sed -E 's/openjdk//; s/java-1\.([0-9])/\1/')"
 fi
 
-# PHP
+# ---------- PHP ----------
 PHP_INST="no"; PHP_VER=""
 if command -v php >/dev/null 2>&1; then
   PHP_INST="yes"
-  PHP_VER="$(php -v 2>/dev/null | head -n1 | sed -E 's/^PHP ([0-9][^ ]*).*/\1/;t;d')"
+  PHP_VER="$(php -v 2>/dev/null | head -n1 | awk '{print $2}')"
+elif command -v php-fpm >/dev/null 2>&1; then
+  PHP_INST="yes"
+  PHP_VER="$(php-fpm -v 2>/dev/null | head -n1 | awk '{print $2}')"
 fi
 if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "rpm" ]; then
-  V="$(rpm -q --qf '%{VERSION}\n' php 2>/dev/null | head -n1)"
-  if [ -n "$V" ]; then PHP_INST="yes"; PHP_VER="$V"; fi
+  V="$(rpm -q --qf '%{VERSION}\n' php 2>/dev/null | head -n1)"; [ -n "$V" ] && PHP_INST="yes" && PHP_VER="$V"
 fi
 if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "dpkg" ]; then
-  V="$(dpkg-query -W -f='${Version}\n' php 2>/dev/null | head -n1)"
-  if [ -n "$V" ]; then PHP_INST="yes"; PHP_VER="$V"; fi
+  V="$(dpkg-query -W -f='${Version}\n' php 2>/dev/null | head -n1)"; [ -n "$V" ] && PHP_INST="yes" && PHP_VER="$V"
 fi
 if [ "$PHP_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
-  L="$(printf '%s' "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
-  echo "$L" | grep -Eq '(^|;)php($|[-;])' && PHP_INST="yes"
+  printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)php($|[-;])' && PHP_INST="yes"
 fi
 
-# Apache HTTPD
-AP_INST="no"; AP_VER=""
+# ---------- APACHE HTTPD ----------
+AP_INST="no"; AP_VER=""; AP_FLAVOR=""; AP_SVC=""
 if command -v httpd >/dev/null 2>&1; then
-  AP_INST="yes"
-  AP_VER="$(httpd -v 2>/dev/null | grep -i 'server version' | head -n1 | sed -E 's/.*Apache\/([0-9][^ ]*).*/\1/;t;d')"
+  AP_INST="yes"; AP_FLAVOR="httpd"; AP_SVC="$(systemctl list-units --type=service --all 2>/dev/null | awk '/httpd\.service/ {print $1}' | head -n1)"
+  AP_VER="$(httpd -v 2>/dev/null | awk -F/ '/Server version/ {print $2}' | awk '{print $1}')"
 elif command -v apache2 >/dev/null 2>&1; then
-  AP_INST="yes"
-  AP_VER="$(apache2 -v 2>/dev/null | grep -i 'server version' | head -n1 | sed -E 's/.*Apache\/([0-9][^ ]*).*/\1/;t;d')"
+  AP_INST="yes"; AP_FLAVOR="apache2"; AP_SVC="$(systemctl list-units --type=service --all 2>/dev/null | awk '/apache2\.service/ {print $1}' | head -n1)"
+  AP_VER="$(apache2 -v 2>/dev/null | awk -F/ '/Server version/ {print $2}' | awk '{print $1}')"
 fi
-if [ "$AP_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
-  L="$(printf '%s' "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
-  echo "$L" | grep -Eq '(^|;)(httpd|apache2)($|;)' && AP_INST="yes"
-fi
-if [ -z "$AP_VER" ] && [ "$AP_INST" = "yes" ]; then
+if [ "$AP_INST" = "yes" ] && [ -z "$AP_VER" ]; then
   if [ "$PKG_MGR" = "rpm" ]; then
-    V="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
-    [ -n "$V" ] && AP_VER="$V"
+    AP_VER="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
   elif [ "$PKG_MGR" = "dpkg" ]; then
-    V="$(dpkg-query -W -f='${Version}\n' apache2 2>/dev/null | head -n1)"
-    [ -n "$V" ] && AP_VER="$V"
+    AP_VER="$(dpkg-query -W -f='${Version}\n' apache2 2>/dev/null | head -n1)"
   elif [ "$PKG_MGR" = "apk" ]; then
-    V="$(apk info -vv apache2 2>/dev/null | head -n1 | sed -E 's/.*-([0-9][^-]*)-.*/\1/')" || true
-    [ -n "$V" ] && AP_VER="$V"
+    AP_VER="$(apk info -vv apache2 2>/dev/null | head -n1 | sed -E 's/.*-([0-9][^-]*)-.*/\1/')"
   fi
 fi
 
-# Saída
+# ---------- JBOSS / WILDFLY ----------
+JB_INST="no"; JB_PROD=""; JB_VER=""; JB_HOME=""; JB_SVCS=""; JB_PIDS=""
+# candidatos de HOME
+CANDS=""
+for d in "$JBOSS_HOME" "/opt/jboss" "/opt/wildfly" "/opt/jboss-eap" "/usr/share/wildfly" "/usr/share/jboss"; do
+  [ -n "$d" ] && [ -d "$d" ] && CANDS="${CANDS}\n${d}"
+done
+# descobrir por processos
+P_JB="$(ps -eo pid,comm,args 2>/dev/null | grep -Ei 'jboss|wildfly' | grep -v grep || true)"
+if [ -n "$P_JB" ]; then
+  JB_PIDS="$(printf "%s" "$P_JB" | awk '{print $1}' | tr '\n' ';' | sed 's/;*$//')"
+  HINT="$(printf "%s" "$P_JB" | grep -Eo '/[^ ]*/(jboss[^ ]*|wildfly[^ ]*)' | awk -F'/bin' '{print $1}' | sort -u | head -n1)"
+  [ -n "$HINT" ] && CANDS="${CANDS}\n${HINT}"
+fi
+# serviços
+JB_SVCS="$(systemctl list-units --type=service --all 2>/dev/null | awk '/jboss|wildfly|eap/ {print $1}' | sort -u | tr '\n' ';' | sed 's/;*$//' )"
+[ -n "$JB_SVCS" ] && JB_INST="yes"
+# tentar homes
+if [ -z "$JB_HOME" ] && [ -n "$CANDS" ]; then
+  JB_HOME="$(printf "%b" "$CANDS" | sed '/^$/d' | head -n1)"
+fi
+# versão via CLI/manifests
+if [ -n "$JB_HOME" ]; then
+  if [ -x "$JB_HOME/bin/jboss-cli.sh" ]; then
+    V="$("$JB_HOME/bin/jboss-cli.sh" --version 2>&1 | head -n1)"
+    JB_VER="$(printf "%s" "$V" | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
+    JB_PROD="$(printf "%s" "$V" | awk '{print $1}' | tr '[:upper:]' '[:lower:]')"
+  fi
+  if [ -z "$JB_VER" ]; then
+    MF="$(ls "$JB_HOME"/modules/system/layers/*/org/jboss/as/product/*/dir/META-INF/MANIFEST.MF 2>/dev/null | head -n1)"
+    if [ -n "$MF" ]; then
+      JB_PROD="$(grep -E 'JBoss-Product-Release-Name:' "$MF" 2>/dev/null | awk -F': ' '{print tolower($2)}' | head -n1)"
+      JB_VER="$(grep -E 'JBoss-Product-Release-Version:' "$MF" 2>/dev/null | awk -F': ' '{print $2}' | head -n1)"
+    fi
+  fi
+fi
+[ -n "$JB_HOME$JB_SVCS$JB_PIDS" ] && JB_INST="yes"
+
+# ---------- WEBSPHERE ----------
+WS_INST="no"; WS_VER=""; WS_HOME=""
+for d in "$WAS_HOME" "/opt/IBM/WebSphere/AppServer" "/opt/IBM/WebSphere/AppServer/profiles" "/opt/IBM/WebSphere"; do
+  [ -n "$d" ] && [ -d "$d" ] && { WS_HOME="$d"; break; }
+done
+# processos
+if ps -eo comm,args 2>/dev/null | grep -Ei 'websphere|com\.ibm\.ws\.' | grep -v grep >/dev/null 2>&1; then
+  WS_INST="yes"
+fi
+# versionInfo.sh
+if [ -z "$WS_VER" ]; then
+  if [ -x "/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh" ]; then
+    VI="$(/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh -product 2>/dev/null | head -n 50)"
+    WS_VER="$(printf "%s" "$VI" | grep -Eo 'Version\s+[:=]\s*[0-9]+(\.[0-9]+)+' | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
+    WS_HOME="${WS_HOME:-/opt/IBM/WebSphere/AppServer}"
+  elif [ -n "$WS_HOME" ] && [ -x "$WS_HOME/bin/versionInfo.sh" ]; then
+    VI="$("$WS_HOME/bin/versionInfo.sh" -product 2>/dev/null | head -n 50)"
+    WS_VER="$(printf "%s" "$VI" | grep -Eo 'Version\s+[:=]\s*[0-9]+(\.[0-9]+)+' | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
+  fi
+fi
+[ -n "$WS_HOME" ] && [ -z "$WS_INST" ] && WS_INST="yes"
+
+# ---------- SAÍDA ----------
 out_kv os_family "linux"
 out_kv distro_id "${OS_ID}"
 out_kv distro_pretty_name "${OS_PRETTY}"
@@ -272,10 +334,10 @@ out_kv distro_version_id "${OS_VER}"
 out_kv kernel "${KERNEL}"
 out_kv init_system "${INIT}"
 out_kv services_running_count "${SERV_CNT}"
-out_kv services_all "${SERV_ALL}"
+out_kv services_all "$(trimsemi "$SERV_ALL")"
 out_kv pkg_manager "${PKG_MGR}"
 out_kv pkg_count "${PKG_CNT}"
-out_kv pkg_all "${PKG_ALL}"
+out_kv pkg_all "$(trimsemi "$PKG_ALL")"
 out_kv python_installed "${PY_INST}"
 out_kv python_version "${PY_VER}"
 out_kv zabbix_agent_installed "${ZB_INST}"
@@ -284,10 +346,22 @@ out_kv qualys_agent_installed "${QL_INST}"
 out_kv qualys_agent_version "${QL_VER}"
 out_kv java_installed "${JAVA_INST}"
 out_kv java_version "${JAVA_VER}"
+out_kv java_home "${JAVA_HOME}"
 out_kv php_installed "${PHP_INST}"
 out_kv php_version "${PHP_VER}"
 out_kv apache_installed "${AP_INST}"
 out_kv apache_version "${AP_VER}"
+out_kv apache_flavor "${AP_FLAVOR}"
+out_kv apache_service "${AP_SVC}"
+out_kv jboss_installed "${JB_INST}"
+out_kv jboss_product "${JB_PROD}"
+out_kv jboss_version "${JB_VER}"
+out_kv jboss_home "${JB_HOME}"
+out_kv jboss_services "${JB_SVCS}"
+out_kv jboss_pids "${JB_PIDS}"
+out_kv websphere_installed "${WS_INST}"
+out_kv websphere_version "${WS_VER}"
+out_kv websphere_home "${WS_HOME}"
 '''
 
 def parse_kv(text):
@@ -310,18 +384,8 @@ def tcp_probe(host, port, timeout):
         return "unreachable"
 
 def row_base(h, ip):
-    return {
-        "hostname": h, "ip_address": ip, "status":"failed", "error":"", "collected_at": now_str(),
-        "os_family":"", "distro_id":"", "distro_pretty_name":"", "distro_version_id":"",
-        "kernel":"", "init_system":"",
-        "services_running_count":"", "services_all":"",
-        "pkg_manager":"", "pkg_count":"", "pkg_all":"",
-        "python_installed":"", "python_version":"",
-        "zabbix_agent_installed":"", "zabbix_agent_version":"",
-        "qualys_agent_installed":"", "qualys_agent_version":"",
-        "java_installed":"", "java_version":"",
-        "php_installed":"", "php_version":"",
-        "apache_installed":"", "apache_version":"",
+    return {k: "" for k in OUT_COLS} | {
+        "hostname": h, "ip_address": ip, "status":"failed", "error":"", "collected_at": now_str()
     }
 
 def collect_one(entry, dflt, filter_ok, dbg):
@@ -359,35 +423,13 @@ def collect_one(entry, dflt, filter_ok, dbg):
     for user in users:
         cmd = ssh_cmd(target, user, port, dflt["identity"], dflt["timeout"], dflt["strict"], dflt["legacy"])
         try:
-            p = run(cmd, dflt["timeout"] + 150, input_data=REMOTE_SCRIPT)
+            # +180s para rpm -qa e scans pesados
+            p = run(cmd, dflt["timeout"] + 180, input_data=REMOTE_SCRIPT)
             if p.returncode == 0:
                 kv = parse_kv(p.stdout)
-                row.update({
-                    "status":"ok", "error":"",
-                    "os_family": kv.get("os_family",""),
-                    "distro_id": kv.get("distro_id",""),
-                    "distro_pretty_name": kv.get("distro_pretty_name",""),
-                    "distro_version_id": kv.get("distro_version_id",""),
-                    "kernel": kv.get("kernel",""),
-                    "init_system": kv.get("init_system",""),
-                    "services_running_count": kv.get("services_running_count",""),
-                    "services_all": kv.get("services_all",""),
-                    "pkg_manager": kv.get("pkg_manager",""),
-                    "pkg_count": kv.get("pkg_count",""),
-                    "pkg_all": kv.get("pkg_all",""),
-                    "python_installed": kv.get("python_installed",""),
-                    "python_version": kv.get("python_version",""),
-                    "zabbix_agent_installed": kv.get("zabbix_agent_installed",""),
-                    "zabbix_agent_version": kv.get("zabbix_agent_version",""),
-                    "qualys_agent_installed": kv.get("qualys_agent_installed",""),
-                    "qualys_agent_version": kv.get("qualys_agent_version",""),
-                    "java_installed": kv.get("java_installed",""),
-                    "java_version": kv.get("java_version",""),
-                    "php_installed": kv.get("php_installed",""),
-                    "php_version": kv.get("php_version",""),
-                    "apache_installed": kv.get("apache_installed",""),
-                    "apache_version": kv.get("apache_version",""),
-                })
+                for k in OUT_COLS:
+                    if k in kv: row[k] = kv.get(k,"")
+                row["status"]="ok"; row["error"]=""
                 return row
             else:
                 last_err = (p.stderr or "").strip() or f"rc={p.returncode}"
@@ -409,8 +451,7 @@ def collect_one(entry, dflt, filter_ok, dbg):
 def write_csv(path, rows):
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=OUT_COLS); w.writeheader()
-        for r in rows:
-            w.writerow({k: r.get(k,"") for k in OUT_COLS})
+        for r in rows: w.writerow({k: r.get(k,"") for k in OUT_COLS})
 
 def write_xlsx(path, rows):
     try:
@@ -423,12 +464,11 @@ def write_xlsx(path, rows):
     for c,col in enumerate(OUT_COLS): ws.write(0,c,col,head)
     for r,row in enumerate(rows, start=1):
         for c,col in enumerate(OUT_COLS):
-            v = row.get(col,"")
-            ws.write(r,c,v if v is not None else "")
+            v = row.get(col,""); ws.write(r,c,v if v is not None else "")
     wb.close()
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Perfil de sistemas via SSH (bastion) -> CSV único com listas completas e detecções Java/PHP/Apache.")
+    p = argparse.ArgumentParser(description="Perfil via SSH com listas completas e detecção Java/PHP/Apache/JBoss/WebSphere.")
     p.add_argument("--inventory", required=True, help="CSV/XLSX com hostname/ip; opcionais: ssh_user, ssh_port")
     p.add_argument("--connectivity-csv", help="CSV do ssh_connectivity_probe para filtrar status=connected")
     p.add_argument("--target-user", default="root", help="Usuário padrão")
