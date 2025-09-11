@@ -384,9 +384,15 @@ def tcp_probe(host, port, timeout):
         return "unreachable"
 
 def row_base(h, ip):
-    return {k: "" for k in OUT_COLS} | {
-        "hostname": h, "ip_address": ip, "status":"failed", "error":"", "collected_at": now_str()
-    }
+    row = {k: "" for k in OUT_COLS}
+    row.update({
+        "hostname": h,
+        "ip_address": ip,
+        "status": "failed",
+        "error": "",
+        "collected_at": now_str(),
+    })
+    return row
 
 def collect_one(entry, dflt, filter_ok, dbg):
     hostname = (entry.get(dflt["host_f"]) or "").strip()
