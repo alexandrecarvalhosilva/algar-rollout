@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# teste
+
 """
 ssh_system_profile.py — coleta via SSH (bastion) para CSV único.
 
