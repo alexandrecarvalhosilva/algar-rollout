@@ -2,19 +2,23 @@
 # -*- coding: utf-8 -*-
 
 """
-ssh_system_profile.py — coleta via SSH (bastion)
-Saída: único CSV com:
-  - OS, kernel, init
-  - TODOS os serviços UP (services_all)
-  - TODOS os pacotes + versão (pkg_all)
-  - Python: instalado + versão
-  - Zabbix/Qualys: instalado + versão
-  - Java: instalado + versão + JAVA_HOME
-  - PHP: instalado + versão
-  - Apache HTTPD: instalado + versão + flavor (httpd/apache2)
-  - JBoss/WildFly: instalado + produto + versão + home + serviços/pids
-  - WebSphere: instalado + versão + home
-Compatível: Python 3.6+, OpenSSH. XLSX opcional: pandas/openpyxl/xlsxwriter
+ssh_system_profile.py — coleta via SSH (bastion) para CSV único.
+
+Coleta por host:
+- OS/distro/kernel/init
+- TODOS os serviços UP (services_all)
+- TODOS os pacotes + versão (pkg_all: "nome=versao[-release]")
+- Python/Zabbix/Qualys (presença+versão)
+- Java/PHP/Apache (presença+versão)
+- Tomcat (presença+versão)
+- JBoss/WildFly (presença+produto+versão+home+serviços+pids)
+- WebSphere (presença+versão+home)
+- Processos não-gerenciados (aprox. PPID=1 fora de serviços) + contagem
+- Containers (docker/podman/containerd/crictl) + contagem
+- Sockets em escuta (ss|netstat) + contagem
+- Entradas de cron (root + /etc/cron*) + contagem
+
+Compatível Python 3.6+. Requer OpenSSH. XLSX opcional: pandas/openpyxl/xlsxwriter.
 """
 
 import argparse, csv, ipaddress, os, re, socket, subprocess, sys
@@ -22,23 +26,36 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 OUT_COLS = [
+    # Ident
     "hostname","ip_address","status","error","collected_at",
+    # SO
     "os_family","distro_id","distro_pretty_name","distro_version_id","kernel","init_system",
+    # Serviços
     "services_running_count","services_all",
+    # Pacotes
     "pkg_manager","pkg_count","pkg_all",
+    # Python/Zabbix/Qualys
     "python_installed","python_version",
     "zabbix_agent_installed","zabbix_agent_version",
     "qualys_agent_installed","qualys_agent_version",
-    # Java
+    # Java/PHP/Apache
     "java_installed","java_version","java_home",
-    # PHP
     "php_installed","php_version",
-    # Apache
     "apache_installed","apache_version","apache_flavor","apache_service",
-    # JBoss / WildFly
+    # Tomcat
+    "tomcat_installed","tomcat_version",
+    # JBoss/WildFly
     "jboss_installed","jboss_product","jboss_version","jboss_home","jboss_services","jboss_pids",
     # WebSphere
     "websphere_installed","websphere_version","websphere_home",
+    # Processos não gerenciados
+    "unmanaged_count","unmanaged_processes",
+    # Containers
+    "containers_count","containers_running",
+    # Listening sockets
+    "listening_count","listening_sockets",
+    # Cron
+    "cron_count","cron_entries",
 ]
 
 DEF_USERS = ["root","ec2-user","ubuntu","centos","opc","admin","azureuser","rocky","oracle"]
@@ -114,7 +131,7 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
         "-o","GlobalKnownHostsFile=/dev/null",
         "-o","LogLevel=ERROR",
         "-o","StrictHostKeyChecking=" + ("accept-new" if strict else "no"),
-        "-o",f"ConnectTimeout={timeout}",
+        "-o", "ConnectTimeout={}".format(timeout),
     ]
     if legacy:
         cmd += [
@@ -124,13 +141,12 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
         ]
     if identity: cmd += ["-i", identity]
     if port and str(port)!="22": cmd += ["-p", str(port)]
-    cmd += [f"{user}@{host}","sh","-c","bash --noprofile --norc -s || sh -s"]
+    cmd += [ "{}@{}".format(user, host), "sh", "-c", "bash --noprofile --norc -s || sh -s" ]
     return cmd
 
 REMOTE_SCRIPT = r'''set -u
 export LC_ALL=C TERM=dumb
-# PATH amplo p/ serviços/bins comuns
-export PATH="/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:/usr/local/sbin:/opt/IBM/WebSphere/AppServer/bin:/opt/jboss/bin:/opt/wildfly/bin:$PATH"
+export PATH="/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:/usr/local/sbin:/opt/IBM/WebSphere/AppServer/bin:/opt/jboss/bin:/opt/wildfly/bin:/usr/share/tomcat/bin:$PATH"
 
 out_kv(){ printf "%s=%s\n" "$1" "$2"; }
 trimsemi(){ X="$1"; X="${X%%;}" ; printf "%s" "$X"; }
@@ -150,7 +166,7 @@ if command -v systemctl >/dev/null 2>&1; then INIT="systemd"
 elif command -v rc-status >/dev/null 2>&1; then INIT="openrc"
 else INIT="$(ps -p 1 -o comm= 2>/dev/null || echo)"; fi
 
-# ---------- SERVIÇOS UP (completo) ----------
+# ---------- SERVIÇOS UP ----------
 SERV_ALL=""
 if [ "${INIT}" = "systemd" ]; then
   SERV_ALL="$(systemctl list-units --type=service --state=running --no-legend --no-pager 2>/dev/null | awk '{print $1}' | sort -u | joinsemi)"
@@ -171,7 +187,8 @@ elif command -v rpm >/dev/null 2>&1; then
   PKG_ALL="$(rpm -qa --qf '%{NAME}=%{VERSION}-%{RELEASE}\n' 2>/dev/null | sort -u | joinsemi)"
 elif command -v apk >/dev/null 2>&1; then
   PKG_MGR="apk"
-  PKG_ALL="$(apk info -v 2>/dev/null | sed 's/-r/=/; s/-[0-9].*=/=/' | sort -u | joinsemi)"
+  # apk info -v => foo-1.2.3-r0 ; converte para foo=1.2.3-r0
+  PKG_ALL="$(apk info -v 2>/dev/null | awk 'BEGIN{FS=\"-\"}{name=$1; sub(/^[^-]+-/,\"\",$0); print name\"=\"$0}' | sort -u | joinsemi)"
 elif command -v dnf >/dev/null 2>&1; then
   PKG_MGR="dnf"
   PKG_ALL="$(rpm -qa --qf '%{NAME}=%{VERSION}-%{RELEASE}\n' 2>/dev/null | sort -u | joinsemi)"
@@ -209,33 +226,24 @@ fi
 
 # ---------- JAVA ----------
 JAVA_INST="no"; JAVA_VER=""; JAVA_HOME=""
-# via binário
 if command -v java >/dev/null 2>&1; then
   JAVA_INST="yes"
   JAVA_VER="$(java -version 2>&1 | head -n1 | awk -F\" '/version/ {print $2}' | awk '{print $1}')"
   JAVA_HOME="$(readlink -f "$(command -v java)" 2>/dev/null | sed 's#/bin/java##' || true)"
-fi
-# alternativas
-if [ "$JAVA_INST" = "no" ] && command -v javac >/dev/null 2>&1; then
-  JAVA_INST="yes"
-  JAVA_VER="$(javac -version 2>&1 | awk '{print $2}')"
+elif command -v javac >/dev/null 2>&1; then
+  JAVA_INST="yes"; JAVA_VER="$(javac -version 2>&1 | awk '{print $2}')"
   JAVA_HOME="$(readlink -f "$(command -v javac)" 2>/dev/null | sed 's#/bin/javac##' || true)"
 fi
-# package-based hint
 if [ "$JAVA_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
   L="$(printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
-  echo "$L" | grep -Eq '(^|;)openjdk|(^|;)java-1\.|(^|;)jdk|(^|;)jre' && JAVA_INST="yes"
-  [ -z "$JAVA_VER" ] && JAVA_VER="$(printf "%s" "$L" | grep -Eo 'openjdk[0-9]{1,2}|java-1\.[0-9]' | head -n1 | sed -E 's/openjdk//; s/java-1\.([0-9])/\1/')"
+  echo "$L" | grep -Eq '(^|;)openjdk=|(^|;)java-1\.' && JAVA_INST="yes"
+  [ -z "$JAVA_VER" ] && JAVA_VER="$(printf "%s" "$L" | grep -Eo 'openjdk=[0-9]+|java-1\.[0-9]' | head -n1 | sed -E 's/.*=//; s/java-1\.([0-9])/\1/')"
 fi
 
 # ---------- PHP ----------
 PHP_INST="no"; PHP_VER=""
-if command -v php >/dev/null 2>&1; then
-  PHP_INST="yes"
-  PHP_VER="$(php -v 2>/dev/null | head -n1 | awk '{print $2}')"
-elif command -v php-fpm >/dev/null 2>&1; then
-  PHP_INST="yes"
-  PHP_VER="$(php-fpm -v 2>/dev/null | head -n1 | awk '{print $2}')"
+if command -v php >/dev/null 2>&1; then PHP_INST="yes"; PHP_VER="$(php -v 2>/dev/null | head -n1 | awk '{print $2}')"
+elif command -v php-fpm >/dev/null 2>&1; then PHP_INST="yes"; PHP_VER="$(php-fpm -v 2>/dev/null | head -n1 | awk '{print $2}')"
 fi
 if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "rpm" ]; then
   V="$(rpm -q --qf '%{VERSION}\n' php 2>/dev/null | head -n1)"; [ -n "$V" ] && PHP_INST="yes" && PHP_VER="$V"
@@ -244,7 +252,7 @@ if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "dpkg" ]; then
   V="$(dpkg-query -W -f='${Version}\n' php 2>/dev/null | head -n1)"; [ -n "$V" ] && PHP_INST="yes" && PHP_VER="$V"
 fi
 if [ "$PHP_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
-  printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)php($|[-;])' && PHP_INST="yes"
+  printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)php(=|;|$)' && PHP_INST="yes"
 fi
 
 # ---------- APACHE HTTPD ----------
@@ -257,74 +265,121 @@ elif command -v apache2 >/dev/null 2>&1; then
   AP_VER="$(apache2 -v 2>/dev/null | awk -F/ '/Server version/ {print $2}' | awk '{print $1}')"
 fi
 if [ "$AP_INST" = "yes" ] && [ -z "$AP_VER" ]; then
-  if [ "$PKG_MGR" = "rpm" ]; then
-    AP_VER="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
-  elif [ "$PKG_MGR" = "dpkg" ]; then
-    AP_VER="$(dpkg-query -W -f='${Version}\n' apache2 2>/dev/null | head -n1)"
-  elif [ "$PKG_MGR" = "apk" ]; then
-    AP_VER="$(apk info -vv apache2 2>/dev/null | head -n1 | sed -E 's/.*-([0-9][^-]*)-.*/\1/')"
+  if [ "$PKG_MGR" = "rpm" ]; then AP_VER="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
+  elif [ "$PKG_MGR" = "dpkg" ]; then AP_VER="$(dpkg-query -W -f='${Version}\n' apache2 2>/dev/null | head -n1)"
+  elif [ "$PKG_MGR" = "apk" ]; then AP_VER="$(apk info -vv apache2 2>/dev/null | head -n1 | sed -E 's/.*-([0-9][^-]*)-.*/\1/')"
   fi
+fi
+
+# ---------- TOMCAT ----------
+TC_INST="no"; TC_VER=""
+if command -v catalina.sh >/dev/null 2>&1; then
+  TC_INST="yes"
+  TC_VER="$(catalina.sh version 2>/dev/null | awk -F: '/Server number/ {gsub(/ /,\"\"); print $2; exit}')"
+fi
+if [ "$TC_INST" = "no" ]; then
+  # serviços/pacotes
+  systemctl list-unit-files 2>/dev/null | grep -qi 'tomcat' && TC_INST="yes"
+  printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)tomcat=' && TC_INST="yes"
 fi
 
 # ---------- JBOSS / WILDFLY ----------
 JB_INST="no"; JB_PROD=""; JB_VER=""; JB_HOME=""; JB_SVCS=""; JB_PIDS=""
-# candidatos de HOME
 CANDS=""
 for d in "$JBOSS_HOME" "/opt/jboss" "/opt/wildfly" "/opt/jboss-eap" "/usr/share/wildfly" "/usr/share/jboss"; do
   [ -n "$d" ] && [ -d "$d" ] && CANDS="${CANDS}\n${d}"
 done
-# descobrir por processos
 P_JB="$(ps -eo pid,comm,args 2>/dev/null | grep -Ei 'jboss|wildfly' | grep -v grep || true)"
 if [ -n "$P_JB" ]; then
   JB_PIDS="$(printf "%s" "$P_JB" | awk '{print $1}' | tr '\n' ';' | sed 's/;*$//')"
   HINT="$(printf "%s" "$P_JB" | grep -Eo '/[^ ]*/(jboss[^ ]*|wildfly[^ ]*)' | awk -F'/bin' '{print $1}' | sort -u | head -n1)"
   [ -n "$HINT" ] && CANDS="${CANDS}\n${HINT}"
 fi
-# serviços
 JB_SVCS="$(systemctl list-units --type=service --all 2>/dev/null | awk '/jboss|wildfly|eap/ {print $1}' | sort -u | tr '\n' ';' | sed 's/;*$//' )"
 [ -n "$JB_SVCS" ] && JB_INST="yes"
-# tentar homes
 if [ -z "$JB_HOME" ] && [ -n "$CANDS" ]; then
   JB_HOME="$(printf "%b" "$CANDS" | sed '/^$/d' | head -n1)"
 fi
-# versão via CLI/manifests
-if [ -n "$JB_HOME" ]; then
-  if [ -x "$JB_HOME/bin/jboss-cli.sh" ]; then
-    V="$("$JB_HOME/bin/jboss-cli.sh" --version 2>&1 | head -n1)"
-    JB_VER="$(printf "%s" "$V" | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
-    JB_PROD="$(printf "%s" "$V" | awk '{print $1}' | tr '[:upper:]' '[:lower:]')"
-  fi
-  if [ -z "$JB_VER" ]; then
-    MF="$(ls "$JB_HOME"/modules/system/layers/*/org/jboss/as/product/*/dir/META-INF/MANIFEST.MF 2>/dev/null | head -n1)"
-    if [ -n "$MF" ]; then
-      JB_PROD="$(grep -E 'JBoss-Product-Release-Name:' "$MF" 2>/dev/null | awk -F': ' '{print tolower($2)}' | head -n1)"
-      JB_VER="$(grep -E 'JBoss-Product-Release-Version:' "$MF" 2>/dev/null | awk -F': ' '{print $2}' | head -n1)"
-    fi
+if [ -n "$JB_HOME" ] && [ -x "$JB_HOME/bin/jboss-cli.sh" ]; then
+  V="$("$JB_HOME/bin/jboss-cli.sh" --version 2>&1 | head -n1)"
+  JB_VER="$(printf "%s" "$V" | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
+  JB_PROD="$(printf "%s" "$V" | awk '{print $1}' | tr '[:upper:]' '[:lower:]')"
+fi
+if [ -z "$JB_VER" ] && [ -n "$JB_HOME" ]; then
+  MF="$(ls "$JB_HOME"/modules/system/layers/*/org/jboss/as/product/*/dir/META-INF/MANIFEST.MF 2>/dev/null | head -n1)"
+  if [ -n "$MF" ]; then
+    JB_PROD="$(grep -E 'JBoss-Product-Release-Name:' "$MF" 2>/dev/null | awk -F': ' '{print tolower($2)}' | head -n1)"
+    JB_VER="$(grep -E 'JBoss-Product-Release-Version:' "$MF" 2>/dev/null | awk -F': ' '{print $2}' | head -n1)"
   fi
 fi
 [ -n "$JB_HOME$JB_SVCS$JB_PIDS" ] && JB_INST="yes"
 
 # ---------- WEBSPHERE ----------
 WS_INST="no"; WS_VER=""; WS_HOME=""
-for d in "$WAS_HOME" "/opt/IBM/WebSphere/AppServer" "/opt/IBM/WebSphere/AppServer/profiles" "/opt/IBM/WebSphere"; do
+for d in "$WAS_HOME" "/opt/IBM/WebSphere/AppServer" "/opt/IBM/WebSphere"; do
   [ -n "$d" ] && [ -d "$d" ] && { WS_HOME="$d"; break; }
 done
-# processos
 if ps -eo comm,args 2>/dev/null | grep -Ei 'websphere|com\.ibm\.ws\.' | grep -v grep >/dev/null 2>&1; then
   WS_INST="yes"
 fi
-# versionInfo.sh
-if [ -z "$WS_VER" ]; then
-  if [ -x "/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh" ]; then
-    VI="$(/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh -product 2>/dev/null | head -n 50)"
-    WS_VER="$(printf "%s" "$VI" | grep -Eo 'Version\s+[:=]\s*[0-9]+(\.[0-9]+)+' | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
-    WS_HOME="${WS_HOME:-/opt/IBM/WebSphere/AppServer}"
-  elif [ -n "$WS_HOME" ] && [ -x "$WS_HOME/bin/versionInfo.sh" ]; then
-    VI="$("$WS_HOME/bin/versionInfo.sh" -product 2>/dev/null | head -n 50)"
-    WS_VER="$(printf "%s" "$VI" | grep -Eo 'Version\s+[:=]\s*[0-9]+(\.[0-9]+)+' | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
-  fi
+if [ -x "/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh" ]; then
+  VI="$(/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh -product 2>/dev/null | head -n 60)"
+  WS_VER="$(printf "%s" "$VI" | grep -Eo 'Version\s+[:=]\s*[0-9]+(\.[0-9]+)+' | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
+  WS_HOME="${WS_HOME:-/opt/IBM/WebSphere/AppServer}"
+elif [ -n "$WS_HOME" ] && [ -x "$WS_HOME/bin/versionInfo.sh" ]; then
+  VI="$("$WS_HOME/bin/versionInfo.sh" -product 2>/dev/null | head -n 60)"
+  WS_VER="$(printf "%s" "$VI" | grep -Eo 'Version\s+[:=]\s*[0-9]+(\.[0-9]+)+' | grep -Eo '[0-9]+(\.[0-9]+)+' | head -n1)"
 fi
-[ -n "$WS_HOME" ] && [ -z "$WS_INST" ] && WS_INST="yes"
+[ -n "$WS_HOME" ] && [ "$WS_INST" = "no" ] && WS_INST="yes"
+
+# ---------- PROCESSOS NÃO GERENCIADOS (heurística PPID=1) ----------
+UNM="$(ps -eo pid,ppid,user,comm,args --no-headers 2>/dev/null | awk '$2==1{print $1 "|" $3 "|" $4 "|" $5}' | grep -Ev "^(1|systemd|init|bash|sh|sshd|agetty)" | head -n 500 | tr '\n' ';' | sed 's/;*$//')"
+UNM_CNT=0; [ -n "$UNM" ] && UNM_CNT=$(printf "%s" "$UNM" | awk -F';' '{print NF}')
+
+# ---------- CONTAINERS ----------
+C_LIST=""
+if command -v docker >/dev/null 2>&1; then
+  L="$(docker ps --format '{{.Names}}|{{.Image}}|{{.Status}}' 2>/dev/null || true)"; [ -z "$L" ] && L="$(docker ps 2>/dev/null | awk 'NR>1{print $NF"|"$2"|"$4}' || true)"
+  [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
+fi
+if command -v podman >/dev/null 2>&1; then
+  L="$(podman ps --format '{{.Names}}|{{.Image}}|{{.Status}}' 2>/dev/null || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
+fi
+if command -v ctr >/dev/null 2>&1; then
+  L="$(ctr -n k8s.io containers list 2>/dev/null | awk 'NR>1{print $1"|"$2"|running"}' || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
+fi
+if command -v crictl >/dev/null 2>&1; then
+  L="$(crictl ps 2>/dev/null | awk 'NR>1{print $NF"|"$2"|"$4}' || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
+fi
+C_LIST="$(printf "%b" "$C_LIST" | sed '/^$/d' | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
+C_CNT=0; [ -n "$C_LIST" ] && C_CNT=$(printf "%s" "$C_LIST" | awk -F';' '{print NF}')
+
+# ---------- LISTENING SOCKETS ----------
+LS=""
+if command -v ss >/dev/null 2>&1; then
+  LS="$(ss -tulpen 2>/dev/null | awk 'NR>1{print $1\"|\"$5\"|\"$7}' | sed 's/ users:\\(\\(//; s/\\)\\)//g' | head -n 1000 | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
+elif command -v netstat >/dev/null 2>&1; then
+  LS="$(netstat -tulpen 2>/dev/null | awk 'NR>2{print $1\"|\"$4\"|\"$7}' | head -n 1000 | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
+fi
+LS_CNT=0; [ -n "$LS" ] && LS_CNT=$(printf "%s" "$LS" | awk -F';' '{print NF}')
+
+# ---------- CRON ----------
+CR=""
+RCR="$(crontab -l -u root 2>/dev/null | grep -E '^[^#@]|^@' | sed 's/[[:space:]]\\+/ /g' | head -n 300)"
+SYSCR="$(grep -E '^[^#@]|^@' /etc/crontab 2>/dev/null | sed 's/[[:space:]]\\+/ /g' | head -n 300)"
+DIRS="/etc/cron.d /etc/cron.hourly /etc/cron.daily /etc/cron.weekly /etc/cron.monthly"
+for d in $DIRS; do
+  if [ -d "$d" ]; then
+    while IFS= read -r f; do
+      [ -f "$f" ] && L="$(grep -E '^[^#@]|^@' "$f" 2>/dev/null | sed 's/[[:space:]]\\+/ /g' | head -n 50)"
+      [ -n "$L" ] && CR="${CR}\n${f}|${L}"
+    done < <(find "$d" -maxdepth 1 -type f 2>/dev/null)
+  fi
+done
+[ -n "$RCR" ] && CR="${CR}\nroot_crontab|${RCR}"
+[ -n "$SYSCR" ] && CR="${CR}\n/etc/crontab|${SYSCR}"
+CR="$(printf "%b" "$CR" | sed '/^$/d' | head -n 1000 | tr '\n' ';' | sed 's/;*$//')"
+CR_CNT=0; [ -n "$CR" ] && CR_CNT=$(printf "%s" "$CR" | awk -F';' '{print NF}')
 
 # ---------- SAÍDA ----------
 out_kv os_family "linux"
@@ -353,6 +408,8 @@ out_kv apache_installed "${AP_INST}"
 out_kv apache_version "${AP_VER}"
 out_kv apache_flavor "${AP_FLAVOR}"
 out_kv apache_service "${AP_SVC}"
+out_kv tomcat_installed "${TC_INST}"
+out_kv tomcat_version "${TC_VER}"
 out_kv jboss_installed "${JB_INST}"
 out_kv jboss_product "${JB_PROD}"
 out_kv jboss_version "${JB_VER}"
@@ -362,6 +419,14 @@ out_kv jboss_pids "${JB_PIDS}"
 out_kv websphere_installed "${WS_INST}"
 out_kv websphere_version "${WS_VER}"
 out_kv websphere_home "${WS_HOME}"
+out_kv unmanaged_count "${UNM_CNT}"
+out_kv unmanaged_processes "${UNM}"
+out_kv containers_count "${C_CNT}"
+out_kv containers_running "${C_LIST}"
+out_kv listening_count "${LS_CNT}"
+out_kv listening_sockets "${LS}"
+out_kv cron_count "${CR_CNT}"
+out_kv cron_entries "${CR}"
 '''
 
 def parse_kv(text):
@@ -386,11 +451,7 @@ def tcp_probe(host, port, timeout):
 def row_base(h, ip):
     row = {k: "" for k in OUT_COLS}
     row.update({
-        "hostname": h,
-        "ip_address": ip,
-        "status": "failed",
-        "error": "",
-        "collected_at": now_str(),
+        "hostname": h, "ip_address": ip, "status":"failed", "error":"", "collected_at": now_str()
     })
     return row
 
@@ -423,14 +484,14 @@ def collect_one(entry, dflt, filter_ok, dbg):
 
     pre = tcp_probe(target, port, dflt["timeout"])
     if pre != "ok":
-        row["status"]="failed"; row["error"]=f"tcp_{pre}"; return row
+        row["status"]="failed"; row["error"]="tcp_{}".format(pre); return row
 
     last_err = ""
     for user in users:
         cmd = ssh_cmd(target, user, port, dflt["identity"], dflt["timeout"], dflt["strict"], dflt["legacy"])
         try:
-            # +180s para rpm -qa e scans pesados
-            p = run(cmd, dflt["timeout"] + 180, input_data=REMOTE_SCRIPT)
+            # +240s para rpm -qa/ss/crontab e detecções
+            p = run(cmd, dflt["timeout"] + 240, input_data=REMOTE_SCRIPT)
             if p.returncode == 0:
                 kv = parse_kv(p.stdout)
                 for k in OUT_COLS:
@@ -438,19 +499,19 @@ def collect_one(entry, dflt, filter_ok, dbg):
                 row["status"]="ok"; row["error"]=""
                 return row
             else:
-                last_err = (p.stderr or "").strip() or f"rc={p.returncode}"
-                if dbg: dbg.write(f"{target} user={user} rc={p.returncode} err={last_err}\n")
+                last_err = (p.stderr or "").strip() or "rc={}".format(p.returncode)
+                if dbg: dbg.write("{} user={} rc={} err={}\n".format(target, user, p.returncode, last_err))
                 if re.search(r"permission denied|no supported authentication methods|too many authentication failures", last_err, re.I):
                     continue
-                row["status"]="failed"; row["error"]=f"ssh_error:{last_err[:180]}"; return row
+                row["status"]="failed"; row["error"]="ssh_error:{}".format(last_err[:180]); return row
         except subprocess.TimeoutExpired:
             row["status"]="failed"; row["error"]="ssh_timeout"; return row
         except Exception as e:
             last_err = str(e)
-            if dbg: dbg.write(f"{target} user={user} EXC={last_err}\n")
+            if dbg: dbg.write("{} user={} EXC={}\n".format(target, user, last_err))
             if re.search(r"permission denied|authentication", last_err, re.I):
                 continue
-            row["status"]="failed"; row["error"]=f"ssh_exc:{last_err[:180]}"; return row
+            row["status"]="failed"; row["error"]="ssh_exc:{}".format(last_err[:180]); return row
 
     row["status"]="failed"; row["error"]="auth_failed"; return row
 
@@ -474,7 +535,7 @@ def write_xlsx(path, rows):
     wb.close()
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Perfil via SSH com listas completas e detecção Java/PHP/Apache/JBoss/WebSphere.")
+    p = argparse.ArgumentParser(description="Perfil via SSH com listas completas, versões e varreduras estendidas.")
     p.add_argument("--inventory", required=True, help="CSV/XLSX com hostname/ip; opcionais: ssh_user, ssh_port")
     p.add_argument("--connectivity-csv", help="CSV do ssh_connectivity_probe para filtrar status=connected")
     p.add_argument("--target-user", default="root", help="Usuário padrão")
@@ -496,7 +557,7 @@ def main():
     if a.identity:
         a.identity = os.path.abspath(os.path.expanduser(os.path.expandvars(a.identity)))
         if not os.path.exists(a.identity):
-            print(f"Erro: chave não encontrada: {a.identity}", file=sys.stderr); sys.exit(2)
+            print("Erro: chave não encontrada: {}".format(a.identity), file=sys.stderr); sys.exit(2)
 
     rows, host_f, ip_f, user_f, port_f = read_inventory(a.inventory)
     if a.sample>0: rows = rows[:a.sample]
@@ -517,16 +578,16 @@ def main():
             for f in as_completed(futs): results.append(f.result())
 
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        out_csv = a.out_csv or os.path.join(os.path.dirname(os.path.abspath(a.inventory)), f"system_profile_{ts}.csv")
+        out_csv = a.out_csv or os.path.join(os.path.dirname(os.path.abspath(a.inventory)), "system_profile_{}.csv".format(ts))
         write_csv(out_csv, results)
         if a.out_xlsx: write_xlsx(a.out_xlsx, results)
 
         ok = sum(1 for r in results if r["status"]=="ok")
         fail = sum(1 for r in results if r["status"]=="failed")
         nt = sum(1 for r in results if r["status"]=="not_tested")
-        print(f"Total: {len(results)} | ok: {ok} | failed: {fail} | not_tested: {nt}")
-        print(f"CSV: {out_csv}")
-        if a.out_xlsx: print(f"XLSX: {a.out_xlsx}")
+        print("Total: {} | ok: {} | failed: {} | not_tested: {}".format(len(results), ok, fail, nt))
+        print("CSV: {}".format(out_csv))
+        if a.out_xlsx: print("XLSX: {}".format(a.out_xlsx))
     finally:
         if dbg: dbg.close()
 
