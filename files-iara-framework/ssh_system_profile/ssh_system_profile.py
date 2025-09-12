@@ -13,12 +13,13 @@ Coleta por host:
 - Tomcat (presença+versão)
 - JBoss/WildFly (presença+produto+versão+home+serviços+pids)
 - WebSphere (presença+versão+home)
-- Processos não-gerenciados (aprox. PPID=1 fora de serviços) + contagem
-- Containers (docker/podman/containerd/crictl) + contagem
+- Processos não gerenciados (heurística PPID=1) + contagem
+- Containers (docker/podman/containerd/crictl/ctr) + contagem
 - Sockets em escuta (ss|netstat) + contagem
 - Entradas de cron (root + /etc/cron*) + contagem
+- Contas de sistema relevantes (java,tomcat,jboss,wildfly,websphere,was,oracle,apache,www-data,nginx,mysql,postgres,mongodb,redis,rabbitmq,docker,zabbix,qualys)
 
-Compatível Python 3.6+. Requer OpenSSH. XLSX opcional: pandas/openpyxl/xlsxwriter.
+Compatível Python 3.6+. Requer OpenSSH. XLSX opcional (pandas/openpyxl/xlsxwriter).
 """
 
 import argparse, csv, ipaddress, os, re, socket, subprocess, sys
@@ -56,6 +57,8 @@ OUT_COLS = [
     "listening_count","listening_sockets",
     # Cron
     "cron_count","cron_entries",
+    # Contas relevantes
+    "tech_accounts_count","tech_accounts",
 ]
 
 DEF_USERS = ["root","ec2-user","ubuntu","centos","opc","admin","azureuser","rocky","oracle"]
@@ -141,6 +144,7 @@ def ssh_cmd(host, user, port, identity, timeout, strict, legacy):
         ]
     if identity: cmd += ["-i", identity]
     if port and str(port)!="22": cmd += ["-p", str(port)]
+    # bash se existir; senão sh
     cmd += [ "{}@{}".format(user, host), "sh", "-c", "bash --noprofile --norc -s || sh -s" ]
     return cmd
 
@@ -181,17 +185,29 @@ SERV_CNT=0; [ -n "$SERV_ALL" ] && SERV_CNT=$(printf "%s" "$SERV_ALL" | awk -F';'
 PKG_MGR=""; PKG_ALL=""
 if command -v dpkg-query >/dev/null 2>&1; then
   PKG_MGR="dpkg"
-  PKG_ALL="$(dpkg-query -W -f='${Package}=${Version}\n' 2>/dev/null | sort -u | joinsemi)"
+  PKG_ALL="$(dpkg-query -W -f='${binary:Package}=${Version}\n' 2>/dev/null | sort -u | joinsemi)"
 elif command -v rpm >/dev/null 2>&1; then
   PKG_MGR="rpm"
-  PKG_ALL="$(rpm -qa --qf '%{NAME}=%{VERSION}-%{RELEASE}\n' 2>/dev/null | sort -u | joinsemi)"
+  PKG_ALL="$(rpm -qa --qf '%{NAME}=%{EPOCH}:%{VERSION}-%{RELEASE}\n' 2>/dev/null | sed 's/=:/:/; s/^\\([^=]*\\)=:\\(.*\\)$/\\1=\\2/' | sort -u | joinsemi)"
 elif command -v apk >/dev/null 2>&1; then
   PKG_MGR="apk"
-  # apk info -v => foo-1.2.3-r0 ; converte para foo=1.2.3-r0
-  PKG_ALL="$(apk info -v 2>/dev/null | awk 'BEGIN{FS=\"-\"}{name=$1; sub(/^[^-]+-/,\"\",$0); print name\"=\"$0}' | sort -u | joinsemi)"
+  # apk info -v -> name-version-rN ; reconstruir seguro preservando nomes com '-'
+  PKG_ALL="$(apk info -v 2>/dev/null | awk -F- '{
+      ver=$(NF-1) "-" $NF; $NF=""; $(NF-1)=""; sub(/[ -]+$/, "", $0);
+      name=$0; gsub(" ", "-", name); print name "=" ver
+    }' | sort -u | joinsemi)"
 elif command -v dnf >/dev/null 2>&1; then
   PKG_MGR="dnf"
+  PKG_ALL="$(dnf -q list installed 2>/dev/null | awk 'NR>1 && $1!~/^(Installed|Last|Available|$)/{split($1,a,\".\"); print a[1]\"=\" $2}' | sort -u | joinsemi)"
+elif command -v yum >/dev/null 2>&1; then
+  PKG_MGR="yum"
+  PKG_ALL="$(yum -q list installed 2>/dev/null | awk 'NR>1 && $1!~/^(Installed|Updated|Obsoleting|$)/{split($1,a,\".\"); print a[1]\"=\" $2}' | sort -u | joinsemi)"
+elif command -v zypper >/dev/null 2>&1; then
+  PKG_MGR="zypper"
   PKG_ALL="$(rpm -qa --qf '%{NAME}=%{VERSION}-%{RELEASE}\n' 2>/dev/null | sort -u | joinsemi)"
+elif command -v pacman >/dev/null 2>&1; then
+  PKG_MGR="pacman"
+  PKG_ALL="$(pacman -Q 2>/dev/null | awk '{print $1\"=\" $2}' | sort -u | joinsemi)"
 fi
 PKG_CNT=0; [ -n "$PKG_ALL" ] && PKG_CNT=$(printf "%s" "$PKG_ALL" | awk -F';' '{print NF}')
 
@@ -206,13 +222,13 @@ ZB_INST="no"; ZB_VER=""
 if command -v zabbix_agentd >/dev/null 2>&1; then ZB_INST="yes"; ZB_VER="$(zabbix_agentd -V 2>&1 | head -n1 | awk '{print $NF}')"
 elif command -v zabbix_agent2 >/dev/null 2>&1; then ZB_INST="yes"; ZB_VER="$(zabbix_agent2 -V 2>/dev/null | head -n1 | awk '{print $NF}')"
 elif systemctl list-unit-files 2>/dev/null | grep -q '^zabbix-agent'; then ZB_INST="yes"
-elif pgrep -fa zabbix_agent >/dev/null 2>&1; then ZB_INST="yes"
+elif ps -eo comm,args 2>/dev/null | grep -q zabbix_agent; then ZB_INST="yes"
 fi
 
 # ---------- QUALYS ----------
 QL_INST="no"; QL_VER=""
 if systemctl list-unit-files 2>/dev/null | grep -q '^qualys-cloud-agent'; then QL_INST="yes"; fi
-if pgrep -fa qualys >/dev/null 2>&1 || pgrep -fa qagent >/dev/null 2>&1; then QL_INST="yes"; fi
+if ps -eo comm,args 2>/dev/null | grep -Eq 'qualys|qagent'; then QL_INST="yes"; fi
 if [ -x /usr/local/qualys/cloud-agent/bin/qagent ]; then
   V="$(/usr/local/qualys/cloud-agent/bin/qagent -v 2>&1 || true)"
   QL_VER="$(printf "%s" "$V" | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n1)"
@@ -236,8 +252,8 @@ elif command -v javac >/dev/null 2>&1; then
 fi
 if [ "$JAVA_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
   L="$(printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]')"
-  echo "$L" | grep -Eq '(^|;)openjdk=|(^|;)java-1\.' && JAVA_INST="yes"
-  [ -z "$JAVA_VER" ] && JAVA_VER="$(printf "%s" "$L" | grep -Eo 'openjdk=[0-9]+|java-1\.[0-9]' | head -n1 | sed -E 's/.*=//; s/java-1\.([0-9])/\1/')"
+  echo "$L" | grep -Eq '(^|;)(openjdk|java-1\\.)=' && JAVA_INST="yes"
+  [ -z "$JAVA_VER" ] && JAVA_VER="$(printf "%s" "$L" | grep -Eo '(openjdk|java-1\\.)[0-9]+' | head -n1 | sed -E 's/[^0-9]//g')"
 fi
 
 # ---------- PHP ----------
@@ -245,14 +261,14 @@ PHP_INST="no"; PHP_VER=""
 if command -v php >/dev/null 2>&1; then PHP_INST="yes"; PHP_VER="$(php -v 2>/dev/null | head -n1 | awk '{print $2}')"
 elif command -v php-fpm >/dev/null 2>&1; then PHP_INST="yes"; PHP_VER="$(php-fpm -v 2>/dev/null | head -n1 | awk '{print $2}')"
 fi
-if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "rpm" ]; then
+if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "rpm" -o "$PKG_MGR" = "zypper" ]; then
   V="$(rpm -q --qf '%{VERSION}\n' php 2>/dev/null | head -n1)"; [ -n "$V" ] && PHP_INST="yes" && PHP_VER="$V"
 fi
 if [ "$PHP_INST" = "no" ] && [ "$PKG_MGR" = "dpkg" ]; then
   V="$(dpkg-query -W -f='${Version}\n' php 2>/dev/null | head -n1)"; [ -n "$V" ] && PHP_INST="yes" && PHP_VER="$V"
 fi
 if [ "$PHP_INST" = "no" ] && [ -n "$PKG_ALL" ]; then
-  printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)php(=|;|$)' && PHP_INST="yes"
+  printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)php=' && PHP_INST="yes"
 fi
 
 # ---------- APACHE HTTPD ----------
@@ -265,7 +281,7 @@ elif command -v apache2 >/dev/null 2>&1; then
   AP_VER="$(apache2 -v 2>/dev/null | awk -F/ '/Server version/ {print $2}' | awk '{print $1}')"
 fi
 if [ "$AP_INST" = "yes" ] && [ -z "$AP_VER" ]; then
-  if [ "$PKG_MGR" = "rpm" ]; then AP_VER="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
+  if [ "$PKG_MGR" = "rpm" -o "$PKG_MGR" = "zypper" ]; then AP_VER="$(rpm -q --qf '%{VERSION}\n' httpd 2>/dev/null | head -n1)"
   elif [ "$PKG_MGR" = "dpkg" ]; then AP_VER="$(dpkg-query -W -f='${Version}\n' apache2 2>/dev/null | head -n1)"
   elif [ "$PKG_MGR" = "apk" ]; then AP_VER="$(apk info -vv apache2 2>/dev/null | head -n1 | sed -E 's/.*-([0-9][^-]*)-.*/\1/')"
   fi
@@ -278,7 +294,6 @@ if command -v catalina.sh >/dev/null 2>&1; then
   TC_VER="$(catalina.sh version 2>/dev/null | awk -F: '/Server number/ {gsub(/ /,\"\"); print $2; exit}')"
 fi
 if [ "$TC_INST" = "no" ]; then
-  # serviços/pacotes
   systemctl list-unit-files 2>/dev/null | grep -qi 'tomcat' && TC_INST="yes"
   printf "%s" "$PKG_ALL" | tr '[:upper:]' '[:lower:]' | grep -Eq '(^|;)tomcat=' && TC_INST="yes"
 fi
@@ -332,24 +347,24 @@ elif [ -n "$WS_HOME" ] && [ -x "$WS_HOME/bin/versionInfo.sh" ]; then
 fi
 [ -n "$WS_HOME" ] && [ "$WS_INST" = "no" ] && WS_INST="yes"
 
-# ---------- PROCESSOS NÃO GERENCIADOS (heurística PPID=1) ----------
-UNM="$(ps -eo pid,ppid,user,comm,args --no-headers 2>/dev/null | awk '$2==1{print $1 "|" $3 "|" $4 "|" $5}' | grep -Ev "^(1|systemd|init|bash|sh|sshd|agetty)" | head -n 500 | tr '\n' ';' | sed 's/;*$//')"
+# ---------- PROCESSOS NÃO GERENCIADOS (PPID=1, heurística) ----------
+UNM="$(ps -eo pid,ppid,user,comm,args --no-headers 2>/dev/null | awk '$2==1{print $1\"|\"$3\"|\"$4\"|\"$5}' | grep -Ev '^(1|systemd|init|bash|sh|sshd|agetty)' | head -n 500 | tr '\n' ';' | sed 's/;*$//')"
 UNM_CNT=0; [ -n "$UNM" ] && UNM_CNT=$(printf "%s" "$UNM" | awk -F';' '{print NF}')
 
 # ---------- CONTAINERS ----------
 C_LIST=""
 if command -v docker >/dev/null 2>&1; then
-  L="$(docker ps --format '{{.Names}}|{{.Image}}|{{.Status}}' 2>/dev/null || true)"; [ -z "$L" ] && L="$(docker ps 2>/dev/null | awk 'NR>1{print $NF"|"$2"|"$4}' || true)"
+  L="$(docker ps --format '{{.Names}}|{{.Image}}|{{.Status}}' 2>/dev/null || true)"; [ -z "$L" ] && L="$(docker ps 2>/dev/null | awk 'NR>1{print $NF\"|\"$2\"|\"$4}' || true)"
   [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
 fi
 if command -v podman >/dev/null 2>&1; then
   L="$(podman ps --format '{{.Names}}|{{.Image}}|{{.Status}}' 2>/dev/null || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
 fi
 if command -v ctr >/dev/null 2>&1; then
-  L="$(ctr -n k8s.io containers list 2>/dev/null | awk 'NR>1{print $1"|"$2"|running"}' || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
+  L="$(ctr -n k8s.io containers list 2>/dev/null | awk 'NR>1{print $1\"|\"$2\"|running"}' || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
 fi
 if command -v crictl >/dev/null 2>&1; then
-  L="$(crictl ps 2>/dev/null | awk 'NR>1{print $NF"|"$2"|"$4}' || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
+  L="$(crictl ps 2>/dev/null | awk 'NR>1{print $NF\"|\"$2\"|\"$4}' || true)"; [ -n "$L" ] && C_LIST="${C_LIST}\n$(printf "%s" "$L")"
 fi
 C_LIST="$(printf "%b" "$C_LIST" | sed '/^$/d' | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
 C_CNT=0; [ -n "$C_LIST" ] && C_CNT=$(printf "%s" "$C_LIST" | awk -F';' '{print NF}')
@@ -357,7 +372,7 @@ C_CNT=0; [ -n "$C_LIST" ] && C_CNT=$(printf "%s" "$C_LIST" | awk -F';' '{print N
 # ---------- LISTENING SOCKETS ----------
 LS=""
 if command -v ss >/dev/null 2>&1; then
-  LS="$(ss -tulpen 2>/dev/null | awk 'NR>1{print $1\"|\"$5\"|\"$7}' | sed 's/ users:\\(\\(//; s/\\)\\)//g' | head -n 1000 | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
+  LS="$(ss -tulpen 2>/dev/null | awk 'NR>1{print $1\"|\"$5\"|\"$7}' | sed 's/ users:(//; s/)//g' | head -n 1000 | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
 elif command -v netstat >/dev/null 2>&1; then
   LS="$(netstat -tulpen 2>/dev/null | awk 'NR>2{print $1\"|\"$4\"|\"$7}' | head -n 1000 | tr ' ' '_' | tr '\n' ';' | sed 's/;*$//')"
 fi
@@ -367,19 +382,25 @@ LS_CNT=0; [ -n "$LS" ] && LS_CNT=$(printf "%s" "$LS" | awk -F';' '{print NF}')
 CR=""
 RCR="$(crontab -l -u root 2>/dev/null | grep -E '^[^#@]|^@' | sed 's/[[:space:]]\\+/ /g' | head -n 300)"
 SYSCR="$(grep -E '^[^#@]|^@' /etc/crontab 2>/dev/null | sed 's/[[:space:]]\\+/ /g' | head -n 300)"
-DIRS="/etc/cron.d /etc/cron.hourly /etc/cron.daily /etc/cron.weekly /etc/cron.monthly"
-for d in $DIRS; do
+for d in /etc/cron.d /etc/cron.hourly /etc/cron.daily /etc/cron.weekly /etc/cron.monthly; do
   if [ -d "$d" ]; then
-    while IFS= read -r f; do
-      [ -f "$f" ] && L="$(grep -E '^[^#@]|^@' "$f" 2>/dev/null | sed 's/[[:space:]]\\+/ /g' | head -n 50)"
+    find "$d" -maxdepth 1 -type f 2>/dev/null | while read -r f; do
+      L="$(grep -E '^[^#@]|^@' "$f" 2>/dev/null | sed 's/[[:space:]]\\+/ /g' | head -n 50)"
       [ -n "$L" ] && CR="${CR}\n${f}|${L}"
-    done < <(find "$d" -maxdepth 1 -type f 2>/dev/null)
+    done
   fi
 done
 [ -n "$RCR" ] && CR="${CR}\nroot_crontab|${RCR}"
 [ -n "$SYSCR" ] && CR="${CR}\n/etc/crontab|${SYSCR}"
 CR="$(printf "%b" "$CR" | sed '/^$/d' | head -n 1000 | tr '\n' ';' | sed 's/;*$//')"
 CR_CNT=0; [ -n "$CR" ] && CR_CNT=$(printf "%s" "$CR" | awk -F';' '{print NF}')
+
+# ---------- CONTAS RELEVANTES ----------
+ACCTS=""
+if [ -r /etc/passwd ]; then
+  ACCTS="$(grep -E '^(java|tomcat|jboss|wildfly|websphere|was|oracle|apache|www-data|nginx|mysql|postgres|mongodb|redis|rabbitmq|docker|zabbix|qualys):' /etc/passwd 2>/dev/null | cut -d: -f1 | tr '\n' ';' | sed 's/;*$//')"
+fi
+ACCTS_CNT=0; [ -n "$ACCTS" ] && ACCTS_CNT=$(printf "%s" "$ACCTS" | awk -F';' '{print NF}')
 
 # ---------- SAÍDA ----------
 out_kv os_family "linux"
@@ -427,6 +448,8 @@ out_kv listening_count "${LS_CNT}"
 out_kv listening_sockets "${LS}"
 out_kv cron_count "${CR_CNT}"
 out_kv cron_entries "${CR}"
+out_kv tech_accounts_count "${ACCTS_CNT}"
+out_kv tech_accounts "${ACCTS}"
 '''
 
 def parse_kv(text):
@@ -490,8 +513,8 @@ def collect_one(entry, dflt, filter_ok, dbg):
     for user in users:
         cmd = ssh_cmd(target, user, port, dflt["identity"], dflt["timeout"], dflt["strict"], dflt["legacy"])
         try:
-            # +240s para rpm -qa/ss/crontab e detecções
-            p = run(cmd, dflt["timeout"] + 240, input_data=REMOTE_SCRIPT)
+            # +300s para rpm -qa/coletores
+            p = run(cmd, dflt["timeout"] + 300, input_data=REMOTE_SCRIPT)
             if p.returncode == 0:
                 kv = parse_kv(p.stdout)
                 for k in OUT_COLS:
@@ -535,7 +558,7 @@ def write_xlsx(path, rows):
     wb.close()
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Perfil via SSH com listas completas, versões e varreduras estendidas.")
+    p = argparse.ArgumentParser(description="Perfil via SSH com listas completas, versões e coletores estendidos.")
     p.add_argument("--inventory", required=True, help="CSV/XLSX com hostname/ip; opcionais: ssh_user, ssh_port")
     p.add_argument("--connectivity-csv", help="CSV do ssh_connectivity_probe para filtrar status=connected")
     p.add_argument("--target-user", default="root", help="Usuário padrão")
